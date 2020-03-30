@@ -1,16 +1,20 @@
-<h1>LOL</h1>
+<script>
+  const ola = "adeus";
 
-<button>
-  LOL
-</button>
+  let count = 0;
+  function increment() {
+    count = count + 1;
+    console.log(count);
+  }
+</script>
 
 <style>
   button {
     width: 100px;
     background-color: red;
   }
-
-  h1{
-    color: green;
-  }
 </style>
+
+<button on:click={increment}>+1</button>
+
+<h1>lol {count}</h1>

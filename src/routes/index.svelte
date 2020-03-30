@@ -1,13 +1,16 @@
 <script>
-	import Styles from '../components/Styles.svelte';
-	import Noob from '../components/Noob.svelte';
+  import Noob from "../components/Noob.svelte";
+
+  const ola = 2;
+  const ashdasd = 231312312;
+  foo = ba;
 </script>
 
-<h1>Great success!</h1>
-<Noob/>
-
 <style>
-	h1{
-		color: blue;
-	}
+  h1 {
+    color: var(--main-color);
+  }
 </style>
+
+<h1>Great success! lol</h1>
+<Noob />

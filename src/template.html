@@ -1,20 +1,19 @@
-<!doctype html>
-<html lang='en'>
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
-	<meta name='theme-color' content='#333333'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
 
-	%sapper.base%
+    %sapper.base%
 
-	%sapper.styles%
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
 
-	%sapper.head%
-</head>
-<body>
+    %sapper.styles% %sapper.head%
+  </head>
+  <body>
+    <div id="sapper">%sapper.html%</div>
 
-	%sapper.html%
-
-	%sapper.scripts%
-</body>
+    %sapper.scripts%
+  </body>
 </html>
