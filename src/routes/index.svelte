@@ -3,7 +3,6 @@
 
   const ola = 2;
   const ashdasd = 231312312;
-  foo = ba;
 </script>
 
 <style>
