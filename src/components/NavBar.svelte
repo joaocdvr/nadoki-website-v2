@@ -8,6 +8,8 @@
 <style>
   nav {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     max-width: 100%;
     height: 72px;
@@ -17,26 +19,45 @@
     backface-visibility: hidden;
   }
 
-  div {
+  /* NavBar animation */
+  .nav-bg {
     position: absolute;
     z-index: -1;
     background-color: var(--black);
-    width: 100%;
-    height: 100%;
-    right: -100vw;
-    transition: transform 1s;
+    width: 120vw;
+    height: 72px;
+    right: -120vw;
+    transition: transform 500ms;
+    transition-delay: 500ms;
   }
 
-  .isActivated {
+  .navBgIsActivated {
     transform: translateX(-100%);
+    transition-delay: 0s;
+  }
+
+  /* Menu animation */
+  .menu-bg {
+    position: absolute;
+    z-index: -1;
+    background-color: var(--black);
+    width: 100vw;
+    height: 100vh;
+    top: -100vh;
+    transition: transform 500ms;
+    transition-delay: 0s;
+  }
+
+  .menuBgIsActivated {
+    transform: translateY(100%);
+    transition-delay: 500ms;
   }
 </style>
 
 <nav>
   <NadokiLogo />
   <MenuIcon />
-  <div class:isActivated={$isMenuClicked} />
-  {#if $isMenuClicked}
-    <Menu />
-  {/if}
+  <div class:navBgIsActivated={$isMenuClicked} class="nav-bg" />
+  <Menu />
+  <div class:menuBgIsActivated={$isMenuClicked} class="menu-bg" />
 </nav>

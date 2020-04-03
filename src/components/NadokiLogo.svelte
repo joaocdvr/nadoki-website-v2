@@ -19,14 +19,15 @@
     width: 40px;
     height: 24px;
     fill: var(--black);
-    transition: fill 100ms ease-out;
-    transition-delay: 50ms;
+    transition: fill 200ms ease-in-out;
+    transition-delay: 550ms;
   }
 
+  /* Fill animation */
   .isWhite {
     fill: var(--white);
-    transition: fill 500ms ease-in;
-    transition-delay: 400ms;
+    transition: fill 100ms ease-in-out;
+    transition-delay: 200ms;
   }
 </style>
 

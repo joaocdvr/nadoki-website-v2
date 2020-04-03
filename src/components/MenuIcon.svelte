@@ -21,16 +21,11 @@
     width: 24px;
     height: 24px;
     fill: var(--black);
-    transition: fill 400ms ease-in;
-    transition-delay: 300ms;
+    transition: fill 20ms ease-in-out;
+    transition-delay: 750ms;
   }
 
-  .isWhite {
-    fill: var(--white);
-    transition: fill 10ms ease-out;
-    transition-delay: 0;
-  }
-
+  /* Menu icon */
   rect {
     width: 4.8px;
     height: 24px;
@@ -45,6 +40,7 @@
     x: 19.2px;
   }
 
+  /* Menu icon animation */
   button:hover rect {
     transition: 0.2s ease-in, out;
   }
@@ -55,6 +51,13 @@
 
   button:hover rect:nth-child(2) {
     height: 16px;
+  }
+
+  /* Fill animation */
+  .isWhite {
+    fill: var(--white);
+    transition: fill 5ms ease-in-out;
+    transition-delay: 0;
   }
 </style>
 

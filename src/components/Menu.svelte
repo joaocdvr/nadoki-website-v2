@@ -5,10 +5,9 @@
 <style>
   ul {
     position: absolute;
-    background-color: black;
     width: 100vw;
     height: calc(100vh - 72px);
-    top: 72px;
+    margin-top: 72px;
     padding: 20px 0px;
     line-height: 0;
   }
@@ -16,6 +15,10 @@
   li {
     text-align: center;
     padding: 20px 0px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 200ms ease-in-out;
+    transition-delay: 0ms;
   }
 
   a {
@@ -39,6 +42,7 @@
     fill: var(--white);
   }
 
+  /* Equipment height fix */
   .equipment-svg {
     min-height: 30px;
     height: calc(((100vh - 312px) * 0.25) + ((100vh - 312px) * 0.25 / 4 / 5));
@@ -47,11 +51,56 @@
   .equipment-li {
     padding-bottom: calc(20px - (100vh - 312px) * 0.25 / 4);
   }
+
+  @media only screen and (min-height: 632px) {
+    .equipment-svg {
+      height: calc(((100vh - 312px) * 0.25));
+    }
+  }
+
+  /* Menu entries animation */
+  .servicesIsVisible {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: all 700ms ease-in-out;
+    transition-delay: 400ms;
+  }
+
+  .studioIsVisible {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: all 700ms ease-in-out;
+    transition-delay: 450ms;
+  }
+
+  .workIsVisible {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: all 700ms ease-in-out;
+    transition-delay: 500ms;
+  }
+
+  .equipmentIsVisible {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: all 700ms ease-in-out;
+    transition-delay: 550ms;
+  }
+
+  .aboutUsIsVisible {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: all 700ms ease-in-out;
+    transition-delay: 600ms;
+  }
 </style>
 
 <ul>
-  <li>
-    <a href="/services" aria-label="Link to Services Page">
+  <li class:servicesIsVisible={$isMenuClicked}>
+    <a
+      href="/services"
+      aria-label="Link to Services Page"
+      on:click={handleMenuClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -135,8 +184,11 @@
       </svg>
     </a>
   </li>
-  <li>
-    <a href="/studio" aria-label="Link to Studio Page">
+  <li class:studioIsVisible={$isMenuClicked}>
+    <a
+      href="/studio"
+      aria-label="Link to Studio Page"
+      on:click={handleMenuClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -200,8 +252,8 @@
       </svg>
     </a>
   </li>
-  <li>
-    <a href="/work" aria-label="Link to Work Page">
+  <li class:workIsVisible={$isMenuClicked}>
+    <a href="/work" aria-label="Link to Work Page" on:click={handleMenuClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -240,8 +292,11 @@
       </svg>
     </a>
   </li>
-  <li class="equipment-li">
-    <a href="/equipment" aria-label="Link to Equipment Page">
+  <li class="equipment-li" class:equipmentIsVisible={$isMenuClicked}>
+    <a
+      href="/equipment"
+      aria-label="Link to Equipment Page"
+      on:click={handleMenuClick}>
       <svg
         class="equipment-svg"
         preserveAspectRatio="none"
@@ -294,8 +349,11 @@
 
     </a>
   </li>
-  <li>
-    <a href="/about_us" aria-label="Link to About Us Page">
+  <li class:aboutUsIsVisible={$isMenuClicked}>
+    <a
+      href="/about_us"
+      aria-label="Link to About Us Page"
+      on:click={handleMenuClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
