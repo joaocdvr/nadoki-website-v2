@@ -19,21 +19,20 @@
     width: 40px;
     height: 24px;
     fill: var(--black);
-    transition: fill 200ms ease-in-out;
-    transition-delay: 550ms;
+    transition: fill 300ms ease-in-out;
+    transition-delay: 0;
   }
 
   /* Fill animation */
-  .isWhite {
+  .is-white {
     fill: var(--white);
-    transition: fill 100ms ease-in-out;
-    transition-delay: 200ms;
+    transition-delay: 100ms;
   }
 </style>
 
 <a href="/" aria-label="Link to Homepage (Nadoki Logo)">
   <svg
-    class:isWhite={$isMenuClicked}
+    class:is-white={$isMenuClicked}
     on:click={$isMenuClicked ? handleMenuClick : () => null}
     preserveAspectRatio="none"
     viewBox="0 0 40 24"

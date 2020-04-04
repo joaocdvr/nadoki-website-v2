@@ -16,9 +16,9 @@
     text-align: center;
     padding: 20px 0px;
     opacity: 0;
-    transform: translateX(-50px);
-    transition: all 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
     transition-delay: 0ms;
+    visibility: hidden;
   }
 
   a {
@@ -59,44 +59,44 @@
   }
 
   /* Menu entries animation */
-  .servicesIsVisible {
-    transform: translateX(50px);
+  .services-is-visible {
+    visibility: visible;
     opacity: 1;
-    transition: all 700ms ease-in-out;
+    transition: all 600ms ease-in-out;
     transition-delay: 400ms;
   }
 
-  .studioIsVisible {
-    transform: translateX(50px);
+  .studio-is-visible {
+    visibility: visible;
     opacity: 1;
-    transition: all 700ms ease-in-out;
-    transition-delay: 450ms;
-  }
-
-  .workIsVisible {
-    transform: translateX(50px);
-    opacity: 1;
-    transition: all 700ms ease-in-out;
+    transition: all 600ms ease-in-out;
     transition-delay: 500ms;
   }
 
-  .equipmentIsVisible {
-    transform: translateX(50px);
+  .work-is-visible {
+    visibility: visible;
     opacity: 1;
-    transition: all 700ms ease-in-out;
-    transition-delay: 550ms;
+    transition: all 600ms ease-in-out;
+    transition-delay: 600ms;
   }
 
-  .aboutUsIsVisible {
-    transform: translateX(50px);
+  .equipment-is-visible {
+    visibility: visible;
     opacity: 1;
-    transition: all 700ms ease-in-out;
-    transition-delay: 600ms;
+    transition: all 600ms ease-in-out;
+    transition-delay: 700ms;
+  }
+
+  .about-us-is-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: all 600ms ease-in-out;
+    transition-delay: 800ms;
   }
 </style>
 
 <ul>
-  <li class:servicesIsVisible={$isMenuClicked}>
+  <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
       aria-label="Link to Services Page"
@@ -184,7 +184,7 @@
       </svg>
     </a>
   </li>
-  <li class:studioIsVisible={$isMenuClicked}>
+  <li class:studio-is-visible={$isMenuClicked}>
     <a
       href="/studio"
       aria-label="Link to Studio Page"
@@ -252,7 +252,7 @@
       </svg>
     </a>
   </li>
-  <li class:workIsVisible={$isMenuClicked}>
+  <li class:work-is-visible={$isMenuClicked}>
     <a href="/work" aria-label="Link to Work Page" on:click={handleMenuClick}>
       <svg
         preserveAspectRatio="none"
@@ -292,7 +292,7 @@
       </svg>
     </a>
   </li>
-  <li class="equipment-li" class:equipmentIsVisible={$isMenuClicked}>
+  <li class="equipment-li" class:equipment-is-visible={$isMenuClicked}>
     <a
       href="/equipment"
       aria-label="Link to Equipment Page"
@@ -349,7 +349,7 @@
 
     </a>
   </li>
-  <li class:aboutUsIsVisible={$isMenuClicked}>
+  <li class:about-us-is-visible={$isMenuClicked}>
     <a
       href="/about_us"
       aria-label="Link to About Us Page"

@@ -24,15 +24,15 @@
     position: absolute;
     z-index: -1;
     background-color: var(--black);
-    width: 120vw;
+    width: 100vw;
     height: 72px;
-    right: -120vw;
-    transition: transform 500ms;
+    right: -100vw;
+    transition: transform 500ms ease;
     transition-delay: 500ms;
   }
 
-  .navBgIsActivated {
-    transform: translateX(-100%);
+  .nav-bg-is-activated {
+    transform: translateX(-100vw);
     transition-delay: 0s;
   }
 
@@ -44,12 +44,12 @@
     width: 100vw;
     height: 100vh;
     top: -100vh;
-    transition: transform 500ms;
+    transition: transform 500ms ease;
     transition-delay: 0s;
   }
 
-  .menuBgIsActivated {
-    transform: translateY(100%);
+  .menu-bg-is-activated {
+    transform: translateY(100vh);
     transition-delay: 500ms;
   }
 </style>
@@ -57,7 +57,7 @@
 <nav>
   <NadokiLogo />
   <MenuIcon />
-  <div class:navBgIsActivated={$isMenuClicked} class="nav-bg" />
+  <div class:nav-bg-is-activated={$isMenuClicked} class="nav-bg" />
   <Menu />
-  <div class:menuBgIsActivated={$isMenuClicked} class="menu-bg" />
+  <div class:menu-bg-is-activated={$isMenuClicked} class="menu-bg" />
 </nav>

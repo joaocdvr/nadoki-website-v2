@@ -20,44 +20,74 @@
   svg {
     width: 24px;
     height: 24px;
-    fill: var(--black);
-    transition: fill 20ms ease-in-out;
-    transition-delay: 750ms;
   }
 
   /* Menu icon */
-  rect {
+  .left-rect-menu {
+    fill: var(--black);
     width: 4.8px;
     height: 24px;
-    transition: 0.2s ease-in-out;
+    transition: 300ms ease-in-out;
+    transition-delay: 0;
   }
 
-  rect:nth-child(2) {
-    x: 9.6px;
+  .middle-rect-menu {
+    fill: var(--black);
+    width: 4.8px;
+    height: 24px;
+    transform: translateX(9.6px);
+    opacity: 1;
+    transition: 300ms ease-in-out;
+    transition-delay: 0;
   }
 
-  rect:nth-child(3) {
-    x: 19.2px;
+  .right-rect-menu {
+    fill: var(--black);
+    width: 4.8px;
+    height: 24px;
+    transform: translateX(19.2px);
+    transition: 300ms ease-in-out;
+    transition-delay: 0;
   }
 
-  /* Menu icon animation */
-  button:hover rect {
-    transition: 0.2s ease-in, out;
-  }
-
-  button:hover rect:nth-child(1) {
+  /* Menu icon hover animation */
+  button:hover .left-rect-menu {
     height: 8px;
   }
 
-  button:hover rect:nth-child(2) {
+  button:hover .middle-rect-menu {
     height: 16px;
   }
 
-  /* Fill animation */
-  .isWhite {
+  /* Menu cross */
+  .left-rect-cross {
     fill: var(--white);
-    transition: fill 5ms ease-in-out;
-    transition-delay: 0;
+    height: 29.13px;
+    transform-origin: top right;
+    transform: rotate(45deg) translate(21.6px, 2.4px);
+  }
+
+  .middle-rect-cross {
+    opacity: 0;
+  }
+
+  .right-rect-cross {
+    fill: var(--white);
+    height: 29.13px;
+    transform-origin: top left;
+    transform: rotate(-45deg) translate(-2.4px, 2.4px);
+  }
+
+  /* Menu cross hover animation */
+  button:hover .left-rect-cross {
+    height: 29.13px;
+    width: 7.2px;
+    transform: rotate(45deg) translate(20.4px, 2.4px);
+  }
+
+  button:hover .right-rect-cross {
+    width: 7.2px;
+    transform: rotate(-45deg) translate(-3.6px, 2.4px);
   }
 </style>
 
@@ -66,13 +96,12 @@
   aria-label="Toggle Menu Page"
   aria-pressed={$isMenuClicked}>
   <svg
-    class:isWhite={$isMenuClicked}
     viewbox="0 0 24 24"
     preserveAspectRatio="none"
     xmlns="http://www.w3.org/2000/svg">
     >
-    <rect />
-    <rect />
-    <rect />
+    <rect class:middle-rect-cross={$isMenuClicked} class="middle-rect-menu" />
+    <rect class:left-rect-cross={$isMenuClicked} class="left-rect-menu" />
+    <rect class:right-rect-cross={$isMenuClicked} class="right-rect-menu" />
   </svg>
 </button>

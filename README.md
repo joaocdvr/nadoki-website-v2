@@ -1,5 +1,5 @@
 # Nadoki Website
 
-Designed and developed by João Rodrigues.
+Designed and coded by @joaocdvr
 
-www.nadoki.com
+Check our current website version here: www.nadoki.com
