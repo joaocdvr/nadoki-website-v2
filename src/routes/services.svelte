@@ -13,4 +13,3 @@
 </style>
 
 <Header />
-<h1>Services</h1>

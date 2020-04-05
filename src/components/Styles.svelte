@@ -13,14 +13,43 @@
 
   :global(h1) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
-    font-size: 1.875rem;
-    text-align: center;
-    color: var(--main-color);
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--black);
   }
 
   :global(.body-regular) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
     font-size: 1rem;
+    color: var(--black);
+  }
+
+  :global(.body-bold) {
+    font-family: "syne-bold", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: var(--black);
+  }
+
+  :global(.body-extra) {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: var(--black);
+  }
+
+  :global(.body-italic) {
+    font-family: "syne-italic", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: var(--black);
+  }
+
+  :global(.body-mono) {
+    font-family: "syne-mono", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: var(--black);
   }
 </style>

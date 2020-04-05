@@ -13,4 +13,3 @@
 </style>
 
 <Header />
-<h1>About Us</h1>
