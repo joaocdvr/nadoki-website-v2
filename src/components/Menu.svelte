@@ -1,5 +1,13 @@
 <script>
-  import { isMenuClicked, handleMenuClick } from "./stores.js";
+  import {
+    isMenuClicked,
+    handleMenuClick,
+    handleServicesClick,
+    handleStudioClick,
+    handleWorkClick,
+    handleEquipmentClick,
+    handleAboutUsClick
+  } from "./stores.js";
 </script>
 
 <style>
@@ -10,6 +18,7 @@
     margin-top: 72px;
     padding: 20px 0px;
     line-height: 0;
+    visibility: hidden;
   }
 
   li {
@@ -18,7 +27,6 @@
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     transition-delay: 0ms;
-    visibility: hidden;
   }
 
   a {
@@ -100,7 +108,8 @@
     <a
       href="/services"
       aria-label="Link to Services Page"
-      on:click={handleMenuClick}>
+      on:click={handleMenuClick}
+      on:click={handleServicesClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -188,7 +197,8 @@
     <a
       href="/studio"
       aria-label="Link to Studio Page"
-      on:click={handleMenuClick}>
+      on:click={handleMenuClick}
+      on:click={handleStudioClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -253,7 +263,11 @@
     </a>
   </li>
   <li class:work-is-visible={$isMenuClicked}>
-    <a href="/work" aria-label="Link to Work Page" on:click={handleMenuClick}>
+    <a
+      href="/work"
+      aria-label="Link to Work Page"
+      on:click={handleMenuClick}
+      on:click={handleWorkClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -296,7 +310,8 @@
     <a
       href="/equipment"
       aria-label="Link to Equipment Page"
-      on:click={handleMenuClick}>
+      on:click={handleMenuClick}
+      on:click={handleEquipmentClick}>
       <svg
         class="equipment-svg"
         preserveAspectRatio="none"
@@ -353,7 +368,8 @@
     <a
       href="/about_us"
       aria-label="Link to About Us Page"
-      on:click={handleMenuClick}>
+      on:click={handleMenuClick}
+      on:click={handleAboutUsClick}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"

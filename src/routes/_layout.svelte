@@ -3,7 +3,6 @@
   import { isMenuClicked } from "../components/stores.js";
   import Styles from "../components/Styles.svelte";
   import NavBar from "../components/NavBar.svelte";
-  import Header from "../components/Header.svelte";
   import { onMount } from "svelte";
 
   onMount(() => {
@@ -12,6 +11,7 @@
 </script>
 
 <style>
+  /* Scrollbar hiding */
   .menuIsOpened {
     overflow: hidden;
     max-height: 100vh;
@@ -20,6 +20,5 @@
 
 <body class:menuIsOpened={$isMenuClicked}>
   <NavBar />
-  <Header />
   <slot />
 </body>
