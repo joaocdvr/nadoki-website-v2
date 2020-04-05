@@ -7,12 +7,12 @@
     padding: 1.5rem;
   }
 
-  :global(.user-is-tabbing) a:focus {
-    background-color: var(--main-color);
-  }
-
   a:focus {
     outline: none;
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    background-color: var(--main-color);
   }
 
   svg {

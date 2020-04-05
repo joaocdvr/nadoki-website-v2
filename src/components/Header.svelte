@@ -21,7 +21,7 @@
     display: block;
     margin: auto;
     text-align: center;
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     max-width: 50rem;
     height: 1.5rem;
     fill: var(--white);

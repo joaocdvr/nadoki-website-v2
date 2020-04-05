@@ -52,4 +52,11 @@
     font-size: 1rem;
     color: var(--black);
   }
+
+  :global(.caption) {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--black);
+  }
 </style>

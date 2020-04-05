@@ -3,18 +3,18 @@
 </script>
 
 <style>
-  :global(.user-is-tabbing) button:focus {
-    background-color: var(--main-color);
+  button {
+    border: none;
+    cursor: pointer;
+    padding: 1.5rem;
   }
 
   button:focus {
     outline: none;
   }
 
-  button {
-    border: none;
-    cursor: pointer;
-    padding: 1.5rem;
+  :global(.user-is-tabbing) button:focus {
+    background-color: var(--main-color);
   }
 
   svg {

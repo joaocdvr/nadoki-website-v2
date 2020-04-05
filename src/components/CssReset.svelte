@@ -16,6 +16,7 @@
   }
   :global(ol, ul) {
     list-style: none;
+    line-height: 0;
   }
   :global(blockquote, q) {
     quotes: none;
