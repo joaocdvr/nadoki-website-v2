@@ -12,7 +12,7 @@
     left: 0;
     width: 100vw;
     max-width: 100%;
-    height: 72px;
+    height: 4.5rem;
     display: flex;
     justify-content: space-between;
     background-color: var(--white);
@@ -25,7 +25,7 @@
     z-index: -1;
     background-color: var(--black);
     width: 100vw;
-    height: 72px;
+    height: 4.5rem;
     right: -100vw;
     transition: transform 500ms ease;
     transition-delay: 500ms;

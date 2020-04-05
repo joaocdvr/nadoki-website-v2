@@ -14,16 +14,16 @@
   ul {
     position: absolute;
     width: 100vw;
-    height: calc(100vh - 72px);
-    margin-top: 72px;
-    padding: 20px 0px;
+    height: calc(100vh - 4.5rem);
+    margin-top: 4.5rem;
+    padding: 1.25rem 0;
     line-height: 0;
     visibility: hidden;
   }
 
   li {
     text-align: center;
-    padding: 20px 0px;
+    padding: 1.25rem 0;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     transition-delay: 0ms;
@@ -39,71 +39,74 @@
 
   a:focus {
     outline: none;
-    padding: 0px 24px;
+    padding: 0 1.5rem;
   }
 
   svg {
-    width: calc(100vw - 48px);
-    max-width: 800px;
-    min-height: 24px;
-    height: calc(((100vh - 312px) * 0.1875) + ((100vh - 312px) * 0.25 / 4 / 5));
+    width: calc(100vw - 3rem);
+    max-width: 50rem;
+    min-height: 1.5rem;
+    height: calc(
+      ((100vh - 19.5rem) * 0.1875) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
+    );
     fill: var(--white);
   }
 
   /* Equipment height fix */
   .equipment-svg {
-    min-height: 30px;
-    height: calc(((100vh - 312px) * 0.25) + ((100vh - 312px) * 0.25 / 4 / 5));
+    min-height: 1.875rem;
+    height: calc(
+      ((100vh - 19.5rem) * 0.25) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
+    );
   }
 
   .equipment-li {
-    padding-bottom: calc(20px - (100vh - 312px) * 0.25 / 4);
+    padding-bottom: calc(1.25rem - (100vh - 19.5rem) * 0.25 / 4);
   }
 
   @media only screen and (min-height: 632px) {
     .equipment-svg {
-      height: calc(((100vh - 312px) * 0.25));
+      height: calc(((100vh - 19.5rem) * 0.25));
     }
   }
 
   /* Menu entries animation */
-  .services-is-visible {
+  .menu-is-visible {
     visibility: visible;
+  }
+
+  .services-is-visible {
     opacity: 1;
     transition: all 600ms ease-in-out;
     transition-delay: 400ms;
   }
 
   .studio-is-visible {
-    visibility: visible;
     opacity: 1;
     transition: all 600ms ease-in-out;
     transition-delay: 500ms;
   }
 
   .work-is-visible {
-    visibility: visible;
     opacity: 1;
     transition: all 600ms ease-in-out;
     transition-delay: 600ms;
   }
 
   .equipment-is-visible {
-    visibility: visible;
     opacity: 1;
     transition: all 600ms ease-in-out;
     transition-delay: 700ms;
   }
 
   .about-us-is-visible {
-    visibility: visible;
     opacity: 1;
     transition: all 600ms ease-in-out;
     transition-delay: 800ms;
   }
 </style>
 
-<ul>
+<ul class:menu-is-visible={$isMenuClicked}>
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"

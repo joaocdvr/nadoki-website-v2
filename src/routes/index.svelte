@@ -7,7 +7,7 @@
 </style>
 
 <h1>Homepage</h1>
-<p>
+<p class="body-regular">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in erat ut
   mauris tempor molestie vel et massa. Nam venenatis sem in nunc lacinia
   pulvinar. Sed sit amet orci in neque pulvinar posuere. Maecenas dapibus

@@ -12,8 +12,8 @@
   header {
     width: 100vw;
     max-width: 100%;
-    padding: 40px 0;
-    margin-top: 72px;
+    padding: 2.5rem 0;
+    margin-top: 4.5rem;
     background-color: var(--main-color);
   }
 
@@ -21,19 +21,19 @@
     display: block;
     margin: auto;
     text-align: center;
-    width: calc(100vw - 48px);
-    max-width: 800px;
-    height: 24px;
+    width: calc(100vw - 3rem);
+    max-width: 50rem;
+    height: 1.5rem;
     fill: var(--white);
   }
 
   /* Equipment height fix */
   .equipment-svg {
-    height: 30px;
+    height: 1.875rem;
   }
 
   .equipment-padding {
-    padding: 40px 0 34px 0;
+    padding: 2.5rem 0 2.125rem 0;
   }
 </style>
 

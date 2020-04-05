@@ -4,7 +4,7 @@
 
 <style>
   a {
-    padding: 24px;
+    padding: 1.5rem;
   }
 
   :global(.user-is-tabbing) a:focus {
@@ -16,13 +16,12 @@
   }
 
   svg {
-    width: 40px;
-    height: 24px;
+    width: 2.5rem;
+    height: 1.5rem;
     fill: var(--black);
     transition: fill 300ms ease-in-out;
     transition-delay: 0;
   }
-
   /* Fill animation */
   .is-white {
     fill: var(--white);

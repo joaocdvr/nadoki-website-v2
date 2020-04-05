@@ -13,8 +13,14 @@
 
   :global(h1) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     color: var(--main-color);
+  }
+
+  :global(.body-regular) {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
   }
 </style>
