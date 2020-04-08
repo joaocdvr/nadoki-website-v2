@@ -6,6 +6,7 @@
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    max-width: 100%;
   }
   :global(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
     display: block;
@@ -39,6 +40,7 @@
     color: inherit;
     font: inherit;
     line-height: normal;
+    max-width: 100%;
   }
 
   :global(html) {

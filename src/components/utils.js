@@ -1,3 +1,4 @@
+// Function that identifies if the user is navigating with a mouse or tab
 export function focusOnlyWhenNeeded() {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
