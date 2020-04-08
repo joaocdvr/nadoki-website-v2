@@ -59,4 +59,18 @@
     font-size: 0.75rem;
     color: var(--black);
   }
+
+  :global(.list-name) {
+    font-family: "syne-bold", Arial, Helvetica, sans-serif;
+    line-height: 3rem;
+    font-size: 1rem;
+    color: var(--black);
+  }
+
+  :global(.list-content) {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--black);
+  }
 </style>

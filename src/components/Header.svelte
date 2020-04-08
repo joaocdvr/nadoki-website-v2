@@ -11,7 +11,6 @@
 <style>
   header {
     width: 100vw;
-    max-width: 100%;
     padding: 2.5rem 0;
     margin-top: 4.5rem;
     background-color: var(--main-color);

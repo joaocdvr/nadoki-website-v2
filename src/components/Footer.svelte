@@ -1,6 +1,7 @@
 <style>
   a {
     text-decoration: none;
+    color: var(--black);
   }
   a:active,
   a:visited {
@@ -22,10 +23,8 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100vw;
-    max-width: 100%;
     padding: 1.5rem;
-    height: calc(100vh - 4.5rem);
-
+    min-height: calc(100vh - 4.5rem);
     background-color: var(--main-color);
   }
 
