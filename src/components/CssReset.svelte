@@ -15,7 +15,7 @@
   :global(body) {
     line-height: 1;
   }
-  :global(ol, ul) {
+  :global(ol, ul, menu) {
     list-style: none;
     line-height: 0;
   }

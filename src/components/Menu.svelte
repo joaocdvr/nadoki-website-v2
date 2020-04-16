@@ -11,7 +11,7 @@
 </script>
 
 <style>
-  ul {
+  menu {
     position: absolute;
     width: 100vw;
     height: calc(100vh - 4.5rem);
@@ -106,7 +106,7 @@
   }
 </style>
 
-<ul class:menu-is-visible={$isMenuClicked}>
+<menu class:menu-is-visible={$isMenuClicked}>
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
@@ -453,4 +453,4 @@
       </svg>
     </a>
   </li>
-</ul>
+</menu>
