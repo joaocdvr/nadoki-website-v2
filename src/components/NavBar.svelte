@@ -16,6 +16,7 @@
     justify-content: space-between;
     background-color: var(--white);
     backface-visibility: hidden;
+    z-index: 1;
   }
 
   hr {

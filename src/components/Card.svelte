@@ -9,6 +9,12 @@
 <style>
   img {
     width: 100vw;
+    filter: grayscale(1);
+    transition: filter 300ms ease-in-out;
+  }
+
+  img:hover {
+    filter: grayscale(0);
   }
 
   div {
