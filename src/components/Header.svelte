@@ -23,7 +23,7 @@
     width: calc(100% - 3rem);
     max-width: 50rem;
     height: 1.5rem;
-    fill: var(--white);
+    fill: var(--black);
   }
 
   /* Equipment height fix */
