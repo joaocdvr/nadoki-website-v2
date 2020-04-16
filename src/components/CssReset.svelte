@@ -44,6 +44,10 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  :global(a) {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   :global(html) {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
