@@ -41,6 +41,7 @@
     font: inherit;
     line-height: normal;
     max-width: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
 
   :global(html) {
