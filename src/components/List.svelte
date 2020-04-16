@@ -21,8 +21,12 @@
     background-color: var(--main-color);
   }
 
-  li {
+  dl {
     padding: 0 1.5rem;
+  }
+
+  dd {
+    padding-bottom: 0.5rem;
   }
 
   hr {
@@ -35,19 +39,19 @@
 
 <svelte:options immutable={true} />
 
-<li>
+<dl>
   <button
     on:click
     aria-label="Toggle {list.name} list"
     aria-pressed={list.open}>
-    <p class="list-name">{list.name}</p>
+    <dt class="list-name">{list.name}</dt>
     <p class="list-name">{list.open ? '-' : '+'}</p>
   </button>
 
   {#if list.open}
-    <p class="list-content" transition:slide>
+    <dd class="list-content" transition:slide>
       {@html list.content}
-    </p>
+    </dd>
   {/if}
   <hr noshade />
-</li>
+</dl>
