@@ -50,7 +50,7 @@
     <h1>{card.title}</h1>
     {#if $isStudioClicked}
       <h2 class="body-bold">{card.size}</h2>
-      <hr noshade />
+      <hr style="height: 0.1rem" noshade />
     {/if}
     <p class="body-regular">{card.content}</p>
     {#if $isWorkClicked}
