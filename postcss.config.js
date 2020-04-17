@@ -1,5 +1,9 @@
 module.exports = {
   plugins: {
-    "postcss-preset-env": {},
+    "postcss-preset-env": {
+      features: {
+        "custom-media-queries": {},
+      },
+    },
   },
 };

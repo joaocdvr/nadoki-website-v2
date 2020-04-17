@@ -60,7 +60,7 @@
   }
 
   /* Media query for tablet-portrait (and larger) */
-  @media (min-width: 480px) {
+  @media (--narrow-window) {
     menu {
       padding: 0;
     }
@@ -80,6 +80,27 @@
 
   /* Media query for tablet-portrait (and larger) */
   @media (min-width: 768px) {
+    menu,
+    li {
+      padding: 1.25rem 0;
+    }
+
+    svg {
+      max-width: 50rem;
+      height: 3rem;
+    }
+    /* Equipment height fix */
+    .equipment-svg {
+      height: 3.75rem;
+    }
+
+    .equipment-li {
+      padding-bottom: 0.875rem;
+    }
+  }
+
+  /* Media query for laptops (and larger) */
+  @media (min-width: 1200px) {
     menu,
     li {
       padding: 1.25rem 0;
