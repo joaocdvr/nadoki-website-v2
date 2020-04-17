@@ -1,15 +1,17 @@
 <script>
-  import Styles from "../components/CssReset.svelte";
+  import CssReset from "../components/CssReset.svelte";
   import SyneFont from "../components/SyneFont.svelte";
 </script>
 
-<style>
+<style global>
   :global(:root) {
     /* Colors */
     --main-color: #00ff00;
     --white: #ffffff;
     --black: #000000;
   }
+
+  @custom-media --narrow-window (max-width: 30em);
 
   :global(h1) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
