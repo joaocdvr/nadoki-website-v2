@@ -59,8 +59,23 @@
     padding-bottom: 0.875rem;
   }
 
-  /* Media query for mobile-landscape (and larger) */
+  /* Media query for tablet-portrait (and larger) */
   @media (min-width: 480px) {
+    li {
+      padding: 0.75rem 0;
+    }
+
+    svg {
+      max-width: 25rem;
+    }
+
+    .equipment-li {
+      padding-bottom: 0.375rem;
+    }
+  }
+
+  /* Media query for tablet-portrait (and larger) */
+  @media (min-width: 768px) {
     svg {
       max-width: 50rem;
       min-height: 1.5rem;
@@ -80,7 +95,8 @@
     }
   }
 
-  @media (min-width: 480px) and (min-height: 632px) {
+  /* Media query to fix equipment height when the height of the screen is > 632px */
+  @media (min-width: 768px) and (min-height: 632px) {
     .equipment-svg {
       height: calc(((100vh - 19.5rem) * 0.25));
     }
