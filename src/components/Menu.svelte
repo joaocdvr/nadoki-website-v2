@@ -61,6 +61,10 @@
 
   /* Media query for tablet-portrait (and larger) */
   @media (min-width: 480px) {
+    menu {
+      padding: 0;
+    }
+
     li {
       padding: 0.75rem 0;
     }
@@ -76,9 +80,13 @@
 
   /* Media query for tablet-portrait (and larger) */
   @media (min-width: 768px) {
+    menu,
+    li {
+      padding: 1.25rem 0;
+    }
+
     svg {
       max-width: 50rem;
-      min-height: 1.5rem;
       height: calc(
         ((100vh - 19.5rem) * 0.1875) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
       );
