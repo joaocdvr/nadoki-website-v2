@@ -7,8 +7,13 @@
 </script>
 
 <style>
-  img {
+  li {
     width: 100vw;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
     filter: grayscale(1);
     transition: filter 300ms ease-in-out;
   }

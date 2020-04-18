@@ -18,13 +18,13 @@
   svg {
     width: 2.5rem;
     height: 1.5rem;
-    fill: var(--black);
+    fill: var(--dark);
     transition: fill 300ms ease-in-out;
     transition-delay: 0;
   }
   /* Fill animation */
   .is-white {
-    fill: var(--white);
+    fill: var(--light);
     transition-delay: 100ms;
   }
 </style>

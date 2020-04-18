@@ -24,7 +24,7 @@
 
   /* Menu icon */
   .left-rect-menu {
-    fill: var(--black);
+    fill: var(--dark);
     width: 0.3rem;
     height: 1.5rem;
     transition: 300ms ease-in-out;
@@ -32,7 +32,7 @@
   }
 
   .middle-rect-menu {
-    fill: var(--black);
+    fill: var(--dark);
     width: 0.3rem;
     height: 1.5rem;
     transform: translateX(0.6rem);
@@ -42,7 +42,7 @@
   }
 
   .right-rect-menu {
-    fill: var(--black);
+    fill: var(--dark);
     width: 0.3rem;
     height: 1.5rem;
     transform: translateX(1.2rem);
@@ -61,7 +61,7 @@
 
   /* Menu cross */
   .left-rect-cross {
-    fill: var(--white);
+    fill: var(--light);
     height: 1.820625rem;
     transform-origin: top right;
     transform: rotate(45deg) translate(1.35rem, 0.15rem);
@@ -72,7 +72,7 @@
   }
 
   .right-rect-cross {
-    fill: var(--white);
+    fill: var(--light);
     height: 1.820625rem;
     transform-origin: top left;
     transform: rotate(-45deg) translate(-0.15rem, 0.15rem);

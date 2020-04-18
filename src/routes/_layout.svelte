@@ -18,7 +18,7 @@
   }
 </style>
 
-<body class:menuIsOpened={$isMenuClicked}>
+<div class:menuIsOpened={$isMenuClicked}>
   <NavBar />
   <slot />
-</body>
+</div>

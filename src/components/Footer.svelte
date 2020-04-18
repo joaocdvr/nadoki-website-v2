@@ -1,21 +1,21 @@
 <style>
   a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--dark);
   }
   a:active,
   a:visited {
-    color: var(--black);
+    color: var(--dark);
     outline: none;
   }
 
   a:focus {
-    color: var(--black);
+    color: var(--dark);
     outline: none;
   }
 
   :global(.user-is-tabbing) a:focus {
-    background-color: var(--white);
+    background-color: var(--light);
   }
 
   footer {
@@ -41,7 +41,7 @@
   svg {
     width: 1.5rem;
     height: 1.5rem;
-    fill: var(--black);
+    fill: var(--dark);
   }
 
   .p-cta {

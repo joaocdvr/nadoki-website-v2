@@ -46,7 +46,7 @@
     width: calc(100vw - 3rem);
     min-height: 1.5rem;
     height: 1.5rem;
-    fill: var(--white);
+    fill: var(--light);
   }
 
   /* Equipment height fix */

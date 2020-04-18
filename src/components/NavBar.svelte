@@ -14,7 +14,7 @@
     height: 4.5rem;
     display: flex;
     justify-content: space-between;
-    background-color: var(--white);
+    background-color: var(--light);
     backface-visibility: hidden;
     z-index: 1;
   }
@@ -36,7 +36,7 @@
   .nav-bg {
     position: absolute;
     z-index: -1;
-    background-color: var(--black);
+    background-color: var(--dark);
     width: 100vw;
     height: 4.5rem;
     right: -100vw;
@@ -58,7 +58,7 @@
   .menu-bg {
     position: absolute;
     z-index: -1;
-    background-color: var(--black);
+    background-color: var(--dark);
     width: 100vw;
     height: 100vh;
     top: -100vh;
