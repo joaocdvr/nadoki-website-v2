@@ -5,8 +5,10 @@
 <style>
   a {
     text-decoration: none;
-    display: flex;
-    justify-content: center;
+    border-radius: 5rem;
+    text-align: center;
+    color: var(--dark);
+    background-color: var(--main-color);
   }
   a:active,
   a:visited {
@@ -15,26 +17,26 @@
   }
 
   a:focus {
-    color: var(--dark);
+    background-color: var(--light);
     outline: none;
+    box-shadow: inset 0 0 0 0.2rem var(--main-color);
   }
 
   div {
-    margin: 2.5rem 0;
-    background-color: var(--main-color);
-    text-align: center;
-    width: fit-content;
-    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 0;
   }
 
   p {
     padding: 0.5rem 1.5rem;
-    color: var(--dark);
   }
 </style>
 
-<a href={button.href} aria-label={button.label} target="_blank">
-  <div>
-    <p class="body-bold">{button.text}</p>
-  </div>
-</a>
+<div>
+  <a href={button.href} aria-label={button.label} target="_blank">
+    <span>
+      <p class="body-bold">{button.text}</p>
+    </span>
+  </a>
+</div>
