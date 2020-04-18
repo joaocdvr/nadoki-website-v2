@@ -2,6 +2,7 @@
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import List from "../components/List.svelte";
+  import Tab from "../components/Tab.svelte";
   import { handleEquipmentClick } from "../components/stores.js";
   import { onMount } from "svelte";
 
@@ -9,7 +10,7 @@
     handleEquipmentClick();
   });
 
-  let lists = [
+  let hardwareList = [
     { open: false, name: "Computer", content: "— Mac Pro 5.1" },
     {
       open: false,
@@ -104,7 +105,7 @@
   ];
 
   function handleListToggle(x) {
-    lists = lists.map(list => {
+    hardwareList = hardwareList.map(list => {
       if (list === x) {
         return {
           name: list.name,
@@ -122,8 +123,9 @@
 </style>
 
 <Header />
+<Tab />
 <ul>
-  {#each lists as list}
+  {#each hardwareList as list}
     <List {list} on:click={() => handleListToggle(list)} />
   {/each}
 </ul>
