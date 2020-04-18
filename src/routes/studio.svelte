@@ -11,7 +11,7 @@
 
   let cards = [
     {
-      src: "studio/nadoki_studios_1.png",
+      src: "studio/nadoki_studios_1.jpg",
       alt: "Nadoki Studios picture nº1",
       title: "NADOKI",
       size: "20m²",
@@ -20,7 +20,7 @@
       tags: ""
     },
     {
-      src: "studio/riverside_1.png",
+      src: "studio/riverside_1.jpg",
       alt: "Riverside Studios picture nº1",
       title: "RIVERSIDE STUDIOS",
       size: "1700m²",
@@ -29,7 +29,7 @@
       tags: ""
     },
     {
-      src: "studio/the_lab_1.png",
+      src: "studio/the_lab_1.jpg",
       alt: "The Lab picture nº1",
       title: "THE LAB",
       size: "100m²",
@@ -38,7 +38,7 @@
       tags: ""
     },
     {
-      src: "studio/studio_10.png",
+      src: "studio/studio_10.jpg",
       alt: "Studio 10 picture nº1",
       title: "STUDIO 10",
       size: "20m²",

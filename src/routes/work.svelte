@@ -11,28 +11,28 @@
 
   let cards = [
     {
-      src: "work/above_it_all.png",
+      src: "work/above_it_all.jpg",
       alt: "'Above It ALL' cover hurt",
       title: "ABOVE IT ALL",
       content: "Song by Mind Against.",
       tags: "Master"
     },
     {
-      src: "work/parda.png",
+      src: "work/parda.jpg",
       alt: "'Parda' cover hurt",
       title: "PARDA",
       content: "A Brazilian documentary, directed by Tai Linhares.",
       tags: "5.1 Mix"
     },
     {
-      src: "work/love_hurts.png",
+      src: "work/love_hurts.jpg",
       alt: "'Love Hurts' cover art",
       title: "LOVE HURTS",
       content: "Song by Osaka88.",
       tags: "Mix, Master"
     },
     {
-      src: "work/der_hauptbanhof.png",
+      src: "work/der_hauptbanhof.jpg",
       alt: "'Der Hauptbanhof' cover art",
       title: "DER HAUPTBANHOF",
       content:
@@ -40,7 +40,7 @@
       tags: "Sound Design, Post-Production"
     },
     {
-      src: "work/ertrinken.png",
+      src: "work/ertrinken.jpg",
       alt: "Frame from 'Ertrinken'",
       title: "ERTRINKEN",
       content:
@@ -48,7 +48,7 @@
       tags: "Sound Design"
     },
     {
-      src: "work/a_juventude_por_ela_própria.png",
+      src: "work/a_juventude_por_ela_própria.jpg",
       alt: "Frame from 'A juventude por ela própria'",
       title: "A JUVENTUDE POR ELA PRÓPRIA",
       content:
