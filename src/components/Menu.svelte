@@ -194,7 +194,7 @@
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
-      aria-label="Link to Services Page"
+      aria-label="Services page"
       on:click={handleMenuClick}
       on:click={handleServicesClick}>
       <svg
@@ -283,7 +283,7 @@
   <li class:studio-is-visible={$isMenuClicked}>
     <a
       href="/studio"
-      aria-label="Link to Studio Page"
+      aria-label="Studio page"
       on:click={handleMenuClick}
       on:click={handleStudioClick}>
       <svg
@@ -352,7 +352,7 @@
   <li class:work-is-visible={$isMenuClicked}>
     <a
       href="/work"
-      aria-label="Link to Work Page"
+      aria-label="Work page"
       on:click={handleMenuClick}
       on:click={handleWorkClick}>
       <svg
@@ -396,7 +396,7 @@
   <li class="equipment-li" class:equipment-is-visible={$isMenuClicked}>
     <a
       href="/equipment"
-      aria-label="Link to Equipment Page"
+      aria-label="Equipment page"
       on:click={handleMenuClick}
       on:click={handleEquipmentClick}>
       <svg
@@ -454,7 +454,7 @@
   <li class:about-us-is-visible={$isMenuClicked}>
     <a
       href="/about_us"
-      aria-label="Link to About Us Page"
+      aria-label="About Us page"
       on:click={handleMenuClick}
       on:click={handleAboutUsClick}>
       <svg

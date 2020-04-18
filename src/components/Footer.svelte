@@ -61,14 +61,14 @@
       @
       <a
         target="_blank"
-        aria-label="Link to Riverside Studios' website"
+        aria-label="Riverside Studios' website"
         href="https://riversidestudios.de">
         Riverside Studios
       </a>
       <br />
       <a
         target="_blank"
-        aria-label="Link to Nadoki's adress"
+        aria-label="Nadoki's address"
         href="https://goo.gl/maps/gYojUUpPSQornBWh9">
         Pfuelstraße 5
         <br />
@@ -81,7 +81,7 @@
   <ul>
     <a
       target="_blank"
-      aria-label="Link to Nadoki's Instagram page"
+      aria-label="Nadoki's Instagram page"
       href="https://www.instagram.com/nadokistudios">
       <li>
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@
     </a>
     <a
       target="_blank"
-      aria-label="Link to Nadoki's Facebook page"
+      aria-label="Nadoki's Facebook page"
       href="https://www.facebook.com/nadokistudios">
       <li>
         <svg viewBox="0 0 12 24" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +123,7 @@
     </a>
     <a
       target="_blank"
-      aria-label="Link to Nadoki's Messenger"
+      aria-label="Nadoki's Messenger"
       href="https://www.m.me/nadokistudios">
       <li>
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +140,7 @@
     </a>
     <a
       target="_blank"
-      aria-label="Link to Nadoki's WhatsApp"
+      aria-label="Nadoki's WhatsApp"
       href="https://wa.me/4917643965731">
       <li>
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +173,7 @@
     </a>
     <a
       target="_blank"
-      aria-label="Link to Nadoki's Email"
+      aria-label="Nadoki's Email"
       href="mailto:info@nadoki.com">
       <li>
         <svg viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">

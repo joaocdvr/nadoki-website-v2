@@ -33,10 +33,7 @@
   }
 </style>
 
-<a
-  href={button.href}
-  aria-label="Link to the pdf version of the equipment list"
-  target="_blank">
+<a href={button.href} aria-label={button.label} target="_blank">
   <div>
     <p class="body-bold">{button.text}</p>
   </div>

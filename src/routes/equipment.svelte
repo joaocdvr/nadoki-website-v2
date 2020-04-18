@@ -120,7 +120,8 @@
 
   let pdfButton = {
     text: "PDF VERSION",
-    href: "/documents/nadoki_equipment_list.pdf"
+    href: "/documents/nadoki_equipment_list.pdf",
+    label: "PDF version of the equipment list"
   };
 </script>
 

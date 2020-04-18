@@ -29,11 +29,12 @@
   }
 </style>
 
-<a href="/" aria-label="Link to Homepage (Nadoki Logo)">
+<a href="/" aria-label="Homepage">
   <svg
     class:is-white={$isMenuClicked}
     on:click={$isMenuClicked ? handleMenuClick : () => null}
     preserveAspectRatio="none"
+    alt="Nadoki logo"
     viewBox="0 0 40 24"
     xmlns="http://www.w3.org/2000/svg">
     <path
