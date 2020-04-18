@@ -1,8 +1,9 @@
 <script>
   import Header from "../components/Header.svelte";
-  import Footer from "../components/Footer.svelte";
-  import List from "../components/List.svelte";
   import Tab from "../components/Tab.svelte";
+  import List from "../components/List.svelte";
+  import Button from "../components/Button.svelte";
+  import Footer from "../components/Footer.svelte";
   import { handleEquipmentClick } from "../components/stores.js";
   import { onMount } from "svelte";
 
@@ -104,7 +105,7 @@
     }
   ];
 
-  function handleListToggle(x) {
+  function handleHardwareListToggle(x) {
     hardwareList = hardwareList.map(list => {
       if (list === x) {
         return {
@@ -116,6 +117,11 @@
       return list;
     });
   }
+
+  let pdfButton = {
+    text: "PDF VERSION",
+    href: "/documents/nadoki_equipment_list.pdf"
+  };
 </script>
 
 <style>
@@ -126,7 +132,8 @@
 <Tab />
 <ul>
   {#each hardwareList as list}
-    <List {list} on:click={() => handleListToggle(list)} />
+    <List {list} on:click={() => handleHardwareListToggle(list)} />
   {/each}
 </ul>
+<Button button={pdfButton} />
 <Footer />
