@@ -21,7 +21,7 @@
     margin: 1rem auto;
   }
 
-  @media (min-width: 480px) {
+  @media (--mobile-landscape) {
     h1 {
       font-size: 4rem;
     }

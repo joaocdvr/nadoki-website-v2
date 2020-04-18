@@ -2,6 +2,7 @@
 export function focusOnlyWhenNeeded() {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
+      //9 is the keycode for the Tab key //
       document.body.classList.add("user-is-tabbing");
 
       window.removeEventListener("keydown", handleFirstTab);

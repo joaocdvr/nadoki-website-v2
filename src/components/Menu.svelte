@@ -59,78 +59,6 @@
     padding-bottom: 0.875rem;
   }
 
-  /* Media query for tablet-portrait (and larger) */
-  @media (--narrow-window) {
-    menu {
-      padding: 0;
-    }
-
-    li {
-      padding: 0.75rem 0;
-    }
-
-    svg {
-      max-width: 25rem;
-    }
-
-    .equipment-li {
-      padding-bottom: 0.375rem;
-    }
-  }
-
-  /* Media query for tablet-portrait (and larger) */
-  @media (min-width: 768px) {
-    menu,
-    li {
-      padding: 1.25rem 0;
-    }
-
-    svg {
-      max-width: 50rem;
-      height: 3rem;
-    }
-    /* Equipment height fix */
-    .equipment-svg {
-      height: 3.75rem;
-    }
-
-    .equipment-li {
-      padding-bottom: 0.875rem;
-    }
-  }
-
-  /* Media query for laptops (and larger) */
-  @media (min-width: 1200px) {
-    menu,
-    li {
-      padding: 1.25rem 0;
-    }
-
-    svg {
-      max-width: 50rem;
-      height: calc(
-        ((100vh - 19.5rem) * 0.1875) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
-      );
-    }
-    /* Equipment height fix */
-    .equipment-svg {
-      height: calc(
-        ((100vh - 19.5rem) * 0.25) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
-      );
-    }
-
-    .equipment-li {
-      padding-bottom: calc(1.25rem - (100vh - 19.5rem) * 0.25 / 4);
-    }
-  }
-
-  /* Media query to fix equipment height when the height of the screen is > 632px */
-  @media (min-width: 768px) and (min-height: 632px) {
-    .equipment-svg {
-      height: calc(((100vh - 19.5rem) * 0.25));
-    }
-  }
-
   /* Menu entries animation */
   .menu-is-visible {
     visibility: visible;
@@ -164,6 +92,101 @@
     opacity: 1;
     transition: all 600ms ease-in-out;
     transition-delay: 800ms;
+  }
+
+  /* Media queries */
+  @media (--mobile-landscape) {
+    menu {
+      padding: 0;
+    }
+
+    li {
+      padding: 0.75rem 0;
+    }
+
+    svg {
+      max-width: 25rem;
+    }
+
+    .equipment-li {
+      padding-bottom: 0.375rem;
+    }
+  }
+
+  @media (--tablet-portrait) {
+    menu,
+    li {
+      padding: 1.25rem 0;
+    }
+
+    svg {
+      height: 4rem;
+      max-width: 35rem;
+    }
+
+    /* Equipment height fix */
+    .equipment-svg {
+      height: 5.25rem;
+    }
+
+    .equipment-li {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (--tablet-landscape) {
+    menu,
+    li {
+      padding: 1.25rem 0;
+    }
+
+    svg {
+      max-width: 50rem;
+      height: calc(
+        ((100vh - 19.5rem) * 0.1875) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
+      );
+    }
+    /* Equipment height fix */
+    .equipment-svg {
+      height: calc(
+        ((100vh - 19.5rem) * 0.25) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
+      );
+    }
+
+    .equipment-li {
+      padding-bottom: calc(1.25rem - (100vh - 19.5rem) * 0.25 / 4);
+    }
+  }
+
+  /* Media query to fix equipment height when the height of the screen is > 632px */
+  @media (min-width: 75rem) and (min-height: 39.5rem) and (orientation: landscape) {
+    .equipment-svg {
+      height: calc(((100vh - 19.5rem) * 0.25));
+    }
+  }
+
+  @media (--mobile-landscape-big) {
+    menu {
+      padding: 0;
+    }
+
+    li {
+      padding: 0.75rem 0;
+    }
+
+    svg {
+      max-width: 30rem;
+      height: 1.5rem;
+    }
+
+    /* Equipment height fix */
+    .equipment-svg {
+      height: 1.875rem;
+    }
+
+    .equipment-li {
+      padding-bottom: 0.375rem;
+    }
   }
 </style>
 
