@@ -17,7 +17,7 @@
     handleEquipmentClick();
   });
 
-  let equipmentTab = [
+  $: equipmentTab = [
     {
       title: "Hardware",
       function: handleHardwareClick,
