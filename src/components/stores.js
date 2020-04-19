@@ -1,15 +1,18 @@
 import { writable } from "svelte/store";
 
+// Menu handling
 export const isMenuClicked = writable(false);
+
+export function handleMenuClick() {
+  isMenuClicked.update((n) => !n);
+}
+
+// Page handling
 export const isServicesClicked = writable(false);
 export const isStudioClicked = writable(false);
 export const isWorkClicked = writable(false);
 export const isEquipmentClicked = writable(false);
 export const isAboutUsClicked = writable(false);
-
-export function handleMenuClick() {
-  isMenuClicked.update((n) => !n);
-}
 
 export function handleServicesClick() {
   isServicesClicked.set(true);
@@ -49,4 +52,18 @@ export function handleAboutUsClick() {
   isWorkClicked.set(false);
   isEquipmentClicked.set(false);
   isAboutUsClicked.set(true);
+}
+
+// Equipment page tab handling
+export const isHardwareClicked = writable(true);
+export const isSoftwareClicked = writable(false);
+
+export function handleHardwareClick() {
+  isHardwareClicked.set(true);
+  isSoftwareClicked.set(false);
+}
+
+export function handleSoftwareClick() {
+  isHardwareClicked.set(false);
+  isSoftwareClicked.set(true);
 }

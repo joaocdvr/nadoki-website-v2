@@ -4,12 +4,31 @@
   import List from "../components/List.svelte";
   import Button from "../components/Button.svelte";
   import Footer from "../components/Footer.svelte";
-  import { handleEquipmentClick } from "../components/stores.js";
+  import {
+    handleEquipmentClick,
+    isHardwareClicked,
+    isSoftwareClicked,
+    handleHardwareClick,
+    handleSoftwareClick
+  } from "../components/stores.js";
   import { onMount } from "svelte";
 
   onMount(() => {
     handleEquipmentClick();
   });
+
+  let equipmentTab = [
+    {
+      title: "Hardware",
+      function: handleHardwareClick,
+      variable: $isHardwareClicked
+    },
+    {
+      title: "Software",
+      function: handleSoftwareClick,
+      variable: $isSoftwareClicked
+    }
+  ];
 
   let hardwareList = [
     { open: false, name: "Computer", content: "— Mac Pro 5.1" },
@@ -118,6 +137,33 @@
     });
   }
 
+  let softwareList = [
+    {
+      open: false,
+      name: "DAWs",
+      content: "— Ableton 9 & 10<br>— Pro Tools 2019.6<br>— Logic Pro X"
+    },
+    {
+      open: false,
+      name: "Plug-ins",
+      content:
+        "— Antares: Auto-Key | Auto-Tune Pro<br>— Cableguys: Half-Time | TimeShaper<br>— Camel Audio: CamelCrusher<br>— Celemony: Melodyne 4 Studio<br>— Fabfilter: Pro-Q 2<br>— Illformed: Glitch 2<br>— iZotope: Music Production Suite<br>— Lexicon: LXPChamber | LXPHall | LXPPlate | LXRRoom<br>— Native Instruments: Komplete 12 Ultimate<br>— oeksound: soothe<br>— Process.Audio: Sugar<br>— Plugin Alliance: bx_cleansweep V2 | bx_rockrack V3 Player | bx_solo | bx_subfilter | dearVR Pro | elysia niveau filter | Schoeps Double MS | SPL Free Ranger<br>— Slate Digital: All Access Pass<br>— Softube: Saturation Knob<br>— Sonarworks: Reference 4<br>— Sonnox: Oxford Dynamic EQ | Oxford Inflator | Oxford Limiter<br>— Soundtoys: Soundtoys 5<br>— Valhalla DSP: ValhallaVintageVerb<br>— Waves: Aphex Vintage Exciter | API 550 | Butch Vig Vocals | Chris Lord-Alge Signature | dbx 160 Compressor/Limiter | Horizon | J37 Tape | Linear Phase Multiband Compressor | Nx | SSL G-Equalizer/Master Buss Compressor | StudioRack | Waves Tune Real-Time<br>— Xfer Records: Serum | Cthulhu"
+    }
+  ];
+
+  function handleSoftwareListToggle(x) {
+    softwareList = softwareList.map(list => {
+      if (list === x) {
+        return {
+          name: list.name,
+          content: list.content,
+          open: !list.open
+        };
+      }
+      return list;
+    });
+  }
+
   let pdfButton = {
     text: "PDF VERSION",
     href: "/documents/nadoki_equipment_list.pdf",
@@ -130,11 +176,18 @@
 </style>
 
 <Header />
-<Tab />
+<Tab tab={equipmentTab} />
 <ul>
-  {#each hardwareList as list}
-    <List {list} on:click={() => handleHardwareListToggle(list)} />
-  {/each}
+  {#if $isHardwareClicked}
+    {#each hardwareList as list}
+      <List {list} on:click={() => handleHardwareListToggle(list)} />
+    {/each}
+  {:else}
+    {#each softwareList as list}
+      <List {list} on:click={() => handleSoftwareListToggle(list)} />
+    {/each}
+  {/if}
+
 </ul>
 <Button button={pdfButton} />
 <Footer />
