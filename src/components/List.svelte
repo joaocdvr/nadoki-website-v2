@@ -1,5 +1,5 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { slide, fade } from "svelte/transition";
 
   export let list = [];
 </script>
@@ -39,7 +39,7 @@
 
 <svelte:options immutable={true} />
 
-<dl>
+<dl in:fade={{ duration: 800 }} out:fade={{ duration: 100 }}>
   <button
     on:click
     aria-label="Toggle {list.name} list"
