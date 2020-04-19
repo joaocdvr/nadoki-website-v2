@@ -171,10 +171,6 @@
   };
 </script>
 
-<style>
-
-</style>
-
 <Header />
 <Tab tab={equipmentTab} />
 <ul>

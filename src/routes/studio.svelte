@@ -49,10 +49,6 @@
   ];
 </script>
 
-<style>
-
-</style>
-
 <Header />
 <ul>
   {#each cards as card}

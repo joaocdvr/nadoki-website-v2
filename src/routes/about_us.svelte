@@ -9,9 +9,5 @@
   });
 </script>
 
-<style>
-
-</style>
-
 <Header />
 <Footer />

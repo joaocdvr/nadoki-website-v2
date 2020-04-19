@@ -93,7 +93,7 @@
 
 <button
   on:click={handleMenuClick}
-  aria-label="Toggle Menu Page"
+  aria-label="Toggle main menu"
   aria-pressed={$isMenuClicked}>
   <svg
     viewbox="0 0 1.5rem 1.5rem"
