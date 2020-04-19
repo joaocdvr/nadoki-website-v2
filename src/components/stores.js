@@ -67,3 +67,46 @@ export function handleSoftwareClick() {
   isHardwareClicked.set(false);
   isSoftwareClicked.set(true);
 }
+
+// Services page nav handling
+export const isMusicClicked = writable(false);
+export const isFilmClicked = writable(false);
+export const isGameClicked = writable(false);
+export const isBrandingClicked = writable(false);
+export const isAnyServiceClicked = writable(false);
+
+export function handleMusicClick() {
+  if (isMusicClicked == true) {
+    isAnyServiceClicked.set(false);
+  } else {
+    isMusicClicked.set(true);
+    isFilmClicked.set(false);
+    isGameClicked.set(false);
+    isBrandingClicked.set(false);
+    isAnyServiceClicked.set(true);
+  }
+}
+
+export function handleFilmClick() {
+  isMusicClicked.set(false);
+  isFilmClicked.set(true);
+  isGameClicked.set(false);
+  isBrandingClicked.set(false);
+  isAnyServiceClicked.set(true);
+}
+
+export function handleGameClick() {
+  isMusicClicked.set(false);
+  isFilmClicked.set(false);
+  isGameClicked.set(true);
+  isBrandingClicked.set(false);
+  isAnyServiceClicked.set(true);
+}
+
+export function handleBrandingClick() {
+  isMusicClicked.set(false);
+  isFilmClicked.set(false);
+  isGameClicked.set(false);
+  isBrandingClicked.set(true);
+  isAnyServiceClicked.set(true);
+}
