@@ -76,57 +76,33 @@ export const isBrandingClicked = writable(false);
 export const isAnyServiceClicked = writable(false);
 
 export function handleMusicClick() {
-  let clicked = get(isMusicClicked);
-  if (clicked === true) {
-    isMusicClicked.set(false);
-    isAnyServiceClicked.set(false);
-  } else {
-    isMusicClicked.set(true);
-    isFilmClicked.set(false);
-    isGameClicked.set(false);
-    isBrandingClicked.set(false);
-    isAnyServiceClicked.set(true);
-  }
+  isMusicClicked.set(true);
+  isFilmClicked.set(false);
+  isGameClicked.set(false);
+  isBrandingClicked.set(false);
+  isAnyServiceClicked.set(true);
 }
 
 export function handleFilmClick() {
-  let clicked = get(isFilmClicked);
-  if (clicked === true) {
-    isFilmClicked.set(false);
-    isAnyServiceClicked.set(false);
-  } else {
-    isMusicClicked.set(false);
-    isFilmClicked.set(true);
-    isGameClicked.set(false);
-    isBrandingClicked.set(false);
-    isAnyServiceClicked.set(true);
-  }
+  isMusicClicked.set(false);
+  isFilmClicked.set(true);
+  isGameClicked.set(false);
+  isBrandingClicked.set(false);
+  isAnyServiceClicked.set(true);
 }
 
 export function handleGameClick() {
-  let clicked = get(isGameClicked);
-  if (clicked === true) {
-    isGameClicked.set(false);
-    isAnyServiceClicked.set(false);
-  } else {
-    isMusicClicked.set(false);
-    isFilmClicked.set(false);
-    isGameClicked.set(true);
-    isBrandingClicked.set(false);
-    isAnyServiceClicked.set(true);
-  }
+  isMusicClicked.set(false);
+  isFilmClicked.set(false);
+  isGameClicked.set(true);
+  isBrandingClicked.set(false);
+  isAnyServiceClicked.set(true);
 }
 
 export function handleBrandingClick() {
-  let clicked = get(isBrandingClicked);
-  if (clicked === true) {
-    isBrandingClicked.set(false);
-    isAnyServiceClicked.set(false);
-  } else {
-    isMusicClicked.set(false);
-    isFilmClicked.set(false);
-    isGameClicked.set(false);
-    isBrandingClicked.set(true);
-    isAnyServiceClicked.set(true);
-  }
+  isMusicClicked.set(false);
+  isFilmClicked.set(false);
+  isGameClicked.set(false);
+  isBrandingClicked.set(true);
+  isAnyServiceClicked.set(true);
 }
