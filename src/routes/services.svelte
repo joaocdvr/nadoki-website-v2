@@ -8,7 +8,8 @@
     isMusicClicked,
     isFilmClicked,
     isGameClicked,
-    isBrandingClicked
+    isBrandingClicked,
+    isAnyServiceClicked
   } from "../components/stores.js";
   import { onMount } from "svelte";
 
@@ -67,4 +68,6 @@
 {#if $isBrandingClicked}
   <Tab tab={brandingTab} />
 {/if}
-<Footer />
+{#if !$isAnyServiceClicked}
+  <Footer />
+{/if}
