@@ -44,6 +44,8 @@
   ul {
     display: flex;
     justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
   }
 </style>
 
