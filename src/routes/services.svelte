@@ -19,37 +19,67 @@
 
   $: musicTab = [
     {
-      title: "Music 1"
+      title: "Mixing"
     },
     {
-      title: "Music 2"
+      title: "Mastering"
+    },
+    {
+      title: "Recording"
+    },
+    {
+      title: "Editing"
+    },
+    {
+      title: "Restoration"
+    },
+    {
+      title: "Production"
     }
   ];
 
   $: filmTab = [
     {
-      title: "Film 1"
+      title: "Mixing"
     },
     {
-      title: "Film 2"
+      title: "Mastering"
+    },
+    {
+      title: "Editing"
+    },
+    {
+      title: "Sound Design/Foley"
+    },
+    {
+      title: "Original Soundtrack"
     }
   ];
 
   $: gameTab = [
     {
-      title: "Game 1"
+      title: "Mixing"
     },
     {
-      title: "Game 2"
+      title: "Sound Design"
+    },
+    {
+      title: "Original Soundtrack"
+    },
+    {
+      title: "Integration"
     }
   ];
 
   $: brandingTab = [
     {
-      title: "Branding 1"
+      title: "Sound Logo"
     },
     {
-      title: "Branding 2"
+      title: "Podcast"
+    },
+    {
+      title: "Advertisement"
     }
   ];
 </script>

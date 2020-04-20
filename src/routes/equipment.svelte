@@ -21,12 +21,14 @@
     {
       title: "Hardware",
       function: handleHardwareClick,
-      variable: $isHardwareClicked
+      variable: $isHardwareClicked,
+      justTwo: true
     },
     {
       title: "Software",
       function: handleSoftwareClick,
-      variable: $isSoftwareClicked
+      variable: $isSoftwareClicked,
+      justTwo: true
     }
   ];
 

@@ -7,16 +7,19 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
   button {
-    width: 50vw;
+    height: 3.5rem;
     border: none;
     cursor: pointer;
     text-align: center;
-    padding: 1rem 0;
-    color: var(--light);
+    flex: 0 0 auto;
     background-color: var(--dark);
+    box-shadow: inset 0 0 0 0.2rem var(--dark);
   }
 
   button:focus {
@@ -28,19 +31,22 @@
     background-color: var(--main-color);
   }
 
-  hr {
-    position: absolute;
-    bottom: 0;
-    width: 50vw;
-    max-width: 50%;
-    height: 0.3rem;
-    border-width: 0;
-    background-color: var(--main-color);
-    margin: 0;
+  p {
+    color: var(--light);
+    margin: 1rem 1.5rem;
+    transition: color 300ms ease-in-out;
   }
 
-  .is-clicked {
+  .is-clicked-color {
     color: var(--main-color);
+  }
+
+  .is-clicked-box-shadow {
+    box-shadow: inset 0 0 0 0.2rem var(--main-color);
+  }
+
+  .just-two {
+    width: 50%;
   }
 </style>
 
@@ -50,12 +56,9 @@
       on:click={tab.function}
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}
-      class="body-bold"
-      class:is-clicked={tab.variable}>
-      {tab.title}
-      {#if tab.variable}
-        <hr noshade />
-      {/if}
+      class:is-clicked-box-shadow={tab.variable}
+      class:just-two={tab.justTwo}>
+      <p class="body-bold" class:is-clicked-color={tab.variable}>{tab.title}</p>
     </button>
   {/each}
 </menu>
