@@ -39,7 +39,7 @@
 
 <svelte:options immutable={true} />
 
-<dl in:fade={{ duration: 800 }} out:fade={{ duration: 100 }}>
+<dl in:fade>
   <button
     on:click
     aria-label="Toggle {list.name} list"
