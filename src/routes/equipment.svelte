@@ -6,10 +6,10 @@
   import Footer from "../components/Footer.svelte";
   import {
     handleEquipmentClick,
-    isHardwareClicked,
-    isSoftwareClicked,
-    handleHardwareClick,
-    handleSoftwareClick
+    isEquipmentHardwareClicked,
+    isEquipmentSoftwareClicked,
+    handleHardwareSubmenuClick,
+    handleSoftwareSubmenuClick
   } from "../components/stores.js";
   import { onMount } from "svelte";
 
@@ -20,14 +20,14 @@
   $: equipmentTab = [
     {
       title: "Hardware",
-      function: handleHardwareClick,
-      variable: $isHardwareClicked,
+      function: handleHardwareSubmenuClick,
+      variable: $isEquipmentHardwareClicked,
       justTwo: true
     },
     {
       title: "Software",
-      function: handleSoftwareClick,
-      variable: $isSoftwareClicked,
+      function: handleSoftwareSubmenuClick,
+      variable: $isEquipmentSoftwareClicked,
       justTwo: true
     }
   ];
@@ -173,10 +173,16 @@
   };
 </script>
 
+<style>
+  ul {
+    padding-bottom: 2.5rem;
+  }
+</style>
+
 <Header />
 <Tab tab={equipmentTab} />
 <ul>
-  {#if $isHardwareClicked}
+  {#if $isEquipmentHardwareClicked}
     {#each hardwareList as list}
       <List {list} on:click={() => handleHardwareListToggle(list)} />
     {/each}
@@ -185,7 +191,6 @@
       <List {list} on:click={() => handleSoftwareListToggle(list)} />
     {/each}
   {/if}
-
 </ul>
 <Button button={pdfButton} />
 <Footer />

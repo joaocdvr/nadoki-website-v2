@@ -25,7 +25,7 @@
   div {
     display: flex;
     justify-content: center;
-    padding: 2.5rem 0;
+    padding-bottom: 2.5rem;
   }
 
   p {
