@@ -131,8 +131,8 @@
       if (list === x) {
         return {
           name: list.name,
-          content: list.content
-          // open: !list.open
+          content: list.content,
+          open: !list.open
         };
       }
       return list;
@@ -158,8 +158,8 @@
       if (list === x) {
         return {
           name: list.name,
-          content: list.content
-          // open: !list.open
+          content: list.content,
+          open: !list.open
         };
       }
       return list;
