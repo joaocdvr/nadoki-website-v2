@@ -42,7 +42,7 @@
 <ul>
   {#each cards as card, i}
     <li
-      in:fade={{ delay: i * 250, duration: 1000, easing: quadInOut }}
+      in:fade={{ delay: 300 + i * 250, duration: 1000, easing: quadInOut }}
       out:fade={{ duration: 300 }}>
       <span>
         <hr noshade />
