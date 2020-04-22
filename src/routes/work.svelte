@@ -9,7 +9,7 @@
     handleWorkClick();
   });
 
-  let cards = [
+  let workCards = [
     {
       src: "work/above_it_all.jpg",
       alt: "'Above It ALL' album cover art",
@@ -59,9 +59,5 @@
 </script>
 
 <Header />
-<ul>
-  {#each cards as card}
-    <Card {card} />
-  {/each}
-</ul>
+<Card cards={workCards} />
 <Footer />

@@ -1,16 +1,13 @@
 <script>
   import { isStudioClicked, isWorkClicked } from "../components/stores.js";
   import Tag from "../components/Tag.svelte";
+  import { fade } from "svelte/transition";
+  import { quadInOut } from "svelte/easing";
 
-  export let card = [];
-  export let tags = card.tags.split(",");
+  export let cards = [];
 </script>
 
 <style>
-  li {
-    width: 100vw;
-  }
-
   img {
     width: 100%;
     height: auto;
@@ -40,32 +37,29 @@
     background-color: var(--main-color);
     margin: 0;
   }
-
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-  }
 </style>
 
-<li>
-  <hr noshade />
-  <img src={card.src} alt={card.alt} />
-  <hr noshade />
-  <div>
-    <h1>{card.title}</h1>
-    {#if $isStudioClicked}
-      <h2 class="body-bold">{card.size}</h2>
-      <hr style="height: 0.1rem" noshade />
-    {/if}
-    <p class="body-regular">{card.content}</p>
-    {#if $isWorkClicked}
-      <ul>
-        {#each tags as tag}
-          <Tag {tag} />
-        {/each}
-      </ul>
-    {/if}
-  </div>
-</li>
+<ul>
+  {#each cards as card, i}
+    <li
+      in:fade={{ delay: i * 250, duration: 1000, easing: quadInOut }}
+      out:fade={{ duration: 300 }}>
+      <span>
+        <hr noshade />
+        <img src={card.src} alt={card.alt} />
+        <hr noshade />
+      </span>
+      <div>
+        <h1>{card.title}</h1>
+        {#if $isStudioClicked}
+          <h2 class="body-bold">{card.size}</h2>
+          <hr style="height: 0.1rem" noshade />
+        {/if}
+        <p class="body-regular">{card.content}</p>
+        {#if $isWorkClicked}
+          <Tag tags={card.tags} />
+        {/if}
+      </div>
+    </li>
+  {/each}
+</ul>

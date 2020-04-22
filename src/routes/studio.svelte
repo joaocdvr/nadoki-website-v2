@@ -9,7 +9,7 @@
     handleStudioClick();
   });
 
-  let cards = [
+  let studioCards = [
     {
       src: "studio/nadoki_studios_1.jpg",
       alt: "Nadoki Studios picture nº1",
@@ -50,9 +50,5 @@
 </script>
 
 <Header />
-<ul>
-  {#each cards as card}
-    <Card {card} />
-  {/each}
-</ul>
+<Card cards={studioCards} />
 <Footer />

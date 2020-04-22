@@ -1,5 +1,6 @@
 <script>
-  export let tag = "";
+  export let tags = [];
+  export let splitTags = tags.split(",");
 </script>
 
 <style>
@@ -12,8 +13,19 @@
     background-color: var(--main-color);
     padding: 0.375rem;
   }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
 </style>
 
-<li>
-  <p class="body-bold">{tag}</p>
-</li>
+<ul>
+  {#each splitTags as tag}
+    <li>
+      <p class="body-bold">{tag}</p>
+    </li>
+  {/each}
+</ul>
