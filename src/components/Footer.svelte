@@ -1,3 +1,15 @@
+<script>
+  import {
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
+  } from "./stores.js";
+  import { fade } from "svelte/transition";
+  import { quadIn, quadOut } from "svelte/easing";
+</script>
+
 <style>
   a {
     text-decoration: none;
@@ -53,7 +65,9 @@
   }
 </style>
 
-<footer>
+<footer
+  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <p class="body-extra p-cta">LET'S HAVE A BEER!</p>
 
   <address>

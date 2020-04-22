@@ -1,8 +1,15 @@
 <script>
-  import { isStudioClicked, isWorkClicked } from "./stores.js";
+  import {
+    isStudioClicked,
+    isWorkClicked,
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
+  } from "./stores.js";
   import Tag from "./Tag.svelte";
   import { fade } from "svelte/transition";
-  import { quadIn, quadOut } from "svelte/easing";
 
   export let cards = [];
 </script>
@@ -42,8 +49,8 @@
 <ul>
   {#each cards as card, i}
     <li
-      in:fade={{ delay: 300 + i * 250, duration: 1000, easing: quadIn }}
-      out:fade={{ duration: 200, easing: quadOut }}>
+      in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
+      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       <span>
         <hr noshade />
         <img src={card.src} alt={card.alt} />

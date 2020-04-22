@@ -1,4 +1,11 @@
 <script>
+  import {
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
+  } from "./stores.js";
   import { fade } from "svelte/transition";
   import { quadIn, quadOut } from "svelte/easing";
 
@@ -54,8 +61,8 @@
 </style>
 
 <menu
-  in:fade={{ delay: 300, duration: 300, easing: quadIn }}
-  out:fade={{ duration: 200, easing: quadOut }}>
+  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   {#each tab as tab}
     <button
       on:click={tab.function}

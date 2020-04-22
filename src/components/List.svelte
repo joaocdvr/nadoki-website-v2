@@ -1,7 +1,13 @@
 <script>
+  import {
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
+  } from "./stores.js";
   import { handleListToggle } from "./utils.js";
   import { slide, fade } from "svelte/transition";
-  import { quadIn, quadOut } from "svelte/easing";
 
   export let inputList = [];
 </script>
@@ -48,8 +54,8 @@
 <ul>
   {#each inputList as outputList, i}
     <dl
-      in:fade={{ delay: 300 + i * 100, duration: 300, easing: quadIn }}
-      out:fade={{ duration: 200, easing: quadOut }}>
+      in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
+      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       <button
         on:click={() => handleListToggle(inputList, outputList)}
         aria-label="Toggle {outputList.name} list"
