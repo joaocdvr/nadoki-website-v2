@@ -19,3 +19,17 @@ export function focusOnlyWhenNeeded() {
 
   window.addEventListener("keydown", handleFirstTab);
 }
+
+// Function that handles the toggling of the list component
+export function handleListToggle(closedList, openList) {
+  closedList = closedList.map((list) => {
+    if (list === openList) {
+      return {
+        name: list.name,
+        content: list.content,
+        open: !list.open,
+      };
+    }
+    return list;
+  });
+}
