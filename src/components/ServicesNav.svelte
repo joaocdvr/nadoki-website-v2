@@ -40,14 +40,19 @@
     height: 100%;
     width: 100%;
     fill: var(--dark);
+    transition: height 400ms ease-in-out;
   }
 
   .last-button {
     margin-bottom: 0;
   }
 
-  .is-small {
+  .button-is-small {
     height: 2rem;
+  }
+
+  .svg-is-small {
+    height: 100%;
   }
 </style>
 
@@ -56,11 +61,12 @@
     on:click={handleMusicClick}
     aria-label="Toggle music submenu"
     aria-pressed={$isMusicClicked}
-    class:is-small={$isAnyServiceClicked}>
+    class:button-is-small={$isAnyServiceClicked}>
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+      class:svg-is-small={$isAnyServiceClicked}>
       <path
         d="M78.3984 0.986783V31.0602H64.7876V15.6476L47.3657
         31.0602H31.0327L13.6108 15.6946V31.0602H0V0.986783H13.6108L39.1448
@@ -119,11 +125,12 @@
     on:click={handleFilmClick}
     aria-label="Toggle film submenu"
     aria-pressed={$isFilmClicked}
-    class:is-small={$isAnyServiceClicked}>
+    class:button-is-small={$isAnyServiceClicked}>
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+      class:svg-is-small={$isAnyServiceClicked}>
       <path
         d="M19.112 9.5V13.75H66.5097V22.25H19.112V32H0V0H77.0595V9.5H19.112Z" />
       <path d="M110.309 0V32H91.197V0H110.309Z" />
@@ -137,11 +144,12 @@
     on:click={handleGameClick}
     aria-label="Toggle game submenu"
     aria-pressed={$isGameClicked}
-    class:is-small={$isAnyServiceClicked}>
+    class:button-is-small={$isAnyServiceClicked}>
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+      class:svg-is-small={$isAnyServiceClicked}>
       <path
         d="M71.9075 31.0588H60.2597C60.2597 29.1451 60.9926 26.3529 62.4585
         22.6824C60.438 25.5686 57.0902 27.8431 52.4152 29.5059C47.7799 31.1686
@@ -172,12 +180,13 @@
     on:click={handleBrandingClick}
     aria-label="Toggle branding submenu"
     aria-pressed={$isBrandingClicked}
-    class:is-small={$isAnyServiceClicked}
+    class:button-is-small={$isAnyServiceClicked}
     class="last-button">
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+      class:svg-is-small={$isAnyServiceClicked}>
       <path
         d="M26.2778 15.8118C28.9764 15.9686 31.0224 16.5333 32.416
         17.5059C33.8095 18.4471 34.5062 20.1255 34.5062 22.5412C34.5062 25.3961
