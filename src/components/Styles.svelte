@@ -1,6 +1,6 @@
 <script>
-  import CssReset from "../components/CssReset.svelte";
-  import SyneFont from "../components/SyneFont.svelte";
+  import CssReset from "./CssReset.svelte";
+  import SyneFont from "./SyneFont.svelte";
 </script>
 
 <style global>

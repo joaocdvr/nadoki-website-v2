@@ -1,6 +1,6 @@
 <script>
-  import Tab from "../components/Tab.svelte";
-  import TextBlock from "../components/TextBlock.svelte";
+  import Tab from "./Tab.svelte";
+  import TextBlock from "./TextBlock.svelte";
   import {
     handleServicesClick,
     isMusicClicked,
@@ -44,7 +44,7 @@
     handleBrandingSecondSubmenuClick,
     isBrandingThirdClicked,
     handleBrandingThirdSubmenuClick
-  } from "../components/stores.js";
+  } from "./stores.js";
 
   $: musicTab = [
     {
