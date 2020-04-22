@@ -1,7 +1,7 @@
 <script>
   import { handleListToggle } from "./utils.js";
   import { slide, fade } from "svelte/transition";
-  import { quadInOut } from "svelte/easing";
+  import { quadIn, quadOut } from "svelte/easing";
 
   export let inputList = [];
 </script>
@@ -48,8 +48,8 @@
 <ul>
   {#each inputList as outputList, i}
     <dl
-      in:fade={{ delay: 300 + i * 100, duration: 300, easing: quadInOut }}
-      out:fade={{ duration: 300 }}>
+      in:fade={{ delay: 300 + i * 100, duration: 300, easing: quadIn }}
+      out:fade={{ duration: 200, easing: quadOut }}>
       <button
         on:click={() => handleListToggle(inputList, outputList)}
         aria-label="Toggle {outputList.name} list"

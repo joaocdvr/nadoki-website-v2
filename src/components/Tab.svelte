@@ -1,4 +1,7 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { quadIn, quadOut } from "svelte/easing";
+
   export let tab = [];
 </script>
 
@@ -50,7 +53,9 @@
   }
 </style>
 
-<menu>
+<menu
+  in:fade={{ delay: 300, duration: 300, easing: quadIn }}
+  out:fade={{ duration: 200, easing: quadOut }}>
   {#each tab as tab}
     <button
       on:click={tab.function}

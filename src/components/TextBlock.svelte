@@ -1,5 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
+  import { quadIn, quadOut } from "svelte/easing";
 
   export let content;
 </script>
@@ -14,8 +15,10 @@
   }
 </style>
 
-<div>
-  <p class="body-regular" in:fade>
+<div
+  in:fade={{ delay: 300, duration: 300, easing: quadIn }}
+  out:fade={{ duration: 200, easing: quadOut }}>
+  <p class="body-regular">
     {@html content}
   </p>
 </div>
