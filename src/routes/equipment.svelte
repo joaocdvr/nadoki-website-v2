@@ -126,6 +126,19 @@
     }
   ];
 
+  function handleHardwareListToggle(x) {
+    hardwareList = hardwareList.map(list => {
+      if (list === x) {
+        return {
+          name: list.name,
+          content: list.content,
+          open: !list.open
+        };
+      }
+      return list;
+    });
+  }
+
   let softwareList = [
     {
       open: false,
@@ -140,6 +153,19 @@
     }
   ];
 
+  function handleSoftwareListToggle(x) {
+    softwareList = softwareList.map(list => {
+      if (list === x) {
+        return {
+          name: list.name,
+          content: list.content,
+          open: !list.open
+        };
+      }
+      return list;
+    });
+  }
+
   let pdfButton = {
     text: "PDF VERSION",
     href: "/documents/nadoki_equipment_list.pdf",
@@ -147,12 +173,30 @@
   };
 </script>
 
+<style>
+  ul {
+    padding-bottom: 2.5rem;
+  }
+</style>
+
 <Header />
 <Tab tab={equipmentTab} />
-{#if $isEquipmentHardwareClicked}
-  <List inputList={hardwareList} />
-{:else}
-  <List inputList={softwareList} />
-{/if}
+<ul>
+  {#if $isEquipmentHardwareClicked}
+    {#each hardwareList as listItem, i}
+      <List
+        {listItem}
+        {i}
+        on:click={() => handleHardwareListToggle(listItem)} />
+    {/each}
+  {:else}
+    {#each softwareList as listItem, i}
+      <List
+        {listItem}
+        {i}
+        on:click={() => handleSoftwareListToggle(listItem)} />
+    {/each}
+  {/if}
+</ul>
 <Button button={pdfButton} />
 <Footer />

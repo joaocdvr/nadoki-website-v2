@@ -6,10 +6,10 @@
     animationOutDuration,
     animationOutEasing
   } from "./stores.js";
-  import { handleListToggle } from "./utils.js";
   import { slide, fade } from "svelte/transition";
 
-  export let inputList = [];
+  export let listItem = [];
+  export let i = 0;
 </script>
 
 <style>
@@ -27,10 +27,6 @@
 
   :global(.user-is-tabbing) button:focus {
     background-color: var(--main-color);
-  }
-
-  ul {
-    padding-bottom: 2.5rem;
   }
 
   dl {
@@ -51,25 +47,21 @@
 
 <svelte:options immutable={true} />
 
-<ul>
-  {#each inputList as outputList, i}
-    <dl
-      in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
-      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-      <button
-        on:click={() => handleListToggle(inputList, outputList)}
-        aria-label="Toggle {outputList.name} list"
-        aria-pressed={outputList.open}>
-        <dt class="list-name">{outputList.name}</dt>
-        <p class="list-name">{outputList.open ? '-' : '+'}</p>
-      </button>
+<dl
+  in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+  <button
+    on:click
+    aria-label="Toggle {listItem.name} list"
+    aria-pressed={listItem.open}>
+    <dt class="list-name">{listItem.name}</dt>
+    <p class="list-name">{listItem.open ? '-' : '+'}</p>
+  </button>
 
-      {#if outputList.open}
-        <dd class="list-content" transition:slide>
-          {@html outputList.content}
-        </dd>
-      {/if}
-      <hr noshade />
-    </dl>
-  {/each}
-</ul>
+  {#if listItem.open}
+    <dd class="list-content" transition:slide>
+      {@html listItem.content}
+    </dd>
+  {/if}
+  <hr noshade />
+</dl>
