@@ -1,5 +1,6 @@
 <script>
-  import { isMenuClicked, handleMenuClick } from "./stores.js";
+  import { isMenuClicked } from "./stores.js";
+  import { handleMenuClick } from "./utils.js";
 </script>
 
 <style>

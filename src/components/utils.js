@@ -33,3 +33,10 @@ export function handleListToggle(closedList, openList) {
     return list;
   });
 }
+
+// Funtion that handles menu click
+import { isMenuClicked } from "./stores.js";
+
+export function handleMenuClick() {
+  isMenuClicked.update((n) => !n);
+}

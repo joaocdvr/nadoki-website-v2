@@ -6,15 +6,11 @@ export const animationInDelay = readable(300);
 export const animationInDuration = readable(300);
 export const animationInEasing = readable(quadInOut);
 
-export const animationOutDuration = readable(200);
+export const animationOutDuration = readable(100);
 export const animationOutEasing = readable(quadInOut);
 
 // Menu handling
 export const isMenuClicked = writable(false);
-
-export function handleMenuClick() {
-  isMenuClicked.update((n) => !n);
-}
 
 // Page handling
 export const isServicesClicked = writable(false);

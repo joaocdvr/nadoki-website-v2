@@ -1,13 +1,13 @@
 <script>
   import {
     isMenuClicked,
-    handleMenuClick,
     handleServicesClick,
     handleStudioClick,
     handleWorkClick,
     handleEquipmentClick,
     handleAboutUsClick
   } from "./stores.js";
+  import { handleMenuClick } from "./utils.js";
 </script>
 
 <style>
