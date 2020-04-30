@@ -1,6 +1,7 @@
 <script>
   import Tab from "./Tab.svelte";
   import TextBlock from "./TextBlock.svelte";
+  import Footer from "../components/Footer.svelte";
   import {
     handleServicesClick,
     isMusicClicked,
@@ -236,4 +237,8 @@
   {:else if $isBrandingThirdClicked}
     <TextBlock content={brandingTab[2].content} />
   {/if}
+{/if}
+
+{#if $isAnyServiceClicked}
+  <Footer />
 {/if}
