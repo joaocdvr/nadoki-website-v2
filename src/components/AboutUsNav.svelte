@@ -29,7 +29,7 @@
   button {
     width: 50vw;
     max-width: 50%;
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 
   button:focus {

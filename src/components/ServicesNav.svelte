@@ -14,13 +14,13 @@
 
 <style>
   menu {
-    padding: 1.25rem;
+    padding: 1.5rem;
     line-height: 0;
   }
 
   button {
     width: 100vw;
-    height: calc((100vh - 14.75rem) / 4);
+    height: calc((100vh - 15.5rem) / 4);
     min-height: 2rem;
     margin-bottom: 0.5rem;
     border: none;
