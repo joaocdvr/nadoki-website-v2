@@ -8,8 +8,14 @@
     handleJoaoClick,
     isJuliaClicked,
     handleJuliaClick,
-    isAnyOfUsClicked
+    isAnyOfUsClicked,
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
   } from "../components/stores.js";
+  import { fade } from "svelte/transition";
 </script>
 
 <style>
@@ -92,7 +98,10 @@
   }
 </style>
 
-<menu class:menu-open={$isAnyOfUsClicked}>
+<menu
+  class:menu-open={$isAnyOfUsClicked}
+  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
     class="alper"
     class:any-button-open={$isAnyOfUsClicked}
