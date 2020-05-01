@@ -113,11 +113,11 @@
       class:specific-img-open={$isAnyOfUsClicked}
       src="about_us/alper.png"
       alt="Alper Arslan" />
-    <p class={$isAlperClicked ? 'header-big' : 'body-bold'}>
+    <h2 class={$isAlperClicked ? 'header-big' : 'body-bold'}>
       {#if $isEliaClicked || $isJoaoClicked || $isJuliaClicked}
         Alper
       {:else if !$isAnyOfUsClicked}Alper Arslan{/if}
-    </p>
+    </h2>
   </button>
   <button
     class="elia"
@@ -130,11 +130,11 @@
       class:specific-img-open={$isAnyOfUsClicked}
       src="about_us/elia.png"
       alt="Elia Bertolaso" />
-    <p class="body-bold">
+    <h2 class="body-bold">
       {#if $isAlperClicked || $isJoaoClicked || $isJuliaClicked}
         Elia
       {:else if !$isAnyOfUsClicked}Elia Bertolaso{/if}
-    </p>
+    </h2>
   </button>
   <button
     class="joao"
@@ -147,11 +147,11 @@
       class:specific-img-open={$isAnyOfUsClicked}
       src="about_us/joao.png"
       alt="João Rodrigues" />
-    <p class="body-bold">
+    <h2 class="body-bold">
       {#if $isAlperClicked || $isEliaClicked || $isJuliaClicked}
         João
       {:else if !$isAnyOfUsClicked}João Rodrigues{/if}
-    </p>
+    </h2>
   </button>
   <button
     class="julia"
@@ -164,10 +164,10 @@
       class:specific-img-open={$isAnyOfUsClicked}
       src="about_us/julia.png"
       alt="Julia Borelli" />
-    <p class="body-bold">
+    <h2 class="body-bold">
       {#if $isAlperClicked || $isEliaClicked || $isJoaoClicked}
         Julia
       {:else if !$isAnyOfUsClicked}Julia Borelli{/if}
-    </p>
+    </h2>
   </button>
 </menu>

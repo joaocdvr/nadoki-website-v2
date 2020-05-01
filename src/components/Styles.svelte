@@ -80,4 +80,11 @@
     font-size: 1rem;
     color: var(--dark);
   }
+
+  :global(small) {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 1.125rem;
+    font-size: 0.75rem;
+    color: var(--dark);
+  }
 </style>
