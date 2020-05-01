@@ -278,3 +278,43 @@ export function handleBrandingThirdSubmenuClick() {
   isBrandingSecondClicked.set(false);
   isBrandingThirdClicked.set(true);
 }
+
+// About us page handling
+
+export const isAlperClicked = writable(false);
+export const isEliaClicked = writable(false);
+export const isJoaoClicked = writable(false);
+export const isJuliaClicked = writable(false);
+export const isAnyOfUsClicked = writable(false);
+
+export function handleAlperClick() {
+  isAlperClicked.set(true);
+  isEliaClicked.set(false);
+  isJoaoClicked.set(false);
+  isJuliaClicked.set(false);
+  isAnyOfUsClicked.set(true);
+}
+
+export function handleEliaClick() {
+  isAlperClicked.set(false);
+  isEliaClicked.set(true);
+  isJoaoClicked.set(false);
+  isJuliaClicked.set(false);
+  isAnyOfUsClicked.set(true);
+}
+
+export function handleJoaoClick() {
+  isAlperClicked.set(false);
+  isEliaClicked.set(false);
+  isJoaoClicked.set(true);
+  isJuliaClicked.set(false);
+  isAnyOfUsClicked.set(true);
+}
+
+export function handleJuliaClick() {
+  isAlperClicked.set(false);
+  isEliaClicked.set(false);
+  isJoaoClicked.set(false);
+  isJuliaClicked.set(true);
+  isAnyOfUsClicked.set(true);
+}

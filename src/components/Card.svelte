@@ -57,7 +57,7 @@
         <hr noshade />
       </span>
       <div>
-        <h1>{card.title}</h1>
+        <h1 class="header-small">{card.title}</h1>
         {#if $isStudioClicked}
           <h2 class="body-bold">{card.size}</h2>
           <hr style="height: 0.1rem" noshade />

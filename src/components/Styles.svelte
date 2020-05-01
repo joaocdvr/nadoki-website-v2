@@ -11,10 +11,17 @@
     --dark: #000000;
   }
 
-  :global(h1) {
+  :global(.header-small) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 2rem;
     font-size: 1rem;
+    color: var(--dark);
+  }
+
+  :global(.header-big) {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 2.5rem;
+    font-size: 1.625rem;
     color: var(--dark);
   }
 
