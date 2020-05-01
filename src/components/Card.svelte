@@ -30,7 +30,7 @@
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   }
 
-  h2 {
+  h3 {
     padding-bottom: 1.5rem;
   }
 
@@ -57,9 +57,9 @@
         <hr noshade />
       </span>
       <div>
-        <h1 class="header-small">{card.title}</h1>
+        <h2 class="header-small">{card.title}</h2>
         {#if $isStudioClicked}
-          <h2 class="body-bold">{card.size}</h2>
+          <h3 class="body-bold">{card.size}</h3>
           <hr style="height: 0.1rem" noshade />
         {/if}
         <p class="body-regular">{card.content}</p>
