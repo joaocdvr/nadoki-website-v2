@@ -6,6 +6,7 @@
 <style>
   a {
     padding: 1.5rem;
+    display: inline-block;
   }
 
   a:focus {

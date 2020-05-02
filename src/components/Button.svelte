@@ -19,7 +19,7 @@
     background-color: var(--main-color);
     color: var(--dark);
     outline: none;
-    box-shadow: inset 0 0 0 0.2rem var(--dark);
+    box-shadow: inset 0 0 0 0.125rem var(--dark);
   }
 
   div {

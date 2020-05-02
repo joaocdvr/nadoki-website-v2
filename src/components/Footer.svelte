@@ -14,6 +14,7 @@
   a {
     text-decoration: none;
     color: var(--dark);
+    display: inline-block;
   }
   a:active,
   a:visited {
@@ -43,11 +44,19 @@
   ul {
     display: flex;
     flex-direction: row;
-    margin-left: -1rem;
+    flex-wrap: wrap;
+  }
+
+  ul :last-child {
+    margin-right: 0;
   }
 
   li {
-    padding: 1rem;
+    min-width: 2.5rem;
+    width: calc((100vw - 5rem) / 5);
+    box-shadow: inset 0 0 0 0.125rem var(--dark);
+    text-align: center;
+    margin: 0.5rem 0.5rem 0.5rem 0;
   }
 
   svg {
@@ -55,8 +64,14 @@
     height: 1.5rem;
   }
 
-  .a-email {
+  .emaio-a {
     margin-bottom: 8rem;
+  }
+
+  .socials-a {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
   }
 
   address {
@@ -70,7 +85,7 @@
   <p class="body-extra">LET'S HAVE A BEER!</p>
 
   <a
-    class="body-italic a-email"
+    class="body-italic emaio-a"
     target="_blank"
     aria-label="Nadoki's Email"
     href="mailto:info@nadoki.com">
@@ -101,6 +116,7 @@
   <ul>
     <li>
       <a
+        class="socials-a"
         target="_blank"
         aria-label="Nadoki's Instagram page"
         href="https://www.instagram.com/nadokistudios">
@@ -132,6 +148,7 @@
 
     <li>
       <a
+        class="socials-a"
         target="_blank"
         aria-label="Nadoki's Facebook page"
         href="https://www.facebook.com/nadokistudios">
@@ -146,6 +163,7 @@
 
     <li>
       <a
+        class="socials-a"
         target="_blank"
         aria-label="Nadoki's Messenger"
         href="https://www.m.me/nadokistudios">
@@ -165,6 +183,7 @@
 
     <li>
       <a
+        class="socials-a"
         target="_blank"
         aria-label="Nadoki's WhatsApp"
         href="https://wa.me/4917643965731">
@@ -206,6 +225,7 @@
 
     <li>
       <a
+        class="socials-a"
         target="_blank"
         aria-label="Nadoki's LindedIn"
         href="https://www.linkedin.com/company/nadokistudios">
