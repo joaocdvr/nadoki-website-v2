@@ -29,12 +29,12 @@
     text-align: center;
     width: calc(100% - 3rem);
     max-width: 50rem;
-    height: 100%;
+    height: 1.5rem;
     fill: var(--dark);
   }
 
   /* Equipment height fix */
-  .equipment-div {
+  .equipment-svg {
     height: 1.875rem;
   }
 
@@ -46,8 +46,7 @@
 <header class:equipment-padding={$isEquipmentClicked}>
   <div
     in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-    out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
-    class:equipment-div={$isEquipmentClicked}>
+    out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
     <h1>
       {#if $isServicesClicked}
         <svg
@@ -251,6 +250,7 @@
         </svg>
       {:else if $isEquipmentClicked}
         <svg
+          class="equipment-svg"
           preserveAspectRatio="none"
           viewBox="0 0 312 30"
           xmlns="http://www.w3.org/2000/svg"
