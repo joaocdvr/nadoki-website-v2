@@ -9,6 +9,7 @@
     --main-color: #00ff00;
     --light: #ffffff;
     --dark: #000000;
+    --dark-two: #868686;
   }
 
   :global(.header-small) {
@@ -32,6 +33,15 @@
     color: var(--dark);
   }
 
+  :global(.body-regular-two) {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: var(--dark-two);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
   :global(.body-bold) {
     font-family: "syne-bold", Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
@@ -48,15 +58,15 @@
 
   :global(.body-italic) {
     font-family: "syne-italic", Arial, Helvetica, sans-serif;
-    line-height: 1.5rem;
-    font-size: 1rem;
+    line-height: 1.875rem;
+    font-size: 1.25rem;
     color: var(--dark);
   }
 
   :global(.body-mono) {
     font-family: "syne-mono", Arial, Helvetica, sans-serif;
-    line-height: 1.5rem;
-    font-size: 1rem;
+    line-height: 1.875rem;
+    font-size: 1.25rem;
     color: var(--dark);
   }
 
@@ -78,13 +88,6 @@
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 2rem;
     font-size: 1rem;
-    color: var(--dark);
-  }
-
-  :global(small) {
-    font-family: "syne-regular", Arial, Helvetica, sans-serif;
-    line-height: 1.125rem;
-    font-size: 0.75rem;
     color: var(--dark);
   }
 </style>
