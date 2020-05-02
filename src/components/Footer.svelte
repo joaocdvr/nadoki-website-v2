@@ -99,11 +99,11 @@
   </address>
 
   <ul>
-    <a
-      target="_blank"
-      aria-label="Nadoki's Instagram page"
-      href="https://www.instagram.com/nadokistudios">
-      <li>
+    <li>
+      <a
+        target="_blank"
+        aria-label="Nadoki's Instagram page"
+        href="https://www.instagram.com/nadokistudios">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16
@@ -127,26 +127,28 @@
             5.59503C19.8448 4.80003 19.2008 4.15503 18.4058 4.15503Z"
             fill="var(--dark)" />
         </svg>
-      </li>
-    </a>
-    <a
-      target="_blank"
-      aria-label="Nadoki's Facebook page"
-      href="https://www.facebook.com/nadokistudios">
-      <li>
+      </a>
+    </li>
+
+    <li>
+      <a
+        target="_blank"
+        aria-label="Nadoki's Facebook page"
+        href="https://www.facebook.com/nadokistudios">
         <svg viewBox="0 0 12 24" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M3 8H0V12H3V24H8V12H11.642L12 8H8V6.333C8 5.378 8.192 5 9.115
             5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z"
             fill="var(--dark)" />
         </svg>
-      </li>
-    </a>
-    <a
-      target="_blank"
-      aria-label="Nadoki's Messenger"
-      href="https://www.m.me/nadokistudios">
-      <li>
+      </a>
+    </li>
+
+    <li>
+      <a
+        target="_blank"
+        aria-label="Nadoki's Messenger"
+        href="https://www.m.me/nadokistudios">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -158,13 +160,14 @@
             8L13.193 14.963Z"
             fill="var(--dark)" />
         </svg>
-      </li>
-    </a>
-    <a
-      target="_blank"
-      aria-label="Nadoki's WhatsApp"
-      href="https://wa.me/4917643965731">
-      <li>
+      </a>
+    </li>
+
+    <li>
+      <a
+        target="_blank"
+        aria-label="Nadoki's WhatsApp"
+        href="https://wa.me/4917643965731">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -198,13 +201,14 @@
             14.4111 17.6107 14.4374 17.6615 14.4618Z"
             fill="var(--dark)" />
         </svg>
-      </li>
-    </a>
-    <a
-      target="_blank"
-      aria-label="Nadoki's LindedIn"
-      href="https://www.linkedin.com/company/nadokistudios">
-      <li>
+      </a>
+    </li>
+
+    <li>
+      <a
+        target="_blank"
+        aria-label="Nadoki's LindedIn"
+        href="https://www.linkedin.com/company/nadokistudios">
         <svg viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02
@@ -213,8 +217,8 @@
             14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
             fill="var(--dark)" />
         </svg>
-      </li>
-    </a>
+      </a>
+    </li>
   </ul>
 
   <p>
