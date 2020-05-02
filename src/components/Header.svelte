@@ -23,10 +23,6 @@
     background-color: var(--main-color);
   }
 
-  div {
-    height: 1.5rem;
-  }
-
   svg {
     display: block;
     margin: auto;
