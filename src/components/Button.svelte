@@ -5,21 +5,21 @@
 <style>
   a {
     text-decoration: none;
-    border-radius: 5rem;
     text-align: center;
-    color: var(--dark);
-    background-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--dark);
   }
   a:active,
   a:visited {
-    color: var(--dark);
+    color: var(--main-color);
     outline: none;
   }
 
   a:focus {
-    background-color: var(--light);
+    background-color: var(--main-color);
+    color: var(--dark);
     outline: none;
-    box-shadow: inset 0 0 0 0.2rem var(--main-color);
+    box-shadow: inset 0 0 0 0.2rem var(--dark);
   }
 
   div {
@@ -34,9 +34,13 @@
 </style>
 
 <div>
-  <a href={button.href} aria-label={button.label} target="_blank">
+  <a
+    class="body-bold"
+    href={button.href}
+    aria-label={button.label}
+    target="_blank">
     <span>
-      <p class="body-bold">{button.text}</p>
+      <p>{button.text}</p>
     </span>
   </a>
 </div>
