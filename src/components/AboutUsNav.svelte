@@ -84,6 +84,7 @@
     border-right: none;
     border-left: none;
     border-bottom: 0.125rem solid var(--main-color);
+    padding: 0.5rem 1rem;
   }
 
   .specific-button-open {
@@ -91,6 +92,7 @@
     width: 100vw;
     max-width: 100%;
     border: none;
+    padding: 1.5rem;
   }
 
   .specific-img-open {
@@ -113,7 +115,7 @@
       class:specific-img-open={$isAnyOfUsClicked}
       src="about_us/alper.png"
       alt="Alper Arslan" />
-    <h2 class="body-bold" }>
+    <h2 class="body-bold">
       {#if $isEliaClicked || $isJoaoClicked || $isJuliaClicked}
         Alper
       {:else if !$isAnyOfUsClicked}Alper Arslan{/if}

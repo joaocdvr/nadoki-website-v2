@@ -217,12 +217,6 @@
         </li>
 
         <li>
-          <br />
-          <dt class="header-small">Nationality</dt>
-          <dd class="body-regular">Brazilian</dd>
-        </li>
-
-        <li>
           <dt class="header-small">Background</dt>
           <dd class="body-regular">
             Musician since an early age — mainly guitarist
@@ -231,6 +225,12 @@
         <li>
           <dt class="header-small">Interests</dt>
           <dd class="body-regular">Technology, music, and Netflix</dd>
+        </li>
+
+        <li>
+          <br />
+          <dt class="header-small">Nationality</dt>
+          <dd class="body-regular">Brazilian</dd>
         </li>
 
         <li>
