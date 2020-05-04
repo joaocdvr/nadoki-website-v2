@@ -113,7 +113,7 @@
       class:specific-img-open={$isAnyOfUsClicked}
       src="about_us/alper.png"
       alt="Alper Arslan" />
-    <h2 class={$isAlperClicked ? 'header-big' : 'body-bold'}>
+    <h2 class="body-bold" }>
       {#if $isEliaClicked || $isJoaoClicked || $isJuliaClicked}
         Alper
       {:else if !$isAnyOfUsClicked}Alper Arslan{/if}
