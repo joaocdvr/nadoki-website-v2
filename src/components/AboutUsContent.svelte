@@ -36,6 +36,10 @@
     background-color: var(--main-color);
   }
 
+  h2 {
+    padding-bottom: 0.5rem;
+  }
+
   div {
     padding: 0 1.5rem 2.5rem 1.5rem;
   }
@@ -58,9 +62,9 @@
   .socials-li {
     min-width: 2.5rem;
     width: calc((100vw - 5rem) / 5);
-    box-shadow: inset 0 0 0 0.125rem var(--dark);
+    box-shadow: inset 0 0 0 0.0625rem var(--dark);
     text-align: center;
-    margin: 0.5rem 0.5rem 1.5rem 0;
+    margin-right: 0.5rem;
   }
 
   .socials-a {
@@ -69,11 +73,31 @@
     padding: 0.5rem;
   }
 
+  dt {
+    border-bottom: 0.0625rem solid var(--main-color);
+    padding: 2.5rem 0 0.5rem 0;
+  }
+
+  dd {
+    padding-top: 0.25rem;
+  }
+
+  dd :last-child {
+    margin-bottom: 0;
+  }
+
+  ul :last-child dt {
+    border-bottom: none;
+  }
+
+  ul :last-child dd {
+    padding-top: 0;
+  }
+
   table {
     border: 0.0625rem solid var(--dark);
     border-collapse: collapse;
     width: 100%;
-    margin-top: 0.5rem;
   }
 
   th,
@@ -83,9 +107,9 @@
     padding: 0.5rem 1rem;
   }
 
-  /* td {
+  td {
     text-align: center;
-  } */
+  }
 </style>
 
 {#if $isAnyOfUsClicked}
@@ -93,13 +117,13 @@
     in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
     out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
     {#if $isAlperClicked}
-      <h2 class="header-big">Alper Arslan</h2>
+      <h2 class="header-big">ALPER ARSLAN</h2>
     {:else if $isEliaClicked}
-      <h2 class="header-big">Elia Bertolaso</h2>
+      <h2 class="header-big">ELIA BERTOLASO</h2>
     {:else if $isJoaoClicked}
-      <h2 class="header-big">João Rodrigues</h2>
+      <h2 class="header-big">JOÃO RODRIGUES</h2>
     {:else if $isJuliaClicked}
-      <h2 class="header-big">Julia Borelli</h2>
+      <h2 class="header-big">JULIA BORELLI</h2>
 
       <ul>
         <li>
@@ -159,17 +183,7 @@
         </li>
 
         <li>
-          <br />
-          <dt class="body-bold">Nationality</dt>
-          <dd class="body-regular">
-            Brazilian
-            <br />
-            <br />
-          </dd>
-        </li>
-
-        <li>
-          <dt class="body-bold">Experience</dt>
+          <dt class="header-small">Experience</dt>
           <dd class="body-regular">
             Audio Department Assistant
             <br />
@@ -182,13 +196,11 @@
             Production Assistant
             <br />
             <span class="body-regular-two">Post Modern Mastering</span>
-            <br />
-            <br />
           </dd>
         </li>
 
         <li>
-          <dt class="body-bold">Education</dt>
+          <dt class="header-small">Education</dt>
           <dd class="body-regular">
             Audio Engineering
             <br />
@@ -201,48 +213,42 @@
             Summer Performance Program
             <br />
             <span class="body-regular-two">Berklee College of Music</span>
-            <br />
-            <br />
           </dd>
         </li>
 
         <li>
-          <dt class="body-bold">Background</dt>
+          <br />
+          <dt class="header-small">Nationality</dt>
+          <dd class="body-regular">Brazilian</dd>
+        </li>
+
+        <li>
+          <dt class="header-small">Background</dt>
           <dd class="body-regular">
             Musician since an early age — mainly guitarist
-            <br />
-            <br />
           </dd>
         </li>
         <li>
-          <dt class="body-bold">Interests</dt>
-          <dd class="body-regular">
-            Technology, music, and Netflix
-            <br />
-            <br />
-          </dd>
+          <dt class="header-small">Interests</dt>
+          <dd class="body-regular">Technology, music, and Netflix</dd>
         </li>
 
         <li>
-          <dt class="body-bold">Languages</dt>
+          <dt class="header-small">Languages</dt>
           <dd class="body-regular">
             Portuguese, English, German (B1) and I pretend I speak Spanish
-            <br />
-            <br />
           </dd>
         </li>
 
         <li>
-          <dt class="body-bold">About me</dt>
+          <dt class="header-small">About me</dt>
           <dd class="body-regular">
             Workaholic. Part-time OCD. Full-time Nerd
-            <br />
-            <br />
           </dd>
         </li>
 
         <li>
-          <dt class="body-bold">Highlights</dt>
+          <dt class="header-small">Highlights</dt>
           <dd>
             <table>
               <tr>
