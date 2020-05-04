@@ -35,9 +35,9 @@
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   }
 
-  h3 {
-    padding-bottom: 1.5rem;
+  .div-header {
     border-bottom: 0.0625rem solid var(--main-color);
+    padding-bottom: 1.5rem;
   }
 
   p {
@@ -54,10 +54,12 @@
         <img src={card.src} alt={card.alt} />
       </div>
       <div class="div-text">
-        <h2 class="header-small">{card.title}</h2>
-        {#if $isStudioClicked}
-          <h3 class="body-bold">{card.size}</h3>
-        {/if}
+        <div class="div-header">
+          <h2 class="header-small">{card.title}</h2>
+          {#if $isStudioClicked}
+            <h3 class="body-bold">{card.size}</h3>
+          {/if}
+        </div>
         <p class="body-regular">{card.content}</p>
         {#if $isWorkClicked}
           <Tag tags={card.tags} />
