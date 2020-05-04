@@ -33,7 +33,13 @@
   }
 
   :global(.user-is-tabbing) a:focus {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
+  }
+
+  img {
+    width: 100vw;
+    max-width: 100%;
+    padding: 1.5rem;
   }
 
   h2 {
@@ -113,16 +119,49 @@
 </style>
 
 {#if $isAnyOfUsClicked}
-  <div
-    in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-    out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-    {#if $isAlperClicked}
+
+  {#if $isAlperClicked}
+    <div
+      in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+      <img
+        class:specific-img-open={$isAnyOfUsClicked}
+        src="about_us/alper.png"
+        alt="Alper Arslan" />
+
       <h2 class="header-big">ALPER ARSLAN</h2>
-    {:else if $isEliaClicked}
+    </div>
+  {:else if $isEliaClicked}
+    <div
+      in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+      <img
+        class:specific-img-open={$isAnyOfUsClicked}
+        src="about_us/elia.png"
+        alt="Elia Bertolaso" />
+
       <h2 class="header-big">ELIA BERTOLASO</h2>
-    {:else if $isJoaoClicked}
+    </div>
+  {:else if $isJoaoClicked}
+    <div
+      in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+      <img
+        class:specific-img-open={$isAnyOfUsClicked}
+        src="about_us/joao.png"
+        alt="João Rodrigues" />
+
       <h2 class="header-big">JOÃO RODRIGUES</h2>
-    {:else if $isJuliaClicked}
+    </div>
+  {:else if $isJuliaClicked}
+    <div
+      in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+      <img
+        class:specific-img-open={$isAnyOfUsClicked}
+        src="about_us/julia.png"
+        alt="Julia Borelli" />
+
       <h2 class="header-big">JULIA BORELLI</h2>
 
       <ul>
@@ -267,7 +306,8 @@
           </dd>
         </li>
       </ul>
-    {/if}
-  </div>
+    </div>
+  {/if}
+
   <Footer />
 {/if}
