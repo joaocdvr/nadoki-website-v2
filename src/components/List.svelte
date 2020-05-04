@@ -30,18 +30,11 @@
   }
 
   dl {
-    padding: 0 1.5rem;
+    border-bottom: 0.0625rem solid var(--main-color);
   }
 
   dd {
     padding-bottom: 0.75rem;
-  }
-
-  hr {
-    height: 0.0625rem;
-    border-width: 0;
-    background-color: var(--main-color);
-    margin: 0;
   }
 </style>
 
@@ -63,5 +56,4 @@
       {@html listItem.content}
     </dd>
   {/if}
-  <hr noshade />
 </dl>

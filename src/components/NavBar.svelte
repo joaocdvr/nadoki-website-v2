@@ -17,19 +17,8 @@
     background-color: var(--light);
     backface-visibility: hidden;
     z-index: 1;
-  }
 
-  hr {
-    position: absolute;
-    top: 4.5rem;
-    height: 0.125rem;
-    width: 100vw;
-    border-width: 0;
-    background-color: var(--main-color);
-    margin: 0;
-    opacity: 1;
-    transition: opacity 500ms ease-in-out;
-    transition-delay: 500ms;
+    border-bottom: 0.125rem solid var(--main-color);
   }
 
   /* NavBar animation */
@@ -46,11 +35,6 @@
 
   .nav-bg-is-activated {
     transform: translateX(-100vw);
-    transition-delay: 0s;
-  }
-
-  .hr-is-hidden {
-    opacity: 0;
     transition-delay: 0s;
   }
 
@@ -78,5 +62,4 @@
   <div class:nav-bg-is-activated={$isMenuClicked} class="nav-bg" />
   <Menu />
   <div class:menu-bg-is-activated={$isMenuClicked} class="menu-bg" />
-  <hr noshade class:hr-is-hidden={$isMenuClicked} />
 </nav>

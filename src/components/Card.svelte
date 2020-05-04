@@ -26,23 +26,22 @@
     filter: grayscale(0);
   }
 
-  div {
+  .div-img {
+    border-top: 0.125rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--main-color);
+  }
+
+  .div-text {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   }
 
   h3 {
     padding-bottom: 1.5rem;
+    border-bottom: 0.0625rem solid var(--main-color);
   }
 
   p {
     padding-top: 0.75rem;
-  }
-
-  hr {
-    height: 0.125rem;
-    border-width: 0;
-    background-color: var(--main-color);
-    margin: 0;
   }
 </style>
 
@@ -51,16 +50,13 @@
     <li
       in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-      <span>
-        <hr noshade />
+      <div class="div-img">
         <img src={card.src} alt={card.alt} />
-        <hr noshade />
-      </span>
-      <div>
+      </div>
+      <div class="div-text">
         <h2 class="header-small">{card.title}</h2>
         {#if $isStudioClicked}
           <h3 class="body-bold">{card.size}</h3>
-          <hr style="height: 0.0625rem" noshade />
         {/if}
         <p class="body-regular">{card.content}</p>
         {#if $isWorkClicked}
