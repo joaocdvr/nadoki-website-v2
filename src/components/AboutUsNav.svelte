@@ -30,6 +30,7 @@
     width: 50vw;
     max-width: 50%;
     padding: 1.5rem;
+    transition: all 300ms ease;
   }
 
   button:focus {
@@ -37,7 +38,11 @@
   }
 
   :global(.user-is-tabbing) button:focus {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) button:focus h2 {
+    color: var(--light);
   }
 
   img {
@@ -78,8 +83,8 @@
   }
 
   .any-button-open {
-    width: calc(1 / 3 * 100vw);
-    max-width: calc(1 / 3 * 100%);
+    width: calc(1 / 4 * 100vw);
+    max-width: calc(1 / 4 * 100%);
     border-top: none;
     border-right: none;
     border-left: none;
@@ -88,11 +93,7 @@
   }
 
   .specific-button-open {
-    order: 4;
-    width: 100vw;
-    max-width: 100%;
-    border: none;
-    padding: 1.5rem;
+    background-color: var(--main-color);
   }
 
   .specific-img-open {
@@ -116,9 +117,7 @@
       src="about_us/alper.png"
       alt="Alper Arslan" />
     <h2 class="body-bold">
-      {#if $isEliaClicked || $isJoaoClicked || $isJuliaClicked}
-        Alper
-      {:else if !$isAnyOfUsClicked}Alper Arslan{/if}
+      {#if $isAnyOfUsClicked}Alper{:else}Alper Arslan{/if}
     </h2>
   </button>
   <button
@@ -133,9 +132,7 @@
       src="about_us/elia.png"
       alt="Elia Bertolaso" />
     <h2 class="body-bold">
-      {#if $isAlperClicked || $isJoaoClicked || $isJuliaClicked}
-        Elia
-      {:else if !$isAnyOfUsClicked}Elia Bertolaso{/if}
+      {#if $isAnyOfUsClicked}Elia{:else}Elia Bertolaso{/if}
     </h2>
   </button>
   <button
@@ -150,9 +147,7 @@
       src="about_us/joao.png"
       alt="João Rodrigues" />
     <h2 class="body-bold">
-      {#if $isAlperClicked || $isEliaClicked || $isJuliaClicked}
-        João
-      {:else if !$isAnyOfUsClicked}João Rodrigues{/if}
+      {#if $isAnyOfUsClicked}João{:else}João Rodrigues{/if}
     </h2>
   </button>
   <button
@@ -167,9 +162,7 @@
       src="about_us/julia.png"
       alt="Julia Borelli" />
     <h2 class="body-bold">
-      {#if $isAlperClicked || $isEliaClicked || $isJoaoClicked}
-        Julia
-      {:else if !$isAnyOfUsClicked}Julia Borelli{/if}
+      {#if $isAnyOfUsClicked}Julia{:else}Julia Borelli{/if}
     </h2>
   </button>
 </menu>
