@@ -7,6 +7,7 @@
   :global(:root) {
     /* Colors */
     --main-color: #00ff00;
+    --secondary-color: #6400ff;
     --light: #ffffff;
     --dark: #000000;
     --dark-two: #868686;

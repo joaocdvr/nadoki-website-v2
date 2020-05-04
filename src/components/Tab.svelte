@@ -29,7 +29,8 @@
     text-align: center;
     flex: 0 0 auto;
     background-color: var(--dark);
-    box-shadow: inset 0 0 0 0.125rem var(--dark);
+    box-shadow: none;
+    transition: box-shadow 300ms ease-in-out;
   }
 
   button:focus {
@@ -37,8 +38,7 @@
   }
 
   :global(.user-is-tabbing) button:focus {
-    color: var(--dark);
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
   }
 
   p {
@@ -47,11 +47,11 @@
     transition: color 300ms ease-in-out;
   }
 
-  .is-clicked-color {
+  .is-selected-color {
     color: var(--main-color);
   }
 
-  .is-clicked-box-shadow {
+  .is-selected-box-shadow {
     box-shadow: inset 0 0 0 0.125rem var(--main-color);
   }
 
@@ -68,9 +68,11 @@
       on:click={tab.function}
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}
-      class:is-clicked-box-shadow={tab.variable}
+      class:is-selected-box-shadow={tab.variable}
       class:just-two={tab.justTwo}>
-      <p class="body-bold" class:is-clicked-color={tab.variable}>{tab.title}</p>
+      <p class="body-bold" class:is-selected-color={tab.variable}>
+        {tab.title}
+      </p>
     </button>
   {/each}
 </menu>
