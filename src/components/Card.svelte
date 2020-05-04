@@ -39,7 +39,7 @@
   }
 
   hr {
-    height: 0.2rem;
+    height: 0.125rem;
     border-width: 0;
     background-color: var(--main-color);
     margin: 0;
@@ -60,7 +60,7 @@
         <h2 class="header-small">{card.title}</h2>
         {#if $isStudioClicked}
           <h3 class="body-bold">{card.size}</h3>
-          <hr style="height: 0.1rem" noshade />
+          <hr style="height: 0.0625rem" noshade />
         {/if}
         <p class="body-regular">{card.content}</p>
         {#if $isWorkClicked}

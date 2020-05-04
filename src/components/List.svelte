@@ -38,7 +38,7 @@
   }
 
   hr {
-    height: 0.1rem;
+    height: 0.0625rem;
     border-width: 0;
     background-color: var(--main-color);
     margin: 0;

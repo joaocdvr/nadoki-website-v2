@@ -54,7 +54,7 @@
   li {
     min-width: 2.5rem;
     width: calc((100vw - 5rem) / 5);
-    box-shadow: inset 0 0 0 0.125rem var(--dark);
+    box-shadow: inset 0 0 0 0.0625rem var(--dark);
     text-align: center;
     margin: 0.5rem 0.5rem 0.5rem 0;
   }

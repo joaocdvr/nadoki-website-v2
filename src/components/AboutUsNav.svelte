@@ -45,31 +45,31 @@
   }
   /* Different border widths fix */
   .alper {
-    border-left: 0.2rem solid var(--main-color);
-    border-right: 0.1rem solid var(--main-color);
-    border-top: 0.2rem solid var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
+    border-left: 0.125rem solid var(--main-color);
+    border-right: 0.0625rem solid var(--main-color);
+    border-top: 0.125rem solid var(--main-color);
+    border-bottom: 0.0625rem solid var(--main-color);
   }
 
   .elia {
-    border-left: 0.1rem solid var(--main-color);
-    border-right: 0.2rem solid var(--main-color);
-    border-top: 0.2rem solid var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
+    border-left: 0.0625rem solid var(--main-color);
+    border-right: 0.125rem solid var(--main-color);
+    border-top: 0.125rem solid var(--main-color);
+    border-bottom: 0.0625rem solid var(--main-color);
   }
 
   .joao {
-    border-left: 0.2rem solid var(--main-color);
-    border-right: 0.1rem solid var(--main-color);
-    border-top: 0.1rem solid var(--main-color);
-    border-bottom: 0.2rem solid var(--main-color);
+    border-left: 0.125rem solid var(--main-color);
+    border-right: 0.0625rem solid var(--main-color);
+    border-top: 0.0625rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--main-color);
   }
 
   .julia {
-    border-left: 0.1rem solid var(--main-color);
-    border-right: 0.2rem solid var(--main-color);
-    border-top: 0.1rem solid var(--main-color);
-    border-bottom: 0.2rem solid var(--main-color);
+    border-left: 0.0625rem solid var(--main-color);
+    border-right: 0.125rem solid var(--main-color);
+    border-top: 0.0625rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--main-color);
   }
 
   /* Animation */
@@ -83,7 +83,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 0.2rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--main-color);
   }
 
   .specific-button-open {

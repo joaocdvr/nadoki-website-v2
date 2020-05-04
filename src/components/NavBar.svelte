@@ -22,7 +22,7 @@
   hr {
     position: absolute;
     top: 4.5rem;
-    height: 0.2rem;
+    height: 0.125rem;
     width: 100vw;
     border-width: 0;
     background-color: var(--main-color);

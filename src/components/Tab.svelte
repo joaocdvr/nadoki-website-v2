@@ -29,7 +29,7 @@
     text-align: center;
     flex: 0 0 auto;
     background-color: var(--dark);
-    box-shadow: inset 0 0 0 0.2rem var(--dark);
+    box-shadow: inset 0 0 0 0.125rem var(--dark);
   }
 
   button:focus {
@@ -52,7 +52,7 @@
   }
 
   .is-clicked-box-shadow {
-    box-shadow: inset 0 0 0 0.2rem var(--main-color);
+    box-shadow: inset 0 0 0 0.125rem var(--main-color);
   }
 
   .just-two {
