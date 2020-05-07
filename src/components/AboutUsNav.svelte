@@ -1,21 +1,37 @@
 <script>
   import {
-    isAlperClicked,
-    handleAlperClick,
-    isEliaClicked,
-    handleEliaClick,
-    isJoaoClicked,
-    handleJoaoClick,
-    isJuliaClicked,
-    handleJuliaClick,
-    isAnyOfUsClicked,
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
+    animationOutEasing,
+    itemActive,
+    setItemActive
   } from "../components/stores.js";
   import { fade } from "svelte/transition";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const url = new URL(document.location);
+    const nameParam = url.searchParams.get("name");
+    if (["alper", "elia", "joao", "julia"].includes(nameParam)) {
+      handleItemClick(nameParam);
+    }
+  });
+
+  $: isAnyItemActive = !!$itemActive;
+
+  $: isItemActive = name => {
+    return $itemActive === name;
+  };
+
+  $: isJoaoActive = isItemActive("joao");
+
+  function handleItemClick(name) {
+    const newUrl = `${window.location.pathname}?name=${name}`;
+    window.history.pushState("", "", newUrl);
+    setItemActive(name);
+  }
 </script>
 
 <style>
@@ -102,67 +118,67 @@
 </style>
 
 <menu
-  class:menu-open={$isAnyOfUsClicked}
+  class:menu-open={isAnyItemActive}
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
     class="alper"
-    class:any-button-open={$isAnyOfUsClicked}
-    class:specific-button-open={$isAlperClicked}
-    on:click={handleAlperClick}
+    class:any-button-open={isAnyItemActive}
+    class:specific-button-open={isItemActive('alper')}
+    on:click={() => handleItemClick('alper')}
     aria-label="Toggle Alper Arslan's details"
-    aria-pressed={$isAlperClicked}>
+    aria-pressed={isItemActive('alper')}>
     <img
-      class:specific-img-open={$isAnyOfUsClicked}
+      class:specific-img-open={isAnyItemActive}
       src="about_us/alper.png"
       alt="Alper Arslan" />
     <h2 class="body-bold">
-      {#if $isAnyOfUsClicked}Alper{:else}Alper Arslan{/if}
+      {#if isAnyItemActive}Alper{:else}Alper Arslan{/if}
     </h2>
   </button>
   <button
     class="elia"
-    class:any-button-open={$isAnyOfUsClicked}
-    class:specific-button-open={$isEliaClicked}
-    on:click={handleEliaClick}
+    class:any-button-open={isAnyItemActive}
+    class:specific-button-open={isItemActive('elia')}
+    on:click={() => handleItemClick('elia')}
     aria-label="Toggle Elia Bertolaso's details"
-    aria-pressed={$isEliaClicked}>
+    aria-pressed={isItemActive('elia')}>
     <img
-      class:specific-img-open={$isAnyOfUsClicked}
+      class:specific-img-open={isAnyItemActive}
       src="about_us/elia.png"
       alt="Elia Bertolaso" />
     <h2 class="body-bold">
-      {#if $isAnyOfUsClicked}Elia{:else}Elia Bertolaso{/if}
+      {#if isAnyItemActive}Elia{:else}Elia Bertolaso{/if}
     </h2>
   </button>
   <button
     class="joao"
-    class:any-button-open={$isAnyOfUsClicked}
-    class:specific-button-open={$isJoaoClicked}
-    on:click={handleJoaoClick}
+    class:any-button-open={isAnyItemActive}
+    class:specific-button-open={isJoaoActive}
+    on:click={() => handleItemClick('joao')}
     aria-label="Toggle João Rodrigues's details"
-    aria-pressed={$isJoaoClicked}>
+    aria-pressed={isJoaoActive}>
     <img
-      class:specific-img-open={$isAnyOfUsClicked}
+      class:specific-img-open={isAnyItemActive}
       src="about_us/joao.png"
       alt="João Rodrigues" />
     <h2 class="body-bold">
-      {#if $isAnyOfUsClicked}João{:else}João Rodrigues{/if}
+      {#if isAnyItemActive}João{:else}João Rodrigues{/if}
     </h2>
   </button>
   <button
     class="julia"
-    class:any-button-open={$isAnyOfUsClicked}
-    class:specific-button-open={$isJuliaClicked}
-    on:click={handleJuliaClick}
+    class:any-button-open={isAnyItemActive}
+    class:specific-button-open={isItemActive('julia')}
+    on:click={() => handleItemClick('julia')}
     aria-label="Toggle Julia Borelli's details"
-    aria-pressed={$isJuliaClicked}>
+    aria-pressed={isItemActive('julia')}>
     <img
-      class:specific-img-open={$isAnyOfUsClicked}
+      class:specific-img-open={isAnyItemActive}
       src="about_us/julia.png"
       alt="Julia Borelli" />
     <h2 class="body-bold">
-      {#if $isAnyOfUsClicked}Julia{:else}Julia Borelli{/if}
+      {#if isAnyItemActive}Julia{:else}Julia Borelli{/if}
     </h2>
   </button>
 </menu>

@@ -1,18 +1,21 @@
 <script>
   import Footer from "../components/Footer.svelte";
   import {
-    isAlperClicked,
-    isEliaClicked,
-    isJoaoClicked,
-    isJuliaClicked,
-    isAnyOfUsClicked,
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
+    animationOutEasing,
+    itemActive,
+    setItemActive
   } from "../components/stores.js";
   import { fade } from "svelte/transition";
+
+  $: isAnyItemActive = !!$itemActive;
+
+  $: isItemActive = name => {
+    return $itemActive === name;
+  };
 </script>
 
 <style>
@@ -118,47 +121,47 @@
   }
 </style>
 
-{#if $isAnyOfUsClicked}
+{#if isAnyItemActive}
 
-  {#if $isAlperClicked}
+  {#if isItemActive('alper')}
     <div
       in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       <img
-        class:specific-img-open={$isAnyOfUsClicked}
+        class:specific-img-open={isAnyItemActive}
         src="about_us/alper.png"
         alt="Alper Arslan" />
 
       <h2 class="header-big">ALPER ARSLAN</h2>
     </div>
-  {:else if $isEliaClicked}
+  {:else if isItemActive('elia')}
     <div
       in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       <img
-        class:specific-img-open={$isAnyOfUsClicked}
+        class:specific-img-open={isAnyItemActive}
         src="about_us/elia.png"
         alt="Elia Bertolaso" />
 
       <h2 class="header-big">ELIA BERTOLASO</h2>
     </div>
-  {:else if $isJoaoClicked}
+  {:else if isItemActive('joao')}
     <div
       in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       <img
-        class:specific-img-open={$isAnyOfUsClicked}
+        class:specific-img-open={isAnyItemActive}
         src="about_us/joao.png"
         alt="João Rodrigues" />
 
       <h2 class="header-big">JOÃO RODRIGUES</h2>
     </div>
-  {:else if $isJuliaClicked}
+  {:else if isItemActive('julia')}
     <div
       in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       <img
-        class:specific-img-open={$isAnyOfUsClicked}
+        class:specific-img-open={isAnyItemActive}
         src="about_us/julia.png"
         alt="Julia Borelli" />
 
