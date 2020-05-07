@@ -9,7 +9,7 @@
     animationOutEasing,
     itemActive,
     setItemActive
-  } from "../components/stores.js";
+  } from "../utensils/stores.js";
 
   onMount(() => {
     const url = new URL(document.location);

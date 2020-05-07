@@ -1,9 +1,9 @@
 <script>
   import { onMount } from "svelte";
-  import { focusOnlyWhenNeeded } from "../components/utils.js";
-  import { isMenuClicked } from "../components/stores.js";
-  import Styles from "../components/Styles.svelte";
-  import NavBar from "../components/NavBar.svelte";
+  import { focusOnlyWhenNeeded } from "../utensils/utils.js";
+  import { isMenuClicked } from "../utensils/stores.js";
+  import Styles from "../utensils/Styles.svelte";
+  import NavBar from "../containers/NavBar.svelte";
 
   onMount(() => {
     focusOnlyWhenNeeded();

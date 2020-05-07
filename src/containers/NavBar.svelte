@@ -1,7 +1,7 @@
 <script>
-  import { isMenuClicked } from "./stores.js";
-  import MenuIcon from "./MenuIcon.svelte";
-  import NadokiLogo from "./NadokiLogo.svelte";
+  import { isMenuClicked } from "../utensils/stores.js";
+  import MenuButton from "../components/otu/MenuButton.svelte";
+  import HomepageButton from "../components/otu/HomepageButton.svelte";
   import Menu from "./Menu.svelte";
 </script>
 
@@ -57,8 +57,8 @@
 </style>
 
 <nav>
-  <NadokiLogo />
-  <MenuIcon />
+  <HomepageButton />
+  <MenuButton />
   <div class:nav-bg-is-activated={$isMenuClicked} class="nav-bg" />
   <Menu />
   <div class:menu-bg-is-activated={$isMenuClicked} class="menu-bg" />

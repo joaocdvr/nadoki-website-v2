@@ -8,7 +8,7 @@
     animationInEasing,
     animationOutDuration,
     animationOutEasing
-  } from "./stores.js";
+  } from "../utensils/stores.js";
   import Tag from "./Tag.svelte";
 
   export let cards = [];

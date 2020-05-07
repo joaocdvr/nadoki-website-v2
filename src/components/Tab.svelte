@@ -7,7 +7,7 @@
     animationInEasing,
     animationOutDuration,
     animationOutEasing
-  } from "./stores.js";
+  } from "../utensils/stores.js";
 
   export let tab = [];
 </script>

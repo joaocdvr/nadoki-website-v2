@@ -6,8 +6,8 @@
     handleWorkClick,
     handleEquipmentClick,
     handleAboutUsClick
-  } from "./stores.js";
-  import { handleMenuClick } from "./utils.js";
+  } from "../utensils/stores.js";
+  import { handleMenuClick } from "../utensils/utils.js";
 </script>
 
 <style>

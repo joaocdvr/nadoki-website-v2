@@ -12,7 +12,7 @@
     animationInEasing,
     animationOutDuration,
     animationOutEasing
-  } from "./stores.js";
+  } from "../utensils/stores.js";
 </script>
 
 <style>

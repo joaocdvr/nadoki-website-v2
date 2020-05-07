@@ -9,7 +9,7 @@
     handleGameClick,
     handleBrandingClick,
     isAnyServiceClicked
-  } from "./stores.js";
+  } from "../utensils/stores.js";
 </script>
 
 <style>

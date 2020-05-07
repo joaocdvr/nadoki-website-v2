@@ -8,7 +8,7 @@
     animationOutEasing,
     itemActive,
     setItemActive
-  } from "../components/stores.js";
+  } from "../utensils/stores.js";
   import Footer from "../components/Footer.svelte";
 
   $: isAnyItemActive = !!$itemActive;

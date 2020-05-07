@@ -42,9 +42,9 @@
     handleBrandingSecondSubmenuClick,
     isBrandingThirdClicked,
     handleBrandingThirdSubmenuClick
-  } from "./stores.js";
-  import Tab from "./Tab.svelte";
-  import TextBlock from "./TextBlock.svelte";
+  } from "../utensils/stores.js";
+  import Tab from "../components/Tab.svelte";
+  import TextBlock from "../components/TextBlock.svelte";
   import Footer from "../components/Footer.svelte";
 
   $: musicTab = [

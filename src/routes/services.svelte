@@ -1,9 +1,9 @@
 <script>
   import { onMount } from "svelte";
-  import { handleServicesClick } from "../components/stores.js";
+  import { handleServicesClick } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
-  import ServicesNav from "../components/ServicesNav.svelte";
-  import ServicesContent from "../components/ServicesContent.svelte";
+  import ServicesNav from "../containers/ServicesNav.svelte";
+  import ServicesContent from "../containers/ServicesContent.svelte";
 
   onMount(() => {
     handleServicesClick();

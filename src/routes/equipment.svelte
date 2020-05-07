@@ -6,7 +6,7 @@
     isEquipmentSoftwareClicked,
     handleHardwareSubmenuClick,
     handleSoftwareSubmenuClick
-  } from "../components/stores.js";
+  } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import Tab from "../components/Tab.svelte";
   import List from "../components/List.svelte";
