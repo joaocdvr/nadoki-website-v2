@@ -1,4 +1,12 @@
 <script>
+  import { fade } from "svelte/transition";
+  import {
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
+  } from "../utensils/stores.js";
   export let button = {};
 </script>
 
@@ -33,7 +41,9 @@
   }
 </style>
 
-<div>
+<div
+  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <a
     class="body-bold"
     href={button.href}
