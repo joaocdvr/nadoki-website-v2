@@ -1,9 +1,5 @@
 <script>
-  import Header from "../components/Header.svelte";
-  import Tab from "../components/Tab.svelte";
-  import List from "../components/List.svelte";
-  import Button from "../components/Button.svelte";
-  import Footer from "../components/Footer.svelte";
+  import { onMount } from "svelte";
   import {
     handleEquipmentClick,
     isEquipmentHardwareClicked,
@@ -11,7 +7,11 @@
     handleHardwareSubmenuClick,
     handleSoftwareSubmenuClick
   } from "../components/stores.js";
-  import { onMount } from "svelte";
+  import Header from "../components/Header.svelte";
+  import Tab from "../components/Tab.svelte";
+  import List from "../components/List.svelte";
+  import Button from "../components/Button.svelte";
+  import Footer from "../components/Footer.svelte";
 
   onMount(() => {
     handleEquipmentClick();

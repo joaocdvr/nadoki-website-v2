@@ -1,4 +1,5 @@
 <script>
+  import { slide, fade } from "svelte/transition";
   import {
     animationInDelay,
     animationInDuration,
@@ -6,7 +7,6 @@
     animationOutDuration,
     animationOutEasing
   } from "./stores.js";
-  import { slide, fade } from "svelte/transition";
 
   export let listItem = [];
   export let i = 0;

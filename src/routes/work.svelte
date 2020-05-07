@@ -1,9 +1,9 @@
 <script>
+  import { onMount } from "svelte";
+  import { handleWorkClick } from "../components/stores.js";
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import Card from "../components/Card.svelte";
-  import { handleWorkClick } from "../components/stores.js";
-  import { onMount } from "svelte";
 
   onMount(() => {
     handleWorkClick();

@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
   import {
     animationInDelay,
     animationInDuration,
@@ -8,8 +10,6 @@
     itemActive,
     setItemActive
   } from "../components/stores.js";
-  import { fade } from "svelte/transition";
-  import { onMount } from "svelte";
 
   onMount(() => {
     const url = new URL(document.location);

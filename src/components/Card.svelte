@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import {
     isStudioClicked,
     isWorkClicked,
@@ -9,7 +10,6 @@
     animationOutEasing
   } from "./stores.js";
   import Tag from "./Tag.svelte";
-  import { fade } from "svelte/transition";
 
   export let cards = [];
 </script>

@@ -1,4 +1,6 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { quadIn, quadOut } from "svelte/easing";
   import {
     isServicesClicked,
     isStudioClicked,
@@ -11,8 +13,6 @@
     animationOutDuration,
     animationOutEasing
   } from "./stores.js";
-  import { fade } from "svelte/transition";
-  import { quadIn, quadOut } from "svelte/easing";
 </script>
 
 <style>

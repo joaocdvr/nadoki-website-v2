@@ -1,4 +1,6 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { quadIn, quadOut } from "svelte/easing";
   import {
     animationInDelay,
     animationInDuration,
@@ -6,8 +8,6 @@
     animationOutDuration,
     animationOutEasing
   } from "./stores.js";
-  import { fade } from "svelte/transition";
-  import { quadIn, quadOut } from "svelte/easing";
 
   export let tab = [];
 </script>
