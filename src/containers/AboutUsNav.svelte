@@ -46,7 +46,8 @@
     width: 50vw;
     max-width: 50%;
     padding: 1.5rem;
-    transition: all 300ms ease;
+    background-color: var(--light);
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
   button:focus {
@@ -98,7 +99,7 @@
     height: fit-content;
   }
 
-  .any-button-open {
+  .button-open {
     width: calc(1 / 4 * 100vw);
     max-width: calc(1 / 4 * 100%);
     border-top: none;
@@ -108,12 +109,16 @@
     padding: 0.5rem 1rem;
   }
 
-  .specific-button-open {
-    background-color: var(--main-color);
+  .img-open {
+    margin: 0;
   }
 
-  .specific-img-open {
-    margin: 0;
+  .selected-button {
+    background-color: var(--secondary-color);
+  }
+
+  .selected-text {
+    color: var(--light);
   }
 </style>
 
@@ -123,61 +128,61 @@
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
     class="alper"
-    class:any-button-open={isAnyItemActive}
-    class:specific-button-open={isItemActive('alper')}
+    class:button-open={isAnyItemActive}
+    class:selected-button={isItemActive('alper')}
     on:click={() => handleItemClick('alper')}
     aria-label="Toggle Alper Arslan's details"
     aria-pressed={isItemActive('alper')}>
     <img
-      class:specific-img-open={isAnyItemActive}
+      class:img-open={isAnyItemActive}
       src="about_us/alper.png"
       alt="Alper Arslan" />
-    <h2 class="body-bold">
+    <h2 class="body-bold" class:selected-text={isItemActive('alper')}>
       {#if isAnyItemActive}Alper{:else}Alper Arslan{/if}
     </h2>
   </button>
   <button
     class="elia"
-    class:any-button-open={isAnyItemActive}
-    class:specific-button-open={isItemActive('elia')}
+    class:button-open={isAnyItemActive}
+    class:selected-button={isItemActive('elia')}
     on:click={() => handleItemClick('elia')}
     aria-label="Toggle Elia Bertolaso's details"
     aria-pressed={isItemActive('elia')}>
     <img
-      class:specific-img-open={isAnyItemActive}
+      class:img-open={isAnyItemActive}
       src="about_us/elia.png"
       alt="Elia Bertolaso" />
-    <h2 class="body-bold">
+    <h2 class="body-bold" class:selected-text={isItemActive('elia')}>
       {#if isAnyItemActive}Elia{:else}Elia Bertolaso{/if}
     </h2>
   </button>
   <button
     class="joao"
-    class:any-button-open={isAnyItemActive}
-    class:specific-button-open={isJoaoActive}
+    class:button-open={isAnyItemActive}
+    class:selected-button={isJoaoActive}
     on:click={() => handleItemClick('joao')}
     aria-label="Toggle João Rodrigues's details"
     aria-pressed={isJoaoActive}>
     <img
-      class:specific-img-open={isAnyItemActive}
+      class:img-open={isAnyItemActive}
       src="about_us/joao.png"
       alt="João Rodrigues" />
-    <h2 class="body-bold">
+    <h2 class="body-bold" class:selected-text={isItemActive('joao')}>
       {#if isAnyItemActive}João{:else}João Rodrigues{/if}
     </h2>
   </button>
   <button
     class="julia"
-    class:any-button-open={isAnyItemActive}
-    class:specific-button-open={isItemActive('julia')}
+    class:button-open={isAnyItemActive}
+    class:selected-button={isItemActive('julia')}
     on:click={() => handleItemClick('julia')}
     aria-label="Toggle Julia Borelli's details"
     aria-pressed={isItemActive('julia')}>
     <img
-      class:specific-img-open={isAnyItemActive}
+      class:img-open={isAnyItemActive}
       src="about_us/julia.png"
       alt="Julia Borelli" />
-    <h2 class="body-bold">
+    <h2 class="body-bold" class:selected-text={isItemActive('julia')}>
       {#if isAnyItemActive}Julia{:else}Julia Borelli{/if}
     </h2>
   </button>

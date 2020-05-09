@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     width: calc(100vw - 3rem);
+    transition: background-color 300ms ease-in-out;
   }
 
   button:focus {
@@ -26,7 +27,12 @@
   }
 
   :global(.user-is-tabbing) button:focus {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) button:focus dt,
+  p {
+    color: var(--light);
   }
 
   dl {

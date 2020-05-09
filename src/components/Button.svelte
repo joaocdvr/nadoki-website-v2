@@ -16,18 +16,19 @@
     text-align: center;
     color: var(--main-color);
     background-color: var(--dark);
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
+
   a:active,
-  a:visited {
-    color: var(--main-color);
+  a:visited,
+  a:focus {
     outline: none;
   }
 
-  a:focus {
-    background-color: var(--main-color);
-    color: var(--dark);
+  :global(.user-is-tabbing) a:focus {
+    background-color: var(--secondary-color);
+    color: var(--light);
     outline: none;
-    box-shadow: inset 0 0 0 0.125rem var(--dark);
   }
 
   div {

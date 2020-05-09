@@ -8,6 +8,8 @@
     border: none;
     cursor: pointer;
     padding: 1.5rem;
+    fill: var(--dark);
+    transition: background-color 300ms ease-in-out;
   }
 
   button:focus {
@@ -15,7 +17,8 @@
   }
 
   :global(.user-is-tabbing) button:focus {
-    background-color: var(--main-color);
+    fill: var(--light);
+    background-color: var(--secondary-color);
   }
 
   svg {
@@ -25,30 +28,24 @@
 
   /* Menu icon */
   .left-rect-menu {
-    fill: var(--dark);
     width: 0.3rem;
     height: 1.5rem;
     transition: 300ms ease-in-out;
-    transition-delay: 0;
   }
 
   .middle-rect-menu {
-    fill: var(--dark);
     width: 0.3rem;
     height: 1.5rem;
     transform: translateX(0.6rem);
     opacity: 1;
     transition: 300ms ease-in-out;
-    transition-delay: 0;
   }
 
   .right-rect-menu {
-    fill: var(--dark);
     width: 0.3rem;
     height: 1.5rem;
     transform: translateX(1.2rem);
     transition: 300ms ease-in-out;
-    transition-delay: 0;
   }
 
   /* Menu icon hover animation */

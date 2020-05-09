@@ -25,7 +25,7 @@
     margin-bottom: 0.5rem;
     border: none;
     cursor: pointer;
-    transition: height 400ms ease-in-out;
+    transition: height 400ms ease-in-out, background-color 300ms ease-in-out;
   }
 
   button:focus {
@@ -33,13 +33,13 @@
   }
 
   :global(.user-is-tabbing) button:focus {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
   }
 
   svg {
+    fill: var(--dark);
     height: 100%;
     width: 100%;
-    fill: var(--dark);
     transition: height 400ms ease-in-out;
   }
 

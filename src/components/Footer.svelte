@@ -15,20 +15,26 @@
     text-decoration: none;
     color: var(--dark);
     display: inline-block;
-  }
-  a:active,
-  a:visited {
-    color: var(--dark);
-    outline: none;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
+  a:active,
+  a:visited,
   a:focus {
-    color: var(--dark);
     outline: none;
   }
 
   :global(.user-is-tabbing) a:focus {
-    background-color: var(--light);
+    color: var(--light);
+    background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) a:focus svg {
+    fill: var(--light);
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    fill: var(--light);
   }
 
   footer {
@@ -42,6 +48,7 @@
   }
 
   ul {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -53,7 +60,7 @@
 
   li {
     min-width: 2.5rem;
-    width: calc((100vw - 5rem) / 5);
+    width: calc((100% - 2rem) / 5);
     box-shadow: inset 0 0 0 0.0625rem var(--dark);
     text-align: center;
     margin: 0.5rem 0.5rem 0.5rem 0;
@@ -62,9 +69,10 @@
   svg {
     width: 1.5rem;
     height: 1.5rem;
+    fill: var(--dark);
   }
 
-  .emaio-a {
+  .email-a {
     margin-bottom: 8rem;
   }
 
@@ -85,7 +93,7 @@
   <p class="body-extra">LET'S HAVE A BEER!</p>
 
   <a
-    class="body-italic emaio-a"
+    class="body-italic email-a"
     target="_blank"
     aria-label="Nadoki's Email"
     href="mailto:info@nadoki.com">
@@ -123,8 +131,7 @@
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16
-            9.791 16 12C16 14.21 14.209 16 12 16Z"
-            fill="var(--dark)" />
+            9.791 16 12C16 14.21 14.209 16 12 16Z" />
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -140,8 +147,7 @@
             8.59689 15.4029 5.83789 11.9999 5.83789ZM18.4058 4.15503C17.6098
             4.15503 16.9648 4.80003 16.9648 5.59503C16.9648 6.39003 17.6098
             7.03503 18.4058 7.03503C19.2008 7.03503 19.8448 6.39003 19.8448
-            5.59503C19.8448 4.80003 19.2008 4.15503 18.4058 4.15503Z"
-            fill="var(--dark)" />
+            5.59503C19.8448 4.80003 19.2008 4.15503 18.4058 4.15503Z" />
         </svg>
       </a>
     </li>
@@ -155,8 +161,7 @@
         <svg viewBox="0 0 12 24" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M3 8H0V12H3V24H8V12H11.642L12 8H8V6.333C8 5.378 8.192 5 9.115
-            5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z"
-            fill="var(--dark)" />
+            5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z" />
         </svg>
       </a>
     </li>
@@ -175,8 +180,7 @@
             19.763V24L8.558 21.758C9.648 22.059 10.804 22.222 12 22.222C18.627
             22.222 24 17.248 24 11.111C24 4.975 18.627 0 12 0ZM13.193
             14.963L10.137 11.704L4.174 14.963L10.733 8L13.863 11.259L19.752
-            8L13.193 14.963Z"
-            fill="var(--dark)" />
+            8L13.193 14.963Z" />
         </svg>
       </a>
     </li>
@@ -217,8 +221,7 @@
             14.9519 13.665 14.9269 13.8389 14.7289C14.0127 14.5309 14.5854
             13.8609 14.7843 13.5639C14.9843 13.2659 15.1832 13.3159 15.4565
             13.4149C15.7308 13.5139 17.1988 14.2329 17.4972 14.3819C17.5559
-            14.4111 17.6107 14.4374 17.6615 14.4618Z"
-            fill="var(--dark)" />
+            14.4111 17.6107 14.4374 17.6615 14.4618Z" />
         </svg>
       </a>
     </li>
@@ -234,8 +237,7 @@
             d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02
             1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5 7H0V23H5V7ZM12.982
             7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549 19.012
-            14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
-            fill="var(--dark)" />
+            14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z" />
         </svg>
       </a>
     </li>

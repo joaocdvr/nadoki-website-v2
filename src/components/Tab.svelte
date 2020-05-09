@@ -30,7 +30,7 @@
     flex: 0 0 auto;
     background-color: var(--dark);
     box-shadow: none;
-    transition: box-shadow 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
   }
 
   button:focus {
@@ -48,11 +48,7 @@
   }
 
   .is-selected-color {
-    color: var(--main-color);
-  }
-
-  .is-selected-box-shadow {
-    box-shadow: inset 0 0 0 0.125rem var(--main-color);
+    background-color: var(--secondary-color);
   }
 
   .just-two {
@@ -68,11 +64,9 @@
       on:click={tab.function}
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}
-      class:is-selected-box-shadow={tab.variable}
-      class:just-two={tab.justTwo}>
-      <p class="body-bold" class:is-selected-color={tab.variable}>
-        {tab.title}
-      </p>
+      class:just-two={tab.justTwo}
+      class:is-selected-color={tab.variable}>
+      <p class="body-bold">{tab.title}</p>
     </button>
   {/each}
 </menu>

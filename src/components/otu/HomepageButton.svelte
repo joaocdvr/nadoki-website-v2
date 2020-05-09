@@ -7,21 +7,27 @@
   a {
     padding: 1.5rem;
     display: inline-block;
+    transition: background-color 300ms ease-in-out, fill 300ms ease-in-out;
   }
 
+  a:active,
+  a:visited,
   a:focus {
     outline: none;
   }
 
   :global(.user-is-tabbing) a:focus {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) a:focus svg {
+    fill: var(--light);
   }
 
   svg {
     width: 2.5rem;
     height: 1.5rem;
     fill: var(--dark);
-    transition: fill 300ms ease-in-out;
     transition-delay: 0;
   }
   /* Fill animation */

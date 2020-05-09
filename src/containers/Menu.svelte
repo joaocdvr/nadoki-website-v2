@@ -31,15 +31,21 @@
 
   a {
     display: inline-block;
+    transition: background-color 300ms ease-in-out;
   }
 
-  :global(.user-is-tabbing) a:focus {
-    background-color: var(--main-color);
+  a:active,
+  a:visited,
+  a:focus {
+    outline: none;
   }
 
   a:focus {
-    outline: none;
     padding: 0 1.5rem;
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    background-color: var(--secondary-color);
   }
 
   svg {
@@ -66,31 +72,31 @@
 
   .services-is-visible {
     opacity: 1;
-    transition: all 600ms ease-in-out;
+    transition: opacity 600ms ease-in-out;
     transition-delay: 400ms;
   }
 
   .studio-is-visible {
     opacity: 1;
-    transition: all 600ms ease-in-out;
+    transition: opacity 600ms ease-in-out;
     transition-delay: 500ms;
   }
 
   .work-is-visible {
     opacity: 1;
-    transition: all 600ms ease-in-out;
+    transition: opacity 600ms ease-in-out;
     transition-delay: 600ms;
   }
 
   .equipment-is-visible {
     opacity: 1;
-    transition: all 600ms ease-in-out;
+    transition: opacity 600ms ease-in-out;
     transition-delay: 700ms;
   }
 
   .about-us-is-visible {
     opacity: 1;
-    transition: all 600ms ease-in-out;
+    transition: opacity 600ms ease-in-out;
     transition-delay: 800ms;
   }
 

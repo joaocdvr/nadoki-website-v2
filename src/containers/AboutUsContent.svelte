@@ -23,20 +23,21 @@
     text-decoration: none;
     color: var(--dark);
     display: inline-block;
-  }
-  a:active,
-  a:visited {
-    color: var(--dark);
-    outline: none;
+    fill: var(--dark);
   }
 
+  a:active,
+  a:visited,
   a:focus {
-    color: var(--dark);
     outline: none;
   }
 
   :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) a:focus svg {
+    fill: var(--light);
   }
 
   img {
@@ -179,8 +180,7 @@
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209
-                    8 16 9.791 16 12C16 14.21 14.209 16 12 16Z"
-                    fill="var(--dark)" />
+                    8 16 9.791 16 12C16 14.21 14.209 16 12 16Z" />
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -198,8 +198,7 @@
                     5.83789ZM18.4058 4.15503C17.6098 4.15503 16.9648 4.80003
                     16.9648 5.59503C16.9648 6.39003 17.6098 7.03503 18.4058
                     7.03503C19.2008 7.03503 19.8448 6.39003 19.8448
-                    5.59503C19.8448 4.80003 19.2008 4.15503 18.4058 4.15503Z"
-                    fill="var(--dark)" />
+                    5.59503C19.8448 4.80003 19.2008 4.15503 18.4058 4.15503Z" />
                 </svg>
               </a>
             </li>
@@ -216,8 +215,7 @@
                     2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5
                     7H0V23H5V7ZM12.982 7H8.014V23H12.983V14.601C12.983 9.931
                     19.012 9.549 19.012 14.601V23H24V12.869C24 4.989 15.078
-                    5.276 12.982 9.155V7Z"
-                    fill="var(--dark)" />
+                    5.276 12.982 9.155V7Z" />
                 </svg>
               </a>
             </li>
