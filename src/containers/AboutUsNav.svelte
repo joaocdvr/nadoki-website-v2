@@ -105,7 +105,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 0.125rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--secondary-color);
     padding: 0.5rem 1rem;
   }
 
