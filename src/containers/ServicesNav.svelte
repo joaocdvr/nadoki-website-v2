@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import {
     isMusicClicked,
     isFilmClicked,
@@ -8,7 +9,12 @@
     handleFilmClick,
     handleGameClick,
     handleBrandingClick,
-    isAnyServiceClicked
+    isAnyServiceClicked,
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
   } from "../utensils/stores.js";
 </script>
 
@@ -56,7 +62,9 @@
   }
 </style>
 
-<menu>
+<menu
+  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
     on:click={handleMusicClick}
     aria-label="Toggle music submenu"
