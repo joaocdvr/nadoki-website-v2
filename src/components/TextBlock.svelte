@@ -15,8 +15,7 @@
   div {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
     height: fit-content;
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     transition: height 500ms ease-in-out;
   }
 </style>

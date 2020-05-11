@@ -14,7 +14,6 @@
   menu {
     position: absolute;
     width: 100vw;
-    height: calc(100vh - 4.5rem);
     margin-top: 4.5rem;
     padding: 1.25rem 0;
     line-height: 0;

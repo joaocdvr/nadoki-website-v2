@@ -43,8 +43,7 @@
   }
 
   button {
-    width: 50vw;
-    max-width: 50%;
+    width: 50%;
     padding: 1.5rem;
     background-color: var(--light);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
@@ -100,8 +99,7 @@
   }
 
   .button-open {
-    width: calc(1 / 4 * 100vw);
-    max-width: calc(1 / 4 * 100%);
+    width: calc(1 / 4 * 100%);
     border-top: none;
     border-right: none;
     border-left: none;
