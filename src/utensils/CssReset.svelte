@@ -59,4 +59,8 @@
     -moz-box-sizing: inherit;
     box-sizing: inherit;
   }
+
+  :global(svg) {
+    vertical-align: top;
+  }
 </style>
