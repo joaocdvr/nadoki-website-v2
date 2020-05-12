@@ -84,6 +84,10 @@
   address {
     margin-bottom: 1rem;
   }
+
+  .underlined {
+    text-decoration: underline;
+  }
 </style>
 
 <footer
@@ -92,7 +96,7 @@
   <p class="body-extra">LET'S HAVE A BEER!</p>
 
   <a
-    class="body-italic email-a"
+    class="body-italic email-a underlined"
     target="_blank"
     aria-label="Nadoki's Email"
     href="mailto:info@nadoki.com">
@@ -101,18 +105,13 @@
 
   <address>
     <p class="body-bold">
-      @
-      <a
-        target="_blank"
-        aria-label="Riverside Studios' website"
-        href="https://riversidestudios.de">
-        Riverside Studios
-      </a>
-      <br />
       <a
         target="_blank"
         aria-label="Nadoki's address"
         href="https://goo.gl/maps/gYojUUpPSQornBWh9">
+        @
+        <span class="underlined">Riverside Studios</span>
+        <br />
         Pfuelstraße 5
         <br />
         10997 Berlin
