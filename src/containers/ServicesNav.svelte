@@ -19,19 +19,13 @@
 </script>
 
 <style>
-  menu {
-    padding: 1.5rem;
-    line-height: 0;
-  }
-
   button {
+    padding: 0.25rem 1.5rem;
     width: 100vw;
-    height: calc((100vh - 15.5rem) / 4);
-    min-height: 2rem;
-    margin-bottom: 0.5rem;
+    height: fit-content;
     border: none;
     cursor: pointer;
-    transition: height 400ms ease-in-out, background-color 300ms ease-in-out;
+    transition: height 300ms ease-in-out, background-color 300ms ease-in-out;
   }
 
   button:focus {
@@ -42,23 +36,32 @@
     background-color: var(--secondary-color);
   }
 
+  :global(.user-is-tabbing) button:focus svg {
+    fill: var(--light);
+  }
+
   svg {
     fill: var(--dark);
-    height: 100%;
     width: 100%;
-    transition: height 400ms ease-in-out;
+    height: calc((100vh - 13rem) / 4);
+    min-height: 2rem;
+    transition: height 300ms ease-in-out, fill 300ms ease-in-out;
   }
 
   .last-button {
     margin-bottom: 0;
   }
 
-  .button-is-small {
+  .svg-is-small {
     height: 2rem;
   }
 
-  .svg-is-small {
-    height: 100%;
+  .button-is-clicked {
+    background-color: var(--secondary-color);
+  }
+
+  .button-is-clicked svg {
+    fill: var(--light);
   }
 </style>
 
@@ -69,7 +72,7 @@
     on:click={handleMusicClick}
     aria-label="Toggle music submenu"
     aria-pressed={$isMusicClicked}
-    class:button-is-small={$isAnyServiceClicked}>
+    class:button-is-clicked={$isMusicClicked}>
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
@@ -133,7 +136,7 @@
     on:click={handleFilmClick}
     aria-label="Toggle film submenu"
     aria-pressed={$isFilmClicked}
-    class:button-is-small={$isAnyServiceClicked}>
+    class:button-is-clicked={$isFilmClicked}>
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
@@ -152,7 +155,7 @@
     on:click={handleGameClick}
     aria-label="Toggle game submenu"
     aria-pressed={$isGameClicked}
-    class:button-is-small={$isAnyServiceClicked}>
+    class:button-is-clicked={$isGameClicked}>
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 312 32"
@@ -188,7 +191,7 @@
     on:click={handleBrandingClick}
     aria-label="Toggle branding submenu"
     aria-pressed={$isBrandingClicked}
-    class:button-is-small={$isAnyServiceClicked}
+    class:button-is-clicked={$isBrandingClicked}
     class="last-button">
     <svg
       preserveAspectRatio="none"
