@@ -30,8 +30,8 @@
     background-color: var(--secondary-color);
   }
 
-  :global(.user-is-tabbing) button:focus dt,
-  p {
+  :global(.user-is-tabbing) button:focus p,
+  :global(.user-is-tabbing) button:focus dt {
     color: var(--light);
   }
 
