@@ -52,7 +52,7 @@
       open: false,
       name: "Pedals",
       content:
-        "Time based<br>— Boss RC-30 Dual Track Looper<br>— TC Electronic Flashback Delay and Looper<br>— Line6 DL4 Delay Modeller<br><br>Distortion<br>— Ibanez TS9 Tube Screamer<br>— Boss TR-2 Tremolo<br>— Dunlop Crybaby GCB95 Wah-Wah<br>— Boss BD-2 Blues Driver"
+        "Time based<br>— Boss RC-30 Dual Track Looper<br>— TC Electronic Flashback Delay and Looper<br>— Line6 DL4 Delay Modeller<br><br>Modulation<br>— Boss TR-2 Tremolo<br><br>Dynamic<br>— Ibanez TS9 Tube Screamer<br>— Dunlop Crybaby GCB95 Wah-Wah<br>— Boss BD-2 Blues Driver"
     },
     {
       open: false,
