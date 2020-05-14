@@ -191,9 +191,9 @@
         <li>
           <dt class="header-small">Experience</dt>
           <dd class="body-regular">
-            Talent Manager of Electronic Music Artists
+            Talent Manager of Electronic Music Artists (2 years)
             <br />
-            <span class="body-regular-two">???</span>
+            <span class="body-regular-two">Berlin, Germany (Freelancer)</span>
             <br />
             DJ (8 years)
             <br />
@@ -249,16 +249,16 @@
           <dd>
             <table>
               <tr>
-                <th class="body-regular">undefined</th>
-                <td class="header-big">?</td>
+                <th class="body-regular">Owned vynils</th>
+                <td class="header-big">186</td>
               </tr>
               <tr>
-                <th class="body-regular">undefined</th>
-                <td class="header-big">?</td>
+                <th class="body-regular">Fastest speed</th>
+                <td class="header-big">262</td>
               </tr>
               <tr>
-                <th class="body-regular">undefined</th>
-                <td class="header-big">?</td>
+                <th class="body-regular">Max. elevation</th>
+                <td class="header-big">2800</td>
               </tr>
             </table>
           </dd>
