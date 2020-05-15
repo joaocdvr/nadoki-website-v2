@@ -25,8 +25,6 @@
     return $itemActive === name;
   };
 
-  $: isJoaoActive = isItemActive("joao");
-
   function handleItemClick(name) {
     const newUrl = `${window.location.pathname}?name=${name}`;
     window.history.pushState("", "", newUrl);
@@ -157,10 +155,10 @@
   <button
     class="joao"
     class:button-open={isAnyItemActive}
-    class:selected-button={isJoaoActive}
+    class:selected-button={isItemActive('joao')}
     on:click={() => handleItemClick('joao')}
     aria-label="Toggle João Rodrigues's details"
-    aria-pressed={isJoaoActive}>
+    aria-pressed={isItemActive('joao')}>
     <img
       class:img-open={isAnyItemActive}
       src="about_us/joao.png"
