@@ -7,9 +7,6 @@
 
   onMount(() => {
     handleAboutUsClick();
-    window.onpopstate = function(event) {
-      console.log(event.state);
-    };
   });
 </script>
 
