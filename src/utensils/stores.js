@@ -285,3 +285,10 @@ export const itemActive = writable("");
 export function setItemActive(name) {
   itemActive.set(name);
 }
+
+// Work modal pages handling
+export const workModalActive = writable("");
+
+export function setWorkModalActive(name) {
+  workModalActive.set(name);
+}

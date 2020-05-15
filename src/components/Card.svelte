@@ -7,14 +7,51 @@
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
+    animationOutEasing,
+    workModalActive,
+    setWorkModalActive
   } from "../utensils/stores.js";
   import Tag from "./Tag.svelte";
+
+  $: isWorkModalActive = name => {
+    return $workModalActive === name;
+  };
+
+  function handleWorkModalClick(name) {
+    const newUrl = `${window.location.pathname}?project=${name}`;
+    window.history.pushState("", "", newUrl);
+    setWorkModalActive(name);
+  }
 
   export let cards = [];
 </script>
 
 <style>
+  button {
+    text-align: left;
+    width: 100vw;
+    line-height: 0;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  :global(.user-is-tabbing) button:focus {
+    background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) button:focus img {
+    filter: grayscale(0);
+  }
+
+  :global(.user-is-tabbing) button:focus p,
+  :global(.user-is-tabbing) button:focus h2,
+  :global(.user-is-tabbing) button:focus h3 {
+    color: var(--light);
+  }
+
   img {
     width: 100%;
     filter: grayscale(1);
@@ -49,21 +86,26 @@
     <li
       in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-      <div class="div-img">
-        <img src={card.src} alt={card.alt} />
-      </div>
-      <div class="div-text">
-        <div class="div-header">
-          <h2 class="header-small">{card.title}</h2>
-          {#if $isStudioClicked}
-            <h3 class="body-bold">{card.size}</h3>
+      <button
+        on:click={() => handleWorkModalClick(card.url)}
+        aria-label="Toggle {card.title}'s details"
+        aria-pressed={isWorkModalActive(card.url)}>
+        <div class="div-img">
+          <img src={card.src} alt={card.alt} />
+        </div>
+        <div class="div-text">
+          <div class="div-header">
+            <h2 class="header-small">{card.title}</h2>
+            {#if $isStudioClicked}
+              <h3 class="body-bold">{card.size}</h3>
+            {/if}
+          </div>
+          <p class="body-regular">{card.content}</p>
+          {#if $isWorkClicked}
+            <Tag tags={card.tags} />
           {/if}
         </div>
-        <p class="body-regular">{card.content}</p>
-        {#if $isWorkClicked}
-          <Tag tags={card.tags} />
-        {/if}
-      </div>
+      </button>
     </li>
   {/each}
 </ul>
