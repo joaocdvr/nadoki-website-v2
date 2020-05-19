@@ -281,10 +281,10 @@ export function handleBrandingThirdSubmenuClick() {
 }
 
 // About us page handling
-export const itemActive = writable("");
+export const aboutUsActiveItem = writable("");
 
-export function setItemActive(name) {
-  itemActive.set(name);
+export function setAboutUsActiveItem(name) {
+  aboutUsActiveItem.set(name);
 }
 
 // Work modal pages handling

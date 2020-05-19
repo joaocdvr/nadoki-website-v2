@@ -7,17 +7,17 @@
     animationOutDuration,
     animationOutEasing,
     scrollYPosition,
-    itemActive,
-    setItemActive
+    aboutUsActiveItem,
+    setAboutUsActiveItem
   } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import AboutUsNav from "../containers/AboutUsNav.svelte";
   import Footer from "../components/Footer.svelte";
 
-  $: isAnyItemActive = !!$itemActive;
+  $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
 
-  $: isItemActive = name => {
-    return $itemActive === name;
+  $: isAboutUsItemActive = name => {
+    return $aboutUsActiveItem === name;
   };
 </script>
 
@@ -134,13 +134,13 @@
   <Header />
   <AboutUsNav />
 
-  {#if isAnyItemActive}
-    {#if isItemActive('alper')}
+  {#if isAnyAboutUsItemActive}
+    {#if isAboutUsItemActive('alper')}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
-          class:specific-img-open={isAnyItemActive}
+          class:specific-img-open={isAnyAboutUsItemActive}
           src="about_us/alper.png"
           alt="Alper Arslan" />
 
@@ -277,12 +277,12 @@
           </li>
         </ul>
       </div>
-    {:else if isItemActive('elia')}
+    {:else if isAboutUsItemActive('elia')}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
-          class:specific-img-open={isAnyItemActive}
+          class:specific-img-open={isAnyAboutUsItemActive}
           src="about_us/elia.png"
           alt="Elia Bertolaso" />
 
@@ -417,12 +417,12 @@
           </li>
         </ul>
       </div>
-    {:else if isItemActive('joao')}
+    {:else if isAboutUsItemActive('joao')}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
-          class:specific-img-open={isAnyItemActive}
+          class:specific-img-open={isAnyAboutUsItemActive}
           src="about_us/joao.png"
           alt="João Rodrigues" />
 
@@ -552,12 +552,12 @@
           </li>
         </ul>
       </div>
-    {:else if isItemActive('julia')}
+    {:else if isAboutUsItemActive('julia')}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
-          class:specific-img-open={isAnyItemActive}
+          class:specific-img-open={isAnyAboutUsItemActive}
           src="about_us/julia.png"
           alt="Julia Borelli" />
 

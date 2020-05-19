@@ -5,7 +5,8 @@
     handleStudioClick,
     handleWorkClick,
     handleEquipmentClick,
-    handleAboutUsClick
+    handleAboutUsClick,
+    aboutUsActiveItem
   } from "../utensils/stores.js";
   import {
     toggleIsMenuClicked,
@@ -466,7 +467,7 @@
   </li>
   <li class:about-us-is-visible={$isMenuClicked}>
     <a
-      href="/about_us"
+      href={['alper', 'elia', 'joao', 'julia'].includes($aboutUsActiveItem) ? 'about_us?name=' + $aboutUsActiveItem : 'about_us'}
       aria-label="About Us page"
       on:click={() => handleMenuOptionsClick()}
       on:click={handleAboutUsClick}>
