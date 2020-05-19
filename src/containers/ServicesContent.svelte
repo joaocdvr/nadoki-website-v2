@@ -1,5 +1,6 @@
 <script>
   import {
+    scrollYPosition,
     handleServicesClick,
     isMusicClicked,
     isFilmClicked,
@@ -43,6 +44,8 @@
     isBrandingThirdClicked,
     handleBrandingThirdSubmenuClick
   } from "../utensils/stores.js";
+  import Header from "../components/Header.svelte";
+  import ServicesNav from "../containers/ServicesNav.svelte";
   import Tab from "../components/Tab.svelte";
   import TextBlock from "../components/TextBlock.svelte";
   import Footer from "../components/Footer.svelte";
@@ -186,59 +189,61 @@
   ];
 </script>
 
-{#if $isMusicClicked}
-  <Tab tab={musicTab} />
-  {#if $isMusicFirstClicked}
-    <TextBlock content={musicTab[0].content} />
-  {:else if $isMusicSecondClicked}
-    <TextBlock content={musicTab[1].content} />
-  {:else if $isMusicThirdClicked}
-    <TextBlock content={musicTab[2].content} />
-  {:else if $isMusicFourthClicked}
-    <TextBlock content={musicTab[3].content} />
-  {:else if $isMusicFifthClicked}
-    <TextBlock content={musicTab[4].content} />
-  {:else if $isMusicSixthClicked}
-    <TextBlock content={musicTab[5].content} />
-  {/if}
-{/if}
-{#if $isFilmClicked}
-  <Tab tab={filmTab} />
-  {#if $isFilmFirstClicked}
-    <TextBlock content={filmTab[0].content} />
-  {:else if $isFilmSecondClicked}
-    <TextBlock content={filmTab[1].content} />
-  {:else if $isFilmThirdClicked}
-    <TextBlock content={filmTab[2].content} />
-  {:else if $isFilmFourthClicked}
-    <TextBlock content={filmTab[3].content} />
-  {:else if $isFilmFifthClicked}
-    <TextBlock content={filmTab[4].content} />
-  {/if}
-{/if}
-{#if $isGameClicked}
-  <Tab tab={gameTab} />
-  {#if $isGameFirstClicked}
-    <TextBlock content={gameTab[0].content} />
-  {:else if $isGameSecondClicked}
-    <TextBlock content={gameTab[1].content} />
-  {:else if $isGameThirdClicked}
-    <TextBlock content={gameTab[2].content} />
-  {:else if $isGameFourthClicked}
-    <TextBlock content={gameTab[3].content} />
-  {/if}
-{/if}
-{#if $isBrandingClicked}
-  <Tab tab={brandingTab} />
-  {#if $isBrandingFirstClicked}
-    <TextBlock content={brandingTab[0].content} />
-  {:else if $isBrandingSecondClicked}
-    <TextBlock content={brandingTab[1].content} />
-  {:else if $isBrandingThirdClicked}
-    <TextBlock content={brandingTab[2].content} />
-  {/if}
-{/if}
+<div style="transform: translateY({$scrollYPosition * -1}px)">
+  <Header />
+  <ServicesNav />
 
-{#if $isAnyServiceClicked}
-  <Footer />
-{/if}
+  {#if $isMusicClicked}
+    <Tab tab={musicTab} />
+    {#if $isMusicFirstClicked}
+      <TextBlock content={musicTab[0].content} />
+    {:else if $isMusicSecondClicked}
+      <TextBlock content={musicTab[1].content} />
+    {:else if $isMusicThirdClicked}
+      <TextBlock content={musicTab[2].content} />
+    {:else if $isMusicFourthClicked}
+      <TextBlock content={musicTab[3].content} />
+    {:else if $isMusicFifthClicked}
+      <TextBlock content={musicTab[4].content} />
+    {:else if $isMusicSixthClicked}
+      <TextBlock content={musicTab[5].content} />
+    {/if}
+  {:else if $isFilmClicked}
+    <Tab tab={filmTab} />
+    {#if $isFilmFirstClicked}
+      <TextBlock content={filmTab[0].content} />
+    {:else if $isFilmSecondClicked}
+      <TextBlock content={filmTab[1].content} />
+    {:else if $isFilmThirdClicked}
+      <TextBlock content={filmTab[2].content} />
+    {:else if $isFilmFourthClicked}
+      <TextBlock content={filmTab[3].content} />
+    {:else if $isFilmFifthClicked}
+      <TextBlock content={filmTab[4].content} />
+    {/if}
+  {:else if $isGameClicked}
+    <Tab tab={gameTab} />
+    {#if $isGameFirstClicked}
+      <TextBlock content={gameTab[0].content} />
+    {:else if $isGameSecondClicked}
+      <TextBlock content={gameTab[1].content} />
+    {:else if $isGameThirdClicked}
+      <TextBlock content={gameTab[2].content} />
+    {:else if $isGameFourthClicked}
+      <TextBlock content={gameTab[3].content} />
+    {/if}
+  {:else if $isBrandingClicked}
+    <Tab tab={brandingTab} />
+    {#if $isBrandingFirstClicked}
+      <TextBlock content={brandingTab[0].content} />
+    {:else if $isBrandingSecondClicked}
+      <TextBlock content={brandingTab[1].content} />
+    {:else if $isBrandingThirdClicked}
+      <TextBlock content={brandingTab[2].content} />
+    {/if}
+  {/if}
+
+  {#if $isAnyServiceClicked}
+    <Footer />
+  {/if}
+</div>

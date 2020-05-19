@@ -1,13 +1,16 @@
 <script>
   import {
+    scrollYPosition,
     isEquipmentHardwareClicked,
     isEquipmentSoftwareClicked,
     handleHardwareSubmenuClick,
     handleSoftwareSubmenuClick
   } from "../utensils/stores.js";
+  import Header from "../components/Header.svelte";
   import Tab from "../components/Tab.svelte";
   import List from "../components/List.svelte";
   import Button from "../components/Button.svelte";
+  import Footer from "../components/Footer.svelte";
 
   $: equipmentTab = [
     {
@@ -120,22 +123,30 @@
   }
 </style>
 
-<Tab tab={equipmentTab} />
-<ul>
-  {#if $isEquipmentHardwareClicked}
-    {#each hardwareList as listItem, i}
-      <List
-        {listItem}
-        {i}
-        on:click={() => handleHardwareListToggle(listItem)} />
-    {/each}
-  {:else}
-    {#each softwareList as listItem, i}
-      <List
-        {listItem}
-        {i}
-        on:click={() => handleSoftwareListToggle(listItem)} />
-    {/each}
-  {/if}
-</ul>
-<Button button={pdfButton} />
+<div style="transform: translateY({$scrollYPosition * -1}px)">
+  <Header />
+
+  <Tab tab={equipmentTab} />
+
+  <ul>
+    {#if $isEquipmentHardwareClicked}
+      {#each hardwareList as listItem, i}
+        <List
+          {listItem}
+          {i}
+          on:click={() => handleHardwareListToggle(listItem)} />
+      {/each}
+    {:else}
+      {#each softwareList as listItem, i}
+        <List
+          {listItem}
+          {i}
+          on:click={() => handleSoftwareListToggle(listItem)} />
+      {/each}
+    {/if}
+  </ul>
+
+  <Button button={pdfButton} />
+
+  <Footer />
+</div>

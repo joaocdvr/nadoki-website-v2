@@ -7,11 +7,19 @@
     handleEquipmentClick,
     handleAboutUsClick
   } from "../utensils/stores.js";
-  import { handleMenuClick } from "../utensils/utils.js";
+  import {
+    toggleIsMenuClicked,
+    restoreScrollYPosition
+  } from "../utensils/utils.js";
+
+  function handleMenuOptionsClick() {
+    restoreScrollYPosition();
+    toggleIsMenuClicked();
+  }
 </script>
 
 <style>
-  menu {
+  ul {
     position: absolute;
     width: 100vw;
     margin-top: 4.5rem;
@@ -101,7 +109,7 @@
 
   /* Media queries */
   @media (--mobile-landscape) {
-    menu {
+    ul {
       padding: 0;
     }
 
@@ -119,7 +127,7 @@
   }
 
   @media (--tablet-portrait) {
-    menu,
+    ul,
     li {
       padding: 1.25rem 0;
     }
@@ -140,7 +148,7 @@
   }
 
   @media (--tablet-landscape) {
-    menu,
+    ul,
     li {
       padding: 1.25rem 0;
     }
@@ -171,7 +179,7 @@
   }
 
   @media (--mobile-landscape-big) {
-    menu {
+    ul {
       padding: 0;
     }
 
@@ -195,12 +203,12 @@
   }
 </style>
 
-<menu class:menu-is-visible={$isMenuClicked}>
+<ul class:menu-is-visible={$isMenuClicked}>
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
       aria-label="Services page"
-      on:click={handleMenuClick}
+      on:click={() => handleMenuOptionsClick()}
       on:click={handleServicesClick}>
       <svg
         preserveAspectRatio="none"
@@ -289,7 +297,7 @@
     <a
       href="/studio"
       aria-label="Studio page"
-      on:click={handleMenuClick}
+      on:click={() => handleMenuOptionsClick()}
       on:click={handleStudioClick}>
       <svg
         preserveAspectRatio="none"
@@ -358,7 +366,7 @@
     <a
       href="/work"
       aria-label="Work page"
-      on:click={handleMenuClick}
+      on:click={() => handleMenuOptionsClick()}
       on:click={handleWorkClick}>
       <svg
         preserveAspectRatio="none"
@@ -402,7 +410,7 @@
     <a
       href="/equipment"
       aria-label="Equipment page"
-      on:click={handleMenuClick}
+      on:click={() => handleMenuOptionsClick()}
       on:click={handleEquipmentClick}>
       <svg
         class="equipment-svg"
@@ -460,7 +468,7 @@
     <a
       href="/about_us"
       aria-label="About Us page"
-      on:click={handleMenuClick}
+      on:click={() => handleMenuOptionsClick()}
       on:click={handleAboutUsClick}>
       <svg
         preserveAspectRatio="none"
@@ -542,4 +550,4 @@
       </svg>
     </a>
   </li>
-</menu>
+</ul>

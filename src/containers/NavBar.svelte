@@ -10,12 +10,13 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     background-color: var(--light);
     backface-visibility: hidden;
-    z-index: 1;
+
     border-bottom: 0.125rem solid var(--main-color);
   }
 

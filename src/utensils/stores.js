@@ -11,6 +11,7 @@ export const animationOutEasing = readable(quadInOut);
 
 // Menu handling
 export const isMenuClicked = writable(false);
+export const scrollYPosition = writable(0);
 
 // Page handling
 export const isServicesClicked = writable(false);

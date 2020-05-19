@@ -12,13 +12,13 @@
 
 <style>
   /* Scrollbar hiding */
-  .menuIsOpened {
+  .menu-is-open {
     overflow: hidden;
     max-height: 100vh;
   }
 </style>
 
-<div class:menuIsOpened={$isMenuClicked}>
+<div class:menu-is-open={$isMenuClicked}>
   <NavBar />
   <slot />
 </div>

@@ -1,6 +1,6 @@
 <script>
   import { isMenuClicked } from "../../utensils/stores.js";
-  import { handleMenuClick } from "../../utensils/utils.js";
+  import { toggleIsMenuClicked } from "../../utensils/utils.js";
 </script>
 
 <style>
@@ -40,7 +40,7 @@
 <a href="/" aria-label="Homepage">
   <svg
     class:is-white={$isMenuClicked}
-    on:click={$isMenuClicked ? handleMenuClick : () => null}
+    on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
     preserveAspectRatio="none"
     alt="Nadoki logo"
     viewBox="0 0 40 24"

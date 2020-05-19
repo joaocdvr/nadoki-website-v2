@@ -1,5 +1,8 @@
 <script>
+  import { scrollYPosition } from "../utensils/stores.js";
+  import Header from "../components/Header.svelte";
   import Card from "../components/Card.svelte";
+  import Footer from "../components/Footer.svelte";
 
   let studioCards = [
     {
@@ -41,4 +44,8 @@
   ];
 </script>
 
-<Card cards={studioCards} />
+<div style="transform: translateY({$scrollYPosition * -1}px)">
+  <Header />
+  <Card cards={studioCards} />
+  <Footer />
+</div>

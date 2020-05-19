@@ -1,15 +1,13 @@
 <script>
   import { onMount } from "svelte";
   import { handleEquipmentClick } from "../utensils/stores.js";
-  import Header from "../components/Header.svelte";
+  import { resetScrollYPosition } from "../utensils/utils.js";
   import EquipmentContent from "../containers/EquipmentContent.svelte";
-  import Footer from "../components/Footer.svelte";
 
   onMount(() => {
     handleEquipmentClick();
+    resetScrollYPosition();
   });
 </script>
 
-<Header />
 <EquipmentContent />
-<Footer />

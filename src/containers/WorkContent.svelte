@@ -1,9 +1,12 @@
 <script>
   import { onMount } from "svelte";
+  import { scrollYPosition } from "../utensils/stores.js";
   import { workModalActive, setWorkModalActive } from "../utensils/stores.js";
+  import Header from "../components/Header.svelte";
   import Card from "../components/Card.svelte";
   import WorkModal from "./WorkModal.svelte";
   import Tag from "../components/Tag.svelte";
+  import Footer from "../components/Footer.svelte";
 
   onMount(() => {
     const url = new URL(document.location);
@@ -27,12 +30,6 @@
   $: isWorkModalActive = name => {
     return $workModalActive === name;
   };
-
-  function handleWorkModalClick(name) {
-    const newUrl = `${window.location.pathname}?project=${name}`;
-    window.history.pushState("", "", newUrl);
-    setWorkModalActive(name);
-  }
 
   let workCards = [
     {
@@ -90,17 +87,25 @@
 </script>
 
 <style>
-  .modal {
+  .modal-wrapper {
     position: fixed;
     top: 0;
     left: 100vw;
     background-color: var(--light);
+    max-height: 100vh;
+    overflow-y: auto;
     z-index: 2;
+    backface-visibility: hidden;
     transition: left 300ms ease-in-out;
   }
 
   .modal-is-visible {
     left: 0;
+  }
+
+  .cards-are-hidden {
+    overflow: hidden;
+    max-height: 100vh;
   }
 
   iframe {
@@ -112,13 +117,24 @@
   }
 
   .description {
-    margin-top: 1.5rem;
+    padding: 1.5rem 0 2.5rem 0;
+    border-bottom: 0.0625rem solid var(--main-color);
+  }
+
+  .quote {
+    padding-top: 1.5rem;
   }
 </style>
 
-<Card cards={workCards} />
+<div
+  class:cards-are-hidden={isAnyItemActive}
+  style="transform: translateY({$scrollYPosition * -1}px)">
+  <Header />
+  <Card cards={workCards} />
+  <Footer />
+</div>
 
-<div class="modal" class:modal-is-visible={isAnyItemActive}>
+<div class="modal-wrapper" class:modal-is-visible={isAnyItemActive}>
   {#if isWorkModalActive('above_it_all')}
     <WorkModal>
       <iframe
@@ -140,15 +156,21 @@
       <iframe
         slot="media"
         title="'Parda' by Tai Linhares"
+        SameSite="None"
+        Secure
         src="https://player.vimeo.com/video/307440642"
         frameborder="0"
         allow="autoplay; fullscreen"
         allowfullscreen />
+
       <span slot="title">PARDA</span>
+
       <span slot="year">2019</span>
+
       <div slot="tag">
         <Tag tags="5.1 Mix" />
       </div>
+
       <span slot="description">
         <p class="description">
           We had the pleasure to do the 5.1 mix of this touching independent
@@ -161,8 +183,59 @@
           <span class="body-bold">Cinemaissí Festival</span>
           and in Brazil during the
           <span class="body-bold">Mostra Sesc de Cinema</span>
-          .
+          .«
         </p>
+      </span>
+
+      <span slot="quote">
+        <p class="quote">
+          <span class="body-extra">
+            “An authoritarian regime plans to restore white supremacy in Brazil.
+          </span>
+          <br />
+          <br />
+          Their first act is to demand the return of all white Brazilian
+          citizens living abroad. In the midst of this political chaos, Tai
+          needs to prove that she is not white, but is faced with uncertainty
+          about her own racial identity. The film delves into the ambiguous
+          concept of race in Brazil, exploring the traces left by its colonial
+          past and the family history of the director. An exploratory journey
+          between fiction and documentary.”
+          <br />
+          <br />
+          <span class="body-bold">Tai Linhares</span>
+        </p>
+      </span>
+
+      <span slot="credits">
+        Directed, Written and Produced by
+        <span class="body-bold">Tai Linhares</span>
+        <br />
+        Directors of Photography
+        <span class="body-bold">
+          Aline Juárez, Marcos Lamoreux and Sanni Est
+        </span>
+        <br />
+        Assistant Director
+        <span class="body-bold">João Xavi</span>
+        <br />
+        Editors
+        <span class="body-bold">Tai Linhares and Sully Ceccopieri</span>
+        <br />
+        Music by
+        <span class="body-bold">The Cosmic Race</span>
+        <br />
+        Location Sound
+        <span class="body-bold">Elissa Brito</span>
+        <br />
+        Sound Editor
+        <span class="body-bold">Caio Cesar Loures</span>
+        <br />
+        2.0 Mix by
+        <span class="body-bold">Mariana Bahia</span>
+        <br />
+        5.1 Mix by
+        <span class="body-bold">Nadoki Studios</span>
       </span>
     </WorkModal>
   {:else if isWorkModalActive('love_hurts')}
@@ -173,8 +246,7 @@
         src="https://open.spotify.com/embed/track/1ClR5vHqlOlK6fj6hLKnNY"
         frameborder="0"
         allowtransparency="true"
-        allow="encrypted-media"
-        data-mce-fragment="1" />
+        allow="encrypted-media" />
       <span slot="title">LOVE HURTS</span>
       <span slot="year">2019</span>
       <div slot="tag">
@@ -186,6 +258,7 @@
       <iframe
         slot="media"
         title="'Der Hauptbahnhof' by Jordi Garcia Rodriguez"
+        SameSite="None"
         src="https://player.vimeo.com/video/265019323"
         frameborder="0"
         allow="autoplay; fullscreen"

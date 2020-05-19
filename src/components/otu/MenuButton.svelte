@@ -1,6 +1,20 @@
 <script>
+  import { get } from "svelte/store";
   import { isMenuClicked } from "../../utensils/stores.js";
-  import { handleMenuClick } from "../../utensils/utils.js";
+  import {
+    toggleIsMenuClicked,
+    saveScrollYPosition,
+    restoreScrollYPosition
+  } from "../../utensils/utils.js";
+
+  function handleMenuClick() {
+    if (get(isMenuClicked) === false) {
+      saveScrollYPosition();
+    } else {
+      restoreScrollYPosition();
+    }
+    toggleIsMenuClicked();
+  }
 </script>
 
 <style>
