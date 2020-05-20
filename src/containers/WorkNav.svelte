@@ -4,13 +4,14 @@
 
 <style>
   nav {
+    position: sticky;
     top: 0;
     left: 0;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     background-color: var(--light);
-    backface-visibility: hidden;
+    z-index: 3;
     border-bottom: 0.125rem solid var(--main-color);
   }
 

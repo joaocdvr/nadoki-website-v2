@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { get } from "svelte/store";
   import { scrollYPosition } from "../utensils/stores.js";
   import { workModalActive, setWorkModalActive } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
@@ -27,14 +28,12 @@
 
   $: isAnyAboutUsItemActive = !!$workModalActive;
 
-  $: isWorkModalActive = name => {
-    return $workModalActive === name;
-  };
-
   function handleWorkModalClick(name) {
-    const newUrl = `${window.location.pathname}?project=${name}`;
-    window.history.pushState("", "", newUrl);
-    setWorkModalActive(name);
+    if (name !== undefined) {
+      const newUrl = `${window.location.pathname}?project=${name}`;
+      window.history.pushState("", "", newUrl);
+      setWorkModalActive(name);
+    }
   }
 
   let workCards = [
@@ -135,13 +134,13 @@
 <div
   class:cards-are-hidden={isAnyAboutUsItemActive}
   style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header />
-  <Card cards={workCards} />
+  <Header variant="work" />
+  <Card cards={workCards} variant="work" />
   <Footer />
 </div>
 
 <div class="modal-wrapper" class:modal-is-visible={isAnyAboutUsItemActive}>
-  {#if isWorkModalActive('above_it_all')}
+  {#if $workModalActive === 'above_it_all'}
     <WorkModal>
       <iframe
         slot="media"
@@ -157,7 +156,7 @@
         <Tag tags="Master" />
       </div>
     </WorkModal>
-  {:else if isWorkModalActive('parda')}
+  {:else if $workModalActive === 'parda'}
     <WorkModal>
       <iframe
         slot="media"
@@ -242,7 +241,7 @@
         <span class="body-bold">Nadoki Studios</span>
       </span>
     </WorkModal>
-  {:else if isWorkModalActive('love_hurts')}
+  {:else if $workModalActive === 'love_hurts'}
     <WorkModal>
       <iframe
         slot="media"
@@ -257,7 +256,7 @@
         <Tag tags="Mix, Master" />
       </div>
     </WorkModal>
-  {:else if isWorkModalActive('der_hauptbahnhof')}
+  {:else if $workModalActive === 'der_hauptbahnhof'}
     <WorkModal>
       <iframe
         slot="media"
@@ -272,7 +271,7 @@
         <Tag tags="Sound Design, Post-Production" />
       </div>
     </WorkModal>
-  {:else if isWorkModalActive('ertrinken')}
+  {:else if $workModalActive === 'ertrinken'}
     <WorkModal>
       <iframe
         slot="media"
@@ -288,7 +287,7 @@
         <Tag tags="Sound Design" />
       </div>
     </WorkModal>
-  {:else if isWorkModalActive('a_juventude_por_ela_própria')}
+  {:else if $workModalActive === 'a_juventude_por_ela_própria'}
     <WorkModal>
       <iframe
         slot="media"
