@@ -74,8 +74,8 @@ export function handleBrandingClick() {
 }
 
 // Services page tab handling
-
 // Music submenu
+// TODO - minify
 export const isMusicFirstClicked = writable(true);
 export const isMusicSecondClicked = writable(false);
 export const isMusicThirdClicked = writable(false);
@@ -137,6 +137,7 @@ export function handleMusicSixthSubmenuClick() {
   isMusicSixthClicked.set(true);
 }
 // Film submenu
+// TODO - minify
 export const isFilmFirstClicked = writable(true);
 export const isFilmSecondClicked = writable(false);
 export const isFilmThirdClicked = writable(false);
@@ -184,6 +185,7 @@ export function handleFilmFifthSubmenuClick() {
 }
 
 // Game submenu
+// TODO - minify
 export const isGameFirstClicked = writable(true);
 export const isGameSecondClicked = writable(false);
 export const isGameThirdClicked = writable(false);
@@ -218,6 +220,7 @@ export function handleGameFourthSubmenuClick() {
 }
 
 // Branding submenu
+// TODO - minify
 export const isBrandingFirstClicked = writable(true);
 export const isBrandingSecondClicked = writable(false);
 export const isBrandingThirdClicked = writable(false);
