@@ -1,8 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import { get } from "svelte/store";
-  import { scrollYPosition } from "../utensils/stores.js";
-  import { workModalActive, setWorkModalActive } from "../utensils/stores.js";
+  import {
+    scrollYPosition,
+    workModalActive,
+    setWorkModalActive
+  } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import Card from "../components/Card.svelte";
   import WorkModal from "./WorkModal.svelte";
