@@ -1,8 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
   import {
-    isStudioClicked,
-    isWorkClicked,
     animationInDelay,
     animationInDuration,
     animationInEasing,
@@ -13,10 +11,6 @@
   } from "../utensils/stores.js";
   import Tag from "./Tag.svelte";
 
-  $: isWorkModalActive = name => {
-    return $workModalActive === name;
-  };
-
   function handleWorkModalClick(name) {
     if (name !== undefined) {
       const newUrl = `${window.location.pathname}?project=${name}`;
@@ -26,6 +20,7 @@
   }
 
   export let cards = [];
+  export let variant = "";
 </script>
 
 <style>
@@ -91,19 +86,19 @@
       <button
         on:click={() => handleWorkModalClick(card.url)}
         aria-label="Toggle {card.title}'s details"
-        aria-pressed={isWorkModalActive(card.url)}>
+        aria-pressed={$workModalActive === card.url}>
         <div class="div-img">
           <img src={card.src} alt={card.alt} />
         </div>
         <div class="div-text">
           <div class="div-header">
             <h2 class="header-small">{card.title.toUpperCase()}</h2>
-            {#if $isStudioClicked}
+            {#if variant === 'studio'}
               <h3 class="body-bold">{card.size}</h3>
             {/if}
           </div>
           <p class="body-regular">{card.content}</p>
-          {#if $isWorkClicked}
+          {#if variant === 'work'}
             <Tag tags={card.tags} />
           {/if}
         </div>

@@ -1,7 +1,6 @@
 <script>
   import {
     scrollYPosition,
-    handleServicesClick,
     isMusicClicked,
     isFilmClicked,
     isGameClicked,
@@ -190,7 +189,7 @@
 </script>
 
 <div style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header />
+  <Header variant="services" />
   <ServicesNav />
 
   {#if $isMusicClicked}

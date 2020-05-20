@@ -124,7 +124,7 @@
 </style>
 
 <div style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header />
+  <Header variant="equipment" />
 
   <Tab tab={equipmentTab} />
 

@@ -1,11 +1,14 @@
 <script>
   import { onMount } from "svelte";
-  import { handleServicesClick } from "../utensils/stores.js";
+  import { get } from "svelte/store";
+  import { setActivePage, activePage } from "../utensils/stores.js";
   import { resetScrollYPosition } from "../utensils/utils.js";
   import ServicesContent from "../containers/ServicesContent.svelte";
 
   onMount(() => {
-    handleServicesClick();
+    if (get(activePage) !== "services") {
+      setActivePage("services");
+    }
     resetScrollYPosition();
   });
 </script>

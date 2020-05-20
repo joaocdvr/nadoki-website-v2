@@ -45,7 +45,7 @@
 </script>
 
 <div style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header />
-  <Card cards={studioCards} />
+  <Header variant="studio" />
+  <Card cards={studioCards} variant="studio" />
   <Footer />
 </div>

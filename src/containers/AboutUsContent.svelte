@@ -7,18 +7,13 @@
     animationOutDuration,
     animationOutEasing,
     scrollYPosition,
-    aboutUsActiveItem,
-    setAboutUsActiveItem
+    aboutUsActiveItem
   } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import AboutUsNav from "../containers/AboutUsNav.svelte";
   import Footer from "../components/Footer.svelte";
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
-
-  $: isAboutUsItemActive = name => {
-    return $aboutUsActiveItem === name;
-  };
 </script>
 
 <style>
@@ -131,11 +126,11 @@
 <div
   class="content-wrapper"
   style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header />
+  <Header variant="about_us" />
   <AboutUsNav />
 
   {#if isAnyAboutUsItemActive}
-    {#if isAboutUsItemActive('alper')}
+    {#if $aboutUsActiveItem === 'alper'}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -277,7 +272,7 @@
           </li>
         </ul>
       </div>
-    {:else if isAboutUsItemActive('elia')}
+    {:else if $aboutUsActiveItem === 'elia'}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -417,7 +412,7 @@
           </li>
         </ul>
       </div>
-    {:else if isAboutUsItemActive('joao')}
+    {:else if $aboutUsActiveItem === 'joao'}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -552,7 +547,7 @@
           </li>
         </ul>
       </div>
-    {:else if isAboutUsItemActive('julia')}
+    {:else if $aboutUsActiveItem === 'julia'}
       <div
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>

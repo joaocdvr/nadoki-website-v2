@@ -1,17 +1,14 @@
 <script>
   import { fade } from "svelte/transition";
   import {
-    isServicesClicked,
-    isStudioClicked,
-    isWorkClicked,
-    isEquipmentClicked,
-    isAboutUsClicked,
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
+
+  export let variant = "";
 </script>
 
 <style>
@@ -42,12 +39,12 @@
   }
 </style>
 
-<header class:equipment-padding={$isEquipmentClicked}>
+<header class:equipment-padding={variant === 'equipment'}>
   <div
     in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
     out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
     <h1>
-      {#if $isServicesClicked}
+      {#if variant === 'services'}
         <svg
           preserveAspectRatio="none"
           viewBox="0 0 312 24"
@@ -137,7 +134,7 @@
             23.6476 285.515 22.9427C282.786 22.2144 280.698 21.1806 279.25
             19.8414C277.802 18.4787 277.079 16.8693 277.079 15.0132H286.797Z" />
         </svg>
-      {:else if $isStudioClicked}
+      {:else if variant === 'studio'}
         <svg
           preserveAspectRatio="none"
           viewBox="0 0 312 24"
@@ -205,7 +202,7 @@
             14.0147 268.811 15.4009 271.563 16.1762C274.316 16.928 278.334
             17.304 283.619 17.304Z" />
         </svg>
-      {:else if $isWorkClicked}
+      {:else if variant === 'work'}
         <svg
           preserveAspectRatio="none"
           viewBox="0 0 312 24"
@@ -247,7 +244,7 @@
             11.3647V23.2941H251.071V0.705882H264.794V11.2588L289.495
             0.705882H309.036L282.798 11.2235L312 23.2941H291.581Z" />
         </svg>
-      {:else if $isEquipmentClicked}
+      {:else if variant === 'equipment'}
         <svg
           class="equipment-svg"
           preserveAspectRatio="none"
@@ -305,7 +302,7 @@
             14.2674V0.697674H277.486ZM312
             7.32558H300.542V23.0233H293.29V7.32558H281.831V0.697674H312V7.32558Z" />
         </svg>
-      {:else if $isAboutUsClicked}
+      {:else if variant === 'about_us'}
         <svg
           preserveAspectRatio="none"
           viewBox="0 0 312 24"

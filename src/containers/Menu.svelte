@@ -1,12 +1,8 @@
 <script>
   import {
     isMenuClicked,
-    handleServicesClick,
-    handleStudioClick,
-    handleWorkClick,
-    handleEquipmentClick,
-    handleAboutUsClick,
-    aboutUsActiveItem
+    aboutUsActiveItem,
+    setActivePage
   } from "../utensils/stores.js";
   import {
     toggleIsMenuClicked,
@@ -210,7 +206,7 @@
       href="/services"
       aria-label="Services page"
       on:click={() => handleMenuOptionsClick()}
-      on:click={handleServicesClick}>
+      on:click={() => setActivePage('services')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -299,7 +295,7 @@
       href="/studio"
       aria-label="Studio page"
       on:click={() => handleMenuOptionsClick()}
-      on:click={handleStudioClick}>
+      on:click={() => setActivePage('studio')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -368,7 +364,7 @@
       href="/work"
       aria-label="Work page"
       on:click={() => handleMenuOptionsClick()}
-      on:click={handleWorkClick}>
+      on:click={() => setActivePage('work')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
@@ -412,7 +408,7 @@
       href="/equipment"
       aria-label="Equipment page"
       on:click={() => handleMenuOptionsClick()}
-      on:click={handleEquipmentClick}>
+      on:click={() => setActivePage('equipment')}>
       <svg
         class="equipment-svg"
         preserveAspectRatio="none"
@@ -470,7 +466,7 @@
       href={['alper', 'elia', 'joao', 'julia'].includes($aboutUsActiveItem) ? 'about_us?name=' + $aboutUsActiveItem : 'about_us'}
       aria-label="About Us page"
       on:click={() => handleMenuOptionsClick()}
-      on:click={handleAboutUsClick}>
+      on:click={() => setActivePage('studio')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"

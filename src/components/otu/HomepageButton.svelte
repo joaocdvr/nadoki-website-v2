@@ -1,5 +1,5 @@
 <script>
-  import { isMenuClicked } from "../../utensils/stores.js";
+  import { isMenuClicked, setActivePage } from "../../utensils/stores.js";
   import { toggleIsMenuClicked } from "../../utensils/utils.js";
 </script>
 
@@ -37,10 +37,13 @@
   }
 </style>
 
-<a href="/" aria-label="Homepage">
+<a
+  href="/"
+  aria-label="Homepage"
+  on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
+  on:click={() => setActivePage('')}>
   <svg
     class:is-white={$isMenuClicked}
-    on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
     preserveAspectRatio="none"
     alt="Nadoki logo"
     viewBox="0 0 40 24"

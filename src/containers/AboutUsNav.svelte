@@ -17,13 +17,18 @@
     if (["alper", "elia", "joao", "julia"].includes(nameParam)) {
       handleAboutUsItemClick(nameParam);
     }
+    window.addEventListener("popstate", function() {
+      const url = new URL(document.location);
+      const nameParam = url.searchParams.get("name");
+      if (["alper", "elia", "joao", "julia"].includes(nameParam)) {
+        setAboutUsActiveItem(nameParam);
+      } else {
+        setAboutUsActiveItem("");
+      }
+    });
   });
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
-
-  $: isAboutUsItemActive = name => {
-    return $aboutUsActiveItem === name;
-  };
 
   function handleAboutUsItemClick(name) {
     const newUrl = `${window.location.pathname}?name=${name}`;
@@ -125,60 +130,60 @@
   <button
     class="alper"
     class:button-open={isAnyAboutUsItemActive}
-    class:selected-button={isAboutUsItemActive('alper')}
+    class:selected-button={$aboutUsActiveItem === 'alper'}
     on:click={() => handleAboutUsItemClick('alper')}
     aria-label="Toggle Alper Arslan's details"
-    aria-pressed={isAboutUsItemActive('alper')}>
+    aria-pressed={$aboutUsActiveItem === 'alper'}>
     <img
       class:img-open={isAnyAboutUsItemActive}
       src="about_us/alper.png"
       alt="Alper Arslan" />
-    <h2 class="body-bold" class:selected-text={isAboutUsItemActive('alper')}>
+    <h2 class="body-bold" class:selected-text={$aboutUsActiveItem === 'alper'}>
       {#if isAnyAboutUsItemActive}Alper{:else}Alper Arslan{/if}
     </h2>
   </button>
   <button
     class="elia"
     class:button-open={isAnyAboutUsItemActive}
-    class:selected-button={isAboutUsItemActive('elia')}
+    class:selected-button={$aboutUsActiveItem === 'elia'}
     on:click={() => handleAboutUsItemClick('elia')}
     aria-label="Toggle Elia Bertolaso's details"
-    aria-pressed={isAboutUsItemActive('elia')}>
+    aria-pressed={$aboutUsActiveItem === 'elia'}>
     <img
       class:img-open={isAnyAboutUsItemActive}
       src="about_us/elia.png"
       alt="Elia Bertolaso" />
-    <h2 class="body-bold" class:selected-text={isAboutUsItemActive('elia')}>
+    <h2 class="body-bold" class:selected-text={$aboutUsActiveItem === 'elia'}>
       {#if isAnyAboutUsItemActive}Elia{:else}Elia Bertolaso{/if}
     </h2>
   </button>
   <button
     class="joao"
     class:button-open={isAnyAboutUsItemActive}
-    class:selected-button={isAboutUsItemActive('joao')}
+    class:selected-button={$aboutUsActiveItem === 'joao'}
     on:click={() => handleAboutUsItemClick('joao')}
     aria-label="Toggle João Rodrigues's details"
-    aria-pressed={isAboutUsItemActive('joao')}>
+    aria-pressed={$aboutUsActiveItem === 'joao'}>
     <img
       class:img-open={isAnyAboutUsItemActive}
       src="about_us/joao.png"
       alt="João Rodrigues" />
-    <h2 class="body-bold" class:selected-text={isAboutUsItemActive('joao')}>
+    <h2 class="body-bold" class:selected-text={$aboutUsActiveItem === 'joao'}>
       {#if isAnyAboutUsItemActive}João{:else}João Rodrigues{/if}
     </h2>
   </button>
   <button
     class="julia"
     class:button-open={isAnyAboutUsItemActive}
-    class:selected-button={isAboutUsItemActive('julia')}
+    class:selected-button={$aboutUsActiveItem === 'julia'}
     on:click={() => handleAboutUsItemClick('julia')}
     aria-label="Toggle Julia Borelli's details"
-    aria-pressed={isAboutUsItemActive('julia')}>
+    aria-pressed={$aboutUsActiveItem === 'julia'}>
     <img
       class:img-open={isAnyAboutUsItemActive}
       src="about_us/julia.png"
       alt="Julia Borelli" />
-    <h2 class="body-bold" class:selected-text={isAboutUsItemActive('julia')}>
+    <h2 class="body-bold" class:selected-text={$aboutUsActiveItem === 'julia'}>
       {#if isAnyAboutUsItemActive}Julia{:else}Julia Borelli{/if}
     </h2>
   </button>

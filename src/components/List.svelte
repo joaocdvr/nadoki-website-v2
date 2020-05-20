@@ -44,8 +44,6 @@
   }
 </style>
 
-<svelte:options immutable={true} />
-
 <dl
   in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
