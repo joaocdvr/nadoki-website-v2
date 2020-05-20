@@ -18,9 +18,11 @@
   };
 
   function handleWorkModalClick(name) {
-    const newUrl = `${window.location.pathname}?project=${name}`;
-    window.history.pushState("", "", newUrl);
-    setWorkModalActive(name);
+    if (name !== undefined) {
+      const newUrl = `${window.location.pathname}?project=${name}`;
+      window.history.pushState("", "", newUrl);
+      setWorkModalActive(name);
+    }
   }
 
   export let cards = [];
@@ -95,7 +97,7 @@
         </div>
         <div class="div-text">
           <div class="div-header">
-            <h2 class="header-small">{card.title}</h2>
+            <h2 class="header-small">{card.title.toUpperCase()}</h2>
             {#if $isStudioClicked}
               <h3 class="body-bold">{card.size}</h3>
             {/if}

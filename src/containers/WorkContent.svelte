@@ -25,18 +25,24 @@
     }
   });
 
-  $: isAnyItemActive = !!$workModalActive;
+  $: isAnyAboutUsItemActive = !!$workModalActive;
 
   $: isWorkModalActive = name => {
     return $workModalActive === name;
   };
+
+  function handleWorkModalClick(name) {
+    const newUrl = `${window.location.pathname}?project=${name}`;
+    window.history.pushState("", "", newUrl);
+    setWorkModalActive(name);
+  }
 
   let workCards = [
     {
       url: "above_it_all",
       src: "work/above_it_all.jpg",
       alt: "'Above It ALL' album cover art",
-      title: "ABOVE IT ALL",
+      title: "Above It All",
       content: "Song by Mind Against.",
       tags: "Master"
     },
@@ -44,7 +50,7 @@
       url: "parda",
       src: "work/parda.jpg",
       alt: "'Parda' documentary cover art",
-      title: "PARDA",
+      title: "Parda",
       content: "A Brazilian documentary, directed by Tai Linhares.",
       tags: "5.1 Mix"
     },
@@ -52,7 +58,7 @@
       url: "love_hurts",
       src: "work/love_hurts.jpg",
       alt: "'Love Hurts' single cover art",
-      title: "LOVE HURTS",
+      title: "Love Hurts",
       content: "Song by Osaka88.",
       tags: "Mix, Master"
     },
@@ -60,7 +66,7 @@
       url: "der_hauptbahnhof",
       src: "work/der_hauptbahnhof.jpg",
       alt: "'Der Hauptbanhof' documentary cover art",
-      title: "DER HAUPTBAHNHOF",
+      title: "Der Hauptbanhnof",
       content:
         "A documentary written, directed and filmed by Jordi Garcia Rodriguez.",
       tags: "Sound Design, Post-Production"
@@ -69,7 +75,7 @@
       url: "ertrinken",
       src: "work/ertrinken.jpg",
       alt: "Frame from 'Ertrinken' short film",
-      title: "ERTRINKEN",
+      title: "Ertrinken",
       content:
         "A short story directed by Pedro Harres and produced by Cléo Campe.",
       tags: "Sound Design"
@@ -78,7 +84,7 @@
       url: "a_juventude_por_ela_própria",
       src: "work/a_juventude_por_ela_própria.jpg",
       alt: "Frame from 'A juventude por ela própria' documentary",
-      title: "A JUVENTUDE POR ELA PRÓPRIA",
+      title: "A juventude por ela própria",
       content:
         "A documentary produced by Agora, irrepetível. and edited by Guilherme Sousa.",
       tags: "Soundtrack"
@@ -127,14 +133,14 @@
 </style>
 
 <div
-  class:cards-are-hidden={isAnyItemActive}
+  class:cards-are-hidden={isAnyAboutUsItemActive}
   style="transform: translateY({$scrollYPosition * -1}px)">
   <Header />
   <Card cards={workCards} />
   <Footer />
 </div>
 
-<div class="modal-wrapper" class:modal-is-visible={isAnyItemActive}>
+<div class="modal-wrapper" class:modal-is-visible={isAnyAboutUsItemActive}>
   {#if isWorkModalActive('above_it_all')}
     <WorkModal>
       <iframe
@@ -156,8 +162,6 @@
       <iframe
         slot="media"
         title="'Parda' by Tai Linhares"
-        SameSite="None"
-        Secure
         src="https://player.vimeo.com/video/307440642"
         frameborder="0"
         allow="autoplay; fullscreen"
@@ -258,7 +262,6 @@
       <iframe
         slot="media"
         title="'Der Hauptbahnhof' by Jordi Garcia Rodriguez"
-        SameSite="None"
         src="https://player.vimeo.com/video/265019323"
         frameborder="0"
         allow="autoplay; fullscreen"
