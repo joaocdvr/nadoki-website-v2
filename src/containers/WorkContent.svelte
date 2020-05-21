@@ -11,6 +11,7 @@
   import WorkModal from "./WorkModal.svelte";
   import Tag from "../components/Tag.svelte";
   import Footer from "../components/Footer.svelte";
+  import WorkNav from "./WorkNav.svelte";
 
   onMount(() => {
     const url = new URL(document.location);
@@ -111,11 +112,6 @@
     left: 0;
   }
 
-  .cards-are-hidden {
-    overflow: hidden;
-    max-height: 100vh;
-  }
-
   iframe {
     position: absolute;
     top: 0;
@@ -134,15 +130,14 @@
   }
 </style>
 
-<div
-  class:cards-are-hidden={isAnyAboutUsItemActive}
-  style="transform: translateY({$scrollYPosition * -1}px)">
+<div style="transform: translateY({$scrollYPosition * -1}px)">
   <Header variant="work" />
   <Card cards={workCards} variant="work" />
   <Footer />
 </div>
 
 <div class="modal-wrapper" class:modal-is-visible={isAnyAboutUsItemActive}>
+  <WorkNav />
   {#if $workModalActive === 'above_it_all'}
     <WorkModal>
       <iframe

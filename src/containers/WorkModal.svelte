@@ -7,7 +7,6 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
-  import WorkNav from "./WorkNav.svelte";
 </script>
 
 <style>
@@ -29,7 +28,6 @@
 <div
   in:fade={{ duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
-  <WorkNav />
   <div class="media-wrapper">
     <slot name="media" />
   </div>
