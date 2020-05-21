@@ -18,6 +18,8 @@
     line-height: 2rem;
     font-size: 1rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.header-big) {
@@ -25,6 +27,8 @@
     line-height: 2.5rem;
     font-size: 1.625rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.body-regular) {
@@ -32,6 +36,8 @@
     line-height: 1.5rem;
     font-size: 1rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.body-regular-two) {
@@ -41,6 +47,8 @@
     color: var(--dark-two);
     margin-bottom: 0.5rem;
     display: inline-block;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.body-bold) {
@@ -48,6 +56,8 @@
     line-height: 1.5rem;
     font-size: 1rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.body-extra) {
@@ -55,6 +65,8 @@
     line-height: 1.5rem;
     font-size: 1rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.body-italic) {
@@ -62,6 +74,8 @@
     line-height: 1.875rem;
     font-size: 1.25rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.body-mono) {
@@ -69,6 +83,8 @@
     line-height: 1.875rem;
     font-size: 1.25rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.caption) {
@@ -76,6 +92,8 @@
     line-height: 1.5rem;
     font-size: 0.75rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.list-name) {
@@ -83,6 +101,8 @@
     line-height: 3rem;
     font-size: 1rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.list-content) {
@@ -90,5 +110,7 @@
     line-height: 2rem;
     font-size: 1rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 </style>
