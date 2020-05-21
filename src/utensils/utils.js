@@ -27,7 +27,6 @@ export function focusOnlyWhenNeeded() {
 // Functions that save/restore/rest scroll Y position
 export function saveScrollYPosition() {
   scrollYPosition.set(window.scrollY);
-  console.log(get(scrollYPosition));
 }
 
 export function restoreScrollYPosition() {
