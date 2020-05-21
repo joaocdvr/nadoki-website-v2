@@ -14,7 +14,6 @@
   onMount(() => {
     const url = new URL(document.location);
     const nameParam = url.searchParams.get("name");
-    const aboutUsSubpages = ["alper", "elia", "joao", "julia"];
 
     if (aboutUsSubpages.includes(nameParam)) {
       handleAboutUsItemClick(nameParam);
@@ -30,6 +29,8 @@
       }
     });
   });
+
+  const aboutUsSubpages = ["alper", "elia", "joao", "julia"];
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
 

@@ -16,14 +16,6 @@
   onMount(() => {
     const url = new URL(document.location);
     const projectParam = url.searchParams.get("project");
-    const workSubpages = [
-      "above_it_all",
-      "parda",
-      "love_hurts",
-      "der_hauptbahnhof",
-      "ertrinken",
-      "a_juventude_por_ela_própria"
-    ];
 
     if (workSubpages.includes(projectParam)) {
       handleWorkModalClick(projectParam);
@@ -39,6 +31,15 @@
       }
     });
   });
+
+  const workSubpages = [
+    "above_it_all",
+    "parda",
+    "love_hurts",
+    "der_hauptbahnhof",
+    "ertrinken",
+    "a_juventude_por_ela_própria"
+  ];
 
   $: isAnyAboutUsItemActive = !!$workModalActive;
 
