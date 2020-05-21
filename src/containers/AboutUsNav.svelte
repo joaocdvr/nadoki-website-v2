@@ -14,13 +14,16 @@
   onMount(() => {
     const url = new URL(document.location);
     const nameParam = url.searchParams.get("name");
-    if (["alper", "elia", "joao", "julia"].includes(nameParam)) {
+    const aboutUsSubpages = ["alper", "elia", "joao", "julia"];
+
+    if (aboutUsSubpages.includes(nameParam)) {
       handleAboutUsItemClick(nameParam);
     }
+
     window.addEventListener("popstate", function() {
       const url = new URL(document.location);
       const nameParam = url.searchParams.get("name");
-      if (["alper", "elia", "joao", "julia"].includes(nameParam)) {
+      if (aboutUsSubpages.includes(nameParam)) {
         setAboutUsActiveItem(nameParam);
       } else {
         setAboutUsActiveItem("");

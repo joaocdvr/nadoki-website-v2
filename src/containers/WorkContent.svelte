@@ -16,18 +16,28 @@
   onMount(() => {
     const url = new URL(document.location);
     const projectParam = url.searchParams.get("project");
-    if (
-      [
-        "above_it_all",
-        "parda",
-        "love_hurts",
-        "der_hauptbahnhof",
-        "ertrinken",
-        "a_juventude_por_ela_própria"
-      ].includes(projectParam)
-    ) {
+    const workSubpages = [
+      "above_it_all",
+      "parda",
+      "love_hurts",
+      "der_hauptbahnhof",
+      "ertrinken",
+      "a_juventude_por_ela_própria"
+    ];
+
+    if (workSubpages.includes(projectParam)) {
       handleWorkModalClick(projectParam);
     }
+
+    window.addEventListener("popstate", function() {
+      const url = new URL(document.location);
+      const nameParam = url.searchParams.get("project");
+      if (workSubpages.includes(nameParam)) {
+        setWorkModalActive(nameParam);
+      } else {
+        setWorkModalActive("");
+      }
+    });
   });
 
   $: isAnyAboutUsItemActive = !!$workModalActive;
