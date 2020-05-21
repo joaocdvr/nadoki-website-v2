@@ -107,11 +107,12 @@
     border-right: none;
     border-left: none;
     border-bottom: 0.125rem solid var(--secondary-color);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
   }
 
   .img-open {
     margin: 0;
+    width: calc(100% - 1rem);
   }
 
   .selected-button {
