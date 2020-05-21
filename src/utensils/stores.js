@@ -11,6 +11,12 @@ export const animationOutEasing = readable(quadInOut);
 
 // Menu handling
 export const isMenuClicked = writable(false);
+
+export function toggleIsMenuClicked() {
+  isMenuClicked.update((n) => !n);
+}
+
+// Scroll handling
 export const scrollYPosition = writable(0);
 
 // Page handling

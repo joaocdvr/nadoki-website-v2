@@ -1,6 +1,6 @@
 // Imports
 import { get } from "svelte/store";
-import { isMenuClicked, scrollYPosition } from "./stores.js";
+import { scrollYPosition } from "./stores.js";
 
 // Function that identifies if the user is navigating with a mouse or tab
 export function focusOnlyWhenNeeded() {
@@ -24,14 +24,10 @@ export function focusOnlyWhenNeeded() {
   window.addEventListener("keydown", handleFirstTab);
 }
 
-// Function that toggles isMenuClicked
-export function toggleIsMenuClicked() {
-  isMenuClicked.update((n) => !n);
-}
-
 // Functions that save/restore/rest scroll Y position
 export function saveScrollYPosition() {
   scrollYPosition.set(window.scrollY);
+  console.log(get(scrollYPosition));
 }
 
 export function restoreScrollYPosition() {

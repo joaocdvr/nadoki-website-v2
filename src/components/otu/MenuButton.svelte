@@ -1,8 +1,7 @@
 <script>
   import { get } from "svelte/store";
-  import { isMenuClicked } from "../../utensils/stores.js";
+  import { isMenuClicked, toggleIsMenuClicked } from "../../utensils/stores.js";
   import {
-    toggleIsMenuClicked,
     saveScrollYPosition,
     restoreScrollYPosition
   } from "../../utensils/utils.js";

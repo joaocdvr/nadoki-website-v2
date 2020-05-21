@@ -1,6 +1,9 @@
 <script>
-  import { isMenuClicked, setActivePage } from "../../utensils/stores.js";
-  import { toggleIsMenuClicked } from "../../utensils/utils.js";
+  import {
+    isMenuClicked,
+    toggleIsMenuClicked,
+    setActivePage
+  } from "../../utensils/stores.js";
 </script>
 
 <style>

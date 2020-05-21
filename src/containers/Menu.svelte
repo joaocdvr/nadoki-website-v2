@@ -1,13 +1,11 @@
 <script>
   import {
     isMenuClicked,
+    toggleIsMenuClicked,
     aboutUsActiveItem,
     setActivePage
   } from "../utensils/stores.js";
-  import {
-    toggleIsMenuClicked,
-    restoreScrollYPosition
-  } from "../utensils/utils.js";
+  import { restoreScrollYPosition } from "../utensils/utils.js";
 
   function handleMenuOptionsClick() {
     restoreScrollYPosition();
