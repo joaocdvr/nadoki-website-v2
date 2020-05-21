@@ -22,7 +22,7 @@
   }
 
   button {
-    height: 3.5rem;
+    min-height: 3.5rem;
     border: none;
     cursor: pointer;
     text-align: center;
