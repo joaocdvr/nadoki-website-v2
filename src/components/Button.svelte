@@ -14,8 +14,8 @@
   a {
     text-decoration: none;
     text-align: center;
-    color: var(--main-color);
-    background-color: var(--dark);
+    color: var(--dark);
+    background-color: var(--main-color);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 

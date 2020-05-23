@@ -26,6 +26,7 @@
 <style>
   button {
     text-align: left;
+    cursor: pointer;
     width: 100vw;
     line-height: 0;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
@@ -35,7 +36,8 @@
     outline: none;
   }
 
-  :global(.user-is-tabbing) button:focus {
+  :global(.user-is-tabbing) button:focus,
+  :global(.user-is-tabbing) button:focus .div-arrow {
     background-color: var(--secondary-color);
   }
 
@@ -49,6 +51,10 @@
     color: var(--light);
   }
 
+  :global(.user-is-tabbing) button:focus .div-arrow svg {
+    fill: var(--light);
+  }
+
   img {
     width: 100%;
     filter: grayscale(1);
@@ -60,8 +66,24 @@
   }
 
   .div-img {
+    position: relative;
     border-top: 0.125rem solid var(--main-color);
     border-bottom: 0.125rem solid var(--main-color);
+  }
+
+  .div-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--main-color);
+    padding: 1rem;
+    width: fit-content;
+  }
+
+  .div-arrow svg {
+    fill: var(--dark);
+    width: 3rem;
+    height: 2rem;
   }
 
   .div-text {
@@ -87,17 +109,35 @@
         on:click={() => handleWorkModalClick(card.url)}
         aria-label="Toggle {card.title}'s details"
         aria-pressed={$workModalActive === card.url}>
+
         <div class="div-img">
           <img src={card.src} alt={card.alt} />
+
+          {#if variant === 'work'}
+            <div class="div-arrow">
+              <svg
+                viewBox="0 0 48 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32 8V0L48 16L32 32V24H22V8H32ZM18 8H14V24H18V8ZM9.972
+                  8H6V24H9.972V8ZM2 8H0V24H2V8Z" />
+              </svg>
+            </div>
+          {/if}
         </div>
+
         <div class="div-text">
           <div class="div-header">
             <h2 class="header-small">{card.title.toUpperCase()}</h2>
+
             {#if variant === 'studio'}
               <h3 class="body-bold">{card.size}</h3>
             {/if}
           </div>
+
           <p class="body-regular">{card.content}</p>
+
           {#if variant === 'work'}
             <Tag tags={card.tags} />
           {/if}
