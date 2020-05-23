@@ -10,11 +10,6 @@
 </script>
 
 <style>
-  .media-wrapper {
-    padding: 56.25% 0 0 0;
-    position: relative;
-  }
-
   .content-wrapper {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   }
@@ -28,9 +23,7 @@
 <div
   in:fade={{ duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
-  <div class="media-wrapper">
-    <slot name="media" />
-  </div>
+  <slot name="media" />
 
   <div class="content-wrapper">
     <h2 class="body-extra">

@@ -33,6 +33,8 @@
   });
 
   const workSubpages = [
+    "we_gotta_live_together",
+    "glitter_against_terfs",
     "above_it_all",
     "parda",
     "love_hurts",
@@ -52,6 +54,22 @@
   }
 
   let workCards = [
+    {
+      url: "we_gotta_live_together",
+      src: "work/we_gotta_live_together.jpg",
+      alt: "'We Gotta Live Together' album cover art",
+      title: "We Gotta Live Together",
+      content: "Song by DJ FLAT.",
+      tags: "Master"
+    },
+    {
+      url: "glitter_against_terfs",
+      src: "work/glitter_against_terfs.jpg",
+      alt: "'Glitter Against Terfs' album cover art",
+      title: "Glitter Against Terfs",
+      content: "EP by Lazy Rosario.",
+      tags: "Master"
+    },
     {
       url: "above_it_all",
       src: "work/above_it_all.jpg",
@@ -123,7 +141,23 @@
     left: 0;
   }
 
-  iframe {
+  .description {
+    display: block;
+    padding: 1.5rem 0 2.5rem 0;
+    border-bottom: 0.0625rem solid var(--main-color);
+  }
+
+  .quote {
+    padding-top: 1.5rem;
+    display: block;
+  }
+
+  .youtube-iframe {
+    width: 100vw;
+    height: calc(100vw / (16 / 9));
+  }
+
+  .vimeo-iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -131,13 +165,9 @@
     height: 100%;
   }
 
-  .description {
-    padding: 1.5rem 0 2.5rem 0;
-    border-bottom: 0.0625rem solid var(--main-color);
-  }
-
-  .quote {
-    padding-top: 1.5rem;
+  .spotify-iframe {
+    width: 100vw;
+    height: calc(100vw + 80px);
   }
 </style>
 
@@ -149,31 +179,132 @@
 
 <div class="modal-wrapper" class:modal-is-visible={isAnyAboutUsItemActive}>
   <WorkNav />
-  {#if $workModalActive === 'above_it_all'}
+  {#if $workModalActive === 'we_gotta_live_together'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'We Gotta Live Together' by DJ Flat"
+        src="https://open.spotify.com/embed/track/0v2IrjcP4tPmMWRkCBSkCk"
+        class="spotify-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media" />
+
+      <span slot="title">WE GOTTA LIVE TOGETHER</span>
+
+      <span slot="year">2020</span>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <span slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">DJ Flat</span>
+        <br />
+        Mixing
+        <span class="body-bold">DJ Flat</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
+    </WorkModal>
+  {:else if $workModalActive === 'glitter_against_terfs'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Glitter Against Terfs' by Lazy Rozario"
+        src="https://open.spotify.com/embed/track/3ZUxwyfhShxKdaBHYJkyXl"
+        class="spotify-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media" />
+
+      <span slot="title">GLITTER AGAINST TERFS</span>
+
+      <span slot="year">2020</span>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <span slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Lazy Rozario</span>
+        <br />
+        Mixing
+        <span class="body-bold">Lazy Rozario</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
+    </WorkModal>
+  {:else if $workModalActive === 'above_it_all'}
     <WorkModal>
       <iframe
         slot="media"
         title="'Above It All' by Mind Against"
         src="https://www.youtube.com/embed/BuLLtZWK-Ds"
+        class="youtube-iframe"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope;
         picture-in-picture"
         allowfullscreen />
+
       <span slot="title">ABOVE IT ALL</span>
+
       <span slot="year">2019</span>
+
       <div slot="tag">
         <Tag tags="Master" />
       </div>
+
+      <span slot="description" class="description">
+        Out of darkness can only come light. 'Above It All' is one of the
+        31-tracks from 'Unity', a symbol of togetherness curated by Tale Of Us,
+        including artists already on Afterlife and some new names to the label.
+        Accompanied by a continuous journey through this new music, mixed by
+        Tale Of Us, we hope this compilation brings some escape at a challenging
+        time.
+      </span>
+
+      <span slot="quote" class="quote">
+        <span class="body-extra" style="text-transform: uppercase;">
+          "All the tracks in Unity have been carefully selected by Tale Of Us.
+        </span>
+        <br />
+        <br />
+        The mix includes some amazing tunes from Agents of Time, Stephan Bodzin,
+        Fideles, Mathame, Recondite and others. As the records go by, you will
+        find yourself immersed in a simphony of Afterlife sounds, where music is
+        the one and only way to reach your soul."
+        <br />
+        <br />
+        <span class="body-bold">Sol Di Tomasso</span>
+      </span>
+
+      <span slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Mind Against</span>
+        <br />
+        Mixing
+        <span class="body-bold">Mind Against</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
     </WorkModal>
   {:else if $workModalActive === 'parda'}
     <WorkModal>
-      <iframe
-        slot="media"
-        title="'Parda' by Tai Linhares"
-        src="https://player.vimeo.com/video/307440642"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen />
+      <div slot="media" style="padding:56.25% 0 0 0;position:relative;">
+        <iframe
+          title="'Parda' by Tai Linhares"
+          src="https://player.vimeo.com/video/307440642"
+          class="vimeo-iframe"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen />
+      </div>
 
       <span slot="title">PARDA</span>
 
@@ -183,43 +314,39 @@
         <Tag tags="5.1 Mix" />
       </div>
 
-      <span slot="description">
-        <p class="description">
-          We had the pleasure to do the 5.1 mix of this touching independent
-          movie from the Brazilian filmmaker and director Tai Linhares. It
-          questions race and self-identification midst of an authoritarian
-          regime that plans to restore white supremacy.
-          <br />
-          <br />
-          Parda played in Finland during the
-          <span class="body-bold">Cinemaissí Festival</span>
-          and in Brazil during the
-          <span class="body-bold">Mostra Sesc de Cinema</span>
-          .«
-        </p>
+      <span slot="description" class="description">
+        We had the pleasure to do the 5.1 mix of this touching independent movie
+        from the Brazilian filmmaker and director Tai Linhares. It questions
+        race and self-identification midst of an authoritarian regime that plans
+        to restore white supremacy.
+        <br />
+        <br />
+        Parda played in Finland during the
+        <span class="body-bold">Cinemaissí Festival</span>
+        and in Brazil during the
+        <span class="body-bold">Mostra Sesc de Cinema</span>
+        .«
       </span>
 
-      <span slot="quote">
-        <p class="quote">
-          <span class="body-extra">
-            “An authoritarian regime plans to restore white supremacy in Brazil.
-          </span>
-          <br />
-          <br />
-          Their first act is to demand the return of all white Brazilian
-          citizens living abroad. In the midst of this political chaos, Tai
-          needs to prove that she is not white, but is faced with uncertainty
-          about her own racial identity. The film delves into the ambiguous
-          concept of race in Brazil, exploring the traces left by its colonial
-          past and the family history of the director. An exploratory journey
-          between fiction and documentary.”
-          <br />
-          <br />
-          <span class="body-bold">Tai Linhares</span>
-        </p>
+      <span slot="quote" class="quote">
+        <span class="body-extra" style="text-transform: uppercase;">
+          "An authoritarian regime plans to restore white supremacy in Brazil.
+        </span>
+        <br />
+        <br />
+        Their first act is to demand the return of all white Brazilian citizens
+        living abroad. In the midst of this political chaos, Tai needs to prove
+        that she is not white, but is faced with uncertainty about her own
+        racial identity. The film delves into the ambiguous concept of race in
+        Brazil, exploring the traces left by its colonial past and the family
+        history of the director. An exploratory journey between fiction and
+        documentary."
+        <br />
+        <br />
+        <span class="body-bold">Tai Linhares</span>
       </span>
 
-      <span slot="credits">
+      <span slot="credits" class="body-regular">
         Directed, Written and Produced by
         <span class="body-bold">Tai Linhares</span>
         <br />
@@ -256,29 +383,100 @@
         slot="media"
         title="'Love Hurts' by Osaka88"
         src="https://open.spotify.com/embed/track/1ClR5vHqlOlK6fj6hLKnNY"
+        class="spotify-iframe"
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media" />
+
       <span slot="title">LOVE HURTS</span>
+
       <span slot="year">2019</span>
+
       <div slot="tag">
         <Tag tags="Mix, Master" />
       </div>
+
+      <span slot="credits" class="body-regular">
+        Lyrics and Performance
+        <span class="body-bold">Osaka88</span>
+        <br />
+        Producer
+        <span class="body-bold">80root</span>
+        <br />
+        Recording
+        <span class="body-bold">Mo$sart</span>
+        <br />
+        Mixing
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
     </WorkModal>
   {:else if $workModalActive === 'der_hauptbahnhof'}
     <WorkModal>
-      <iframe
-        slot="media"
-        title="'Der Hauptbahnhof' by Jordi Garcia Rodriguez"
-        src="https://player.vimeo.com/video/265019323"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen />
+      <div slot="media" style="padding:56.25% 0 0 0;position:relative;">
+        <iframe
+          title="'Der Hauptbahnhof' by Jordi Garcia Rodriguez"
+          src="https://player.vimeo.com/video/265019323"
+          class="vimeo-iframe"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen />
+      </div>
       <span slot="title">DER HAUPTBANHOF</span>
       <span slot="year">2018</span>
       <div slot="tag">
         <Tag tags="Sound Design, Post-Production" />
       </div>
+
+      <span slot="description" class="description">
+        A documentary about the Hauptbahnhof project at AfrikaBurn Festival 2017
+        in the Tankwa Karoo.
+      </span>
+
+      <span slot="quote" class="quote">
+        <span class="body-extra" style="text-transform: uppercase;">
+          "We are throwing this party to express our love for all those who
+          manage to find ways instead of making excuses.
+        </span>
+        <br />
+        <br />
+        To everyone who prefers to spend time, sweat and tears, rather than to
+        spend money. To everyone who believes in deals made with handshakes,
+        rather than signatures. To everyone with a burning heart. To everyone
+        who believed in a train station in the South African desert. Yes, it
+        happened. Yes, we manifested our dream in the sun going down over the
+        horizon. And your energy is what keeps the fire burning. You are the
+        ones who put trust into strangers without blinking. The ones who keep
+        this spirit that lives deeply in our hearts alive and kicking..."
+        <br />
+        <br />
+        <span class="body-bold">Word from the crew</span>
+      </span>
+
+      <span slot="credits" class="body-regular">
+        Written, Directed and Filmed by
+        <span class="body-bold">Jordi Garcia Rodriguez</span>
+        <br />
+        Text Editor and Narrator
+        <span class="body-bold">Lyz Pfister</span>
+        <br />
+        Sound Mix and Sound Design
+        <span class="body-bold">Nadoki Studios and Claudine Fanilia</span>
+        <br />
+        Music
+        <span class="body-bold">
+          Cal Kahoone, Thor Rixon with James Tuft, Wagner, Tchaikovsky and
+          Xavier
+        </span>
+        <br />
+        Drone Footage
+        <span class="body-bold">Skyhook</span>
+        <br />
+        Extra Footage
+        <span class="body-bold">Ryan Frame and Patrick Baumhöfer</span>
+      </span>
     </WorkModal>
   {:else if $workModalActive === 'ertrinken'}
     <WorkModal>
@@ -286,15 +484,75 @@
         slot="media"
         title="'Ertrinken' by Pedro Harres"
         src="https://www.youtube.com/embed/aeJUNTx6fio"
+        class="youtube-iframe"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope;
         picture-in-picture"
         allowfullscreen />
+
       <span slot="title">ERTRINKEN</span>
+
       <span slot="year">2017</span>
+
       <div slot="tag">
         <Tag tags="Sound Design" />
       </div>
+
+      <span slot="description" class="description">
+        What the ubiquitous flood of images and information actually does.
+        <br />
+        <br />
+        Never before have we been surrounded by so many images, texts, videos
+        and bits of information – we could drown in it.
+        <br />
+        <br />
+        A view to the Legacy study: with advancing digitization, the older
+        members of the population feel increasingly outpaced by the younger –
+        there is no connection. Like the protagonist in this animated film, they
+        go under in the flood.
+      </span>
+
+      <span slot="quote" class="quote">
+        <span class="body-bold">Synospis</span>
+        <br />
+        Hans is not as young as he used to be. In order to avoid his loneliness,
+        he must learn how to swim in the big sea of information that is the
+        Internet nowadays. Is he prepared for the overwhelming amount of
+        distractions and traps that the online world can offer?
+        <br />
+        <br />
+
+        <span class="body-bold">Festivals</span>
+        <br />
+        Open-Air Filmfest Weiterstadt 2018
+        <br />
+        Open World Animation Festival 2018
+        <br />
+        BIT BANG 2018
+        <br />
+        International Tour Film Fest 2018
+        <br />
+        <br />
+
+        <span class="body-bold">Prizes</span>
+        <br />
+        Die Zeit Short Film Competition “Die Welt, die wir uns wünschen. Die
+        Filme zur großen Vermächtnisstudie”, Public Prize – Best Short
+      </span>
+
+      <span slot="credits" class="body-regular">
+        Director
+        <span class="body-bold">Pedro Harres</span>
+        <br />
+        Executive Producer
+        <span class="body-bold">Cléo Campe</span>
+        <br />
+        Assistant Direction and Storyboard
+        <span class="body-bold">Maria Teixeira</span>
+        <br />
+        Sound Design
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
     </WorkModal>
   {:else if $workModalActive === 'a_juventude_por_ela_própria'}
     <WorkModal>
@@ -302,15 +560,41 @@
         slot="media"
         title="'A juventude por ela própria' by Agora Irrepetível"
         src="https://www.youtube.com/embed/iSD3Gwa0oLs"
+        class="youtube-iframe"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope;
         picture-in-picture"
         allowfullscreen />
+
       <span slot="title">A JUVENTUDE POR ELA PRÓPRIA</span>
+
       <span slot="year">2015</span>
+
       <div slot="tag">
         <Tag tags="Soundtrack" />
       </div>
+
+      <span slot="description" class="quote">
+        In 2015, the project of the students of Communication Design at FBAUL
+        consisted of the theme “Youth on the Move”. Fourteen working groups gave
+        very different responses to the initial motto, through projects that
+        addressed issues related to education, current political and social
+        context, as well as this generation’s youth. On the day of the
+        assessment, we asked one member of each group to talk about the
+        experience of working on this topic and the testimonies of the students
+        were brought together in this document.
+      </span>
+
+      <span slot="credits" class="body-regular">
+        Realization
+        <span class="body-bold">Agora, irrepetível.</span>
+        <br />
+        Editing
+        <span class="body-bold">Guilherme Sousa</span>
+        <br />
+        Soundtrack
+        <span class="body-bold">Nadoki Studios and Mariana Freitas</span>
+      </span>
     </WorkModal>
   {/if}
 </div>
