@@ -5,7 +5,6 @@
     isFilmClicked,
     isGameClicked,
     isBrandingClicked,
-    isAnyServiceClicked,
     isMusicFirstClicked,
     handleMusicFirstSubmenuClick,
     isMusicSecondClicked,
@@ -242,7 +241,5 @@
     {/if}
   {/if}
 
-  {#if $isAnyServiceClicked}
-    <Footer />
-  {/if}
+  <Footer />
 </div>

@@ -699,7 +699,6 @@
         </ul>
       </div>
     {/if}
-
-    <Footer />
   {/if}
+  <Footer />
 </div>
