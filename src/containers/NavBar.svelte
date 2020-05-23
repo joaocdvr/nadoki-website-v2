@@ -17,7 +17,6 @@
     background-color: var(--light);
     backface-visibility: hidden;
     border-bottom: 0.125rem solid var(--main-color);
-    display: none;
   }
 
   /* NavBar animation */
