@@ -44,7 +44,7 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     animation-name: img-animation;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
   }
 
@@ -53,7 +53,7 @@
       height: 100%;
     }
     50% {
-      height: 110%;
+      height: 105%;
     }
     100% {
       height: 100%;
