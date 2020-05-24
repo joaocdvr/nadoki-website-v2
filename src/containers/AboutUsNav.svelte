@@ -115,6 +115,15 @@
     padding: 0.5rem 0;
   }
 
+  .button-open svg {
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
   .img-open {
     margin: 0;
     width: calc(100% - 1rem);
@@ -135,8 +144,8 @@
     z-index: -1;
     left: 50%;
     margin-left: -50%;
-    top: 50%;
-    margin-top: -50%;
+    top: 25%;
+    margin-top: -25%;
     max-height: 100%;
     max-width: 100%;
   }
