@@ -72,34 +72,6 @@
   img {
     margin-bottom: 1.25rem;
   }
-  /* Different border widths fix */
-  .alper {
-    border-left: 0.125rem solid var(--main-color);
-    border-right: 0.0625rem solid var(--main-color);
-    border-top: 0.125rem solid var(--main-color);
-    border-bottom: 0.0625rem solid var(--main-color);
-  }
-
-  .elia {
-    border-left: 0.0625rem solid var(--main-color);
-    border-right: 0.125rem solid var(--main-color);
-    border-top: 0.125rem solid var(--main-color);
-    border-bottom: 0.0625rem solid var(--main-color);
-  }
-
-  .joao {
-    border-left: 0.125rem solid var(--main-color);
-    border-right: 0.0625rem solid var(--main-color);
-    border-top: 0.0625rem solid var(--main-color);
-    border-bottom: 0.125rem solid var(--main-color);
-  }
-
-  .julia {
-    border-left: 0.0625rem solid var(--main-color);
-    border-right: 0.125rem solid var(--main-color);
-    border-top: 0.0625rem solid var(--main-color);
-    border-bottom: 0.125rem solid var(--main-color);
-  }
 
   /* Animation */
   .menu-open {
@@ -108,9 +80,6 @@
 
   .button-open {
     width: calc(1 / 4 * 100%);
-    border-top: none;
-    border-right: none;
-    border-left: none;
     border-bottom: 0.125rem solid var(--secondary-color);
     padding: 0.5rem 0;
   }
@@ -156,7 +125,6 @@
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
-    class="alper"
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'alper'}
     on:click={() => handleAboutUsItemClick('alper')}
@@ -214,7 +182,6 @@
     </h2>
   </button>
   <button
-    class="elia"
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'elia'}
     on:click={() => handleAboutUsItemClick('elia')}
@@ -334,7 +301,6 @@
     </h2>
   </button>
   <button
-    class="joao"
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'joao'}
     on:click={() => handleAboutUsItemClick('joao')}
@@ -395,7 +361,6 @@
     </h2>
   </button>
   <button
-    class="julia"
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'julia'}
     on:click={() => handleAboutUsItemClick('julia')}
