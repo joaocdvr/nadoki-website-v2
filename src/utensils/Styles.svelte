@@ -113,4 +113,13 @@
     word-break: break-word;
     hyphens: auto;
   }
+
+  :global(.homepage) {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
+  }
 </style>
