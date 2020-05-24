@@ -196,7 +196,11 @@
           <path d="M24.89,54.8l.86-.17-.86-.6Z" />
         </svg>
 
-        <h2 class="header-big">ALPER ARSLAN</h2>
+        <h2 class="header-big">
+          ALPER
+          <br />
+          ARSLAN
+        </h2>
 
         <ul>
           <li>
@@ -447,7 +451,11 @@
           <path d="M35,46.26l.87-.76h-1C34.85,45.76,34.88,45.92,35,46.26Z" />
         </svg>
 
-        <h2 class="header-big">ELIA BERTOLASO</h2>
+        <h2 class="header-big">
+          ELIA
+          <br />
+          BERTOLASO
+        </h2>
 
         <ul>
           <li>
@@ -637,7 +645,11 @@
           <path d="M31.76,16.52H30.59v.29h1.17Z" />
         </svg>
 
-        <h2 class="header-big">JOÃO RODRIGUES</h2>
+        <h2 class="header-big">
+          JOÃO
+          <br />
+          RODRIGUES
+        </h2>
 
         <ul>
           <li>
@@ -813,7 +825,11 @@
           <path d="M62.55,42.48l-.49.06V44h.74Z" />
         </svg>
 
-        <h2 class="header-big">JULIA BORELLI</h2>
+        <h2 class="header-big">
+          JULIA
+          <br />
+          BORELLI
+        </h2>
 
         <ul>
           <li>
