@@ -68,7 +68,8 @@
 <div style="transform: translateY({$scrollYPosition * -1}px)">
   <div class="content-wrapper">
     <h2 class="homepage">
-      WE ARE
+      <span style="font-size: 2rem;">NADOKI</span>
+      IS
       <br />
       A BERLIN BASED
       <br />
