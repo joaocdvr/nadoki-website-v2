@@ -16,7 +16,7 @@
     justify-content: space-between;
     background-color: var(--light);
     backface-visibility: hidden;
-    border-bottom: 0.125rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--dark);
   }
 
   /* NavBar animation */
