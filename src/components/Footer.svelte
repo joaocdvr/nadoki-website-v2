@@ -43,7 +43,7 @@
     width: 100vw;
     padding: 1.5rem;
     min-height: calc(100vh - 4.5rem);
-    background-color: var(--main-color);
+    background-color: var(--light);
   }
 
   ul {
@@ -73,6 +73,8 @@
 
   .email-a {
     margin-bottom: 8rem;
+    text-align: center;
+    text-decoration: underline;
   }
 
   .socials-a {
@@ -96,11 +98,11 @@
   <p class="body-extra">LET'S HAVE A BEER!</p>
 
   <a
-    class="body-italic email-a underlined"
+    class="body-extra email-a"
     target="_blank"
     aria-label="Nadoki's Email"
     href="mailto:info@nadoki.com">
-    info@nadoki.com
+    INFO@NADOKI.COM
   </a>
 
   <address>
