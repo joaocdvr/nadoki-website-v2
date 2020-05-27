@@ -14,9 +14,10 @@
 <style>
   header {
     width: 100vw;
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 2.375rem 0;
     margin-top: 4.5rem;
-    background-color: var(--main-color);
+    background-color: var(--light);
+    border-bottom: 0.125rem solid var(--dark);
   }
 
   svg {
@@ -35,7 +36,7 @@
   }
 
   .equipment-padding {
-    padding: 2.5rem 0 2.125rem 0;
+    padding: 2.5rem 0 2rem 0;
   }
 </style>
 
