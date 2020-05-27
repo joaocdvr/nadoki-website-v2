@@ -7,6 +7,7 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
+  import Footer from "../components/Footer.svelte";
 </script>
 
 <style>
@@ -50,4 +51,5 @@
       <slot name="credits" />
     </p>
   </div>
+  <Footer />
 </div>
