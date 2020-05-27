@@ -30,6 +30,7 @@
     width: 100vw;
     line-height: 0;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+    padding: 3rem 3rem 7rem 3rem;
   }
 
   button:focus {
@@ -42,7 +43,7 @@
   }
 
   :global(.user-is-tabbing) button:focus img {
-    filter: grayscale(0);
+    /* filter: grayscale(0); */
   }
 
   :global(.user-is-tabbing) button:focus p,
@@ -57,12 +58,8 @@
 
   img {
     width: 100%;
-    filter: grayscale(1);
     transition: filter 300ms ease-in-out;
-  }
-
-  img:hover {
-    filter: grayscale(0);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   }
 
   .div-img {
@@ -71,32 +68,17 @@
     border-bottom: 0.125rem solid var(--main-color);
   }
 
-  .div-arrow {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: var(--main-color);
-    padding: 1rem;
-    width: fit-content;
-  }
-
-  .div-arrow svg {
-    fill: var(--dark);
-    width: 3rem;
-    height: 2rem;
-  }
-
-  .div-text {
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-  }
-
   .div-header {
     border-bottom: 0.0625rem solid var(--main-color);
-    padding-bottom: 1.5rem;
+    margin-top: 2rem;
   }
 
   p {
     padding-top: 0.75rem;
+  }
+
+  ul {
+    background-color: var(--main-color);
   }
 </style>
 
@@ -112,19 +94,6 @@
 
         <div class="div-img">
           <img src={card.src} alt={card.alt} />
-
-          {#if variant === 'work'}
-            <div class="div-arrow">
-              <svg
-                viewBox="0 0 48 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 8V0L48 16L32 32V24H22V8H32ZM18 8H14V24H18V8ZM9.972
-                  8H6V24H9.972V8ZM2 8H0V24H2V8Z" />
-              </svg>
-            </div>
-          {/if}
         </div>
 
         <div class="div-text">
