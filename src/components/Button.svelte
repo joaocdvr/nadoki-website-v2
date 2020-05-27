@@ -14,8 +14,8 @@
   a {
     text-decoration: none;
     text-align: center;
-    color: var(--dark);
-    background-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--dark);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
@@ -34,7 +34,7 @@
   div {
     display: flex;
     justify-content: center;
-    padding-bottom: 2.5rem;
+    padding: 2.5rem 0;
   }
 
   p {
