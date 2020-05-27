@@ -129,7 +129,7 @@
     position: fixed;
     top: 0;
     left: 100vw;
-    background-color: var(--light);
+    background-color: var(--main-color);
     max-height: 100vh;
     overflow-y: auto;
     z-index: 2;
@@ -148,8 +148,16 @@
   }
 
   .quote {
-    padding-top: 1.5rem;
+    padding: 2.5rem 0;
+    border-top: 2px solid var(--dark);
+    border-bottom: 2px solid var(--dark);
     display: block;
+  }
+
+  .quote span:last-child{
+    text-align: right;
+    display: inline-block;
+    width: 100%;
   }
 
   .youtube-iframe {
