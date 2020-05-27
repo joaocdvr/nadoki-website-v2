@@ -10,7 +10,8 @@
   }
 
   p {
-    background-color: var(--main-color);
+    background-color: var(--dark);
+    color: var(--main-color);
     padding: 0.375rem;
   }
 
