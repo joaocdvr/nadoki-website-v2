@@ -14,13 +14,13 @@
 
   $: equipmentTab = [
     {
-      title: "Hardware",
+      title: "HARDWARE",
       function: handleHardwareSubmenuClick,
       variable: $isEquipmentHardwareClicked,
       justTwo: true
     },
     {
-      title: "Software",
+      title: "SOFTWARE",
       function: handleSoftwareSubmenuClick,
       variable: $isEquipmentSoftwareClicked,
       justTwo: true

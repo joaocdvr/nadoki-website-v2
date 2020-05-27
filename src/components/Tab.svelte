@@ -19,6 +19,7 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    border-bottom: 0.125rem solid var(--dark);
   }
 
   button {
@@ -27,7 +28,7 @@
     cursor: pointer;
     text-align: center;
     flex: 0 0 auto;
-    background-color: var(--dark);
+    background-color: var(--light);
     box-shadow: none;
     transition: background-color 300ms ease-in-out;
   }
@@ -40,14 +41,22 @@
     background-color: var(--secondary-color);
   }
 
-  p {
+  :global(.user-is-tabbing) button:focus p {
     color: var(--light);
+  }
+
+  p {
+    color: var(--dark);
     margin: 1rem 1.5rem;
     transition: color 300ms ease-in-out;
   }
 
-  .is-selected-color {
-    background-color: var(--secondary-color);
+  .button-is-selected {
+    background-color: var(--dark);
+  }
+
+  .p-is-selected {
+    color: var(--light);
   }
 
   .just-two {
@@ -64,8 +73,8 @@
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}
       class:just-two={tab.justTwo}
-      class:is-selected-color={tab.variable}>
-      <p class="body-bold">{tab.title}</p>
+      class:button-is-selected={tab.variable}>
+      <p class="body-bold" class:p-is-selected={tab.variable}>{tab.title}</p>
     </button>
   {/each}
 </menu>
