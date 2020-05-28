@@ -12,7 +12,7 @@
     justify-content: space-between;
     background-color: var(--light);
     z-index: 3;
-    border-bottom: 0.125rem solid var(--main-color);
+    border-bottom: 0.125rem solid var(--dark);
   }
 
   h1 {
