@@ -141,19 +141,6 @@
     left: 0;
   }
 
-  .description {
-    display: block;
-    padding: 1.5rem 0 2.5rem 0;
-    border-bottom: 0.0625rem solid var(--main-color);
-  }
-
-  .quote {
-    padding: 2.5rem 0;
-    border-top: 2px solid var(--dark);
-    border-bottom: 2px solid var(--dark);
-    display: block;
-  }
-
   .quote span:last-child{
     text-align: right;
     display: inline-block;
@@ -198,9 +185,9 @@
         allowtransparency="true"
         allow="encrypted-media" />
 
-      <span slot="title">WE GOTTA LIVE TOGETHER</span>
+      <h2 slot="title" class="body-extra">WE GOTTA LIVE TOGETHER</h2>
 
-      <span slot="year">2020</span>
+      <p slot="year" class="body-bold">2020</p>
 
       <div slot="tag">
         <Tag tags="Master" />
@@ -228,9 +215,9 @@
         allowtransparency="true"
         allow="encrypted-media" />
 
-      <span slot="title">GLITTER AGAINST TERFS</span>
+      <h2 slot="title" class="body-extra">GLITTER AGAINST TERFS</h2>
 
-      <span slot="year">2020</span>
+      <p slot="year" class="body-bold">2020</p>
 
       <div slot="tag">
         <Tag tags="Master" />
@@ -259,24 +246,24 @@
         picture-in-picture"
         allowfullscreen />
 
-      <span slot="title">ABOVE IT ALL</span>
+      <h2 slot="title" class="body-extra">ABOVE IT ALL</h2>
 
-      <span slot="year">2019</span>
+      <p slot="year" class="body-bold">2019</p>
 
       <div slot="tag">
         <Tag tags="Master" />
       </div>
 
-      <span slot="description" class="description">
+      <p slot="description" class="body-regular description">
         Out of darkness can only come light. 'Above It All' is one of the
         31-tracks from 'Unity', a symbol of togetherness curated by Tale Of Us,
         including artists already on Afterlife and some new names to the label.
         Accompanied by a continuous journey through this new music, mixed by
         Tale Of Us, we hope this compilation brings some escape at a challenging
         time.
-      </span>
+      </p>
 
-      <span slot="quote" class="quote">
+      <p slot="quote" class="body-regular quote">
         <span class="body-extra" style="text-transform: uppercase;">
           "All the tracks in Unity have been carefully selected by Tale Of Us.
         </span>
@@ -289,9 +276,9 @@
         <br />
         <br />
         <span class="body-bold">Sol Di Tomasso</span>
-      </span>
+      </p>
 
-      <span slot="credits" class="body-regular">
+      <p slot="credits" class="body-regular">
         Music by
         <span class="body-bold">Mind Against</span>
         <br />
@@ -300,7 +287,7 @@
         <br />
         Mastering
         <span class="body-bold">Nadoki Studios</span>
-      </span>
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'parda'}
     <WorkModal>
@@ -314,15 +301,15 @@
           allowfullscreen />
       </div>
 
-      <span slot="title">PARDA</span>
+      <h2 slot="title" class="body-extra">PARDA</h2>
 
-      <span slot="year">2019</span>
+      <p slot="year" class="body-bold">2019</p>
 
       <div slot="tag">
         <Tag tags="5.1 Mix" />
       </div>
 
-      <span slot="description" class="description">
+      <p slot="description" class="description body-regular">
         We had the pleasure to do the 5.1 mix of this touching independent movie
         from the Brazilian filmmaker and director Tai Linhares. It questions
         race and self-identification midst of an authoritarian regime that plans
@@ -334,9 +321,9 @@
         and in Brazil during the
         <span class="body-bold">Mostra Sesc de Cinema</span>
         .«
-      </span>
+      </p>
 
-      <span slot="quote" class="quote">
+      <p slot="quote" class="quote body-regular">
         <span class="body-extra" style="text-transform: uppercase;">
           "An authoritarian regime plans to restore white supremacy in Brazil.
         </span>
@@ -352,7 +339,7 @@
         <br />
         <br />
         <span class="body-bold">Tai Linhares</span>
-      </span>
+      </p>
 
       <span slot="credits" class="body-regular">
         Directed, Written and Produced by
@@ -396,9 +383,9 @@
         allowtransparency="true"
         allow="encrypted-media" />
 
-      <span slot="title">LOVE HURTS</span>
+      <h2 slot="title" class="body-extra">LOVE HURTS</h2>
 
-      <span slot="year">2019</span>
+      <p slot="year" class="body-bold">2019</p>
 
       <div slot="tag">
         <Tag tags="Mix, Master" />
@@ -432,18 +419,18 @@
           allow="autoplay; fullscreen"
           allowfullscreen />
       </div>
-      <span slot="title">DER HAUPTBANHOF</span>
-      <span slot="year">2018</span>
+      <h2 slot="title" class="body-extra">DER HAUPTBANHOF</h2>
+      <p slot="year" class="body-bold">2018</p>
       <div slot="tag">
         <Tag tags="Sound Design, Post-Production" />
       </div>
 
-      <span slot="description" class="description">
+      <p slot="description" class="description body-regular">
         A documentary about the Hauptbahnhof project at AfrikaBurn Festival 2017
         in the Tankwa Karoo.
-      </span>
+      </p>
 
-      <span slot="quote" class="quote">
+      <p slot="quote" class="quote body-regular">
         <span class="body-extra" style="text-transform: uppercase;">
           "We are throwing this party to express our love for all those who
           manage to find ways instead of making excuses.
@@ -461,7 +448,7 @@
         <br />
         <br />
         <span class="body-bold">Word from the crew</span>
-      </span>
+      </p>
 
       <span slot="credits" class="body-regular">
         Written, Directed and Filmed by
@@ -498,15 +485,15 @@
         picture-in-picture"
         allowfullscreen />
 
-      <span slot="title">ERTRINKEN</span>
+      <h2 slot="title" class="body-extra">ERTRINKEN</h2>
 
-      <span slot="year">2017</span>
+      <p slot="year" class="body-bold">2017</p>
 
       <div slot="tag">
         <Tag tags="Sound Design" />
       </div>
 
-      <span slot="description" class="description">
+      <p slot="description" class="description body-regular">
         What the ubiquitous flood of images and information actually does.
         <br />
         <br />
@@ -518,9 +505,9 @@
         members of the population feel increasingly outpaced by the younger –
         there is no connection. Like the protagonist in this animated film, they
         go under in the flood.
-      </span>
+      </p>
 
-      <span slot="quote" class="quote">
+      <p slot="quote" class="quote body-regular">
         <span class="body-bold">Synospis</span>
         <br />
         Hans is not as young as he used to be. In order to avoid his loneliness,
@@ -532,13 +519,13 @@
 
         <span class="body-bold">Festivals</span>
         <br />
-        Open-Air Filmfest Weiterstadt 2018
+        — Open-Air Filmfest Weiterstadt 2018
         <br />
-        Open World Animation Festival 2018
+        — Open World Animation Festival 2018
         <br />
-        BIT BANG 2018
+        — BIT BANG 2018
         <br />
-        International Tour Film Fest 2018
+        — International Tour Film Fest 2018
         <br />
         <br />
 
@@ -546,7 +533,7 @@
         <br />
         Die Zeit Short Film Competition “Die Welt, die wir uns wünschen. Die
         Filme zur großen Vermächtnisstudie”, Public Prize – Best Short
-      </span>
+      </p>
 
       <span slot="credits" class="body-regular">
         Director
@@ -574,15 +561,15 @@
         picture-in-picture"
         allowfullscreen />
 
-      <span slot="title">A JUVENTUDE POR ELA PRÓPRIA</span>
+      <h2 slot="title" class="body-extra">A JUVENTUDE POR ELA PRÓPRIA</h2>
 
-      <span slot="year">2015</span>
+      <p slot="year" class="body-bold">2015</p>
 
       <div slot="tag">
         <Tag tags="Soundtrack" />
       </div>
 
-      <span slot="description" class="quote">
+      <p slot="description" class="quote body-regular">
         In 2015, the project of the students of Communication Design at FBAUL
         consisted of the theme “Youth on the Move”. Fourteen working groups gave
         very different responses to the initial motto, through projects that
@@ -591,7 +578,7 @@
         assessment, we asked one member of each group to talk about the
         experience of working on this topic and the testimonies of the students
         were brought together in this document.
-      </span>
+      </p>
 
       <span slot="credits" class="body-regular">
         Realization

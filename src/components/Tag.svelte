@@ -5,14 +5,16 @@
 
 <style>
   li {
-    padding: 0.75rem 0.75rem 0 0;
+    margin-right: .5rem;
+    margin-top: 1rem;
     flex: 0 0 auto;
-  }
-
-  p {
     background-color: var(--dark);
     color: var(--main-color);
     padding: 0.375rem;
+  }
+
+  li:last-child {
+    margin-right: 0;
   }
 
   ul {
@@ -25,8 +27,8 @@
 
 <ul>
   {#each splitTags as tag}
-    <li>
-      <p class="body-bold">{tag}</p>
+    <li class="body-bold">
+      {tag}
     </li>
   {/each}
 </ul>

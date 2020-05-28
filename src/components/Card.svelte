@@ -37,23 +37,15 @@
     outline: none;
   }
 
-  :global(.user-is-tabbing) button:focus,
-  :global(.user-is-tabbing) button:focus .div-arrow {
+  :global(.user-is-tabbing) button:focus{
     background-color: var(--secondary-color);
-  }
-
-  :global(.user-is-tabbing) button:focus img {
-    /* filter: grayscale(0); */
   }
 
   :global(.user-is-tabbing) button:focus p,
   :global(.user-is-tabbing) button:focus h2,
-  :global(.user-is-tabbing) button:focus h3 {
+  :global(.user-is-tabbing) button:focus h3,
+  :global(.user-is-tabbing) button:focus li {
     color: var(--light);
-  }
-
-  :global(.user-is-tabbing) button:focus .div-arrow svg {
-    fill: var(--light);
   }
 
   img {
@@ -64,17 +56,17 @@
 
   .div-img {
     position: relative;
-    border-top: 0.125rem solid var(--main-color);
-    border-bottom: 0.125rem solid var(--main-color);
   }
 
   .div-header {
-    border-bottom: 0.0625rem solid var(--main-color);
     margin-top: 2rem;
+    margin-bottom: .5rem;
   }
 
-  p {
-    padding-top: 0.75rem;
+  .div-header-border { /* Exceptions for the studio cards */
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 
   ul {
@@ -97,7 +89,7 @@
         </div>
 
         <div class="div-text">
-          <div class="div-header">
+          <div class="div-header" class:div-header-border={variant === "studio"}>
             <h2 class="header-small">{card.title.toUpperCase()}</h2>
 
             {#if variant === 'studio'}
