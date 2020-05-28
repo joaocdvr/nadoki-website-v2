@@ -51,6 +51,7 @@
 
   button {
     position: relative;
+    cursor: pointer;
     width: 50%;
     padding: 1.5rem;
     background-color: var(--main-color);

@@ -137,6 +137,11 @@
   .personal-page-wrapper {
     background-color: var(--main-color);
   }
+
+  h2 {
+    position: relative;
+    z-index: 1;
+  }
 </style>
 
 <div
@@ -263,13 +268,13 @@
           </li>
 
           <li>
-            <dt class="header-small">Experience</dt>
+            <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
-              Talent Manager of Electronic Music Artists (2 years)
+              — Talent Manager of Electronic Music Artists (2 years)
               <br />
               <span class="body-regular-two">Berlin, Germany (Freelancer)</span>
               <br />
-              DJ (8 years)
+              — DJ (8 years)
               <br />
               <span class="body-regular-two">Miami, USA</span>
             </dd>
