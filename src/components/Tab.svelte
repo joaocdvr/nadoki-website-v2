@@ -25,12 +25,14 @@
   button {
     min-height: 3.5rem;
     border: none;
+    border-right: 0.125rem solid var(--dark);
     cursor: pointer;
     text-align: center;
     flex: 0 0 auto;
     background-color: var(--light);
     box-shadow: none;
-    transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out,
+      border-color 300ms ease-in-out;
   }
 
   button:focus {
@@ -53,6 +55,7 @@
 
   .button-is-selected {
     background-color: var(--dark);
+    border-color: var(--light);
   }
 
   .p-is-selected {
@@ -61,6 +64,7 @@
 
   .just-two {
     width: 50%;
+    border: none;
   }
 </style>
 
