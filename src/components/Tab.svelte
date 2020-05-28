@@ -47,6 +47,10 @@
     color: var(--light);
   }
 
+  menu :last-child {
+    border: none;
+  }
+
   p {
     color: var(--dark);
     margin: 1rem 1.5rem;
