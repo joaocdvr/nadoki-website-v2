@@ -39,8 +39,10 @@
   }
 
   img {
+    position: relative;
     width: 100%;
     padding: 1.5rem;
+    z-index: 1;
   }
 
   h2 {
@@ -125,12 +127,15 @@
 
   .texture-svg {
     position: absolute;
-    fill: var(--main-color);
+    fill: var(--light);
     padding: 1.5rem;
-    z-index: -1;
     left: 0;
     height: 100vw;
     width: 100vw;
+  }
+
+  .personal-page-wrapper {
+    background-color: var(--main-color);
   }
 </style>
 
@@ -143,6 +148,7 @@
   {#if isAnyAboutUsItemActive}
     {#if $aboutUsActiveItem === 'alper'}
       <div
+        class="personal-page-wrapper"
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
@@ -335,6 +341,7 @@
       </div>
     {:else if $aboutUsActiveItem === 'elia'}
       <div
+        class="personal-page-wrapper"
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
@@ -588,6 +595,7 @@
       </div>
     {:else if $aboutUsActiveItem === 'joao'}
       <div
+        class="personal-page-wrapper"
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img
@@ -778,6 +786,7 @@
       </div>
     {:else if $aboutUsActiveItem === 'julia'}
       <div
+        class="personal-page-wrapper"
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         <img

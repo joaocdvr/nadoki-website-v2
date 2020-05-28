@@ -53,7 +53,7 @@
     position: relative;
     width: 50%;
     padding: 1.5rem;
-    background-color: rgba(100, 0, 255, 0);
+    background-color: var(--main-color);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
@@ -62,7 +62,7 @@
   }
 
   :global(.user-is-tabbing) button:focus {
-    background-color: rgba(100, 0, 255, 1);
+    background-color: var(--secondary-color);
   }
 
   :global(.user-is-tabbing) button:focus h2 {
@@ -70,6 +70,8 @@
   }
 
   img {
+    position: relative;
+    z-index: 1;
     margin-bottom: 1.25rem;
   }
 
@@ -80,17 +82,13 @@
 
   .button-open {
     width: calc(1 / 4 * 100%);
-    border-bottom: 0.125rem solid var(--secondary-color);
+    background-color: var(--light);
+    border-bottom: 0.125rem solid var(--dark);
     padding: 0.5rem 0;
   }
 
   .button-open svg {
-    left: 0;
-    margin-left: 0;
-    top: 0;
-    margin-top: 0;
-    height: 100%;
-    width: 100%;
+    opacity: 0;
   }
 
   .img-open {
@@ -99,7 +97,7 @@
   }
 
   .selected-button {
-    background-color: rgba(100, 0, 255, 1);
+    background-color: var(--dark);
   }
 
   .selected-text {
@@ -107,16 +105,17 @@
   }
 
   svg {
+    opacity: 1;
     position: absolute;
-    fill: var(--main-color);
+    fill: var(--light);
     padding: 1.5rem;
-    z-index: -1;
     left: 50%;
     margin-left: -50%;
     top: 25%;
     margin-top: -25%;
     max-height: 100%;
     max-width: 100%;
+    transition: opacity 300ms ease-in-out;
   }
 </style>
 
