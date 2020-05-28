@@ -6,6 +6,7 @@
     isGameClicked,
     isBrandingClicked,
     isMusicFirstClicked,
+    isAnyServiceClicked,
     handleMusicFirstSubmenuClick,
     isMusicSecondClicked,
     handleMusicSecondSubmenuClick,
@@ -47,6 +48,7 @@
   import Tab from "../components/Tab.svelte";
   import TextBlock from "../components/TextBlock.svelte";
   import Footer from "../components/Footer.svelte";
+  import WorkNav from "../containers/WorkNav.svelte";
 
   $: musicTab = [
     {
@@ -187,9 +189,32 @@
   ];
 </script>
 
+<style>
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    background-color: var(--light);
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: 2;
+    backface-visibility: hidden;
+    transition: left 300ms ease-in-out;
+  }
+
+  .modal-is-visible {
+    left: 0;
+  }
+</style>
+
 <div style="transform: translateY({$scrollYPosition * -1}px)">
   <Header variant="services" />
   <ServicesNav />
+  <Footer />
+</div>
+
+<div class="modal-wrapper" class:modal-is-visible={$isAnyServiceClicked}>
+  <WorkNav />
 
   {#if $isMusicClicked}
     <Tab tab={musicTab} />
