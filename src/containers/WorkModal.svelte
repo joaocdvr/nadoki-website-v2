@@ -11,13 +11,26 @@
 </script>
 
 <style>
-  .content-wrapper {
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  .work-modal-content-wrapper {
+    padding: 1.5rem 1.5rem 0 1.5rem;
   }
 
   .credits-wrapper {
     background: var(--main-color);
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    padding: 0 1.5rem 2.5rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  :global(.work-modal-content-wrapper p) {
+    margin-top: 2.5rem;
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: 2.5rem;
+  }
+
+  :global(.work-modal-content-wrapper h2 + p) { /* P inside modal always has margin-top except P below H2 */
+    margin-top: .5rem;
+    border-bottom:0;
+    padding: 0;
   }
 </style>
 
@@ -26,30 +39,20 @@
   out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   <slot name="media" />
 
-  <div class="content-wrapper">
-    <h2 class="body-extra">
-      <slot name="title" />
-    </h2>
+  <div class="work-modal-content-wrapper">
+    <slot name="title" />
 
-    <p class="body-regular">
-      <slot name="year" />
-    </p>
+    <slot name="year" />
 
     <slot name="tag" />
 
-    <p class="body-regular">
-      <slot name="description" />
-    </p>
+    <slot name="description" />
 
-    <p class="body-regular">
-      <slot name="quote" />
-    </p>
+    <slot name="quote" />
   </div>
 
   <div class="credits-wrapper">
-    <p class="body-regular">
       <slot name="credits" />
-    </p>
   </div>
   <Footer />
 </div>
