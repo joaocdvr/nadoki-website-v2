@@ -40,6 +40,15 @@
     hyphens: auto;
   }
 
+  :global(.body-small) {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: .75rem;
+    color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
+  }
+
   :global(.body-regular-two) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
