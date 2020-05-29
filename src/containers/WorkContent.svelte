@@ -11,7 +11,7 @@
   import WorkModal from "./WorkModal.svelte";
   import Tag from "../components/Tag.svelte";
   import Footer from "../components/Footer.svelte";
-  import WorkNav from "./WorkNav.svelte";
+  import ModalNav from "./ModalNav.svelte";
 
   onMount(() => {
     const url = new URL(document.location);
@@ -141,7 +141,7 @@
     left: 0;
   }
 
-  .quote span:last-child{
+  .quote span:last-child {
     text-align: right;
     display: inline-block;
     width: 100%;
@@ -173,7 +173,7 @@
 </div>
 
 <div class="modal-wrapper" class:modal-is-visible={isAnyAboutUsItemActive}>
-  <WorkNav />
+  <ModalNav />
   {#if $workModalActive === 'we_gotta_live_together'}
     <WorkModal>
       <iframe

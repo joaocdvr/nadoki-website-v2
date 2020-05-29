@@ -48,7 +48,7 @@
   import Tab from "../components/Tab.svelte";
   import TextBlock from "../components/TextBlock.svelte";
   import Footer from "../components/Footer.svelte";
-  import WorkNav from "../containers/WorkNav.svelte";
+  import ModalNav from "../containers/ModalNav.svelte";
 
   $: musicTab = [
     {
@@ -214,7 +214,7 @@
 </div>
 
 <div class="modal-wrapper" class:modal-is-visible={$isAnyServiceClicked}>
-  <WorkNav />
+  <ModalNav />
 
   {#if $isMusicClicked}
     <Tab tab={musicTab} />
