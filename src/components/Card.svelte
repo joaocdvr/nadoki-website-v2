@@ -37,14 +37,13 @@
     outline: none;
   }
 
-  :global(.user-is-tabbing) button:focus{
+  :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
   :global(.user-is-tabbing) button:focus p,
   :global(.user-is-tabbing) button:focus h2,
-  :global(.user-is-tabbing) button:focus h3,
-  :global(.user-is-tabbing) button:focus li {
+  :global(.user-is-tabbing) button:focus h3 {
     color: var(--light);
   }
 
@@ -60,10 +59,11 @@
 
   .div-header {
     margin-top: 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .div-header-border { /* Exceptions for the studio cards */
+  .div-header-border {
+    /* Exceptions for the studio cards */
     border-bottom: 2px solid var(--dark);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
@@ -89,7 +89,9 @@
         </div>
 
         <div class="div-text">
-          <div class="div-header" class:div-header-border={variant === "studio"}>
+          <div
+            class="div-header"
+            class:div-header-border={variant === 'studio'}>
             <h2 class="header-small">{card.title.toUpperCase()}</h2>
 
             {#if variant === 'studio'}
