@@ -82,13 +82,27 @@
     padding: 0.5rem;
   }
 
+  li:not(:first-child):not(.socials-li):not(:last-child) {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid var(--dark);
+  }
+
+  li:first-child:not(.socials-li) {
+    margin-bottom: 2.5rem;
+  }
+
   dt {
-    border-bottom: 0.0625rem solid var(--main-color);
-    padding: 2.5rem 0 0.5rem 0;
+    margin-bottom: .5rem;
   }
 
   dd {
     padding-top: 0.25rem;
+  }
+
+  dd span {
+    display: block;
+    padding-bottom: .5rem;
   }
 
   dd :last-child {
@@ -209,7 +223,7 @@
 
         <h2 class="header-big">
           ALPER
-          <br />
+          
           ARSLAN
         </h2>
 
@@ -271,36 +285,36 @@
             <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
               — Talent Manager of Electronic Music Artists (2 years)
-              <br />
-              <span class="body-regular-two">Berlin, Germany (Freelancer)</span>
-              <br />
+              
+              <span class="body-small">Berlin, Germany (Freelancer)</span>
+              
               — DJ (8 years)
-              <br />
-              <span class="body-regular-two">Miami, USA</span>
+              
+              <span class="body-small">Miami, USA</span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Education</dt>
+            <dt class="body-bold">Education</dt>
             <dd class="body-regular">
-              Audio Engineering (BA)
-              <br />
-              <span class="body-regular-two">SAE Institute Berlin</span>
-              <br />
-              Finance (BA)
-              <br />
-              <span class="body-regular-two">Marmara University</span>
+              — Audio Engineering (BA)
+              
+              <span class="body-small">SAE Institute Berlin</span>
+              
+              — Finance (BA)
+              
+              <span class="body-small">Marmara University</span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Background</dt>
+            <dt class="body-bold">Background</dt>
             <dd class="body-regular">
               Producer, mixing engineer, DJ & financial analyst
             </dd>
           </li>
           <li>
-            <dt class="header-small">Interests</dt>
+            <dt class="body-bold">Interests</dt>
             <dd class="body-regular">
               Electronic music production, vocal recording, 3D audio, virtual
               reality & social media management
@@ -308,23 +322,23 @@
           </li>
 
           <li>
-            <br />
-            <dt class="header-small">Nationality</dt>
+            
+            <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Turkish</dd>
           </li>
 
           <li>
-            <dt class="header-small">Languages</dt>
+            <dt class="body-bold">Languages</dt>
             <dd class="body-regular">Turkish, English & German</dd>
           </li>
 
           <li>
-            <dt class="header-small">About me</dt>
+            <dt class="body-bold">About me</dt>
             <dd class="body-regular">Energetic & supportive</dd>
           </li>
 
           <li>
-            <dt class="header-small">Highlights</dt>
+            <dt class="body-bold">Highlights</dt>
             <dd>
               <table>
                 <tr>
@@ -464,9 +478,7 @@
         </svg>
 
         <h2 class="header-big">
-          ELIA
-          <br />
-          BERTOLASO
+          ELIA BERTOLASO
         </h2>
 
         <ul>
@@ -524,61 +536,61 @@
           </li>
 
           <li>
-            <dt class="header-small">Experience</dt>
+            <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
-              Tour Manager & Studio Consultant
-              <br />
-              <span class="body-regular-two">Tale of Us</span>
-              <br />
-              Audio Department Assistant
-              <br />
-              <span class="body-regular-two">SAE Institute Berlin</span>
+              — Tour Manager & Studio Consultant
+              
+              <span class="body-small">Tale of Us</span>
+              
+              — Audio Department Assistant
+              
+              <span class="body-small">SAE Institute Berlin</span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Education</dt>
+            <dt class="body-bold">Education</dt>
             <dd class="body-regular">
-              Audio Engineering (BA)
-              <br />
-              <span class="body-regular-two">SAE Institute Berlin</span>
-              <br />
-              Classical Music
-              <br />
-              <span class="body-regular-two">
+              — Audio Engineering (BA)
+              
+              <span class="body-small">SAE Institute Berlin</span>
+              
+              — Classical Music
+              
+              <span class="body-small">
                 Conservatory of Bruno Maderna
               </span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Background</dt>
+            <dt class="body-bold">Background</dt>
             <dd class="body-regular">???</dd>
           </li>
 
           <li>
-            <dt class="header-small">Interests</dt>
+            <dt class="body-bold">Interests</dt>
             <dd class="body-regular">Techno & electronic music production</dd>
           </li>
 
           <li>
-            <br />
-            <dt class="header-small">Nationality</dt>
+            
+            <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Italian</dd>
           </li>
 
           <li>
-            <dt class="header-small">Languages</dt>
+            <dt class="body-bold">Languages</dt>
             <dd class="body-regular">Italian, English & German (B1)</dd>
           </li>
 
           <li>
-            <dt class="header-small">About me</dt>
+            <dt class="body-bold">About me</dt>
             <dd class="body-regular">???</dd>
           </li>
 
           <li>
-            <dt class="header-small">Highlights</dt>
+            <dt class="body-bold">Highlights</dt>
             <dd>
               <table>
                 <tr>
@@ -660,7 +672,7 @@
 
         <h2 class="header-big">
           JOÃO
-          <br />
+          
           RODRIGUES
         </h2>
 
@@ -719,49 +731,49 @@
           </li>
 
           <li>
-            <dt class="header-small">Education</dt>
+            <dt class="body-bold">Education</dt>
             <dd class="body-regular">
-              Audio Engineering (BA)
-              <br />
-              <span class="body-regular-two">SAE Institute Berlin</span>
-              <br />
-              Sound Art (PgD)
-              <br />
-              <span class="body-regular-two">
+              — Audio Engineering (BA)
+              
+              <span class="body-small">SAE Institute Berlin</span>
+              
+              — Sound Art (PgD)
+              
+              <span class="body-small">
                 Faculty of Fine Arts of the University of Lisbon
               </span>
-              <br />
-              Communication Design (BA)
-              <br />
-              <span class="body-regular-two">
+              
+              — Communication Design (BA)
+              
+              <span class="body-small">
                 Faculty of Fine Arts of the University of Lisbon
               </span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Background</dt>
+            <dt class="body-bold">Background</dt>
             <dd class="body-regular">???</dd>
           </li>
 
           <li>
-            <dt class="header-small">Interests</dt>
+            <dt class="body-bold">Interests</dt>
             <dd class="body-regular">Games, sound design & web design</dd>
           </li>
 
           <li>
-            <br />
-            <dt class="header-small">Nationality</dt>
+            
+            <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Portuguese</dd>
           </li>
 
           <li>
-            <dt class="header-small">Languages</dt>
+            <dt class="body-bold">Languages</dt>
             <dd class="body-regular">Portuguese & English</dd>
           </li>
 
           <li>
-            <dt class="header-small">About me</dt>
+            <dt class="body-bold">About me</dt>
             <dd class="body-regular">
               Gamer since Game Boy Color. Ocasional spearfisher. Retired double
               bassist
@@ -769,7 +781,7 @@
           </li>
 
           <li>
-            <dt class="header-small">Highlights</dt>
+            <dt class="body-bold">Highlights</dt>
             <dd>
               <table>
                 <tr>
@@ -841,7 +853,7 @@
 
         <h2 class="header-big">
           JULIA
-          <br />
+          
           BORELLI
         </h2>
 
@@ -900,72 +912,72 @@
           </li>
 
           <li>
-            <dt class="header-small">Experience</dt>
+            <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
-              Audio Department Assistant
-              <br />
-              <span class="body-regular-two">SAE Institute Berlin</span>
-              <br />
-              Assistant Engineer
-              <br />
-              <span class="body-regular-two">Jazzanova Recording Studio</span>
-              <br />
-              Production Assistant
-              <br />
-              <span class="body-regular-two">Post Modern Mastering</span>
+              — Audio Department Assistant
+              
+              <span class="body-small">SAE Institute Berlin</span>
+              
+              — Assistant Engineer
+              
+              <span class="body-small">Jazzanova Recording Studio</span>
+              
+              — Production Assistant
+              
+              <span class="body-small">Post Modern Mastering</span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Education</dt>
+            <dt class="body-bold">Education</dt>
             <dd class="body-regular">
-              Audio Engineering (BA)
-              <br />
-              <span class="body-regular-two">SAE Institute Berlin</span>
-              <br />
-              International Music Production & Sound Engineering Diploma
-              <br />
-              <span class="body-regular-two">Point Blank</span>
-              <br />
-              Summer Performance Program
-              <br />
-              <span class="body-regular-two">Berklee College of Music</span>
+              — Audio Engineering (BA)
+              
+              <span class="body-small">SAE Institute Berlin</span>
+              
+              — International Music Production & Sound Engineering Diploma
+              
+              <span class="body-small">Point Blank</span>
+              
+              — Summer Performance Program
+              
+              <span class="body-small">Berklee College of Music</span>
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Background</dt>
+            <dt class="body-bold">Background</dt>
             <dd class="body-regular">
               Musician since an early age — mainly guitarist
             </dd>
           </li>
           <li>
-            <dt class="header-small">Interests</dt>
+            <dt class="body-bold">Interests</dt>
             <dd class="body-regular">Technology, music, & Netflix</dd>
           </li>
 
           <li>
-            <br />
-            <dt class="header-small">Nationality</dt>
+            
+            <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Brazilian</dd>
           </li>
 
           <li>
-            <dt class="header-small">Languages</dt>
+            <dt class="body-bold">Languages</dt>
             <dd class="body-regular">
               Portuguese, English, German (B1) & I pretend I speak Spanish
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">About me</dt>
+            <dt class="body-bold">About me</dt>
             <dd class="body-regular">
               Workaholic. Part-time OCD. Full-time nerd
             </dd>
           </li>
 
           <li>
-            <dt class="header-small">Highlights</dt>
+            <dt class="body-bold">Highlights</dt>
             <dd>
               <table>
                 <tr>
