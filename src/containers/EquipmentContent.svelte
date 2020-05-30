@@ -118,12 +118,15 @@
 </script>
 
 <style>
-  div {
+  .content-wrapper {
+    margin-top: 4.5rem;
     background-color: var(--main-color);
   }
 </style>
 
-<div style="transform: translateY({$scrollYPosition * -1}px)">
+<div
+  class="content-wrapper"
+  style="transform: translateY({$scrollYPosition * -1}px)">
   <Header variant="equipment" />
 
   <Tab tab={equipmentTab} />

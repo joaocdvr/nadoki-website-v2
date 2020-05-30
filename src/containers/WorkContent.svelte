@@ -4,14 +4,14 @@
   import {
     scrollYPosition,
     workModalActive,
-    setWorkModalActive
+    setWorkModalActive,
+    handleWorkModalClick
   } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import Card from "../components/Card.svelte";
-  import WorkModal from "./WorkModal.svelte";
+  import WorkModal from "../components/WorkModal.svelte";
   import Tag from "../components/Tag.svelte";
   import Footer from "../components/Footer.svelte";
-  import ModalNav from "./ModalNav.svelte";
 
   onMount(() => {
     const url = new URL(document.location);
@@ -43,15 +43,7 @@
     "a_juventude_por_ela_própria"
   ];
 
-  $: isAnyAboutUsItemActive = !!$workModalActive;
-
-  function handleWorkModalClick(name) {
-    if (name !== undefined) {
-      const newUrl = `${window.location.pathname}?project=${name}`;
-      window.history.pushState("", "", newUrl);
-      setWorkModalActive(name);
-    }
-  }
+  $: isAnyWorkModalActive = !!$workModalActive;
 
   let workCards = [
     {
@@ -125,6 +117,10 @@
 </script>
 
 <style>
+  .content-wrapper {
+    margin-top: 4.5rem;
+  }
+
   .modal-wrapper {
     position: fixed;
     top: 0;
@@ -166,14 +162,15 @@
   }
 </style>
 
-<div style="transform: translateY({$scrollYPosition * -1}px)">
+<div
+  class="content-wrapper"
+  style="transform: translateY({$scrollYPosition * -1}px)">
   <Header variant="work" />
   <Card cards={workCards} variant="work" />
   <Footer />
 </div>
 
-<div class="modal-wrapper" class:modal-is-visible={isAnyAboutUsItemActive}>
-  <ModalNav />
+<div class="modal-wrapper" class:modal-is-visible={isAnyWorkModalActive}>
   {#if $workModalActive === 'we_gotta_live_together'}
     <WorkModal>
       <iframe

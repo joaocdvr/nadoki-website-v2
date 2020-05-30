@@ -1,15 +1,10 @@
 <script>
+  import { get } from "svelte/store";
   import { fade } from "svelte/transition";
   import {
-    isMusicClicked,
-    isFilmClicked,
-    isGameClicked,
-    isBrandingClicked,
-    handleMusicClick,
-    handleFilmClick,
-    handleGameClick,
-    handleBrandingClick,
-    isAnyServiceClicked,
+    servicesModalActive,
+    setServicesModalActive,
+    handleServicesModalClick,
     animationInDelay,
     animationInDuration,
     animationInEasing,
@@ -81,10 +76,10 @@
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
-    on:click={handleMusicClick}
+    on:click={() => handleServicesModalClick('music')}
     aria-label="Toggle music submenu"
-    aria-pressed={$isMusicClicked}
-    class:button-is-clicked={$isMusicClicked}>
+    aria-pressed={$servicesModalActive === 'music'}
+    class:button-is-clicked={$servicesModalActive === 'music'}>
     <svg
       class="icon-svg"
       viewBox="0 0 132 132"
@@ -158,10 +153,10 @@
     </svg>
   </button>
   <button
-    on:click={handleFilmClick}
+    on:click={() => handleServicesModalClick('film')}
     aria-label="Toggle film submenu"
-    aria-pressed={$isFilmClicked}
-    class:button-is-clicked={$isFilmClicked}>
+    aria-pressed={$servicesModalActive === 'film'}
+    class:button-is-clicked={$servicesModalActive === 'film'}>
     <svg
       class="icon-svg"
       viewBox="0 0 132 132"
@@ -206,10 +201,10 @@
     </svg>
   </button>
   <button
-    on:click={handleGameClick}
+    on:click={() => handleServicesModalClick('game')}
     aria-label="Toggle game submenu"
-    aria-pressed={$isGameClicked}
-    class:button-is-clicked={$isGameClicked}>
+    aria-pressed={$servicesModalActive === 'game'}
+    class:button-is-clicked={$servicesModalActive === 'game'}>
     <svg
       class="icon-svg"
       viewBox="0 0 132 132"
@@ -282,10 +277,10 @@
     </svg>
   </button>
   <button
-    on:click={handleBrandingClick}
+    on:click={() => handleServicesModalClick('branding')}
     aria-label="Toggle branding submenu"
-    aria-pressed={$isBrandingClicked}
-    class:button-is-clicked={$isBrandingClicked}
+    aria-pressed={$servicesModalActive === 'branding'}
+    class:button-is-clicked={$servicesModalActive === 'branding'}
     class="last-button">
     <svg
       class="icon-svg"

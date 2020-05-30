@@ -135,6 +135,7 @@
   }
 
   .content-wrapper {
+    margin-top: 4.5rem;
     padding: 0;
     position: relative;
   }

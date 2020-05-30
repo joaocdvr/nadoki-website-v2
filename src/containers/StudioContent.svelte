@@ -44,7 +44,15 @@
   ];
 </script>
 
-<div style="transform: translateY({$scrollYPosition * -1}px)">
+<style>
+  .content-wrapper {
+    margin-top: 4.5rem;
+  }
+</style>
+
+<div
+  class="content-wrapper"
+  style="transform: translateY({$scrollYPosition * -1}px)">
   <Header variant="studio" />
   <Card cards={studioCards} variant="studio" />
   <Footer />

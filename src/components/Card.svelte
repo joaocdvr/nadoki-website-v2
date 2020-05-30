@@ -7,17 +7,10 @@
     animationOutDuration,
     animationOutEasing,
     workModalActive,
-    setWorkModalActive
+    setWorkModalActive,
+    handleWorkModalClick
   } from "../utensils/stores.js";
   import Tag from "./Tag.svelte";
-
-  function handleWorkModalClick(name) {
-    if (name !== undefined) {
-      const newUrl = `${window.location.pathname}?project=${name}`;
-      window.history.pushState("", "", newUrl);
-      setWorkModalActive(name);
-    }
-  }
 
   export let cards = [];
   export let variant = "";
