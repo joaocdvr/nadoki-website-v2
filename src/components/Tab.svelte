@@ -9,6 +9,7 @@
   } from "../utensils/stores.js";
 
   export let tab = [];
+  export let delay = 0;
 </script>
 
 <style>
@@ -20,6 +21,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     border-bottom: 0.125rem solid var(--dark);
+    background-color: var(--dark);
   }
 
   button {
@@ -74,7 +76,7 @@
 
 <menu
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+  out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   {#each tab as tab}
     <button
       on:click={tab.function}

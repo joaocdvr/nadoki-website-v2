@@ -5,8 +5,10 @@
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
+    animationOutEasing,
+    resetWorkModalActive
   } from "../utensils/stores.js";
+  import ModalNav from "../components/ModalNav.svelte";
   import Footer from "../components/Footer.svelte";
 </script>
 
@@ -27,9 +29,10 @@
     padding-bottom: 2.5rem;
   }
 
-  :global(.work-modal-content-wrapper h2 + p) { /* P inside modal always has margin-top except P below H2 */
-    margin-top: .5rem;
-    border-bottom:0;
+  :global(.work-modal-content-wrapper h2 + p) {
+    /* P inside modal always has margin-top except P below H2 */
+    margin-top: 0.5rem;
+    border-bottom: 0;
     padding: 0;
   }
 </style>
@@ -37,6 +40,7 @@
 <div
   in:fade={{ duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
+  <ModalNav title="Work" on:click={() => resetWorkModalActive()} />
   <slot name="media" />
 
   <div class="work-modal-content-wrapper">
@@ -52,7 +56,7 @@
   </div>
 
   <div class="credits-wrapper">
-      <slot name="credits" />
+    <slot name="credits" />
   </div>
-  <Footer />
+  <Footer delay={$animationInDelay} />
 </div>

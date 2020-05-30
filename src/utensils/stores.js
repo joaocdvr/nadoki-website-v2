@@ -40,45 +40,6 @@ export function handleSoftwareSubmenuClick() {
   isEquipmentSoftwareClicked.set(true);
 }
 
-// Services page nav handling
-export const isMusicClicked = writable(false);
-export const isFilmClicked = writable(false);
-export const isGameClicked = writable(false);
-export const isBrandingClicked = writable(false);
-export const isAnyServiceClicked = writable(false);
-
-export function handleMusicClick() {
-  isMusicClicked.set(true);
-  isFilmClicked.set(false);
-  isGameClicked.set(false);
-  isBrandingClicked.set(false);
-  isAnyServiceClicked.set(true);
-}
-
-export function handleFilmClick() {
-  isMusicClicked.set(false);
-  isFilmClicked.set(true);
-  isGameClicked.set(false);
-  isBrandingClicked.set(false);
-  isAnyServiceClicked.set(true);
-}
-
-export function handleGameClick() {
-  isMusicClicked.set(false);
-  isFilmClicked.set(false);
-  isGameClicked.set(true);
-  isBrandingClicked.set(false);
-  isAnyServiceClicked.set(true);
-}
-
-export function handleBrandingClick() {
-  isMusicClicked.set(false);
-  isFilmClicked.set(false);
-  isGameClicked.set(false);
-  isBrandingClicked.set(true);
-  isAnyServiceClicked.set(true);
-}
-
 // Services page tab handling
 // Music submenu
 // TODO - minify
@@ -261,4 +222,39 @@ export const workModalActive = writable("");
 
 export function setWorkModalActive(name) {
   workModalActive.set(name);
+}
+
+export function handleWorkModalClick(name) {
+  if (name !== undefined) {
+    const newUrl = `${window.location.pathname}?project=${name}`;
+    window.history.pushState("", "", newUrl);
+    setWorkModalActive(name);
+  }
+}
+
+export function resetWorkModalActive() {
+  const newUrl = `${window.location.pathname}`;
+  window.history.pushState("", "", newUrl);
+  setWorkModalActive("");
+}
+
+// Services modal pages handling
+export const servicesModalActive = writable("");
+
+export function setServicesModalActive(name) {
+  servicesModalActive.set(name);
+}
+
+export function handleServicesModalClick(name) {
+  if (name !== undefined) {
+    const newUrl = `${window.location.pathname}?name=${name}`;
+    window.history.pushState("", "", newUrl);
+    setServicesModalActive(name);
+  }
+}
+
+export function resetServicesModalActive() {
+  const newUrl = `${window.location.pathname}`;
+  window.history.pushState("", "", newUrl);
+  setServicesModalActive("");
 }
