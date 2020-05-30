@@ -1,5 +1,5 @@
 <script>
-  import { get } from "svelte/store";
+  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import {
     servicesModalActive,
@@ -11,6 +11,14 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
+  import { handleSVGAnimation } from "../utensils/utils.js";
+
+  onMount(() => {
+    handleSVGAnimation("svg-to-animate-music");
+    handleSVGAnimation("svg-to-animate-film");
+    handleSVGAnimation("svg-to-animate-game");
+    handleSVGAnimation("svg-to-animate-branding");
+  });
 </script>
 
 <style>
@@ -82,6 +90,7 @@
     class:button-is-clicked={$servicesModalActive === 'music'}>
     <svg
       class="icon-svg"
+      id="svg-to-animate-music"
       viewBox="0 0 132 132"
       xmlns="http://www.w3.org/2000/svg">
       <path
@@ -159,6 +168,7 @@
     class:button-is-clicked={$servicesModalActive === 'film'}>
     <svg
       class="icon-svg"
+      id="svg-to-animate-film"
       viewBox="0 0 132 132"
       xmlns="http://www.w3.org/2000/svg">
       <path
@@ -207,6 +217,7 @@
     class:button-is-clicked={$servicesModalActive === 'game'}>
     <svg
       class="icon-svg"
+      id="svg-to-animate-game"
       viewBox="0 0 132 132"
       xmlns="http://www.w3.org/2000/svg">
       <path
@@ -284,6 +295,7 @@
     class="last-button">
     <svg
       class="icon-svg"
+      id="svg-to-animate-branding"
       viewBox="0 0 132 132"
       xmlns="http://www.w3.org/2000/svg">
       <path
