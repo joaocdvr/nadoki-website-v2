@@ -13,6 +13,13 @@
     --dark-two: #868686;
   }
 
+  :global(.header-small) {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
   :global(.header-big) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 2.5rem;
@@ -20,13 +27,6 @@
     color: var(--dark);
     word-break: break-word;
     hyphens: auto;
-  }
-
-  :global(.header-small) {
-    font-family: "syne-extra", Arial, Helvetica, sans-serif;
-    line-height: 2rem;
-    font-size: 1rem;
-    color: var(--dark);
   }
 
   :global(.body-regular) {
