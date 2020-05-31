@@ -10,17 +10,9 @@
     --secondary-color: #6400ff;
     --light: #ffffff;
     --dark: #000000;
-    --dark-two: #868686;
 
     /* Width */
     --max-width: 48rem;
-  }
-
-  :global(.header-small) {
-    font-family: "syne-extra", Arial, Helvetica, sans-serif;
-    line-height: 2;
-    font-size: 1rem;
-    color: var(--dark);
   }
 
   :global(.header-big) {
@@ -28,8 +20,13 @@
     line-height: 1.5;
     font-size: 1.625rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
+  }
+
+  :global(.header-small) {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 2;
+    font-size: 1rem;
+    color: var(--dark);
   }
 
   :global(.body-regular) {
@@ -43,11 +40,7 @@
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-size: 1rem;
-    color: var(--dark-two);
-    margin-bottom: 0.5rem;
-    display: inline-block;
-    word-break: break-word;
-    hyphens: auto;
+    color: var(--dark);
   }
 
   :global(.body-bold) {
@@ -83,17 +76,6 @@
     line-height: 2;
     font-size: 0.75rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  :global(.list-name) {
-    font-family: "syne-bold", Arial, Helvetica, sans-serif;
-    line-height: 3;
-    font-size: 1rem;
-    color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.list-content) {
