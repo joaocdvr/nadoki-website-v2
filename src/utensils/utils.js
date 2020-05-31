@@ -42,7 +42,7 @@ export function resetScrollYPosition() {
 }
 
 // Function that animates SVGs
-export function handleSVGAnimation(name, page) {
+export function handleSVGAnimation(name, page, param, goalParam) {
   const svg = document.getElementById(name);
   const warp = new Warp(svg);
 
@@ -52,13 +52,20 @@ export function handleSVGAnimation(name, page) {
   let offset = 0;
   function animate() {
     if (get(activePage) === page) {
-      warp.transform(([x, y, oy]) => [
-        x,
-        oy + 8 * Math.sin(x / 12 + offset),
-        oy,
-      ]);
-      offset += 0.2;
-      setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
+      const url = new URL(document.location);
+      const pageParam = url.searchParams.get(param);
+
+      if (pageParam === goalParam) {
+        warp.transform(([x, y, oy]) => [
+          x,
+          oy + 8 * Math.sin(x / 12 + offset),
+          oy,
+        ]);
+        offset += 0.2;
+        setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
+      } else {
+        return;
+      }
     } else {
       return;
     }
