@@ -93,7 +93,7 @@
   }
 
   dt {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   dd {
@@ -102,7 +102,7 @@
 
   dd span {
     display: block;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
 
   dd :last-child {
@@ -144,6 +144,7 @@
     position: absolute;
     fill: var(--light);
     padding: 1.5rem;
+    top: 0;
     left: 0;
     height: 100vw;
     width: 100vw;
@@ -222,11 +223,7 @@
           <path d="M24.89,54.8l.86-.17-.86-.6Z" />
         </svg>
 
-        <h2 class="header-big">
-          ALPER
-          
-          ARSLAN
-        </h2>
+        <h2 class="header-big">ALPER ARSLAN</h2>
 
         <ul>
           <li>
@@ -286,11 +283,8 @@
             <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
               — Talent Manager of Electronic Music Artists (2 years)
-              
               <span class="body-small">Berlin, Germany (Freelancer)</span>
-              
               — DJ (8 years)
-              
               <span class="body-small">Miami, USA</span>
             </dd>
           </li>
@@ -299,11 +293,8 @@
             <dt class="body-bold">Education</dt>
             <dd class="body-regular">
               — Audio Engineering (BA)
-              
               <span class="body-small">SAE Institute Berlin</span>
-              
               — Finance (BA)
-              
               <span class="body-small">Marmara University</span>
             </dd>
           </li>
@@ -323,7 +314,7 @@
           </li>
 
           <li>
-            
+
             <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Turkish</dd>
           </li>
@@ -478,9 +469,7 @@
           <path d="M35,46.26l.87-.76h-1C34.85,45.76,34.88,45.92,35,46.26Z" />
         </svg>
 
-        <h2 class="header-big">
-          ELIA BERTOLASO
-        </h2>
+        <h2 class="header-big">ELIA BERTOLASO</h2>
 
         <ul>
           <li>
@@ -540,11 +529,8 @@
             <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
               — Tour Manager & Studio Consultant
-              
               <span class="body-small">Tale of Us</span>
-              
               — Audio Department Assistant
-              
               <span class="body-small">SAE Institute Berlin</span>
             </dd>
           </li>
@@ -553,14 +539,9 @@
             <dt class="body-bold">Education</dt>
             <dd class="body-regular">
               — Audio Engineering (BA)
-              
               <span class="body-small">SAE Institute Berlin</span>
-              
               — Classical Music
-              
-              <span class="body-small">
-                Conservatory of Bruno Maderna
-              </span>
+              <span class="body-small">Conservatory of Bruno Maderna</span>
             </dd>
           </li>
 
@@ -575,7 +556,7 @@
           </li>
 
           <li>
-            
+
             <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Italian</dd>
           </li>
@@ -671,11 +652,7 @@
           <path d="M31.76,16.52H30.59v.29h1.17Z" />
         </svg>
 
-        <h2 class="header-big">
-          JOÃO
-          
-          RODRIGUES
-        </h2>
+        <h2 class="header-big">JOÃO RODRIGUES</h2>
 
         <ul>
           <li>
@@ -735,17 +712,12 @@
             <dt class="body-bold">Education</dt>
             <dd class="body-regular">
               — Audio Engineering (BA)
-              
               <span class="body-small">SAE Institute Berlin</span>
-              
               — Sound Art (PgD)
-              
               <span class="body-small">
                 Faculty of Fine Arts of the University of Lisbon
               </span>
-              
               — Communication Design (BA)
-              
               <span class="body-small">
                 Faculty of Fine Arts of the University of Lisbon
               </span>
@@ -763,7 +735,7 @@
           </li>
 
           <li>
-            
+
             <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Portuguese</dd>
           </li>
@@ -852,11 +824,7 @@
           <path d="M62.55,42.48l-.49.06V44h.74Z" />
         </svg>
 
-        <h2 class="header-big">
-          JULIA
-          
-          BORELLI
-        </h2>
+        <h2 class="header-big">JULIA BORELLI</h2>
 
         <ul>
           <li>
@@ -916,15 +884,10 @@
             <dt class="body-bold">Experience</dt>
             <dd class="body-regular">
               — Audio Department Assistant
-              
               <span class="body-small">SAE Institute Berlin</span>
-              
               — Assistant Engineer
-              
               <span class="body-small">Jazzanova Recording Studio</span>
-              
               — Production Assistant
-              
               <span class="body-small">Post Modern Mastering</span>
             </dd>
           </li>
@@ -933,15 +896,10 @@
             <dt class="body-bold">Education</dt>
             <dd class="body-regular">
               — Audio Engineering (BA)
-              
               <span class="body-small">SAE Institute Berlin</span>
-              
               — International Music Production & Sound Engineering Diploma
-              
               <span class="body-small">Point Blank</span>
-              
               — Summer Performance Program
-              
               <span class="body-small">Berklee College of Music</span>
             </dd>
           </li>
@@ -958,7 +916,7 @@
           </li>
 
           <li>
-            
+
             <dt class="body-bold">Nationality</dt>
             <dd class="body-regular">Brazilian</dd>
           </li>
