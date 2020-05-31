@@ -47,6 +47,13 @@
     background-color: var(--light);
   }
 
+  @media (--max-content-width) {
+    footer > div {
+      max-width: var(--max-width);
+      transform: translateX(calc(50vw - var(--max-width)/2))
+    }
+  }
+
   ul {
     width: 100%;
     display: flex;
@@ -72,6 +79,13 @@
     fill: var(--dark);
   }
 
+  @media (--max-content-width) {
+    svg {
+      margin: .5rem 0;
+      height: 1.5rem;
+    }
+  }
+
   .email-a {
     width: 100%;
     text-align: center;
@@ -86,6 +100,14 @@
     width: 100%;
     height: 100%;
     padding: 0.5rem;
+  }
+
+  .socials-a:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .socials-a:hover svg {
+    fill: var(--light);
   }
 
   address {

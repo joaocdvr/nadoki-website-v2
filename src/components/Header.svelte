@@ -20,6 +20,13 @@
     border-bottom: 0.125rem solid var(--dark);
   }
 
+  @media (--max-content-width) {
+    header > div {
+      max-width: var(--max-width);
+      transform: translateX(calc(50vw - var(--max-width)/2));
+    }
+  }
+
   svg {
     display: block;
     margin: auto;
@@ -28,6 +35,12 @@
     max-width: 50rem;
     height: 1.5rem;
     fill: var(--dark);
+  }
+
+  @media (--max-content-width) {
+    svg {
+      height: 3rem;
+    }
   }
 
   /* Equipment height fix */

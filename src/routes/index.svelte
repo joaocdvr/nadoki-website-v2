@@ -81,24 +81,45 @@
     }
   }
 
-  h2 {
-    margin-top: 5rem;
-  }
-
+  h2,
   p {
     margin-top: 5rem;
+    max-width: var(--max-width);
+  }
+
+  @media (--max-content-width) {
+    h2,
+    p {
+      transform: translateX(calc(50vw - var(--max-width)/2));
+    }
+  }
+
+  h2 > span {
+    font-size: 2rem;
+  }
+
+  @media (--max-content-width) {
+    h2 > span {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (--max-content-width) {
+    p {
+      font-size: 1.875rem;
+    }
   }
 </style>
 
 <div style="transform: translateY({$scrollYPosition * -1}px)">
   <div class="content-wrapper">
     <h2 class="homepage">
-      <span style="font-size: 2rem;">NADOKI</span>
-      IS
-      <br />
-      A BERLIN BASED
-      <br />
-      MUSIC STUDIO
+      <span>NADOKI</span>
+      IS A BERLIN BASED MUSIC STUDIO
     </h2>
 
     <p class="body-bold">
