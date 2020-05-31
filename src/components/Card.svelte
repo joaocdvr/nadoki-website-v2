@@ -26,6 +26,12 @@
     padding: 3rem 3rem 7rem 3rem;
   }
 
+  @media (--max-content-width) {
+    button {
+      padding: 3rem 1.5rem 7rem 1.5rem;
+    }
+  }
+
   button:focus {
     outline: none;
   }
@@ -64,6 +70,16 @@
 
   ul {
     background-color: var(--main-color);
+  }
+
+  li {
+    max-width: var(--max-width);
+  }
+
+  @media (--max-content-width) {
+    li {
+      transform: translateX(calc(50vw - var(--max-width)/2));
+    }
   }
 </style>
 

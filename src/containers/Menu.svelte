@@ -23,17 +23,31 @@
     visibility: hidden;
   }
 
+  @media (--mobile-landscape) {
+    ul {
+      padding: 0;
+    }
+  }
+
   li {
     text-align: center;
-    padding: 1.25rem 0;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     transition-delay: 0ms;
   }
 
   a {
+    padding: 1.25rem 1.5rem;
     display: inline-block;
     transition: background-color 300ms ease-in-out;
+    width:100%;
+    max-width: 48rem;
+  }
+
+  @media (--mobile-landscape) {
+    a {
+      padding: 0.75rem 0;
+    }
   }
 
   a:active,
@@ -42,19 +56,28 @@
     outline: none;
   }
 
-  a:focus {
-    padding: 0 1.5rem;
-  }
-
   :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
   }
 
   svg {
-    width: calc(100vw - 3rem);
+    width: 100%;
     min-height: 1.5rem;
     height: 1.5rem;
     fill: var(--light);
+  }
+
+  @media (--mobile-landscape) {
+    svg {
+      max-width: 25rem;
+      max-height: 1.5rem;
+    }
+  }
+
+  @media (--max-content-width) {
+    svg {
+      height: 2.5rem;
+    }
   }
 
   /* Equipment height fix */
@@ -63,8 +86,21 @@
     height: 1.875rem;
   }
 
-  .equipment-li {
+  @media (--max-content-width) {
+    svg.equipment-svg {
+      min-height: 3.125rem;
+      height: 3.125rem;
+    }
+  }
+
+  .equipment-li a {
     padding-bottom: 0.875rem;
+  }
+  
+  @media (--mobile-landscape) {
+    .equipment-li a {
+      padding-bottom: 0.375rem;
+    }
   }
 
   /* Menu entries animation */
@@ -72,129 +108,33 @@
     visibility: visible;
   }
 
-  .services-is-visible {
+  .services-is-visible,
+  .studio-is-visible,
+  .work-is-visible,
+  .equipment-is-visible,
+  .about-us-is-visible {
     opacity: 1;
     transition: opacity 600ms ease-in-out;
+  }
+
+  .services-is-visible {
     transition-delay: 400ms;
   }
 
   .studio-is-visible {
-    opacity: 1;
-    transition: opacity 600ms ease-in-out;
     transition-delay: 500ms;
   }
 
   .work-is-visible {
-    opacity: 1;
-    transition: opacity 600ms ease-in-out;
     transition-delay: 600ms;
   }
 
   .equipment-is-visible {
-    opacity: 1;
-    transition: opacity 600ms ease-in-out;
     transition-delay: 700ms;
   }
 
   .about-us-is-visible {
-    opacity: 1;
-    transition: opacity 600ms ease-in-out;
     transition-delay: 800ms;
-  }
-
-  /* Media queries */
-  @media (--mobile-landscape) {
-    ul {
-      padding: 0;
-    }
-
-    li {
-      padding: 0.75rem 0;
-    }
-
-    svg {
-      max-width: 25rem;
-    }
-
-    .equipment-li {
-      padding-bottom: 0.375rem;
-    }
-  }
-
-  @media (--tablet-portrait) {
-    ul,
-    li {
-      padding: 1.25rem 0;
-    }
-
-    svg {
-      height: 4rem;
-      max-width: 35rem;
-    }
-
-    /* Equipment height fix */
-    .equipment-svg {
-      height: 5.25rem;
-    }
-
-    .equipment-li {
-      padding-bottom: 0;
-    }
-  }
-
-  @media (--tablet-landscape) {
-    ul,
-    li {
-      padding: 1.25rem 0;
-    }
-
-    svg {
-      max-width: 50rem;
-      height: calc(
-        ((100vh - 19.5rem) * 0.1875) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
-      );
-    }
-    /* Equipment height fix */
-    .equipment-svg {
-      height: calc(
-        ((100vh - 19.5rem) * 0.25) + ((100vh - 19.5rem) * 0.25 / 4 / 5)
-      );
-    }
-
-    .equipment-li {
-      padding-bottom: calc(1.25rem - (100vh - 19.5rem) * 0.25 / 4);
-    }
-  }
-
-  /* Media query to fix equipment height when the height of the screen is > 632px */
-  @media (min-width: 75rem) and (min-height: 39.5rem) and (orientation: landscape) {
-    .equipment-svg {
-      height: calc(((100vh - 19.5rem) * 0.25));
-    }
-  }
-
-  @media (--mobile-landscape-big) {
-    ul {
-      padding: 0;
-    }
-
-    li {
-      padding: 0.75rem 0;
-    }
-
-    svg {
-      max-width: 30rem;
-      height: 1.5rem;
-    }
-
-    /* Equipment height fix */
-    .equipment-svg {
-      height: 1.875rem;
-    }
-
-    .equipment-li {
-      padding-bottom: 0.375rem;
-    }
   }
 </style>
 
