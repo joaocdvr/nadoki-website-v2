@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { get } from "svelte/store";
   import { fade } from "svelte/transition";
   import {
     servicesModalActive,
@@ -14,10 +15,10 @@
   import { handleSVGAnimation } from "../utensils/utils.js";
 
   onMount(() => {
-    handleSVGAnimation("svg-to-animate-music");
-    handleSVGAnimation("svg-to-animate-film");
-    handleSVGAnimation("svg-to-animate-game");
-    handleSVGAnimation("svg-to-animate-branding");
+    handleSVGAnimation("svg-to-animate-music", "services");
+    handleSVGAnimation("svg-to-animate-film", "services");
+    handleSVGAnimation("svg-to-animate-game", "services");
+    handleSVGAnimation("svg-to-animate-branding", "services");
   });
 </script>
 
@@ -48,6 +49,10 @@
 
   :global(.user-is-tabbing) button:focus .text-svg {
     fill: var(--light);
+  }
+
+  :global(.user-is-tabbing) button:focus .icon-svg {
+    fill: var(--dark);
   }
 
   svg {

@@ -1,7 +1,7 @@
 // Imports
 import { get } from "svelte/store";
 import Warp from "warpjs";
-import { scrollYPosition } from "./stores.js";
+import { scrollYPosition, activePage } from "./stores.js";
 
 // Function that identifies if the user is navigating with a mouse or tab
 export function focusOnlyWhenNeeded() {
@@ -42,19 +42,26 @@ export function resetScrollYPosition() {
 }
 
 // Function that animates SVGs
-export function handleSVGAnimation(name) {
+export function handleSVGAnimation(name, page) {
   const svg = document.getElementById(name);
   const warp = new Warp(svg);
 
-  warp.interpolate(4);
+  warp.interpolate(8);
   warp.transform(([x, y]) => [x, y, y]);
 
   let offset = 0;
   function animate() {
-    warp.transform(([x, y, oy]) => [x, oy + 4 * Math.sin(x / 16 + offset), oy]);
-    offset += 0.1;
-    requestAnimationFrame(animate);
+    if (get(activePage) === page) {
+      warp.transform(([x, y, oy]) => [
+        x,
+        oy + 8 * Math.sin(x / 12 + offset),
+        oy,
+      ]);
+      offset += 0.2;
+      setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
+    } else {
+      return;
+    }
   }
-
-  animate();
+  setTimeout(() => animate(), 0);
 }
