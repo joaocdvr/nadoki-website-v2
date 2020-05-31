@@ -13,15 +13,6 @@
     --dark-two: #868686;
   }
 
-  :global(.header-small) {
-    font-family: "syne-extra", Arial, Helvetica, sans-serif;
-    line-height: 2rem;
-    font-size: 1rem;
-    color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
-  }
-
   :global(.header-big) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 2.5rem;
@@ -31,33 +22,25 @@
     hyphens: auto;
   }
 
+  :global(.header-small) {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
   :global(.body-regular) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
     font-size: 1rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.body-small) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  :global(.body-regular-two) {
-    font-family: "syne-regular", Arial, Helvetica, sans-serif;
-    line-height: 1.5rem;
-    font-size: 1rem;
-    color: var(--dark-two);
-    margin-bottom: 0.5rem;
-    display: inline-block;
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.body-bold) {
@@ -65,8 +48,6 @@
     line-height: 1.5rem;
     font-size: 1rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.body-extra) {
@@ -74,8 +55,6 @@
     line-height: 1.5rem;
     font-size: 1rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.body-italic) {
@@ -83,8 +62,6 @@
     line-height: 1.875rem;
     font-size: 1.25rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.body-mono) {
@@ -92,8 +69,6 @@
     line-height: 1.875rem;
     font-size: 1.25rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.caption) {
@@ -101,17 +76,6 @@
     line-height: 1.5rem;
     font-size: 0.75rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  :global(.list-name) {
-    font-family: "syne-bold", Arial, Helvetica, sans-serif;
-    line-height: 3rem;
-    font-size: 1rem;
-    color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.list-content) {
@@ -119,8 +83,6 @@
     line-height: 2rem;
     font-size: 1rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 
   :global(.homepage) {
@@ -128,7 +90,5 @@
     line-height: 1.875rem;
     font-size: 1.25rem;
     color: var(--dark);
-    word-break: break-word;
-    hyphens: auto;
   }
 </style>
