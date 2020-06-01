@@ -18,7 +18,7 @@
   /* Scrollbar */
   @media (--max-content-width) {
     :global(::-webkit-scrollbar-track) {
-      border-left: 0.125rem solid var(--dark);
+      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.2);
       background-color: var(--light);
     }
 
@@ -28,7 +28,7 @@
     }
 
     :global(::-webkit-scrollbar-thumb) {
-      border-left: 0.125rem solid var(--dark);
+      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.2);
       background-color: var(--main-color);
     }
   }
