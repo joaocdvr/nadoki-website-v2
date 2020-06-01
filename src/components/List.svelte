@@ -26,6 +26,29 @@
     outline: none;
   }
 
+
+  .list-content {
+    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    line-height: 2;
+    font-size: 1rem;
+    color: transparent;
+    transition: color 50ms ease-in-out;
+    transition-delay: 0;
+    max-width: 48rem;
+  }
+
+  .list-open {
+    transition: color 300ms ease-in-out;
+    transition-delay: 100ms;
+    color: var(--dark);
+  }
+
+  @media (--max-content-width) {
+    .list-content {
+      transform: translateX(calc(50vw - var(--max-width)/2));
+    }
+  }
+
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
@@ -40,23 +63,26 @@
     transition: background-color 300ms ease-in-out;
   }
 
+  dt,
+  div {
+    width: 100%;
+    max-width: var(--max-width);
+    text-align: left;
+  }
+
+  @media (--max-content-width) {
+    dt, 
+    div {
+      transform: translateX(calc(50vw - var(--max-width)/2));
+    }
+  }
+
   dt {
-    padding: 1.5rem 0 1.5rem 1.5rem;
+    padding: 1.5rem;
+    position: relative;
   }
 
-  dd {
-    padding: 0 1.5rem 1.5rem 1.5rem;
-  }
-
-  .item-is-clicked {
-    background-color: var(--main-color);
-  }
-
-  .item-is-clicked button:before {
-    transform: rotate(-90deg);
-  }
-
-  button:after {
+  dt span:after {
     content: "";
     position: absolute;
     top: 2.125rem;
@@ -66,7 +92,7 @@
     background-color: var(--dark);
   }
 
-  button:before {
+  dt span:before {
     content: "";
     position: absolute;
     top: 1.75rem;
@@ -75,6 +101,18 @@
     height: 1rem;
     background-color: var(--dark);
     transition: transform 300ms;
+  }
+
+  .item-is-clicked dt span:before {
+    transform: rotate(-90deg);
+  }
+
+  div dd {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .item-is-clicked {
+    background-color: var(--main-color);
   }
 </style>
 
@@ -86,12 +124,11 @@
     on:click
     aria-label="Toggle {listItem.name} list"
     aria-pressed={listItem.open}>
-    <dt class="body-bold">{listItem.name}</dt>
+    <dt class="body-bold">{listItem.name}<span></span></dt>
   </button>
-
-  {#if listItem.open}
-    <dd class="list-content" transition:slide>
-      {@html listItem.content}
-    </dd>
-  {/if}
+  <div class="list-content" class:list-open={listItem.open}>
+    {#if listItem.open}
+      <dd transition:slide>{@html listItem.content}</dd>
+    {/if}
+  </div>
 </dl>

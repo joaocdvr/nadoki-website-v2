@@ -10,6 +10,7 @@
 
   export let tab = [];
   export let delay = 0;
+  export let variant = "";
 </script>
 
 <style>
@@ -24,6 +25,14 @@
     background-color: var(--dark);
   }
 
+  @media (--max-content-width){
+    .services-tab-menu {
+      min-width: 25%;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
   button {
     min-height: 3.5rem;
     border: none;
@@ -34,7 +43,28 @@
     background-color: var(--light);
     box-shadow: none;
     transition: background-color 300ms ease-in-out,
-      border-color 300ms ease-in-out;
+                border-color 300ms ease-in-out;
+  }
+
+  button:last-child {
+    border: none;
+  }
+
+  @media (--max-content-width) {
+    .services-tab-menu button {
+      border: 0.125px solid var(--dark);
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    .services-tab-menu button:last-child {
+      border: 0.125px solid var(--dark);
+      border-bottom: none;
+    }
+
+    .services-tab-menu button:first-child {
+      border-top: none;
+    }
   }
 
   button:focus {
@@ -47,10 +77,6 @@
 
   :global(.user-is-tabbing) button:focus p {
     color: var(--light);
-  }
-
-  menu :last-child {
-    border: none;
   }
 
   p {
@@ -74,11 +100,11 @@
   }
 </style>
 
-<menu
+<menu class:services-tab-menu={variant === "services"}
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   {#each tab as tab}
-    <button
+    <button class="tab-button"
       on:click={tab.function}
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}
