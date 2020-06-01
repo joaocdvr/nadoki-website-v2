@@ -45,12 +45,13 @@
     width: 100vw;
     min-height: calc(100vh - 4.5rem);
     background-color: var(--light);
+    border-top: 0.125rem solid var(--dark);
   }
 
   @media (--max-content-width) {
     footer > div {
       max-width: var(--max-width);
-      transform: translateX(calc(50vw - var(--max-width)/2))
+      transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
 
@@ -81,7 +82,7 @@
 
   @media (--max-content-width) {
     svg {
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       height: 1.5rem;
     }
   }
