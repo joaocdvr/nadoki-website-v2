@@ -46,7 +46,7 @@ export function handleSVGAnimation(name, page, param, goalParam) {
   const svg = document.getElementById(name);
   const warp = new Warp(svg);
 
-  warp.interpolate(8);
+  warp.interpolate(20);
   warp.transform(([x, y]) => [x, y, y]);
 
   let offset = 0;
@@ -54,14 +54,13 @@ export function handleSVGAnimation(name, page, param, goalParam) {
     if (get(activePage) === page) {
       const url = new URL(document.location);
       const pageParam = url.searchParams.get(param);
-
       if (pageParam === goalParam) {
         warp.transform(([x, y, oy]) => [
           x,
-          oy + 8 * Math.sin(x / 12 + offset),
+          oy + 4 * Math.sin(x / 12 + offset),
           oy,
         ]);
-        offset += 0.2;
+        offset += 0.1;
         setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
       } else {
         return;
