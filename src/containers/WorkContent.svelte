@@ -122,6 +122,10 @@
     margin-top: 4.5rem;
   }
 
+  .content-wrapper-not-visible {
+    display: none;
+  }
+
   .modal-wrapper {
     position: fixed;
     top: 0;
@@ -186,6 +190,7 @@
 
 <div
   class="content-wrapper"
+  class:content-wrapper-not-visible={isAnyWorkModalActive}
   style="transform: translateY({$scrollYPosition * -1}px)">
   <Header variant="work" />
   <Card cards={workCards} variant="work" />
