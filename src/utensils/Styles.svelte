@@ -20,6 +20,8 @@
     line-height: 1.5;
     font-size: 1.625rem;
     color: var(--dark);
+    word-break: break-word;
+    hyphens: auto;
   }
 
   :global(.header-small) {
