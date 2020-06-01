@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { afterUpdate } from "svelte";
   import { fade } from "svelte/transition";
   import {
     servicesModalActive,
@@ -13,7 +13,7 @@
   } from "../utensils/stores.js";
   import { handleSVGAnimation } from "../utensils/utils.js";
 
-  onMount(() => {
+  afterUpdate(() => {
     handleSVGAnimation("svg-to-animate-music", "services", "name", null);
     handleSVGAnimation("svg-to-animate-film", "services", "name", null);
     handleSVGAnimation("svg-to-animate-game", "services", "name", null);
