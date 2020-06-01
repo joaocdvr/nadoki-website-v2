@@ -15,6 +15,24 @@
     --max-width: 48rem;
   }
 
+  /* Scrollbar */
+  :global(::-webkit-scrollbar-track) {
+    border-left: 0.125rem solid var(--dark);
+    background-color: var(--light);
+  }
+
+  :global(::-webkit-scrollbar) {
+    width: 1rem;
+    background-color: var(--light);
+  }
+
+  :global(::-webkit-scrollbar-thumb) {
+    border-left: 0.125rem solid var(--dark);
+    background-color: var(--main-color);
+  }
+
+  /* Text */
+
   :global(.header-big) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 1.5;
