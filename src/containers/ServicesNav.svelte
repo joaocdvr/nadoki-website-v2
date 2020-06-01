@@ -14,14 +14,14 @@
   import { handleSVGAnimation } from "../utensils/utils.js";
 
   onMount(() => {
-    handleSVGAnimation("svg-to-animate-music", "services");
-    handleSVGAnimation("svg-to-animate-film", "services");
-    handleSVGAnimation("svg-to-animate-game", "services");
-    handleSVGAnimation("svg-to-animate-branding", "services");
+    handleSVGAnimation("svg-to-animate-music", "services", "name", null);
+    handleSVGAnimation("svg-to-animate-film", "services", "name", null);
+    handleSVGAnimation("svg-to-animate-game", "services", "name", null);
+    handleSVGAnimation("svg-to-animate-branding", "services", "name", null);
   });
 </script>
 
-<style> 
+<style>
   menu {
     line-height: 0;
     min-height: calc(100vh - 11rem);
