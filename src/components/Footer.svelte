@@ -25,7 +25,6 @@
     outline: none;
   }
 
-  a:hover,
   :global(.user-is-tabbing) a:focus {
     color: var(--light);
     background-color: var(--secondary-color);
@@ -37,6 +36,21 @@
 
   :global(.user-is-tabbing) a:focus {
     fill: var(--light);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover {
+      color: var(--light);
+      background-color: var(--secondary-color);
+    }
+
+    .socials-a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .socials-a:hover svg {
+      fill: var(--light);
+    }
   }
 
   footer {
@@ -102,14 +116,6 @@
     width: 100%;
     height: 100%;
     padding: 0.5rem;
-  }
-
-  .socials-a:hover {
-    background-color: var(--secondary-color);
-  }
-
-  .socials-a:hover svg {
-    fill: var(--light);
   }
 
   address {

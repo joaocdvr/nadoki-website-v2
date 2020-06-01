@@ -15,10 +15,16 @@
     outline: none;
   }
 
-  button:hover,
   :global(.user-is-tabbing) button:focus {
     fill: var(--light);
     background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    button:hover {
+      fill: var(--light);
+      background-color: var(--secondary-color);
+    }
   }
 
   svg {

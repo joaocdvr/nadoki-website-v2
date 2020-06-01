@@ -40,18 +40,24 @@
     outline: none;
   }
 
-  button:hover,
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
-  button:hover p,
-  button:hover h2,
-  button:hover h3,
   :global(.user-is-tabbing) button:focus p,
-  :global(.user-is-tabbing) button:focus h2,
-  :global(.user-is-tabbing) button:focus h3 {
+  :global(.user-is-tabbing) button:focus h2 {
     color: var(--light);
+  }
+
+  @media (--not-touchscreen) {
+    button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    button:hover p,
+    button:hover h2 {
+      color: var(--light);
+    }
   }
 
   .studio-card-wrapper {

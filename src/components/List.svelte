@@ -27,21 +27,32 @@
     outline: none;
   }
 
-  button:hover,
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
-  button:hover dt,
   :global(.user-is-tabbing) button:focus dt {
     color: var(--light);
   }
 
-  button:hover :before,
-  button:hover :after,
   :global(.user-is-tabbing) button:focus :before,
   :global(.user-is-tabbing) button:focus :after {
     background-color: var(--light);
+  }
+
+  @media (--not-touchscreen) {
+    button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    button:hover dt {
+      color: var(--light);
+    }
+
+    button:hover :before,
+    button:hover :after {
+      background-color: var(--light);
+    }
   }
 
   .list-content {

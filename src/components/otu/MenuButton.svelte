@@ -29,10 +29,16 @@
     outline: none;
   }
 
-  button:hover,
   :global(.user-is-tabbing) button:focus {
     fill: var(--light);
     background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    button:hover {
+      fill: var(--light);
+      background-color: var(--secondary-color);
+    }
   }
 
   svg {
@@ -63,14 +69,15 @@
   }
 
   /* Menu icon hover animation */
-  button:hover .left-rect-menu {
-    height: 0.5rem;
-  }
+  @media (--not-touchscreen) {
+    button:hover .left-rect-menu {
+      height: 0.5rem;
+    }
 
-  button:hover .middle-rect-menu {
-    height: 1rem;
+    button:hover .middle-rect-menu {
+      height: 1rem;
+    }
   }
-
   /* Menu cross */
   .left-rect-cross {
     fill: var(--light);
@@ -91,15 +98,17 @@
   }
 
   /* Menu cross hover animation */
-  button:hover .left-rect-cross {
-    height: 1.820625rem;
-    width: 0.45rem;
-    transform: rotate(45deg) translate(1.275rem, 0.15rem);
-  }
+  @media (--not-touchscreen) {
+    button:hover .left-rect-cross {
+      height: 1.820625rem;
+      width: 0.45rem;
+      transform: rotate(45deg) translate(1.275rem, 0.15rem);
+    }
 
-  button:hover .right-rect-cross {
-    width: 0.45rem;
-    transform: rotate(-45deg) translate(-0.225rem, 0.15rem);
+    button:hover .right-rect-cross {
+      width: 0.45rem;
+      transform: rotate(-45deg) translate(-0.225rem, 0.15rem);
+    }
   }
 </style>
 

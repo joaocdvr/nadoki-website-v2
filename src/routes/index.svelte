@@ -36,10 +36,16 @@
     outline: none;
   }
 
-  a:hover,
   :global(.user-is-tabbing) a:focus {
     color: var(--light);
     background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover {
+      color: var(--light);
+      background-color: var(--secondary-color);
+    }
   }
 
   div {

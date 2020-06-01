@@ -56,9 +56,14 @@
     outline: none;
   }
 
-  a:hover,
   :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover {
+      background-color: var(--secondary-color);
+    }
   }
 
   svg {

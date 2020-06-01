@@ -71,14 +71,22 @@
     outline: none;
   }
 
-  button:hover,
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
-  button:hover p,
   :global(.user-is-tabbing) button:focus p {
     color: var(--light);
+  }
+
+  @media (--not-touchscreen) {
+    button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    button:hover p {
+      color: var(--light);
+    }
   }
 
   p {

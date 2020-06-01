@@ -49,19 +49,22 @@
     outline: none;
   }
 
-  /* button:hover,
-  :global(.user-is-tabbing) button:focus {
-    background-color: var(--secondary-color);
-  } */
-
-  button:hover .text-svg,
   :global(.user-is-tabbing) button:focus .text-svg {
     fill: var(--light);
   }
 
-  button:hover .icon-svg,
   :global(.user-is-tabbing) button:focus .icon-svg {
     fill: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    button:hover .text-svg {
+      fill: var(--light);
+    }
+
+    button:hover .icon-svg {
+      fill: var(--secondary-color);
+    }
   }
 
   svg {
