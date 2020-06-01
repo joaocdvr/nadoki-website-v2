@@ -16,19 +16,21 @@
   }
 
   /* Scrollbar */
-  :global(::-webkit-scrollbar-track) {
-    border-left: 0.125rem solid var(--dark);
-    background-color: var(--light);
-  }
+  @media (--max-content-width) {
+    :global(::-webkit-scrollbar-track) {
+      border-left: 0.125rem solid var(--dark);
+      background-color: var(--light);
+    }
 
-  :global(::-webkit-scrollbar) {
-    width: 1rem;
-    background-color: var(--light);
-  }
+    :global(::-webkit-scrollbar) {
+      width: 1rem;
+      background-color: var(--light);
+    }
 
-  :global(::-webkit-scrollbar-thumb) {
-    border-left: 0.125rem solid var(--dark);
-    background-color: var(--main-color);
+    :global(::-webkit-scrollbar-thumb) {
+      border-left: 0.125rem solid var(--dark);
+      background-color: var(--main-color);
+    }
   }
 
   /* Text */
