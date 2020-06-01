@@ -226,7 +226,7 @@
     .tab-content {
       padding: 3rem 3rem 5rem 3rem;
       height: calc(100vh - 12.5rem);
-      overflow-y: scroll;
+      overflow-y: auto;
     }
 
     .tab-content p {
