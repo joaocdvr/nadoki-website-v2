@@ -13,13 +13,23 @@
 </script>
 
 <style>
-  .work-modal-content-wrapper {
-    padding: 1.5rem 1.5rem 0 1.5rem;
+  main {
+    width: 100%;
+  }
+
+  @media (--max-content-width) {
+    main {
+      max-width: var(--max-width);
+      transform: translateX(calc(50vw - var(--max-width)/2));
+      padding: 1.5rem 4rem 0;
+    }
+  }
+
+  article {
+    padding: 1.5rem 1.5rem 2.5rem;
   }
 
   .credits-wrapper {
-    background: var(--main-color);
-    padding: 0 1.5rem 2.5rem 1.5rem;
     margin-top: 2.5rem;
   }
 
@@ -41,22 +51,26 @@
   in:fade={{ duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   <ModalNav title="Work" on:click={() => resetWorkModalActive()} />
-  <slot name="media" />
+  <main>
+    <slot name="media" />
+    <article>
+      <div class="work-modal-content-wrapper">
+        <slot name="title" />
 
-  <div class="work-modal-content-wrapper">
-    <slot name="title" />
+        <slot name="year" />
 
-    <slot name="year" />
+        <slot name="tag" />
 
-    <slot name="tag" />
+        <slot name="description" />
 
-    <slot name="description" />
+        <slot name="quote" />
+      </div>
 
-    <slot name="quote" />
-  </div>
-
-  <div class="credits-wrapper">
-    <slot name="credits" />
-  </div>
+      <div class="credits-wrapper">
+        <slot name="credits" />
+      </div>
+    </article>
+  </main>
   <Footer delay={$animationInDelay} />
+  
 </div>

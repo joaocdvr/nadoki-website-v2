@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import { get } from "svelte/store";
   import { fade } from "svelte/transition";
   import {
     servicesModalActive,
@@ -22,12 +21,19 @@
   });
 </script>
 
-<style>
+<style> 
   menu {
     line-height: 0;
     min-height: calc(100vh - 11rem);
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (--max-content-width) {
+    menu {
+      flex-wrap: nowrap;
+      min-height: calc(100vh - 12.5rem);
+    }
   }
 
   button {
