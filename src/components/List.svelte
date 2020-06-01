@@ -20,12 +20,29 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
   button:focus {
     outline: none;
   }
 
+  button:hover,
+  :global(.user-is-tabbing) button:focus {
+    background-color: var(--secondary-color);
+  }
+
+  button:hover dt,
+  :global(.user-is-tabbing) button:focus dt {
+    color: var(--light);
+  }
+
+  button:hover :before,
+  button:hover :after,
+  :global(.user-is-tabbing) button:focus :before,
+  :global(.user-is-tabbing) button:focus :after {
+    background-color: var(--light);
+  }
 
   .list-content {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
@@ -45,16 +62,8 @@
 
   @media (--max-content-width) {
     .list-content {
-      transform: translateX(calc(50vw - var(--max-width)/2));
+      transform: translateX(calc(50vw - var(--max-width) / 2));
     }
-  }
-
-  :global(.user-is-tabbing) button:focus {
-    background-color: var(--secondary-color);
-  }
-
-  :global(.user-is-tabbing) button:focus dt {
-    color: var(--light);
   }
 
   dl {
@@ -71,9 +80,9 @@
   }
 
   @media (--max-content-width) {
-    dt, 
+    dt,
     div {
-      transform: translateX(calc(50vw - var(--max-width)/2));
+      transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
 
@@ -124,11 +133,16 @@
     on:click
     aria-label="Toggle {listItem.name} list"
     aria-pressed={listItem.open}>
-    <dt class="body-bold">{listItem.name}<span></span></dt>
+    <dt class="body-bold">
+      {listItem.name}
+      <span />
+    </dt>
   </button>
   <div class="list-content" class:list-open={listItem.open}>
     {#if listItem.open}
-      <dd transition:slide>{@html listItem.content}</dd>
+      <dd transition:slide>
+        {@html listItem.content}
+      </dd>
     {/if}
   </div>
 </dl>

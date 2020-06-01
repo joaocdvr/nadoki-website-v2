@@ -80,10 +80,12 @@
     outline: none;
   }
 
+  button:hover,
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
+  button:hover h2,
   :global(.user-is-tabbing) button:focus h2 {
     color: var(--light);
   }
@@ -170,7 +172,6 @@
     transform: translate(-50%, -50%);
     max-height: 100%;
     max-width: 100%;
-    transition: opacity 300ms ease-in-out;
   }
 </style>
 

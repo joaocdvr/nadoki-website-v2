@@ -40,14 +40,25 @@
     outline: none;
   }
 
+  button:hover,
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
+  button:hover p,
+  button:hover h2,
+  button:hover h3,
   :global(.user-is-tabbing) button:focus p,
   :global(.user-is-tabbing) button:focus h2,
   :global(.user-is-tabbing) button:focus h3 {
     color: var(--light);
+  }
+
+  .studio-card-wrapper {
+    text-align: left;
+    width: 100vw;
+    line-height: 0;
+    padding: 3rem 3rem 7rem 3rem;
   }
 
   img {
@@ -102,33 +113,49 @@
     <li
       in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-      <button
-        on:click={() => handleWorkModalClick(card.url)}
-        aria-label="Toggle {card.title}'s details"
-        aria-pressed={$workModalActive === card.url}>
-
-        <div class="div-img">
-          <img src={card.src} alt={card.alt} />
-        </div>
-
-        <div class="div-text">
-          <div
-            class="div-header"
-            class:div-header-border={variant === 'studio'}>
-            <h2 class="header-small">{card.title.toUpperCase()}</h2>
-
-            {#if variant === 'studio'}
-              <h3 class="body-bold">{card.size}</h3>
-            {/if}
+      {#if variant === 'studio'}
+        <div class="studio-card-wrapper">
+          <div class="div-img">
+            <img src={card.src} alt={card.alt} />
           </div>
 
-          <p class="body-regular">{card.content}</p>
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}>
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+              <h3 class="body-bold">{card.size}</h3>
+            </div>
 
-          {#if variant === 'work'}
-            <Tag tags={card.tags} />
-          {/if}
+            <p class="body-regular">{card.content}</p>
+          </div>
         </div>
-      </button>
+      {/if}
+
+      {#if variant === 'work'}
+        <button
+          on:click={() => handleWorkModalClick(card.url)}
+          aria-label="Toggle {card.title}'s details"
+          aria-pressed={$workModalActive === card.url}>
+
+          <div class="div-img">
+            <img src={card.src} alt={card.alt} />
+          </div>
+
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}>
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+            </div>
+
+            <p class="body-regular">{card.content}</p>
+
+            <Tag tags={card.tags} />
+          </div>
+        </button>
+      {/if}
+
     </li>
   {/each}
 </ul>

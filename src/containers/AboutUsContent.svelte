@@ -228,7 +228,7 @@
   @media (--max-content-width) {
     .personal-page-wrapper {
       width: 100%;
-      overflow: scroll;
+      overflow-y: scroll;
       padding-top: 5rem;
     }
 

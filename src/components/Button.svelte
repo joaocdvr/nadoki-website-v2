@@ -25,6 +25,7 @@
     outline: none;
   }
 
+  a:hover,
   :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
     color: var(--light);
