@@ -18,7 +18,7 @@
     text-align: center;
   }
 
-  nav > div:not(.menu-bg):not(.nav-bg) { 
+  nav > div:not(.menu-bg):not(.nav-bg) {
     max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@
 
   @media (--max-content-width) {
     nav > div:first-child {
-      transform: translateX(calc(50vw - var(--max-width)/2));
+      transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
 
@@ -37,7 +37,7 @@
     background-color: var(--dark);
     width: 100vw;
     height: 4.5rem;
-    top:0;
+    top: 0;
     right: -100vw;
     transition: transform 500ms ease;
     transition-delay: 500ms;

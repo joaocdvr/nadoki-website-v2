@@ -25,7 +25,7 @@
     background-color: var(--dark);
   }
 
-  @media (--max-content-width){
+  @media (--max-content-width) {
     .services-tab-menu {
       min-width: 25%;
       flex-direction: column;
@@ -43,7 +43,7 @@
     background-color: var(--light);
     box-shadow: none;
     transition: background-color 300ms ease-in-out,
-                border-color 300ms ease-in-out;
+      border-color 300ms ease-in-out;
   }
 
   button:last-child {
@@ -71,10 +71,12 @@
     outline: none;
   }
 
+  button:hover,
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
 
+  button:hover p,
   :global(.user-is-tabbing) button:focus p {
     color: var(--light);
   }
@@ -100,11 +102,13 @@
   }
 </style>
 
-<menu class:services-tab-menu={variant === "services"}
+<menu
+  class:services-tab-menu={variant === 'services'}
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   {#each tab as tab}
-    <button class="tab-button"
+    <button
+      class="tab-button"
       on:click={tab.function}
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}

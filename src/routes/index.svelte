@@ -36,6 +36,7 @@
     outline: none;
   }
 
+  a:hover,
   :global(.user-is-tabbing) a:focus {
     color: var(--light);
     background-color: var(--secondary-color);
@@ -52,25 +53,10 @@
     padding: 1.5rem;
   }
 
-  .image-wrapper {
+  .texture-wrapper {
     width: 100%;
     height: 100%;
   }
-
-  /* img {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    max-width: none;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    animation-name: img-animation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-  } */
 
   svg {
     position: absolute;
@@ -154,7 +140,7 @@
       <a href="/about_us" aria-label="About Us page" underlined>about us</a>
       .
     </p>
-    <div class="image-wrapper">
+    <div class="texture-wrapper">
       <svg
         id="svg-to-animate-homepage"
         preserveAspectRatio="none"

@@ -40,7 +40,7 @@
     padding: 1.25rem 1.5rem;
     display: inline-block;
     transition: background-color 300ms ease-in-out;
-    width:100%;
+    width: 100%;
     max-width: 48rem;
   }
 
@@ -56,6 +56,7 @@
     outline: none;
   }
 
+  a:hover,
   :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
   }
@@ -96,7 +97,7 @@
   .equipment-li a {
     padding-bottom: 0.875rem;
   }
-  
+
   @media (--mobile-landscape) {
     .equipment-li a {
       padding-bottom: 0.375rem;

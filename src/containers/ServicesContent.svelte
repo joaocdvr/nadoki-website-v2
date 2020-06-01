@@ -183,6 +183,24 @@
 </script>
 
 <style>
+  a {
+    color: var(--dark);
+    display: inline-block;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  a:active,
+  a:visited,
+  a:focus {
+    outline: none;
+  }
+
+  a:hover,
+  :global(.user-is-tabbing) a:focus {
+    color: var(--light);
+    background-color: var(--secondary-color);
+  }
+
   .content-wrapper {
     margin-top: 4.5rem;
     background-color: var(--main-color);
@@ -246,7 +264,7 @@
 
 <div
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
   class="modal-wrapper"
   class:modal-is-visible={isAnyServiceClicked}>
   <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
