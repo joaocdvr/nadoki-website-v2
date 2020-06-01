@@ -78,13 +78,6 @@
     color: var(--dark);
   }
 
-  :global(.list-content) {
-    font-family: "syne-regular", Arial, Helvetica, sans-serif;
-    line-height: 2;
-    font-size: 1rem;
-    color: var(--dark);
-  }
-
   :global(.homepage) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 1.5;

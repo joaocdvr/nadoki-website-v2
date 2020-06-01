@@ -118,6 +118,7 @@
 
 <style>
   .content-wrapper {
+    background-color: var(--main-color);
     margin-top: 4.5rem;
   }
 
@@ -148,6 +149,13 @@
     height: calc(100vw / (16 / 9));
   }
 
+  @media (--max-content-width) {
+    .youtube-iframe {
+      padding: 0 1.5rem;
+      height: calc(var(--max-width) * 0.45);
+    }
+  }
+
   .vimeo-iframe {
     position: absolute;
     top: 0;
@@ -156,9 +164,23 @@
     height: 100%;
   }
 
+  @media (--max-content-width) {
+    .vimeo-iframe {
+      padding: 0 1.5rem;
+      height: calc(var(--max-width) * 0.45);
+    }
+  }
+
   .spotify-iframe {
-    width: 100vw;
+    width: 100%;
     height: calc(100vw + 80px);
+  }
+
+  @media (--max-content-width) {
+    .spotify-iframe {
+      padding: 0 1.5rem;
+      height: calc(var(--max-width) - 6rem);
+    }
   }
 </style>
 
@@ -317,7 +339,7 @@
         <span class="body-bold">Cinemaissí Festival</span>
         and in Brazil during the
         <span class="body-bold">Mostra Sesc de Cinema</span>
-        .«
+        .
       </p>
 
       <p slot="quote" class="quote body-regular">

@@ -30,6 +30,10 @@
     button {
       padding: 3rem 1.5rem 7rem 1.5rem;
     }
+
+    .work-cards button {
+      padding: 3rem;
+    }
   }
 
   button:focus {
@@ -68,8 +72,13 @@
     margin-bottom: 1rem;
   }
 
-  ul {
-    background-color: var(--main-color);
+  @media (--max-content-width) {
+    ul.work-cards {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      width: 100%;
+    }
   }
 
   li {
@@ -78,12 +87,17 @@
 
   @media (--max-content-width) {
     li {
-      transform: translateX(calc(50vw - var(--max-width)/2));
+      transform: translateX(calc(50vw - var(--max-width) / 2));
+    }
+
+    .work-cards li {
+      transform: none;
+      max-width: 25%;
     }
   }
 </style>
 
-<ul>
+<ul class:work-cards={variant === 'work'}>
   {#each cards as card, i}
     <li
       in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}

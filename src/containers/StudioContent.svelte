@@ -47,6 +47,7 @@
 <style>
   .content-wrapper {
     margin-top: 4.5rem;
+    background-color: var(--main-color);
   }
 </style>
 
