@@ -57,6 +57,16 @@
     flex-wrap: wrap;
   }
 
+  @media (--max-content-width) {
+    menu {
+      flex-wrap: nowrap;
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
   button {
     position: relative;
     cursor: pointer;
@@ -91,14 +101,33 @@
 
   /* Animation */
   .menu-open {
-    min-height: fit-content;
+    min-height: 0;
+  }
+
+  @media (--max-content-width) {
+    .menu-open {
+      flex-direction: column;
+      min-width: 25%;
+      border-right: 2px solid var(--dark);
+    }
   }
 
   .button-open {
-    width: calc(1 / 4 * 100%);
+    width: 25%;
     background-color: var(--light);
     border-bottom: 0.125rem solid var(--dark);
     padding: 0.5rem 0;
+  }
+
+  @media (--max-content-width) {
+    .button-open {
+      flex-grow: 1;
+      width: 100%;
+      text-align: right;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--dark);
+    }
   }
 
   .button-open svg {
@@ -108,6 +137,19 @@
   .img-open {
     margin: 0;
     width: calc(100% - 1rem);
+  }
+
+  @media (--max-content-width) {
+    .img-open {
+      /* display: none; */
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      max-height: 80%;
+      width: auto;
+      max-width: 45%;
+      transform: translateY(-50%);
+    }
   }
 
   .selected-button {
