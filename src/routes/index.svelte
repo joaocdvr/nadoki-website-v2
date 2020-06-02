@@ -55,6 +55,7 @@
   .content-wrapper {
     position: relative;
     min-height: calc((var(--vh, 1vh) * 100) - 4.5rem);
+    transition: height 300ms ease-in-out;
     overflow: hidden;
     padding: 1.5rem;
   }
@@ -75,6 +76,7 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    transition: height 300ms ease-in-out;
   }
 
   @keyframes img-animation {
