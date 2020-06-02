@@ -50,6 +50,7 @@ export function handleSVGAnimation(name, page, param, goalParam) {
   warp.transform(([x, y]) => [x, y, y]);
 
   let offset = 0;
+
   function animate() {
     if (get(activePage) === page) {
       const url = new URL(document.location);
