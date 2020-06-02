@@ -25,16 +25,6 @@ export function focusOnlyWhenNeeded() {
   window.addEventListener("keydown", handleFirstTab);
 }
 
-// Function that listens and updates mobile vh
-export function updateVHVariable() {
-  window.addEventListener("resize", () => {
-    let vh = window.innerHeight * 0.01;
-    console.log(vh);
-
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  });
-}
-
 // Functions that save/restore/rest scroll Y position
 export function saveScrollYPosition() {
   scrollYPosition.set(window.scrollY);
