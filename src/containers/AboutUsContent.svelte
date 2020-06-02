@@ -73,6 +73,15 @@
       height: calc(100vh - 12.5rem);
       display: flex;
     }
+
+    .header-big {
+      display: inline-block;
+      font-size: 2.625rem;
+    }
+
+    .header-big + .header-big {
+      margin-left: 0.5rem;
+    }
   }
 
   .content-wrapper {
@@ -107,6 +116,15 @@
     z-index: 1;
   }
 
+  @media (--max-content-width) {
+    .img-wrapper {
+      width: 20rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
   h2 {
     padding-bottom: 0.5rem;
   }
@@ -118,9 +136,6 @@
   svg {
     width: 1.5rem;
     height: 1.5rem;
-  }
-
-  @media (--max-content-width) {
   }
 
   .socials-ul {
@@ -252,13 +267,6 @@
       width: 100%;
       overflow-y: scroll;
       padding-top: 5rem;
-    }
-
-    .img-wrapper {
-      width: 20rem;
-      position: absolute;
-      right: 0;
-      top: 0;
     }
   }
 
