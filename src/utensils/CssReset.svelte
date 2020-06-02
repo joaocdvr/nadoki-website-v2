@@ -14,7 +14,19 @@
 
   :global(body) {
     line-height: 1;
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
   }
+
+  :global(html) {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+  }
+
   :global(ol, ul, menu) {
     list-style: none;
     line-height: 0;
@@ -46,12 +58,6 @@
 
   :global(a) {
     -webkit-tap-highlight-color: transparent;
-  }
-
-  :global(html) {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
   }
 
   :global(*, *:before, *:after) {
