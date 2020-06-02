@@ -138,6 +138,10 @@
       text-transform: uppercase;
       border-bottom: 2px solid var(--dark);
     }
+
+    .button-open:last-child {
+      border-bottom: none;
+    }
   }
 
   .button-open svg {
