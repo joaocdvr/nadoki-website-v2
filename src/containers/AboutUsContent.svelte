@@ -141,10 +141,32 @@
     margin-right: 0.5rem;
   }
 
+  @media (--max-content-width) {
+    .socials-li {
+      width: initial;
+      min-width: 5rem;
+    }
+  }
+
   .socials-a {
     width: 100%;
     height: 100%;
     padding: 0.5rem;
+    transition: background-color 300ms ease-in;
+  }
+
+  .socials-a svg {
+    transition: fill 300ms ease-in;
+  }
+
+  @media (--max-content-width) {
+    .socials-a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .socials-a:hover svg {
+      fill: var(--light);
+    }
   }
 
   li:not(:first-child):not(.socials-li):not(:last-child) {
