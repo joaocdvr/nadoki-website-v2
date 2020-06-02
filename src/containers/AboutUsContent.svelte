@@ -122,6 +122,8 @@
       position: absolute;
       right: 0;
       top: 0;
+      padding: 0;
+      margin-top: 5rem;
     }
   }
 
