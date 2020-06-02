@@ -55,6 +55,7 @@
   .content-wrapper {
     position: relative;
     min-height: calc(100vh - 4.5rem);
+    min-height: calc(-webkit-fill-available - 4.5rem);
     overflow: hidden;
     padding: 1.5rem;
   }
