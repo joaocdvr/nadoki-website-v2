@@ -1,12 +1,13 @@
 <script>
   import { onMount } from "svelte";
-  import { focusOnlyWhenNeeded } from "../utensils/utils.js";
+  import { focusOnlyWhenNeeded, updateVHVariable } from "../utensils/utils.js";
   import { isMenuClicked } from "../utensils/stores.js";
   import Styles from "../utensils/Styles.svelte";
   import NavBar from "../containers/NavBar.svelte";
 
   onMount(() => {
     focusOnlyWhenNeeded();
+    updateVHVariable();
   });
 </script>
 
