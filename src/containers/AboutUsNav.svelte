@@ -52,7 +52,7 @@
 <style>
   menu {
     line-height: 0;
-    min-height: calc(100vh - 11rem);
+    min-height: calc((var(--vh, 1vh) * 100) - 11rem);
     display: flex;
     flex-wrap: wrap;
   }

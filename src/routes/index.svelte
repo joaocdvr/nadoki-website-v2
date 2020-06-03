@@ -54,7 +54,7 @@
 
   .content-wrapper {
     position: relative;
-    min-height: calc(100vh - 4.5rem);
+    min-height: calc((var(--vh, 1vh) * 100) - 4.5rem);
     overflow: hidden;
     padding: 1.5rem;
   }
