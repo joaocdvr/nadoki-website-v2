@@ -1,7 +1,13 @@
 <script>
   import { onMount } from "svelte";
   import { get } from "svelte/store";
+  import { fade } from "svelte/transition";
   import {
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing,
     scrollYPosition,
     setActivePage,
     activePage
@@ -121,7 +127,10 @@
 </style>
 
 <div style="transform: translateY({$scrollYPosition * -1}px)">
-  <div class="content-wrapper">
+  <div
+    class="content-wrapper"
+    in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+    out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
     <h2 class="homepage">
       <span>NADOKI</span>
       IS A BERLIN BASED MUSIC STUDIO
