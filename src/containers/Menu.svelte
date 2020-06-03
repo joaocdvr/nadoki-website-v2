@@ -61,8 +61,8 @@
   }
 
   @media (--not-touchscreen) {
-    a:hover {
-      background-color: var(--secondary-color);
+    a:hover svg {
+      fill: var(--secondary-color);
     }
   }
 
@@ -71,6 +71,7 @@
     min-height: 1.5rem;
     height: 1.5rem;
     fill: var(--light);
+    transition: fill 300ms ease-in-out;
   }
 
   @media (--mobile-landscape) {

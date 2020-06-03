@@ -8,7 +8,7 @@
     cursor: pointer;
     padding: 1.5rem;
     fill: var(--dark);
-    transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out, fill 300ms ease-in-out;
   }
 
   button:focus {
@@ -22,8 +22,7 @@
 
   @media (--not-touchscreen) {
     button:hover {
-      fill: var(--light);
-      background-color: var(--secondary-color);
+      fill: var(--secondary-color);
     }
   }
 

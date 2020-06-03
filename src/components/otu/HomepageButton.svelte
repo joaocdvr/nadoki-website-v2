@@ -10,7 +10,7 @@
   a {
     padding: 1.5rem;
     display: inline-block;
-    transition: background-color 300ms ease-in-out, fill 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
   }
 
   a:active,
@@ -28,12 +28,8 @@
   }
 
   @media (--not-touchscreen) {
-    a:hover {
-      background-color: var(--secondary-color);
-    }
-
     a:hover svg {
-      fill: var(--light);
+      fill: var(--secondary-color);
     }
   }
 
@@ -42,6 +38,7 @@
     height: 1.5rem;
     fill: var(--dark);
     transition-delay: 0;
+    transition: fill 300ms ease-in-out;
   }
   /* Fill animation */
   .is-white {

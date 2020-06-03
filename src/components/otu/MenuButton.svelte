@@ -36,8 +36,7 @@
 
   @media (--not-touchscreen) {
     button:hover {
-      fill: var(--light);
-      background-color: var(--secondary-color);
+      fill: var(--secondary-color);
     }
   }
 
@@ -100,12 +99,14 @@
   /* Menu cross hover animation */
   @media (--not-touchscreen) {
     button:hover .left-rect-cross {
+      fill: var(--secondary-color);
       height: 1.820625rem;
       width: 0.45rem;
       transform: rotate(45deg) translate(1.275rem, 0.15rem);
     }
 
     button:hover .right-rect-cross {
+      fill: var(--secondary-color);
       width: 0.45rem;
       transform: rotate(-45deg) translate(-0.225rem, 0.15rem);
     }

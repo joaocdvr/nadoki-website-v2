@@ -40,8 +40,7 @@
 
   @media (--not-touchscreen) {
     a:hover {
-      color: var(--light);
-      background-color: var(--secondary-color);
+      color: var(--secondary-color);
     }
 
     .socials-a:hover {
