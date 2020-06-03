@@ -1,4 +1,12 @@
 <script>
+  import { fade } from "svelte/transition";
+  import {
+    animationInDelay,
+    animationInDuration,
+    animationInEasing,
+    animationOutDuration,
+    animationOutEasing
+  } from "../utensils/stores.js";
   export let title = "";
 </script>
 
@@ -64,6 +72,11 @@
         22.3783 3.021Z" />
     </svg>
   </button>
-  <h1 class="body-bold">{title}</h1>
+  <h1
+    class="body-bold"
+    in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+    out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
+    {title}
+  </h1>
   <span />
 </nav>

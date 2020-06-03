@@ -262,13 +262,16 @@
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
   class="modal-wrapper"
   class:modal-is-visible={isAnyServiceClicked}>
-  <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
 
   {#if $servicesModalActive === 'music'}
+    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
     <Header variant="music" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={musicTab} delay={$animationInDelay} />
-      <div class="tab-content">
+      <div
+        class="tab-content"
+        in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+        out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
         {#if $isMusicFirstClicked}
           <p class="body-regular">
             Nadoki offers mixing using our analog/digital hybrid setup, we have
@@ -350,6 +353,7 @@
       </div>
     </main>
   {:else if $servicesModalActive === 'film'}
+    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
     <Header variant="film" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={filmTab} delay={$animationInDelay} />
@@ -402,6 +406,7 @@
       </div>
     </main>
   {:else if $servicesModalActive === 'game'}
+    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
     <Header variant="game" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={gameTab} delay={$animationInDelay} />
@@ -452,6 +457,7 @@
       </div>
     </main>
   {:else if $servicesModalActive === 'branding'}
+    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
     <Header variant="branding" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={brandingTab} delay={$animationInDelay} />

@@ -47,11 +47,11 @@
   }
 </style>
 
-<div
-  in:fade={{ duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
+<div>
   <ModalNav title="Work" on:click={() => resetWorkModalActive()} />
-  <main>
+  <main
+    in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+    out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
     <slot name="media" />
     <article>
       <div class="work-modal-content-wrapper">
