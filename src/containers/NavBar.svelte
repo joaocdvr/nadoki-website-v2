@@ -36,10 +36,9 @@
     z-index: -1;
     background-color: var(--dark);
     width: 100vw;
-    height: 4.625rem;
+    height: 4.5rem;
     top: 0;
     right: -100vw;
-    border-bottom: 0.125rem solid var(--light);
     transition: transform 500ms ease;
     transition-delay: 500ms;
   }
@@ -59,7 +58,6 @@
     top: calc(var(--vh, 1vh) * -100);
     left: 0;
     transition: transform 500ms ease;
-    /* transition-delay: 0s; */
   }
 
   .menu-bg-is-activated {
