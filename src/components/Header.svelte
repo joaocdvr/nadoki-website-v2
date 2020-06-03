@@ -23,7 +23,7 @@
   @media (--max-content-width) {
     header > div {
       max-width: var(--max-width);
-      transform: translateX(calc(50vw - var(--max-width)/2));
+      transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
 
@@ -50,6 +50,16 @@
 
   .equipment-padding {
     padding: 2.5rem 0 2rem 0;
+  }
+
+  @media (--max-content-width) {
+    .equipment-svg {
+      height: 3.75rem;
+    }
+
+    .equipment-padding {
+      padding: 2.5rem 0 1.625rem 0;
+    }
   }
 </style>
 
