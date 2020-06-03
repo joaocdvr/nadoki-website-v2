@@ -38,7 +38,12 @@
     }
 
     .work-cards button {
-      padding: 3rem;
+      padding: 5rem 3rem;
+    }
+
+    .work-cards li {
+      width: calc(var(--max-width) * 0.75);
+      transform: translateX(calc(50vw - var(--max-width) * 0.375));
     }
   }
 
@@ -95,15 +100,6 @@
     margin-bottom: 1rem;
   }
 
-  @media (--max-content-width) {
-    ul.work-cards {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      width: 100%;
-    }
-  }
-
   li {
     max-width: var(--max-width);
   }
@@ -111,11 +107,6 @@
   @media (--max-content-width) {
     li {
       transform: translateX(calc(50vw - var(--max-width) / 2));
-    }
-
-    .work-cards li {
-      transform: none;
-      max-width: 25%;
     }
   }
 </style>
