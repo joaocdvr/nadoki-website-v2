@@ -37,6 +37,7 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
+
   :global(button) {
     border: none;
     margin: 0;
@@ -51,8 +52,21 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  :global(button:focus) {
+    outline: none;
+  }
+
+  :global(button::-moz-focus-inner) {
+    border: 0;
+  }
+
   :global(a) {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  :global(a:active, a:visited, a:focus) {
+    outline: none;
+    border: none;
   }
 
   :global(*, *:before, *:after) {

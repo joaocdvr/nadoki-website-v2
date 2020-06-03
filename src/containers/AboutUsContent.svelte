@@ -95,12 +95,6 @@
     fill: var(--dark);
   }
 
-  a:active,
-  a:visited,
-  a:focus {
-    outline: none;
-  }
-
   :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
   }

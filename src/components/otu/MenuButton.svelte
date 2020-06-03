@@ -25,10 +25,6 @@
     transition: background-color 300ms ease-in-out;
   }
 
-  button:focus {
-    outline: none;
-  }
-
   :global(.user-is-tabbing) button:focus {
     fill: var(--light);
     background-color: var(--secondary-color);

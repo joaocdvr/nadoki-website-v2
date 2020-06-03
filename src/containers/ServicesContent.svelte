@@ -189,12 +189,6 @@
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
-  a:active,
-  a:visited,
-  a:focus {
-    outline: none;
-  }
-
   :global(.user-is-tabbing) a:focus {
     color: var(--light);
     background-color: var(--secondary-color);

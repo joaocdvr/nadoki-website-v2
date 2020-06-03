@@ -67,10 +67,6 @@
     }
   }
 
-  button:focus {
-    outline: none;
-  }
-
   :global(.user-is-tabbing) button:focus {
     background-color: var(--secondary-color);
   }
