@@ -33,6 +33,11 @@
     }
   }
 
+  /* Removes scrollbar from body */
+  :global(.body-is-not-visible) {
+    overflow: hidden;
+  }
+
   /* Text */
 
   :global(.header-big) {

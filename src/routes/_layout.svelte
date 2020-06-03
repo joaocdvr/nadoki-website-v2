@@ -17,7 +17,7 @@
 </script>
 
 <style>
-  /* Scrollbar hiding */
+  /* Hides scrollbar */
   .menu-is-open {
     overflow: hidden;
     max-height: 100vh;

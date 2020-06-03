@@ -222,6 +222,11 @@ export const workModalActive = writable("");
 
 export function setWorkModalActive(name) {
   workModalActive.set(name);
+  if (name !== "") {
+    document.body.classList.add("body-is-not-visible");
+  } else {
+    document.body.classList.remove("body-is-not-visible");
+  }
 }
 
 export function handleWorkModalClick(name) {
@@ -243,6 +248,11 @@ export const servicesModalActive = writable("");
 
 export function setServicesModalActive(name) {
   servicesModalActive.set(name);
+  if (name !== "") {
+    document.body.classList.add("body-is-not-visible");
+  } else {
+    document.body.classList.remove("body-is-not-visible");
+  }
 }
 
 export function handleServicesModalClick(name) {
