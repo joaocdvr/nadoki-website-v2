@@ -123,7 +123,7 @@
   }
 
   .content-wrapper-not-visible {
-    display: none;
+    /* display: none; */
   }
 
   .modal-wrapper {

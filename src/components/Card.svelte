@@ -10,16 +10,10 @@
     setWorkModalActive,
     handleWorkModalClick
   } from "../utensils/stores.js";
-  import { saveScrollYPosition } from "../utensils/utils.js";
   import Tag from "./Tag.svelte";
 
   export let cards = [];
   export let variant = "";
-
-  function handleCardClick(url) {
-    handleWorkModalClick(url);
-    saveScrollYPosition();
-  }
 </script>
 
 <style>
@@ -137,7 +131,7 @@
 
       {#if variant === 'work'}
         <button
-          on:click={() => handleCardClick(card.url)}
+          on:click={() => handleWorkModalClick(card.url)}
           aria-label="Toggle {card.title}'s details"
           aria-pressed={$workModalActive === card.url}>
 

@@ -11,10 +11,7 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
-  import {
-    saveScrollYPosition,
-    handleSVGAnimation
-  } from "../utensils/utils.js";
+  import { handleSVGAnimation } from "../utensils/utils.js";
 
   afterUpdate(() => {
     handleSVGAnimation("svg-to-animate-music", "services", "name", null);
@@ -22,11 +19,6 @@
     handleSVGAnimation("svg-to-animate-game", "services", "name", null);
     handleSVGAnimation("svg-to-animate-branding", "services", "name", null);
   });
-
-  function handleServiceClick(name) {
-    handleServicesModalClick(name);
-    saveScrollYPosition();
-  }
 </script>
 
 <style>
@@ -111,7 +103,7 @@
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
-    on:click={() => handleServiceClick('music')}
+    on:click={() => handleServicesModalClick('music')}
     aria-label="Toggle music submenu"
     aria-pressed={$servicesModalActive === 'music'}
     class:button-is-clicked={$servicesModalActive === 'music'}>
@@ -184,7 +176,7 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServiceClick('film')}
+    on:click={() => handleServicesModalClick('film')}
     aria-label="Toggle film submenu"
     aria-pressed={$servicesModalActive === 'film'}
     class:button-is-clicked={$servicesModalActive === 'film'}>
@@ -220,7 +212,7 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServiceClick('game')}
+    on:click={() => handleServicesModalClick('game')}
     aria-label="Toggle game submenu"
     aria-pressed={$servicesModalActive === 'game'}
     class:button-is-clicked={$servicesModalActive === 'game'}>
@@ -272,7 +264,7 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServiceClick('branding')}
+    on:click={() => handleServicesModalClick('branding')}
     aria-label="Toggle branding submenu"
     aria-pressed={$servicesModalActive === 'branding'}
     class:button-is-clicked={$servicesModalActive === 'branding'}
