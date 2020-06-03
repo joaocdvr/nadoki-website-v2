@@ -50,6 +50,7 @@
     isBrandingThirdClicked,
     handleBrandingThirdSubmenuClick
   } from "../utensils/stores.js";
+  import { restoreScrollYPosition } from "../utensils/utils.js";
   import Header from "../components/Header.svelte";
   import ServicesNav from "../containers/ServicesNav.svelte";
   import Tab from "../components/Tab.svelte";
@@ -74,6 +75,11 @@
       }
     });
   });
+
+  function handleBackClick() {
+    resetServicesModalActive();
+    restoreScrollYPosition();
+  }
 
   const servicesSubpages = ["music", "film", "game", "branding"];
 
@@ -273,7 +279,7 @@
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
   class="modal-wrapper"
   class:modal-is-visible={isAnyServiceClicked}>
-  <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
+  <ModalNav on:click={() => handleBackClick()} title="Services" />
 
   {#if $servicesModalActive === 'music'}
     <Header variant="music" delay={$animationInDelay} />

@@ -1,5 +1,5 @@
 <script>
-  import { afterUpdate } from "svelte";
+  import { onMount, afterUpdate } from "svelte";
   import { fade } from "svelte/transition";
   import {
     servicesModalActive,
@@ -11,7 +11,10 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
-  import { handleSVGAnimation } from "../utensils/utils.js";
+  import {
+    saveScrollYPosition,
+    handleSVGAnimation
+  } from "../utensils/utils.js";
 
   afterUpdate(() => {
     handleSVGAnimation("svg-to-animate-music", "services", "name", null);
@@ -19,6 +22,11 @@
     handleSVGAnimation("svg-to-animate-game", "services", "name", null);
     handleSVGAnimation("svg-to-animate-branding", "services", "name", null);
   });
+
+  function handleServiceClick(name) {
+    handleServicesModalClick(name);
+    saveScrollYPosition();
+  }
 </script>
 
 <style>
@@ -103,7 +111,7 @@
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
-    on:click={() => handleServicesModalClick('music')}
+    on:click={() => handleServiceClick('music')}
     aria-label="Toggle music submenu"
     aria-pressed={$servicesModalActive === 'music'}
     class:button-is-clicked={$servicesModalActive === 'music'}>
@@ -176,7 +184,7 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServicesModalClick('film')}
+    on:click={() => handleServiceClick('film')}
     aria-label="Toggle film submenu"
     aria-pressed={$servicesModalActive === 'film'}
     class:button-is-clicked={$servicesModalActive === 'film'}>
@@ -212,7 +220,7 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServicesModalClick('game')}
+    on:click={() => handleServiceClick('game')}
     aria-label="Toggle game submenu"
     aria-pressed={$servicesModalActive === 'game'}
     class:button-is-clicked={$servicesModalActive === 'game'}>
@@ -264,7 +272,7 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServicesModalClick('branding')}
+    on:click={() => handleServiceClick('branding')}
     aria-label="Toggle branding submenu"
     aria-pressed={$servicesModalActive === 'branding'}
     class:button-is-clicked={$servicesModalActive === 'branding'}

@@ -8,8 +8,14 @@
     animationOutEasing,
     resetWorkModalActive
   } from "../utensils/stores.js";
+  import { restoreScrollYPosition } from "../utensils/utils.js";
   import ModalNav from "../components/ModalNav.svelte";
   import Footer from "../components/Footer.svelte";
+
+  function handleBackClick() {
+    resetWorkModalActive();
+    restoreScrollYPosition();
+  }
 </script>
 
 <style>
@@ -20,7 +26,7 @@
   @media (--max-content-width) {
     main {
       max-width: var(--max-width);
-      transform: translateX(calc(50vw - var(--max-width)/2));
+      transform: translateX(calc(50vw - var(--max-width) / 2));
       padding: 1.5rem 4rem 0;
     }
   }
@@ -50,7 +56,7 @@
 <div
   in:fade={{ duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
-  <ModalNav title="Work" on:click={() => resetWorkModalActive()} />
+  <ModalNav title="Work" on:click={() => handleBackClick()} />
   <main>
     <slot name="media" />
     <article>
@@ -72,5 +78,5 @@
     </article>
   </main>
   <Footer delay={$animationInDelay} />
-  
+
 </div>

@@ -6,18 +6,13 @@
     setActivePage,
     activePage
   } from "../utensils/stores.js";
-  import {
-    resetScrollYPosition,
-    handleSVGAnimation
-  } from "../utensils/utils.js";
+  import { handleSVGAnimation } from "../utensils/utils.js";
   import Footer from "../components/Footer.svelte";
 
   onMount(() => {
     if (get(activePage) !== "") {
       setActivePage("");
     }
-
-    resetScrollYPosition();
 
     handleSVGAnimation("svg-to-animate-homepage", "", "name", null);
   });
