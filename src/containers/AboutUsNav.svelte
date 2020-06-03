@@ -101,7 +101,7 @@
   img {
     position: relative;
     z-index: 1;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 
   h2 {
