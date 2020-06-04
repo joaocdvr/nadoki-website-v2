@@ -90,7 +90,7 @@
 
   .button-is-selected {
     background-color: var(--dark);
-    border-color: var(--light);
+    border-color: var(--dark);
   }
 
   .p-is-selected {
