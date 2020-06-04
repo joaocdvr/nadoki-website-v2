@@ -34,11 +34,6 @@
     .work-cards button {
       padding: 5rem 3rem;
     }
-
-    .work-cards li {
-      width: calc(var(--max-width) * 0.75);
-      transform: translateX(calc(50vw - var(--max-width) * 0.375));
-    }
   }
 
   :global(.user-is-tabbing) button:focus {
@@ -58,6 +53,17 @@
     button:hover p,
     button:hover h2 {
       color: var(--light);
+    }
+  }
+
+  .work-wrapper {
+    width: 100%;
+  }
+
+  @media (--max-content-width) {
+    .work-wrapper {
+      width: calc(var(--max-width) * 0.62);
+      transform: translateX(calc(47vw - var(--max-width) * 0.31));
     }
   }
 
@@ -88,16 +94,6 @@
     border-bottom: 2px solid var(--dark);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-  }
-
-  li {
-    max-width: var(--max-width);
-  }
-
-  @media (--max-content-width) {
-    li {
-      transform: translateX(calc(50vw - var(--max-width) / 2));
-    }
   }
 
   @media (--max-content-width) {
@@ -141,20 +137,22 @@
           aria-label="Toggle {card.title}'s details"
           aria-pressed={$workModalActive === card.url}>
 
-          <div class="div-img">
-            <img src={card.src} alt={card.alt} />
-          </div>
-
-          <div class="div-text">
-            <div
-              class="div-header"
-              class:div-header-border={variant === 'studio'}>
-              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+          <div class="work-wrapper">
+            <div class="div-img">
+              <img src={card.src} alt={card.alt} />
             </div>
 
-            <p class="body-regular">{card.content}</p>
+            <div class="div-text">
+              <div
+                class="div-header"
+                class:div-header-border={variant === 'studio'}>
+                <h2 class="header-small">{card.title.toUpperCase()}</h2>
+              </div>
 
-            <Tag tags={card.tags} />
+              <p class="body-regular">{card.content}</p>
+
+              <Tag tags={card.tags} />
+            </div>
           </div>
         </button>
       {/if}
