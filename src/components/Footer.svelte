@@ -127,10 +127,15 @@
   .prompt-wrapper {
     position: relative;
     margin: 8rem 0;
+    padding: 0 1.5rem;
   }
 
   .contacts-wrapper {
     padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .body-bold {
+    font-size: 1rem;
   }
 </style>
 
