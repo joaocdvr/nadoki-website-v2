@@ -5,7 +5,7 @@
 
 <style>
   li {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     margin-top: 1rem;
     flex: 0 0 auto;
     background-color: var(--dark);
@@ -23,12 +23,16 @@
     align-content: flex-start;
     flex-wrap: wrap;
   }
+
+  @media (--max-content-width) {
+    .body-bold {
+      font-size: 1rem;
+    }
+  }
 </style>
 
 <ul>
   {#each splitTags as tag}
-    <li class="body-bold">
-      {tag}
-    </li>
+    <li class="body-bold">{tag}</li>
   {/each}
 </ul>

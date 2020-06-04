@@ -74,11 +74,6 @@
       display: flex;
     }
 
-    .header-big {
-      /* display: inline-block; */
-      font-size: 2.625rem;
-    }
-
     .header-big + .header-big {
       margin-bottom: 1rem;
     }

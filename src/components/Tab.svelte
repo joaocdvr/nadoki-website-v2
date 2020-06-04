@@ -101,6 +101,10 @@
     width: 50%;
     border: none;
   }
+
+  .body-bold {
+    font-size: 1rem;
+  }
 </style>
 
 <menu

@@ -241,10 +241,6 @@
       height: calc(100vh - 12.5rem);
       overflow-y: auto;
     }
-
-    .tab-content p {
-      font-size: 2rem;
-    }
   }
 </style>
 

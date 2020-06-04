@@ -108,13 +108,7 @@
       font-size: 3rem;
     }
 
-    h2 {
-      font-size: 1.875rem;
-    }
-  }
-
-  @media (--max-content-width) {
-    p {
+    .homepage {
       font-size: 1.875rem;
     }
   }

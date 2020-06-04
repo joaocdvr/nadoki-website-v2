@@ -99,6 +99,16 @@
       transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
+
+  @media (--max-content-width) {
+    .body-regular {
+      font-size: 1.25rem;
+    }
+
+    .body-bold {
+      font-size: 1rem;
+    }
+  }
 </style>
 
 <ul class:work-cards={variant === 'work'}>

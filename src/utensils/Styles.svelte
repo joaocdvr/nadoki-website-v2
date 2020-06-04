@@ -31,6 +31,12 @@
     hyphens: auto;
   }
 
+  @media (--max-content-width) {
+    :global(.header-big) {
+      font-size: 2.5rem;
+    }
+  }
+
   :global(.header-small) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 2;
@@ -38,11 +44,23 @@
     color: var(--dark);
   }
 
+  @media (--max-content-width) {
+    :global(.header-small) {
+      font-size: 1.25rem;
+    }
+  }
+
   :global(.body-regular) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-size: 1rem;
     color: var(--dark);
+  }
+
+  @media (--max-content-width) {
+    :global(.body-regular) {
+      font-size: 1.875rem;
+    }
   }
 
   :global(.body-small) {
@@ -57,6 +75,12 @@
     line-height: 1.5;
     font-size: 1rem;
     color: var(--dark);
+  }
+
+  @media (--max-content-width) {
+    :global(.body-bold) {
+      font-size: 1.875rem;
+    }
   }
 
   :global(.body-extra) {
@@ -92,5 +116,11 @@
     line-height: 1.5;
     font-size: 1.25rem;
     color: var(--dark);
+  }
+
+  @media (--max-content-width) {
+    :global(.homepage) {
+      font-size: 1.875rem;
+    }
   }
 </style>

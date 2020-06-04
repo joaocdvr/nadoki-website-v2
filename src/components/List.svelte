@@ -54,7 +54,7 @@
   .list-content {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 2;
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: transparent;
     transition: color 50ms ease-in-out;
     transition-delay: 0;
@@ -129,6 +129,12 @@
 
   .item-is-clicked {
     background-color: var(--main-color);
+  }
+
+  @media (--max-content-width) {
+    .body-bold {
+      font-size: 1rem;
+    }
   }
 </style>
 

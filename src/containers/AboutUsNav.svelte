@@ -181,6 +181,12 @@
     max-height: 100%;
     max-width: 100%;
   }
+
+  @media (--max-content-width) {
+    .body-bold {
+      font-size: 1rem;
+    }
+  }
 </style>
 
 <menu
