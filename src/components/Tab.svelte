@@ -27,6 +27,7 @@
 
   @media (--max-content-width) {
     .services-tab-menu {
+      border-bottom: none;
       min-width: 25%;
       flex-direction: column;
       align-items: stretch;
@@ -52,18 +53,14 @@
 
   @media (--max-content-width) {
     .services-tab-menu button {
-      border: 0.125px solid var(--dark);
+      border-right: 0.125rem solid var(--dark);
+      border-bottom: 0.125rem solid var(--dark);
       flex-grow: 1;
       text-align: right;
     }
 
     .services-tab-menu button:last-child {
-      border: 0.125px solid var(--dark);
       border-bottom: none;
-    }
-
-    .services-tab-menu button:first-child {
-      border-top: none;
     }
   }
 
