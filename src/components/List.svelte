@@ -54,7 +54,7 @@
   .list-content {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 2;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: transparent;
     transition: color 50ms ease-in-out;
     transition-delay: 0;
@@ -69,6 +69,7 @@
 
   @media (--max-content-width) {
     .list-content {
+      font-size: 1.25rem;
       transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
