@@ -90,6 +90,12 @@
     color: var(--dark);
   }
 
+  @media (--max-content-width) {
+    :global(.body-extra) {
+      font-size: 1.25rem;
+    }
+  }
+
   :global(.body-italic) {
     font-family: "syne-italic", Arial, Helvetica, sans-serif;
     line-height: 1.5;
