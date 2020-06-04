@@ -469,7 +469,7 @@
                 <dd>
                   <table>
                     <tr>
-                      <th class="body-regular">Owned vynils</th>
+                      <th class="body-regular">Vinyls owned</th>
                       <td class="header-big">186</td>
                     </tr>
                     <tr>
@@ -942,11 +942,11 @@
                   <table>
                     <tr>
                       <th class="body-regular">Pairs of glasses</th>
-                      <td class="header-big">16</td>
+                      <td class="header-big">8</td>
                     </tr>
                     <tr>
                       <th class="body-regular">Guitar strings</th>
-                      <td class="header-big">100</td>
+                      <td class="header-big">78</td>
                     </tr>
                     <tr>
                       <th class="body-regular">Favourite Emoji</th>
