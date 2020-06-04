@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, afterUpdate } from "svelte";
   import {
     focusOnlyWhenNeeded,
     resetScrollYPosition,
@@ -12,7 +12,11 @@
   onMount(() => {
     focusOnlyWhenNeeded();
     updateVHVariable();
-    setTimeout(() => resetScrollYPosition(), 100 / 300);
+    setTimeout(() => resetScrollYPosition(), 1000 / 300);
+  });
+
+  afterUpdate(() => {
+    updateVHVariable();
   });
 </script>
 
