@@ -127,7 +127,7 @@
     <p class="body-bold">
       We provide a wide-range of
       <a href="/services" aria-label="Services page" underlined>services</a>
-      for all your multimedia needs. Check out our past
+      for all your multimedia needs. Check out our
       <a href="/work" aria-label="Work page" underlined>work</a>
       , our state of the art
       <a href="/studio" aria-label="Studio page" underlined>studio</a>
