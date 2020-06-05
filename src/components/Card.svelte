@@ -104,12 +104,21 @@
     margin-bottom: 1rem;
   }
 
+  .body-small {
+    margin-top: 1rem;
+    text-decoration: underline;
+  }
+
   @media (--max-content-width) {
     .body-regular {
       font-size: 1.25rem;
     }
 
     .body-bold {
+      font-size: 1rem;
+    }
+
+    .body-small {
       font-size: 1rem;
     }
   }
@@ -162,6 +171,8 @@
               <p class="body-regular">{card.content}</p>
 
               <Tag tags={card.tags} />
+
+              <p class="body-small">Learn more</p>
             </div>
           </div>
         </button>
