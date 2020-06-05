@@ -13,8 +13,7 @@
     activePage
   } from "../utensils/stores.js";
   import { handleSVGAnimation } from "../utensils/utils.js";
-  import WorkContent from "../containers/WorkContent.svelte";
-  // import Footer from "../components/Footer.svelte";
+  import Footer from "../components/Footer.svelte";
 
   onMount(() => {
     if (get(activePage) !== "") {
@@ -149,6 +148,5 @@
       </svg>
     </div>
   </div>
-  <!-- <Footer /> -->
-  <WorkContent />
+  <Footer />
 </div>
