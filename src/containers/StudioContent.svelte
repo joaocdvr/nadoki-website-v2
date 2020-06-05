@@ -11,7 +11,7 @@
       title: "Nadoki",
       size: "20m²",
       content:
-        "Our control room is equipped with multiple pairs of speakers, outboard gear, instruments and synthesizers. This mixing and mastering suite is also a perfect option for producing and writing sessions.",
+        "We are a mixing and mastering studio located at Riverside Studios, a unique collective of renowned artists and professionals in the heart of Berlin. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves.<br><br>Our control room is equipped with multiple pairs of speakers, outboard gear, instruments and synthesizers. Our mixing and mastering suite is also a perfect option for producing and writing sessions.",
       tags: ""
     },
     {
