@@ -109,6 +109,10 @@
     text-decoration: underline;
   }
 
+  a {
+    display: inline-block;
+  }
+
   @media (--max-content-width) {
     .body-regular {
       font-size: 1.25rem;
@@ -146,6 +150,12 @@
             <p class="body-regular">
               {@html card.content}
             </p>
+
+            {#if card.link}
+              <a target="_blank" class="body-small" href={card.linkHref}>
+                Learn more
+              </a>
+            {/if}
           </div>
         </div>
       {/if}
