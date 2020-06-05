@@ -589,14 +589,14 @@
 
               <li>
                 <dt class="body-bold">Background</dt>
-                <dd class="body-regular">???</dd>
+                <dd class="body-regular">
+                  Failed musician searching for comfort in technology
+                </dd>
               </li>
 
               <li>
                 <dt class="body-bold">Interests</dt>
-                <dd class="body-regular">
-                  Techno & electronic music production
-                </dd>
+                <dd class="body-regular">Technology &#8660 Music</dd>
               </li>
 
               <li>
@@ -612,7 +612,10 @@
 
               <li>
                 <dt class="body-bold">About me</dt>
-                <dd class="body-regular">???</dd>
+                <dd class="body-regular">
+                  Usually an audio engineer on the road. Right now everything
+                  else at home + studio
+                </dd>
               </li>
 
               <li>
