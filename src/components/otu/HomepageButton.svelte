@@ -4,6 +4,12 @@
     toggleIsMenuClicked,
     setActivePage
   } from "../../utensils/stores.js";
+  import { restoreScrollYPosition } from "../../utensils/utils.js";
+
+  function handleHomepageClick() {
+    setActivePage("");
+    restoreScrollYPosition();
+  }
 </script>
 
 <style>
@@ -45,7 +51,7 @@
   href="/"
   aria-label="Homepage"
   on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
-  on:click={() => setActivePage('')}>
+  on:click={() => handleHomepageClick()}>
   <svg
     class:is-white={$isMenuClicked}
     preserveAspectRatio="none"
