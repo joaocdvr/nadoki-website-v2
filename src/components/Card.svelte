@@ -71,7 +71,7 @@
     text-align: left;
     width: 100vw;
     line-height: 0;
-    padding: 3rem 3rem 7rem 3rem;
+    padding: 1.5rem 1.5rem 7rem 1.5rem;
   }
 
   @media (--max-content-width) {
