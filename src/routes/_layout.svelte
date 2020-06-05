@@ -12,7 +12,7 @@
   onMount(() => {
     focusOnlyWhenNeeded();
     updateVHVariable();
-    setTimeout(() => resetScrollYPosition(), 1000 / 300);
+    setTimeout(() => resetScrollYPosition(), 300);
   });
 
   afterUpdate(() => {

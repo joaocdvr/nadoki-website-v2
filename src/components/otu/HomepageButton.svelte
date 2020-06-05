@@ -7,8 +7,8 @@
   import { restoreScrollYPosition } from "../../utensils/utils.js";
 
   function handleHomepageClick() {
-    setActivePage("");
     restoreScrollYPosition();
+    setActivePage("");
   }
 </script>
 
