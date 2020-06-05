@@ -134,7 +134,9 @@
               <h3 class="body-bold">{card.size}</h3>
             </div>
 
-            <p class="body-regular">{card.content}</p>
+            <p class="body-regular">
+              {@html card.content}
+            </p>
           </div>
         </div>
       {/if}
