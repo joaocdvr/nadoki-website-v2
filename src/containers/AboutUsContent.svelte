@@ -134,10 +134,6 @@
     padding-bottom: 0.5rem;
   }
 
-  div {
-    padding: 0 1.5rem 2.5rem 1.5rem;
-  }
-
   svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -292,6 +288,7 @@
 
   .personal-page-wrapper {
     position: relative;
+    padding: 0 1.5rem 2.5rem 1.5rem;
   }
 
   @media (--max-content-width) {
