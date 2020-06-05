@@ -623,16 +623,16 @@
                 <dd>
                   <table>
                     <tr>
-                      <th class="body-regular">undefined</th>
-                      <td class="header-big">?</td>
+                      <th class="body-regular">Height</th>
+                      <td class="header-big">185</td>
                     </tr>
                     <tr>
-                      <th class="body-regular">undefined</th>
-                      <td class="header-big">?</td>
+                      <th class="body-regular">Warzone victories</th>
+                      <td class="header-big">6</td>
                     </tr>
                     <tr>
-                      <th class="body-regular">undefined</th>
-                      <td class="header-big">?</td>
+                      <th class="body-regular">Random highlights written</th>
+                      <td class="header-big">2</td>
                     </tr>
                   </table>
                 </dd>
