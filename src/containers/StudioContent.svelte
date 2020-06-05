@@ -15,15 +15,6 @@
       tags: ""
     },
     {
-      src: "studio/riverside_1.jpg",
-      alt: "Riverside Studios picture nº1",
-      title: "Riverside Studios",
-      size: "1700m²",
-      content:
-        "The complex we are located at, is a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders. ",
-      tags: ""
-    },
-    {
       src: "studio/the_lab_1.jpg",
       alt: "The Lab picture nº1",
       title: "The Lab",
@@ -39,6 +30,16 @@
       size: "20m²",
       content:
         "The perfect space for tracking vocals or overdubs. Great fit for lower-budget projects.",
+      tags: ""
+    },
+
+    {
+      src: "studio/riverside_1.jpg",
+      alt: "Riverside Studios picture nº1",
+      title: "Riverside Studios",
+      size: "1700m²",
+      content:
+        "The complex we are located at, is a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders. ",
       tags: ""
     }
   ];
