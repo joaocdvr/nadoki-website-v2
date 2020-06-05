@@ -110,7 +110,7 @@
     });
   }
 
-  let pdfButton = {
+  let equipmentListPdf = {
     text: "PDF VERSION",
     href: "/documents/nadoki_equipment_list.pdf",
     label: "PDF version of the equipment list"
@@ -149,7 +149,7 @@
     {/if}
   </ul>
 
-  <Button button={pdfButton} />
+  <Button button={equipmentListPdf} />
 
   <Footer />
 </div>

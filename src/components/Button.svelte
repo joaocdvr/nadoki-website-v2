@@ -39,8 +39,20 @@
     padding: 2.5rem 0;
   }
 
+  @media (--max-content-width) {
+    div {
+      padding: 5rem 0;
+    }
+  }
+
   p {
     padding: 0.5rem 1.5rem;
+  }
+
+  @media (--max-content-width) {
+    .body-bold {
+      font-size: 1.25rem;
+    }
   }
 </style>
 
