@@ -44,7 +44,7 @@
       open: false,
       name: "OUTBOARD",
       content:
-        "Dynamics<br>— EL8 Distressor<br>— AnaMod 670 Stereo Compressor<br>— SSL Fusion<br><br>EQ<br>— Dangerous BAX EQ<br><br>Preamps<br>— Neve 1073SPX<br>— Apollo unison-enabled preamp (x4)<br>— Scarlett preamp (x8)<br><br>DI<br>— Radial Engineering J48 Active (Mono)<br><br>Converters<br>— Universal Audio Apollo Quad (silver)<br>— Focusrite Scarlett 18i20<br><br>Miscellaneous<br>— Audioscope Model 2813-E<br>— Radial Engineering X-Amp Active (dual output)<br>— Apogee BigBen Master Clock<br>— TC Electronic Clarity M Stereo"
+        "Dynamics<br>— EL8 Distressor<br>— AnaMod 670 Stereo Compressor<br>— SSL Fusion<br><br>EQ<br>— Dangerous BAX EQ<br><br>Preamps<br>— Neve 1073SPX<br>— Apollo unison-enabled preamp (x4)<br>— Scarlett preamp (x8)<br><br>DI<br>— Radial Engineering J48 Active (Mono)<br><br>Converters<br>— Universal Audio Apollo Quad clocked by Apogee BigBen Master Clock<br>— Focusrite Scarlett 18i20<br><br>Miscellaneous<br>— Audioscope Model 2813-E<br>— Radial Engineering X-Amp Active (dual output)<br>— TC Electronic Clarity M Stereo"
     },
     {
       open: false,
