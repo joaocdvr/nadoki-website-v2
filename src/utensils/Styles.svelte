@@ -66,8 +66,14 @@
   :global(.body-small) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--dark);
+  }
+
+  @media (--max-content-width) {
+    :global(.body-small) {
+      font-size: 1.25rem;
+    }
   }
 
   :global(.body-bold) {
