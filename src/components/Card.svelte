@@ -71,14 +71,14 @@
     text-align: left;
     width: 100vw;
     line-height: 0;
-    padding: 1.5rem 1.5rem 7rem 1.5rem;
+    padding: 1.5rem 1.5rem 9rem 1.5rem;
   }
 
   @media (--max-content-width) {
     .studio-card-wrapper {
       width: var(--max-width);
       transform: translateX(calc(50vw - var(--max-width) * 0.5));
-      padding: 3rem 1.5rem 7rem 1.5rem;
+      padding: 3rem 1.5rem 9rem 1.5rem;
     }
   }
 
