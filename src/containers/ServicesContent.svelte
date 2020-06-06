@@ -249,6 +249,15 @@
 
   .body-bold + .body-regular {
     margin-top: 0;
+    padding-top: 0.5rem;
+  }
+
+  .body-regular + .body-small {
+    margin-top: 0;
+  }
+
+  .body-small + .body-regular {
+    margin-top: 0;
   }
 
   @media (--max-content-width) {
@@ -259,6 +268,29 @@
     .body-regular,
     .body-bold {
       font-size: 1.875rem;
+    }
+  }
+
+  ul li {
+    margin-bottom: 2.5rem;
+  }
+
+  ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  li + li {
+    border-top: 0.125rem solid var(--dark);
+    padding-top: 2.5rem;
+  }
+
+  @media (--max-content-width) {
+    ul li {
+      margin-bottom: 3.5rem;
+    }
+
+    li + li {
+      padding-top: 3.5rem;
     }
   }
 </style>
@@ -287,47 +319,53 @@
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Using our analog/digital hybrid setup, we have the tools and ears
-              to achieve the sound that you deserve.
-            </p>
+            <ul>
+              <li>
+                <p class="body-regular">
+                  Using our analog/digital hybrid setup, we have the tools and
+                  ears to achieve the sound that you deserve.
+                </p>
 
-            <p class="body-regular">
-              The basic price includes three stereo exports: wav 24-bit, wav
-              16-bit, and FLAC. If other formats are desired, we also offer
-              add-ons, such as surround, binaural and 3D audio, as well as other
-              file formats.
-            </p>
+                <p class="body-regular">
+                  You can either
+                  <a
+                    target="_blank"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  the tracks (make sure they're according to our delivery
+                  requirements) or bring the files to an attended session with
+                  us. If you have any mix references, feel free to also send
+                  them.
+                </p>
+              </li>
 
-            <p class="body-regular">
-              You can either
-              <a
-                target="_blank"
-                href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
-                aria-label="Nadoki's dropbox file delivery folder">
-                send us
-              </a>
-              the tracks (make sure it’s according to our delivery requirements
-              ) or bring the files to an attended session with us (check add-on
-              options). If you have any mix references, feel free to also send
-              them to us.
-            </p>
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  To deliver to you the best product possible, we kindly ask you
+                  to deliver your labeled multitrack files separated and in the
+                  highest quality possible according to your session, preferably
+                  44.1kHz or 88.2 kHz sample rate and 24 or 32 bit depth.
+                </p>
 
-            <p class="body-small">Starting price — 250 EUR</p>
+                <p class="body-regular">
+                  Please make sure to send us the correct version of the tracks.
+                  Tracks that are being handed in later, will be charged
+                  accordingly.
+                </p>
+              </li>
 
-            <p class="body-bold">Delivery Requirements</p>
-            <p class="body-regular">
-              To deliver to you the best product possible, we kindly ask you to
-              deliver your labeled multitrack files separated and in the highest
-              quality possible according to your session, preferably 44.1kHz or
-              88.2 kHz sample rate and 24 or 32 bit depth.
-            </p>
-
-            <p class="body-regular">
-              Please make sure to send us the correct version of the track for
-              mixing. Tracks that are being handed in later, will be charged
-              according to the pricelist.
-            </p>
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">— Basic &rArr; 250 EUR</p>
+                <p class="body-small">
+                  Includes three stereo exports: wav 24-bit, wav 16-bit, and
+                  FLAC.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isMusicSecondClicked}
           <div
