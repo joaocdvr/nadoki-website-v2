@@ -20,7 +20,7 @@
       title: "The Lab",
       size: "100m²",
       content:
-        "It is a flexible live tracking room that is perfect for a band, orchestra or choir recording.",
+        "The Riverside eventspace is a flexible live tracking room that is perfect for a full band, orchestra, or choir recording",
       tags: ""
     },
     {
@@ -29,7 +29,7 @@
       title: "Studio 10",
       size: "20m²",
       content:
-        "The perfect space for tracking vocals or overdubs. Great fit for lower-budget projects.",
+        "Studio 10 is our tracking booth for vocals and overdubs recordings. It is the perfect space for smaller-scaled projects.",
       tags: ""
     },
 
