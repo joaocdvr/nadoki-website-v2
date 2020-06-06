@@ -26,7 +26,7 @@
 
   @media (--max-content-width) {
     .body-bold {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
   }
 </style>

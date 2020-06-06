@@ -111,6 +111,10 @@
     .homepage {
       font-size: 1.875rem;
     }
+
+    .body-bold {
+      font-size: 1.875rem;
+    }
   }
 </style>
 

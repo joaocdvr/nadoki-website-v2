@@ -182,16 +182,6 @@
       height: calc(var(--max-width) - 6rem);
     }
   }
-
-  @media (--max-content-width) {
-    .body-regular {
-      font-size: 1.25rem;
-    }
-
-    .body-bold {
-      font-size: 1rem;
-    }
-  }
 </style>
 
 <div

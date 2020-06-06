@@ -242,6 +242,25 @@
       overflow-y: auto;
     }
   }
+
+  p + p {
+    margin-top: 1.5rem;
+  }
+
+  .body-bold + .body-regular {
+    margin-top: 0;
+  }
+
+  @media (--max-content-width) {
+    p + p {
+      margin-top: 3rem;
+    }
+
+    .body-regular,
+    .body-bold {
+      font-size: 1.875rem;
+    }
+  }
 </style>
 
 <div

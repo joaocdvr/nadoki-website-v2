@@ -299,12 +299,12 @@
     }
 
     .personal-page-wrapper .body-bold {
-      font-size: 2rem;
+      font-size: 1.875rem;
       margin-bottom: 0;
     }
 
     .personal-page-wrapper .body-regular {
-      font-size: 1.5rem;
+      font-size: 1.875rem;
     }
   }
 

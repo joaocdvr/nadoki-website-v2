@@ -59,7 +59,7 @@
 
   @media (--max-content-width) {
     :global(.body-regular) {
-      font-size: 1.875rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -85,7 +85,7 @@
 
   @media (--max-content-width) {
     :global(.body-bold) {
-      font-size: 1.875rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -98,7 +98,7 @@
 
   @media (--max-content-width) {
     :global(.body-extra) {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 
