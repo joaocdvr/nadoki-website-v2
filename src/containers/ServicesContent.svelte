@@ -288,20 +288,45 @@
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <p class="body-regular">
-              Nadoki offers mixing using our analog/digital hybrid setup, we
-              have the tools and ears to achieve the sound that you deserve.
-              <br />
-              <br />
+              Using our analog/digital hybrid setup, we have the tools and ears
+              to achieve the sound that you deserve.
+            </p>
+
+            <p class="body-regular">
               The basic price includes three stereo exports: wav 24-bit, wav
               16-bit, and FLAC. If other formats are desired, we also offer
               add-ons, such as surround, binaural and 3D audio, as well as other
               file formats.
-              <br />
-              <br />
-              You can either send us the tracks to be mixed (make sure it’s
-              according to our delivery specs) or bring the files to an attended
-              session with us (check add-on options). If you have any mix
-              references, feel free to also send them to us.
+            </p>
+
+            <p class="body-regular">
+              You can either
+              <a
+                target="_blank"
+                href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                aria-label="Nadoki's dropbox file delivery folder">
+                send us
+              </a>
+              the tracks (make sure it’s according to our delivery requirements
+              ) or bring the files to an attended session with us (check add-on
+              options). If you have any mix references, feel free to also send
+              them to us.
+            </p>
+
+            <p class="body-small">Starting price — 250 EUR</p>
+
+            <p class="body-bold">Delivery Requirements</p>
+            <p class="body-regular">
+              To deliver to you the best product possible, we kindly ask you to
+              deliver your labeled multitrack files separated and in the highest
+              quality possible according to your session, preferably 44.1kHz or
+              88.2 kHz sample rate and 24 or 32 bit depth.
+            </p>
+
+            <p class="body-regular">
+              Please make sure to send us the correct version of the track for
+              mixing. Tracks that are being handed in later, will be charged
+              according to the pricelist.
             </p>
           </div>
         {:else if $isMusicSecondClicked}
@@ -312,13 +337,15 @@
               Nadoki offers digital and/or vinyl mastering of a track, EP or LP.
               With our hybrid setup, we can make your song streaming-ready, as
               well as vinyl-cut ready!
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               The basic price includes three format exports: wav 24-bit, wav
               16-bit, and FLAC. If other formats are desired, we also offer
               add-ons.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               You can either send us the tracks to be mastered (make sure it’s
               according to our delivery requirements) or bring the files to an
               attended session with us (check add-on options). If you have any
@@ -338,13 +365,14 @@
               <br />
               — The Lab is a flexible 60 sqm live tracking room that is perfect
               for a large-size band, orchestra or choir recording.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               A selection of industry-standard microphones from brands like
               Neumann, Shure, and AKG are available to use. And if desired,
               other microphones are available upon request.
               <a href="/equipment" aria-label="Equipment page">
-                Check our gear
+                Check our gear.
               </a>
             </p>
           </div>
@@ -355,9 +383,12 @@
             <p class="body-regular">
               Nadoki offers music editing services, including timing or
               pitching, for monophonic or polyphonic instruments.
-              <br />
-              <br />
-              Please make sure your files are according to our requirements.
+            </p>
+
+            <p class="body-regular">
+              The pricing for this service is hourly based. You can send us the
+              audio files to get a price estimate. Please make sure your files
+              are according to our requirements.
             </p>
           </div>
         {:else if $isMusicFifthClicked}
@@ -369,9 +400,12 @@
               your audio recordings. We can remove pops, clicks, hum, hiss,
               crackle, and many other noises and artifacts, as well as remove
               clipping of an audio file.
-              <br />
-              <br />
-              Please make sure your files are according to our requirements.
+            </p>
+
+            <p class="body-regular">
+              The pricing for this service is hourly based. You can send us the
+              audio files to get a price estimate. Please make sure your files
+              are according to our requirements.
             </p>
           </div>
         {:else if $isMusicSixthClicked}
@@ -380,11 +414,16 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <p class="body-regular">
               Nadoki offers music production services in the genres of
-              hip-hop/trap, pop, and electronic music. Using the endless
-              possibilities of an in-the-box approach, together with live
-              instruments available in our setup and studio musicians, anything
-              is possible.
+              hip-hop/trap, pop, and electronic music.
             </p>
+
+            <p class="body-regular">
+              Using the endless possibilities of an in-the-box approach,
+              together with live instruments available in our setup and studio
+              musicians, anything is possible.
+            </p>
+
+            <p class="body-regular">Contact us for pricing information.</p>
           </div>
         {/if}
       </div>
@@ -403,10 +442,16 @@
               Nadoki offers to mix the sound for your production balancing all
               dialog, ADR, sound effects, music, atmospheres and foleys so that
               it enhances the work’s storytelling without distracting from it.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               We offer both stereo and 5.1 surround mixing. For other formats,
               please get in touch.
+            </p>
+
+            <p class="body-regular">
+              You can send us the audio files to get a price estimate. Please
+              make sure your files are according to our requirements.
             </p>
           </div>
         {:else if $isFilmSecondClicked}
@@ -416,6 +461,12 @@
             <p class="body-regular">
               Nadoki offers dialogue, music and sound effect editing for your
               production.
+            </p>
+
+            <p class="body-regular">
+              The pricing for this service is hourly based. You can send us the
+              audio files to get a price estimate. Please make sure your files
+              are according to our requirements.
             </p>
           </div>
         {:else if $isFilmThirdClicked}
@@ -427,9 +478,12 @@
               your audio recordings. We can remove pops, clicks, hum, hiss,
               crackle, and many other noises, as well as remove clipping of an
               audio file.
-              <br />
-              <br />
-              Please make sure your files are according to our requirements.
+            </p>
+
+            <p class="body-regular">
+              The pricing for this service is hourly based. You can send us the
+              audio files to get a price estimate. Please make sure your files
+              are according to our requirements.
             </p>
           </div>
         {:else if $isFilmFourthClicked}
@@ -440,12 +494,21 @@
               Sound has an important role in storytelling in a film production -
               it allows the creation of atmospheres, emotion and it sets the
               tone of a movie.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               Nadoki offers to sound design your film production to enhance your
               story to its full potential. Using high-quality industry standard
               samples and foley recording techniques, we can create the sound
               your production needs.
+            </p>
+
+            <p class="body-regular">
+              <a target="_blank" href="mailto:info@nadoki.com">
+                Send us an email
+              </a>
+              with the scope of the project, including duration, references, and
+              description for a price estimate.
             </p>
           </div>
         {:else if $isFilmFifthClicked}
@@ -457,6 +520,14 @@
               production. Using our hybrid setup, we have in-the-box tools, as
               well as, analog instruments to create the sound that fits your
               production.
+            </p>
+
+            <p class="body-regular">
+              <a target="_blank" href="mailto:info@nadoki.com">
+                Send us an email
+              </a>
+              with the scope of the project, including duration, references, and
+              description for a price estimate.
             </p>
           </div>
         {/if}
@@ -476,12 +547,14 @@
               The multiplicity and variety of possibilities in sound composition
               in a game not only allow the creation of atmospheres and emotions,
               but also sets the tone of it.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               Nadoki offers to sound design your game to enhance your story to
               its full potential. Using high-quality industry-standard samples
               and foley recording techniques, we can create the sound your
               production needs.
+              <a target="_blank" href="mailto:info@nadoki.com">Get in touch.</a>
             </p>
           </div>
         {:else if $isGameSecondClicked}
@@ -493,6 +566,14 @@
               game. With the unlimited possibilities of the in-the-box approach,
               together with the analog instruments available in our array of
               sounds, we can translate your game’s message into music.
+            </p>
+
+            <p class="body-regular">
+              <a target="_blank" href="mailto:info@nadoki.com">
+                Send us an email
+              </a>
+              with the scope of the project, including duration, references, and
+              description for a price estimate.
             </p>
           </div>
         {:else if $isGameThirdClicked}
@@ -506,8 +587,9 @@
               making sure that all audio assets (music, ambience, dialogue, and
               sound effects) load smoothly, trigger correctly, and playback in
               the highest quality at minimal processing power is key.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               Nadoki offers to integrate the sound of your game utilizing FMOD,
               Unreal Engine and Unity.
             </p>
@@ -520,10 +602,18 @@
               Nadoki offers mixing services for the sound of your game balancing
               all dialog, ADR, sound effects, music, atmospheres and foleys for
               the best immersion of the player.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               We offer both stereo and 5.1 surround mixing. For other formats,
               please get in touch.
+            </p>
+
+            <p class="body-regular">
+              You can either send us the export to be mixed (make sure it’s
+              according to our delivery specs) or bring the files to an attended
+              session with us (check add-on options). If you have any
+              references, feel free to also send them to us.
             </p>
           </div>
         {/if}
@@ -543,8 +633,9 @@
               There’s more to branding than what meets the eye. While strong
               visuals are key, it’s also important to communicate your story and
               create your sonic identity for your brand.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               After a talk to understand the story and personality of your
               brand, we will analyze to find your voice, and create a sonic logo
               customized for your company, to best translate your energy,
@@ -562,8 +653,9 @@
               marketing strategy of your company to keep your clients connected
               to your brand and increase the reach and your participation with
               your community.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               We offer podcast directing, recording, editing and finalization
               for your business.
             </p>
@@ -576,12 +668,21 @@
               Advertisements are around us every day. From radio spots to TV
               spots and now online streaming spots, it’s the most common
               advertising media.
-              <br />
-              <br />
+            </p>
+
+            <p class="body-regular">
               Nadoki offers audio post-production for your advertisements. Our
               services include ADR recording, editing, restoration, sound
               designing, mixing, and finalizing. We can make your ad ready to be
               heard anywhere.
+            </p>
+
+            <p class="body-regular">
+              <a target="_blank" href="mailto:info@nadoki.com">
+                Send us an email
+              </a>
+              with the scope of the project, including duration, references, and
+              description for a price estimate.
             </p>
           </div>
         {/if}
