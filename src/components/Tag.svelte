@@ -33,6 +33,6 @@
 
 <ul>
   {#each splitTags as tag}
-    <li class="body-bold">{tag}</li>
+    <li class="body-bold tag-color">{tag}</li>
   {/each}
 </ul>
