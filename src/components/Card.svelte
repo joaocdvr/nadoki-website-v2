@@ -28,11 +28,10 @@
 
   @media (--max-content-width) {
     button {
-      padding: 3rem 1.5rem 7rem 1.5rem;
-    }
-
-    .work-cards button {
-      padding: 5rem 3rem;
+      padding: 3rem;
+      margin: 3rem 0 6rem 0;
+      width: calc(var(--max-width) * 0.75);
+      transform: translateX(calc(50vw - var(--max-width) * 0.375));
     }
   }
 
@@ -56,14 +55,13 @@
     }
   }
 
-  .work-wrapper {
-    width: 100%;
+  :global(.tag-color) {
+    transition: color 300ms ease-in-out;
   }
 
-  @media (--max-content-width) {
-    .work-wrapper {
-      width: calc(var(--max-width) * 0.62);
-      transform: translateX(calc(47vw - var(--max-width) * 0.31));
+  @media (--not-touchscreen) {
+    button:hover :global(.tag-color) {
+      color: var(--secondary-color);
     }
   }
 
@@ -158,24 +156,22 @@
           aria-label="Toggle {card.title}'s details"
           aria-pressed={$workModalActive === card.url}>
 
-          <div class="work-wrapper">
-            <div class="div-img">
-              <img src={card.src} alt={card.alt} />
+          <div class="div-img">
+            <img src={card.src} alt={card.alt} />
+          </div>
+
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}>
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
             </div>
 
-            <div class="div-text">
-              <div
-                class="div-header"
-                class:div-header-border={variant === 'studio'}>
-                <h2 class="header-small">{card.title.toUpperCase()}</h2>
-              </div>
+            <p class="body-regular">{card.content}</p>
 
-              <p class="body-regular">{card.content}</p>
+            <Tag tags={card.tags} />
 
-              <Tag tags={card.tags} />
-
-              <p class="body-small">Learn more</p>
-            </div>
+            <p class="body-small">Learn more</p>
           </div>
         </button>
       {/if}
