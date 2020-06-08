@@ -128,6 +128,12 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
   }
 
+  @media (--max-content-width) {
+    div dd {
+      padding: 1.5rem;
+    }
+  }
+
   .item-is-clicked {
     background-color: var(--main-color);
   }
