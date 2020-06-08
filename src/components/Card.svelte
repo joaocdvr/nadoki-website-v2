@@ -44,6 +44,23 @@
     color: var(--light);
   }
 
+  a {
+    color: var(--dark);
+    display: inline-block;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    color: var(--light);
+    background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover {
+      color: var(--secondary-color);
+    }
+  }
+
   @media (--not-touchscreen) {
     button:hover {
       background-color: var(--secondary-color);
