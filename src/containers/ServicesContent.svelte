@@ -23,8 +23,6 @@
     handleMusicFourthSubmenuClick,
     isMusicFifthClicked,
     handleMusicFifthSubmenuClick,
-    isMusicSixthClicked,
-    handleMusicSixthSubmenuClick,
     isFilmFirstClicked,
     handleFilmFirstSubmenuClick,
     isFilmSecondClicked,
@@ -96,19 +94,14 @@
       variable: $isMusicThirdClicked
     },
     {
-      title: "EDITING",
+      title: "EDITING | RESTORATION",
       function: handleMusicFourthSubmenuClick,
       variable: $isMusicFourthClicked
     },
     {
-      title: "RESTORATION",
+      title: "PRODUCTION",
       function: handleMusicFifthSubmenuClick,
       variable: $isMusicFifthClicked
-    },
-    {
-      title: "PRODUCTION",
-      function: handleMusicSixthSubmenuClick,
-      variable: $isMusicSixthClicked
     }
   ];
 
@@ -248,8 +241,7 @@
   }
 
   .body-bold + .body-regular {
-    margin-top: 0;
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
   }
 
   .body-regular + .body-small {
@@ -257,11 +249,21 @@
   }
 
   .body-small + .body-regular {
-    margin-top: 0;
+    margin-top: 0.5rem;
+  }
+
+  .body-regular + .reach-out,
+  .body-small + .reach-out {
+    margin-top: 1.5rem;
   }
 
   @media (--max-content-width) {
     p + p {
+      margin-top: 3rem;
+    }
+
+    .body-regular + .reach-out,
+    .body-small + .reach-out {
       margin-top: 3rem;
     }
 
@@ -334,7 +336,7 @@
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
                   </a>
-                  the tracks (make sure they're according to our delivery
+                  your tracks (make sure they're according to our delivery
                   requirements) or bring the files to an attended session with
                   us. If you have any mix references, feel free to also send
                   them.
@@ -344,10 +346,10 @@
               <li>
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
-                  To deliver to you the best product possible, we kindly ask you
-                  to deliver your labeled multitrack files separated and in the
-                  highest quality possible according to your session, preferably
-                  44.1kHz or 88.2 kHz sample rate and 24 or 32 bit depth.
+                  In order to deliver the best product possible, send us your
+                  labeled multitrack files separated and in the highest quality
+                  possible according to your session, preferably 44.1kHz or 88.2
+                  kHz sample rate and 24 or 32 bit depth.
                 </p>
 
                 <p class="body-regular">
@@ -359,10 +361,34 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— Basic &rArr; 250 EUR</p>
+                <p class="body-regular">
+                  — Starting at &rArr; 250 EUR per track
+                </p>
                 <p class="body-small">
                   Includes three stereo exports: wav 24-bit, wav 16-bit, and
-                  FLAC.
+                  FLAC. Up to two revisions included as well.
+                </p>
+                <p class="body-regular">— Multitrack export &rArr; +35 EUR</p>
+                <p class="body-small">
+                  We can export in whatever way is more useful to you.
+                </p>
+                <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
+                <p class="body-small">
+                  We will process the final mix with tape machine.
+                </p>
+                <p class="body-regular">
+                  — Editing/Restoration &rArr; +35 EUR per hour
+                </p>
+                <p class="body-small">
+                  If your recording is noisy or/and you have pitch/timing
+                  issues, we can fix it.
+                </p>
+                <p class="body-regular">
+                  — Other format exports &rArr; +10 EUR per export
+                </p>
+                <p class="body-regular reach-out">
+                  <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
+                  for a more precise quote.
                 </p>
               </li>
             </ul>
@@ -371,97 +397,218 @@
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers digital and/or vinyl mastering of a track, EP or LP.
-              With our hybrid setup, we can make your song streaming-ready, as
-              well as vinyl-cut ready!
-            </p>
+            <ul>
+              <li>
+                <p class="body-regular">
+                  With our hybrid setup, we can make your song streaming-ready,
+                  as well as vinyl-cut ready!
+                </p>
 
-            <p class="body-regular">
-              The basic price includes three format exports: wav 24-bit, wav
-              16-bit, and FLAC. If other formats are desired, we also offer
-              add-ons.
-            </p>
+                <p class="body-regular">
+                  You can either
+                  <a
+                    target="_blank"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  your tracks (make sure they're according to our delivery
+                  requirements) or bring the files to an attended session with
+                  us. If you have any mastering references, feel free to also
+                  send them.
+                </p>
+              </li>
 
-            <p class="body-regular">
-              You can either send us the tracks to be mastered (make sure it’s
-              according to our delivery requirements) or bring the files to an
-              attended session with us (check add-on options). If you have any
-              master references, feel free to also send them to us.
-            </p>
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  mixdown in the highest quality possible according to your
+                  session, preferably 44.1kHz or 88.2 kHz sample rate and 32 bit
+                  depth (or 24bit if you’re using Logic).
+                </p>
+
+                <p class="body-regular">
+                  Please make sure to send us the correct version of the
+                  mixdown. Tracks that are being handed in later, will be
+                  charged accordingly.
+                </p>
+
+                <p class="body-regular">
+                  If a DDP export is desired, please make sure to include the
+                  Catalogue number, track listing, the ISRC code (optional) and
+                  CD Text (optional).
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  — Starting at &rArr; 60 EUR per track
+                </p>
+                <p class="body-small">
+                  Includes three stereo exports: wav 24-bit, wav 16-bit, and
+                  FLAC. Up to two revisions included as well.
+                </p>
+                <p class="body-regular">— Stem mastering &rArr; +70 EUR</p>
+                <p class="body-small">
+                  This gives us more options since we can process each
+                  individual stem differently.
+                </p>
+                <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
+                <p class="body-small">
+                  We will process the final mix with tape machine.
+                </p>
+                <p class="body-regular">— DDP Export &rArr; +50 EUR</p>
+                <p class="body-small">
+                  We will need the Catalogue number, track listing, the ISRC
+                  code (optional) and CD Text (optional).
+                </p>
+                <p class="body-regular">— Mastered for iTunes &rArr; +10 EUR</p>
+                <p class="body-regular reach-out">
+                  <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
+                  for a more precise quote.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isMusicThirdClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki is proud to offer two recording spaces that you can choose
-              from:
-              <br />
-              — Studio 10 is the perfect space for overdub recordings, solo
-              instruments, and small ensembles.
-              <br />
-              — The Lab is a flexible 60 sqm live tracking room that is perfect
-              for a large-size band, orchestra or choir recording.
-            </p>
+            <ul>
+              <li>
+                <p class="body-regular">
+                  We have two very different recording spaces that you can
+                  choose from:
+                  <br />
+                  — Studio 10: our tracking booth for vocals and overdubs
+                  recordings. It is the perfect space for small-scaled projects.
+                  <br />
+                  — The Lab: a flexible live tracking room that is perfect for a
+                  full band, orchestra, or choir recording.
+                  <br />
+                  <a
+                    on:click={() => document.body.classList.remove('body-is-not-visible')}
+                    href="/studio"
+                    aria-label="Studio page">
+                    Click here
+                  </a>
+                  if you want to learn more about these rooms.
+                </p>
 
-            <p class="body-regular">
-              A selection of industry-standard microphones from brands like
-              Neumann, Shure, and AKG are available to use. And if desired,
-              other microphones are available upon request.
-              <a href="/equipment" aria-label="Equipment page">
-                Check our gear.
-              </a>
-            </p>
+                <p class="body-regular">
+                  A selection of industry-standard microphones from brands like
+                  Neumann, Shure, and AKG are available to use. And if desired,
+                  other microphones are available upon request.
+                  <a
+                    on:click={() => document.body.classList.remove('body-is-not-visible')}
+                    href="/equipment"
+                    aria-label="Equipment page">
+                    Check our gear.
+                  </a>
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">— Starting at &rArr; 200 EUR</p>
+                <p class="body-small">
+                  Includes our control room, where a vocalist or single
+                  instrument can be recorded, along with engineer and equipment.
+                </p>
+                <p class="body-regular">— Studio 10 &rArr; +100 EUR</p>
+                <p class="body-small">
+                  Grants access to the Studio 10, perfect for overdub
+                  recordings.
+                </p>
+                <p class="body-regular">— The Lab &rArr; +200 EUR</p>
+                <p class="body-small">
+                  Grants access to The Lab, perfect for bigger projects like
+                  recording a full live band.
+                </p>
+                <p class="body-regular reach-out">
+                  <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
+                  for a more precise quote.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isMusicFourthClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers music editing services, including timing or
-              pitching, for monophonic or polyphonic instruments.
-            </p>
+            <ul>
+              <li>
+                <p class="body-regular">
+                  Using every tool at our disposal, we can fix any problem on
+                  your audio recording ranging from timing and pitching, for
+                  monophonic or polyphonic instruments, to the removal of pops,
+                  clicks, hum, hiss, crackle, and many other noises and
+                  artifacts.
+                </p>
+              </li>
 
-            <p class="body-regular">
-              The pricing for this service is hourly based. You can send us the
-              audio files to get a price estimate. Please make sure your files
-              are according to our requirements.
-            </p>
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  mixdown in the highest quality possible according to your
+                  session, preferably 44.1kHz or 88.2 kHz sample rate and 32 bit
+                  depth (or 24bit if you’re using Logic).
+                </p>
+
+                <p class="body-regular">
+                  If applicable, please attach your OMF and make sure to include
+                  all audio files to the export.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  Hourly based. You can
+                  <a
+                    target="_blank"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  the audio files to get a price estimate. Please make sure your
+                  files are according to our requirements.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isMusicFifthClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers audio restoration services to clean, fix and restore
-              your audio recordings. We can remove pops, clicks, hum, hiss,
-              crackle, and many other noises and artifacts, as well as remove
-              clipping of an audio file.
-            </p>
+            <ul>
+              <li>
+                <p class="body-regular">
+                  We offer music production services in the genres of
+                  hip-hop/trap, pop, and electronic music.
+                </p>
 
-            <p class="body-regular">
-              The pricing for this service is hourly based. You can send us the
-              audio files to get a price estimate. Please make sure your files
-              are according to our requirements.
-            </p>
-          </div>
-        {:else if $isMusicSixthClicked}
-          <div
-            in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-            out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers music production services in the genres of
-              hip-hop/trap, pop, and electronic music.
-            </p>
+                <p class="body-regular">
+                  Using the endless possibilities of an in-the-box approach,
+                  together with live instruments available in our setup and
+                  studio musicians, anything is possible. Collaborations are
+                  possible as well.
+                </p>
+              </li>
 
-            <p class="body-regular">
-              Using the endless possibilities of an in-the-box approach,
-              together with live instruments available in our setup and studio
-              musicians, anything is possible.
-            </p>
-
-            <p class="body-regular">Contact us for pricing information.</p>
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  Project based.
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Get in touch.
+                  </a>
+                </p>
+              </li>
+            </ul>
           </div>
         {/if}
       </div>
@@ -476,21 +623,45 @@
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers to mix the sound for your production balancing all
-              dialog, ADR, sound effects, music, atmospheres and foleys so that
-              it enhances the work’s storytelling without distracting from it.
-            </p>
+            <ul>
+              <li>
+                <p class="body-regular">
+                  We can mix the audio of your film production, meaning:
+                  balancing all dialog, ADR, sound effects, music, atmospheres
+                  and foleys so that it enhances the project’s storytelling
+                  without distracting from it.
+                </p>
 
-            <p class="body-regular">
-              We offer both stereo and 5.1 surround mixing. For other formats,
-              please get in touch.
-            </p>
+                <p class="body-regular">
+                  We offer both stereo and 5.1 surround mixing. If you're
+                  interested in other formats
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    get in touch.
+                  </a>
+                </p>
+              </li>
 
-            <p class="body-regular">
-              You can send us the audio files to get a price estimate. Please
-              make sure your files are according to our requirements.
-            </p>
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  audio files in the highest quality possible according to your
+                  session, preferably 48kHz or 96kHz sample rate and 24 or 32
+                  bit depth. Please export them as an OMF.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  Project based. You can
+                  <a target="_blank" href="mailto:info@nadoki.com">send us</a>
+                  a render of the video project together with the audio files to
+                  get a price estimate. Please make sure your files are
+                  according to our requirements.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isFilmSecondClicked}
           <div
@@ -519,9 +690,9 @@
             </p>
 
             <p class="body-regular">
-              The pricing for this service is hourly based. You can send us the
-              audio files to get a price estimate. Please make sure your files
-              are according to our requirements.
+              Hourly based. You can send us the audio files to get a price
+              estimate. Please make sure your files are according to our
+              requirements.
             </p>
           </div>
         {:else if $isFilmFourthClicked}

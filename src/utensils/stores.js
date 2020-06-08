@@ -48,7 +48,6 @@ export const isMusicSecondClicked = writable(false);
 export const isMusicThirdClicked = writable(false);
 export const isMusicFourthClicked = writable(false);
 export const isMusicFifthClicked = writable(false);
-export const isMusicSixthClicked = writable(false);
 
 export function handleMusicFirstSubmenuClick() {
   isMusicFirstClicked.set(true);
@@ -56,7 +55,6 @@ export function handleMusicFirstSubmenuClick() {
   isMusicThirdClicked.set(false);
   isMusicFourthClicked.set(false);
   isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
 }
 
 export function handleMusicSecondSubmenuClick() {
@@ -65,7 +63,6 @@ export function handleMusicSecondSubmenuClick() {
   isMusicThirdClicked.set(false);
   isMusicFourthClicked.set(false);
   isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
 }
 
 export function handleMusicThirdSubmenuClick() {
@@ -74,7 +71,6 @@ export function handleMusicThirdSubmenuClick() {
   isMusicThirdClicked.set(true);
   isMusicFourthClicked.set(false);
   isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
 }
 
 export function handleMusicFourthSubmenuClick() {
@@ -83,7 +79,6 @@ export function handleMusicFourthSubmenuClick() {
   isMusicThirdClicked.set(false);
   isMusicFourthClicked.set(true);
   isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
 }
 
 export function handleMusicFifthSubmenuClick() {
@@ -92,16 +87,6 @@ export function handleMusicFifthSubmenuClick() {
   isMusicThirdClicked.set(false);
   isMusicFourthClicked.set(false);
   isMusicFifthClicked.set(true);
-  isMusicSixthClicked.set(false);
-}
-
-export function handleMusicSixthSubmenuClick() {
-  isMusicFirstClicked.set(false);
-  isMusicSecondClicked.set(false);
-  isMusicThirdClicked.set(false);
-  isMusicFourthClicked.set(false);
-  isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(true);
 }
 // Film submenu
 // TODO - minify
