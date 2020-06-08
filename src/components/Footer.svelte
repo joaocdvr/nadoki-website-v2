@@ -48,6 +48,7 @@
 
   footer {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: flex-end;
     width: 100vw;
@@ -125,9 +126,10 @@
   }
 
   .prompt-wrapper {
-    position: relative;
-    margin: 8rem 0;
+    position: absolute;
     padding: 0 1.5rem;
+    width: 100%;
+    bottom: 50%;
   }
 
   .contacts-wrapper {
