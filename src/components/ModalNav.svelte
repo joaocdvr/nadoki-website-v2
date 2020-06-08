@@ -48,8 +48,14 @@
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     align-self: center;
+  }
+
+  @media (--max-content-width) {
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 
   span {
