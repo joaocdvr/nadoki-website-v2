@@ -15,9 +15,9 @@
     setTimeout(() => resetScrollYPosition(), 300);
   });
 
-  afterUpdate(() => {
-    updateVHVariable();
-  });
+  // afterUpdate(() => {
+  //   updateVHVariable();
+  // });
 </script>
 
 <style>
