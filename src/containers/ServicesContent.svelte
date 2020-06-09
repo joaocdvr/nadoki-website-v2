@@ -31,8 +31,6 @@
     handleFilmThirdSubmenuClick,
     isFilmFourthClicked,
     handleFilmFourthSubmenuClick,
-    isFilmFifthClicked,
-    handleFilmFifthSubmenuClick,
     isGameFirstClicked,
     handleGameFirstSubmenuClick,
     isGameSecondClicked,
@@ -112,24 +110,19 @@
       variable: $isFilmFirstClicked
     },
     {
-      title: "EDITING",
+      title: "EDITING | RESTORATION",
       function: handleFilmSecondSubmenuClick,
       variable: $isFilmSecondClicked
     },
     {
-      title: "RESTORATION",
+      title: "SOUND DESIGN",
       function: handleFilmThirdSubmenuClick,
       variable: $isFilmThirdClicked
     },
     {
-      title: "SOUND DESIGN",
+      title: "ORIGINAL SOUNDTRACK",
       function: handleFilmFourthSubmenuClick,
       variable: $isFilmFourthClicked
-    },
-    {
-      title: "ORIGINAL SOUNDTRACK",
-      function: handleFilmFifthSubmenuClick,
-      variable: $isFilmFifthClicked
     }
   ];
 
@@ -668,8 +661,11 @@
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <p class="body-regular">
-              Nadoki offers dialogue, music and sound effect editing for your
-              production.
+              We offer dialogue, music and sound effects editing for your
+              production along with audio restoration services like cleaning,
+              fixing and restoring your audio recordings. We can remove pops,
+              clicks, hum, hiss, crackle, and many other noises, as well as
+              remove clipping of your audio files.
             </p>
 
             <p class="body-regular">
@@ -679,23 +675,6 @@
             </p>
           </div>
         {:else if $isFilmThirdClicked}
-          <div
-            in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-            out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers audio restoration services to clean, fix and restore
-              your audio recordings. We can remove pops, clicks, hum, hiss,
-              crackle, and many other noises, as well as remove clipping of an
-              audio file.
-            </p>
-
-            <p class="body-regular">
-              Hourly based. You can send us the audio files to get a price
-              estimate. Please make sure your files are according to our
-              requirements.
-            </p>
-          </div>
-        {:else if $isFilmFourthClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -720,7 +699,7 @@
               description for a price estimate.
             </p>
           </div>
-        {:else if $isFilmFifthClicked}
+        {:else if $isFilmFourthClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>

@@ -94,14 +94,12 @@ export const isFilmFirstClicked = writable(true);
 export const isFilmSecondClicked = writable(false);
 export const isFilmThirdClicked = writable(false);
 export const isFilmFourthClicked = writable(false);
-export const isFilmFifthClicked = writable(false);
 
 export function handleFilmFirstSubmenuClick() {
   isFilmFirstClicked.set(true);
   isFilmSecondClicked.set(false);
   isFilmThirdClicked.set(false);
   isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(false);
 }
 
 export function handleFilmSecondSubmenuClick() {
@@ -109,7 +107,6 @@ export function handleFilmSecondSubmenuClick() {
   isFilmSecondClicked.set(true);
   isFilmThirdClicked.set(false);
   isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(false);
 }
 
 export function handleFilmThirdSubmenuClick() {
@@ -117,7 +114,6 @@ export function handleFilmThirdSubmenuClick() {
   isFilmSecondClicked.set(false);
   isFilmThirdClicked.set(true);
   isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(false);
 }
 
 export function handleFilmFourthSubmenuClick() {
@@ -125,7 +121,6 @@ export function handleFilmFourthSubmenuClick() {
   isFilmSecondClicked.set(false);
   isFilmThirdClicked.set(false);
   isFilmFourthClicked.set(true);
-  isFilmFifthClicked.set(false);
 }
 
 export function handleFilmFifthSubmenuClick() {
@@ -133,7 +128,6 @@ export function handleFilmFifthSubmenuClick() {
   isFilmSecondClicked.set(false);
   isFilmThirdClicked.set(false);
   isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(true);
 }
 
 // Game submenu
