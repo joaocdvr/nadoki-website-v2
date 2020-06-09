@@ -196,7 +196,7 @@
     top: 0;
     left: 100vw;
     background-color: var(--main-color);
-    max-height: 100vh;
+    max-height: calc(var(--vh, 1vh) * 100);
     overflow-y: auto;
     z-index: 2;
     backface-visibility: hidden;
@@ -216,7 +216,7 @@
 
   .tab-content {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-    min-height: calc(100vh - 14.5rem);
+    min-height: calc((var(--vh, 1vh) * 100) - 14.5rem);
     width: 100%;
     transition: height 300ms ease-in-out;
   }
