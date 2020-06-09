@@ -48,7 +48,16 @@ export function resetScrollYPosition() {
 }
 
 // Function that animates SVGs
+const mapping = {};
+
 export function handleSVGAnimation(name, page, param, goalParam) {
+  if (goalParam && mapping[goalParam]) {
+    console.log("ja esta a correr", goalParam);
+    return;
+  }
+
+  mapping[goalParam] = true;
+
   const svg = document.getElementById(name);
   const warp = new Warp(svg);
 
@@ -70,9 +79,11 @@ export function handleSVGAnimation(name, page, param, goalParam) {
         offset += 0.1;
         setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
       } else {
+        mapping[goalParam] = false;
         return;
       }
     } else {
+      mapping[goalParam] = false;
       return;
     }
   }
