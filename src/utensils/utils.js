@@ -52,7 +52,6 @@ const mapping = {};
 
 export function handleSVGAnimation(name, page, param, goalParam) {
   if (goalParam && mapping[goalParam]) {
-    console.log("ja esta a correr", goalParam);
     return;
   }
 
