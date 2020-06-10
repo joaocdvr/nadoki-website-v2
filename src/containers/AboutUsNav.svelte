@@ -112,8 +112,12 @@
 
   @media (--max-content-width) {
     .menu-open {
+      position: sticky;
       flex-direction: column;
+      top: 4.5rem;
+      left: 0;
       min-width: 25%;
+      height: calc(var(--vh, 1vh) * 100 - 4.5rem);
       border-right: 2px solid var(--dark);
     }
   }
@@ -151,7 +155,6 @@
 
   @media (--max-content-width) {
     .img-open {
-      /* display: none; */
       position: absolute;
       top: 50%;
       left: 1rem;

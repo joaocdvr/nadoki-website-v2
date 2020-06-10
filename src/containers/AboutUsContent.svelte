@@ -70,7 +70,6 @@
 <style>
   @media (--max-content-width) {
     main {
-      height: calc(100vh - 12.5rem);
       display: flex;
     }
 
@@ -294,7 +293,6 @@
   @media (--max-content-width) {
     .personal-page-wrapper {
       width: 100%;
-      overflow-y: scroll;
       padding: 2rem 3.5rem 3.5rem 3.5rem;
     }
 
