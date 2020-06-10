@@ -31,7 +31,7 @@
       top: 4.5rem;
       border-bottom: none;
       min-width: 25%;
-      height: calc(100vh - 4.5rem);
+      height: calc(var(--vh, 1vh) * 100 - 4.5rem);
       flex-direction: column;
       align-items: stretch;
     }
