@@ -257,7 +257,8 @@
       display: block;
     }
 
-    p + p {
+    p + p,
+    p + h2 {
       margin-top: 3rem;
     }
 
