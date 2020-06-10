@@ -226,6 +226,10 @@
     }
   }
 
+  h2 {
+    display: none;
+  }
+
   p + p,
   p + h2 {
     margin-top: 1.5rem;
@@ -249,6 +253,10 @@
   }
 
   @media (--max-content-width) {
+    h2 {
+      display: block;
+    }
+
     p + p {
       margin-top: 3rem;
     }
@@ -314,7 +322,7 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
-                <h2 class="body-bold desktop-visually-hidden">Mixing</h2>
+                <h2 class="body-bold">Mixing</h2>
 
                 <p class="body-regular">
                   Using our analog/digital hybrid setup, we have the tools and
@@ -392,7 +400,7 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
-                <h2 class="body-bold desktop-visually-hidden">Mastering</h2>
+                <h2 class="body-bold">Mastering</h2>
 
                 <p class="body-regular">
                   With our hybrid setup, we can make your song streaming-ready,
@@ -473,7 +481,7 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
-                <h2 class="body-bold desktop-visually-hidden">Recording</h2>
+                <h2 class="body-bold">Recording</h2>
 
                 <p class="body-regular">
                   We have two very different recording spaces that you can
@@ -537,14 +545,14 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
-                <h2 class="body-bold desktop-visually-hidden">Editing</h2>
+                <h2 class="body-bold">Editing</h2>
 
                 <p class="body-regular">
                   We offer music editing services, including timing or pitching,
                   for monophonic or polyphonic instruments.
                 </p>
 
-                <h2 class="body-bold desktop-visually-hidden">Restoration</h2>
+                <h2 class="body-bold">Restoration</h2>
 
                 <p class="body-regular">
                   Using every tool at our disposal, we can clean, fix and
@@ -559,7 +567,7 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  mixdown in the highest quality possible according to your
+                  audio files in the highest quality possible according to your
                   session, preferably 44.1kHz or 88.2 kHz sample rate and 32 bit
                   depth (or 24bit if you’re using Logic).
                 </p>
@@ -592,7 +600,7 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
-                <h2 class="body-bold desktop-visually-hidden">Production</h2>
+                <h2 class="body-bold">Production</h2>
 
                 <p class="body-regular">
                   We offer music production services in the genres of
@@ -602,8 +610,8 @@
                 <p class="body-regular">
                   Using the endless possibilities of an in-the-box approach,
                   together with live instruments available in our setup and
-                  studio musicians, anything is possible. Collaborations are
-                  possible as well.
+                  studio musicians, anything is possible. We are open to
+                  collaborations as well.
                 </p>
               </li>
 
@@ -633,6 +641,8 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
+                <h2 class="body-bold">Re-recording Mixing</h2>
+
                 <p class="body-regular">
                   We can mix the audio of your film production, meaning:
                   balancing all dialog, ADR, sound effects, music, atmospheres
@@ -665,8 +675,8 @@
                   Project based. You can
                   <a target="_blank" href="mailto:info@nadoki.com">send us</a>
                   a render of the video project together with the audio files to
-                  get a price estimate. Please make sure your files are
-                  according to our requirements.
+                  get a price estimate. Please make sure they are according to
+                  our requirements.
                 </p>
               </li>
             </ul>
@@ -675,63 +685,117 @@
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              We offer dialogue, music and sound effects editing for your
-              production along with audio restoration services like cleaning,
-              fixing and restoring your audio recordings. We can remove pops,
-              clicks, hum, hiss, crackle, and many other noises, as well as
-              remove clipping of your audio files.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Editing</h2>
 
-            <p class="body-regular">
-              The pricing for this service is hourly based. You can send us the
-              audio files to get a price estimate. Please make sure your files
-              are according to our requirements.
-            </p>
+                <p class="body-regular">
+                  We offer dialogue, music and sound effects editing for your
+                  production.
+                </p>
+
+                <h2 class="body-bold">Restoration</h2>
+
+                <p class="body-regular">
+                  We can also clean, fix and restore your audio recordings.
+                  Anything from removing pops, clicks, hum, hiss, crackle, among
+                  other noises, to restoring clipped samples from your audio
+                  files.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  audio files in the highest quality possible according to your
+                  session, preferably 48kHz or 96kHz sample rate and 24 or 32
+                  bit depth.
+                </p>
+
+                <p class="body-regular">
+                  If applicable, please attach your OMF and make sure to include
+                  all audio files to the export.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  The pricing for this service is hourly based. You can
+                  <a
+                    target="_blank"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  the audio files to get a price estimate. Please make sure they
+                  are according to our requirements.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isFilmThirdClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Sound has an important role in storytelling in a film production -
-              it allows the creation of atmospheres, emotion and it sets the
-              tone of a movie.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Sound Design</h2>
 
-            <p class="body-regular">
-              Nadoki offers to sound design your film production to enhance your
-              story to its full potential. Using high-quality industry standard
-              samples and foley recording techniques, we can create the sound
-              your production needs.
-            </p>
+                <p class="body-regular">
+                  Sound has an important role in storytelling in a film
+                  production - it allows the creation of atmospheres, emotion
+                  and it sets the tone of a movie.
+                </p>
 
-            <p class="body-regular">
-              <a target="_blank" href="mailto:info@nadoki.com">
-                Send us an email
-              </a>
-              with the scope of the project, including duration, references, and
-              description for a price estimate.
-            </p>
+                <p class="body-regular">
+                  We can create the sound design of your film production to
+                  enhance your story to its full potential. Using high-quality
+                  industry standard samples and foley recording techniques, we
+                  are able to deliver the sound your production needs.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including duration, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isFilmFourthClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki can compose a tailored music score to accompany your film
-              production. Using our hybrid setup, we have in-the-box tools, as
-              well as, analog instruments to create the sound that fits your
-              production.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Original Soundtrack</h2>
 
-            <p class="body-regular">
-              <a target="_blank" href="mailto:info@nadoki.com">
-                Send us an email
-              </a>
-              with the scope of the project, including duration, references, and
-              description for a price estimate.
-            </p>
+                <p class="body-regular">
+                  We can compose a tailored music score to accompany your film
+                  production. Using our hybrid setup, in-the-box tools, as well
+                  as, analog instruments to create the sound that fits your
+                  movie.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including duration, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {/if}
       </div>
@@ -746,78 +810,143 @@
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              The multiplicity and variety of possibilities in sound composition
-              in a game not only allow the creation of atmospheres and emotions,
-              but also sets the tone of it.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Sound Design</h2>
 
-            <p class="body-regular">
-              Nadoki offers to sound design your game to enhance your story to
-              its full potential. Using high-quality industry-standard samples
-              and foley recording techniques, we can create the sound your
-              production needs.
-              <a target="_blank" href="mailto:info@nadoki.com">Get in touch.</a>
-            </p>
+                <p class="body-regular">
+                  The multiplicity and variety of possibilities in sound
+                  composition in a game not only allow the creation of
+                  atmospheres and emotions, but also sets the tone of it.
+                </p>
+
+                <p class="body-regular">
+                  We can create the sound design of your game to enhance your
+                  story to its full potential. Using high-quality
+                  industry-standard samples and foley recording techniques, we
+                  can create the sound your project needs.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including an approximation of
+                  how many sound effects you need, references, and description
+                  for a price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isGameSecondClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers to compose tailored music scores to accompany your
-              game. With the unlimited possibilities of the in-the-box approach,
-              together with the analog instruments available in our array of
-              sounds, we can translate your game’s message into music.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Original Soundtrack</h2>
 
-            <p class="body-regular">
-              <a target="_blank" href="mailto:info@nadoki.com">
-                Send us an email
-              </a>
-              with the scope of the project, including duration, references, and
-              description for a price estimate.
-            </p>
+                <p class="body-regular">
+                  We can compose tailored music to enrich your game. With the
+                  unlimited possibilities of the in-the-box approach, together
+                  with analog instruments, we can translate your game’s message
+                  into music.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including how many songs do you
+                  plan to have, references, and description for a price
+                  estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isGameThirdClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              The accuracy of sound integration to the environment of a game has
-              an important role in the immersion of the player. For the finest
-              interaction, precision in each moment of scene is crucial and
-              making sure that all audio assets (music, ambience, dialogue, and
-              sound effects) load smoothly, trigger correctly, and playback in
-              the highest quality at minimal processing power is key.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Integration</h2>
 
-            <p class="body-regular">
-              Nadoki offers to integrate the sound of your game utilizing FMOD,
-              Unreal Engine and Unity.
-            </p>
+                <p class="body-regular">
+                  The accuracy of sound integration to the environment of a game
+                  has an important role in the immersion of the player. For the
+                  finest interaction, precision in each moment of gameplay is
+                  crucial and making sure that all audio assets (music,
+                  ambience, dialogue, and sound effects) load smoothly, trigger
+                  correctly, and playback in the highest quality at minimal
+                  processing power is key.
+                </p>
+
+                <p class="body-regular">
+                  We use FMOD together with either Unreal Engine or Unity to
+                  integrate both music and sound effects into game projects. In
+                  case you have a proprietary engine
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    get in touch.
+                  </a>
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including an approximation of
+                  how many audio files you have to be implemented, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isGameFourthClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Nadoki offers mixing services for the sound of your game balancing
-              all dialog, ADR, sound effects, music, atmospheres and foleys for
-              the best immersion of the player.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Mixing</h2>
 
-            <p class="body-regular">
-              We offer both stereo and 5.1 surround mixing. For other formats,
-              please get in touch.
-            </p>
+                <p class="body-regular">
+                  Nadoki offers mixing services for the sound of your game
+                  balancing all dialog, ADR, sound effects, music, atmospheres
+                  and foleys for the best immersion of the player.
+                </p>
 
-            <p class="body-regular">
-              You can either send us the export to be mixed (make sure it’s
-              according to our delivery specs) or bring the files to an attended
-              session with us (check add-on options). If you have any
-              references, feel free to also send them to us.
-            </p>
+                <p class="body-regular">
+                  We offer both stereo and 5.1 surround mixing. For other
+                  formats, please
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    get in touch.
+                  </a>
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including an approximation of
+                  how many different sounds (be it music or sound effects) there
+                  are in the game, references, and description for a price
+                  estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {/if}
       </div>
@@ -832,61 +961,104 @@
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              There’s more to branding than what meets the eye. While strong
-              visuals are key, it’s also important to communicate your story and
-              create your sonic identity for your brand.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Sonic Logo</h2>
 
-            <p class="body-regular">
-              After a talk to understand the story and personality of your
-              brand, we will analyze to find your voice, and create a sonic logo
-              customized for your company, to best translate your energy,
-              message, and experience to your clients.
-            </p>
+                <p class="body-regular">
+                  There’s more to branding than what meets the eye. While strong
+                  visuals are key, it’s also important to communicate your story
+                  and create a sonic identity for your brand.
+                </p>
+
+                <p class="body-regular">
+                  After a talk to understand the story and personality of your
+                  brand, we will find your voice, and create a sonic logo
+                  customized for your company, to best translate your energy,
+                  message, and experience to your clients.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  for us to discuss possibilities and eventually come up to a
+                  price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isBrandingSecondClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              The fastest-growing media content for brands is used nowadays by
-              several businesses to best connect with their customers at a
-              personal level. Podcasts can be a key tool in the digital
-              marketing strategy of your company to keep your clients connected
-              to your brand and increase the reach and your participation with
-              your community.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Podcast</h2>
 
-            <p class="body-regular">
-              We offer podcast directing, recording, editing and finalization
-              for your business.
-            </p>
+                <p class="body-regular">
+                  The fastest-growing media content for brands is used nowadays
+                  by several businesses to best connect with their customers at
+                  a personal level. Podcasts can be a key tool in the digital
+                  marketing strategy of your company to keep your clients
+                  connected to your brand and increase the reach and your
+                  participation with your community.
+                </p>
+
+                <p class="body-regular">
+                  We offer podcast directing, recording, editing and
+                  finalization for your business.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including duration, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {:else if $isBrandingThirdClicked}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-            <p class="body-regular">
-              Advertisements are around us every day. From radio spots to TV
-              spots and now online streaming spots, it’s the most common
-              advertising media.
-            </p>
+            <ul>
+              <li>
+                <h2 class="body-bold">Post-Production for Ads</h2>
 
-            <p class="body-regular">
-              Nadoki offers audio post-production for your advertisements. Our
-              services include ADR recording, editing, restoration, sound
-              designing, mixing, and finalizing. We can make your ad ready to be
-              heard anywhere.
-            </p>
+                <p class="body-regular">
+                  Advertisements are around us every day. From radio spots to TV
+                  spots and now online streaming spots, it’s the most common
+                  advertising media.
+                </p>
 
-            <p class="body-regular">
-              <a target="_blank" href="mailto:info@nadoki.com">
-                Send us an email
-              </a>
-              with the scope of the project, including duration, references, and
-              description for a price estimate.
-            </p>
+                <p class="body-regular">
+                  We offer audio post-production for your advertisements. Our
+                  services include ADR recording, editing, restoration, sound
+                  designing, mixing, and finalizing. We can make your ad ready
+                  to be heard anywhere.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a target="_blank" href="mailto:info@nadoki.com">
+                    Send us an email
+                  </a>
+                  with the scope of the project, including duration, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
           </div>
         {/if}
       </div>
