@@ -7,6 +7,7 @@
   let studioCards = [
     {
       src: "studio/nadoki_studios_1.jpg",
+      ratio: "calc(810 / 1080 * 100%)",
       alt: "Nadoki Studios picture nº1",
       title: "Nadoki",
       size: "20m²",
@@ -16,6 +17,7 @@
     },
     {
       src: "studio/the_lab_1.jpg",
+      ratio: "calc(560 / 1080 * 100%)",
       alt: "The Lab picture nº1",
       title: "The Lab",
       size: "100m²",
@@ -25,6 +27,7 @@
     },
     {
       src: "studio/studio_10.jpg",
+      ratio: "calc(755 / 1080 * 100%)",
       alt: "Studio 10 picture nº1",
       title: "Studio 10",
       size: "20m²",
@@ -35,6 +38,7 @@
 
     {
       src: "studio/riverside_1.jpg",
+      ratio: "calc(675 / 1080 * 100%)",
       alt: "Riverside Studios picture nº1",
       title: "Riverside Studios",
       size: "1700m²",

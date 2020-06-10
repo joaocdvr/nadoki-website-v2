@@ -98,12 +98,14 @@
   }
 
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    transition: filter 300ms ease-in-out;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   }
 
-  .div-img {
+  .img-wrapper {
     position: relative;
   }
 
@@ -142,7 +144,7 @@
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
       {#if variant === 'studio'}
         <div class="studio-card-wrapper">
-          <div class="div-img">
+          <div class="img-wrapper" style="padding-top:{card.ratio}">
             <img src={card.src} alt={card.alt} />
           </div>
 
@@ -173,7 +175,7 @@
           aria-label="Toggle {card.title}'s details"
           aria-pressed={$workModalActive === card.url}>
 
-          <div class="div-img">
+          <div class="img-wrapper" style="padding-top:{card.ratio}">
             <img src={card.src} alt={card.alt} />
           </div>
 

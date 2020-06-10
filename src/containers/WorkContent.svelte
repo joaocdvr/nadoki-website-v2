@@ -48,6 +48,7 @@
   let workCards = [
     {
       url: "we_gotta_live_together",
+      ratio: "100%",
       src: "work/we_gotta_live_together.jpg",
       alt: "'We Gotta Live Together' album cover art",
       title: "We Gotta Live Together",
@@ -56,6 +57,7 @@
     },
     {
       url: "glitter_against_terfs",
+      ratio: "100%",
       src: "work/glitter_against_terfs.jpg",
       alt: "'Glitter Against Terfs' album cover art",
       title: "Glitter Against Terfs",
@@ -64,6 +66,7 @@
     },
     {
       url: "above_it_all",
+      ratio: "100%",
       src: "work/above_it_all.jpg",
       alt: "'Above It ALL' album cover art",
       title: "Above It All",
@@ -72,6 +75,7 @@
     },
     {
       url: "parda",
+      ratio: "calc(1527 / 1080 * 100%)",
       src: "work/parda.jpg",
       alt: "'Parda' documentary cover art",
       title: "Parda",
@@ -80,6 +84,7 @@
     },
     {
       url: "love_hurts",
+      ratio: "100%",
       src: "work/love_hurts.jpg",
       alt: "'Love Hurts' single cover art",
       title: "Love Hurts",
@@ -88,6 +93,7 @@
     },
     {
       url: "der_hauptbahnhof",
+      ratio: "calc(1528 / 1080 * 100%)",
       src: "work/der_hauptbahnhof.jpg",
       alt: "'Der Hauptbanhof' documentary cover art",
       title: "Der Hauptbanhnof",
@@ -97,6 +103,7 @@
     },
     {
       url: "ertrinken",
+      ratio: "calc(1080 / 1920 * 100%)",
       src: "work/ertrinken.jpg",
       alt: "Frame from 'Ertrinken' short film",
       title: "Ertrinken",
@@ -106,6 +113,7 @@
     },
     {
       url: "a_juventude_por_ela_própria",
+      ratio: "calc(1080 / 1920 * 100%)",
       src: "work/a_juventude_por_ela_própria.jpg",
       alt: "Frame from 'A juventude por ela própria' documentary",
       title: "A juventude por ela própria",
