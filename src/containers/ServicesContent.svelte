@@ -210,7 +210,6 @@
   @media (--max-content-width) {
     main {
       display: flex;
-      height: calc(100vh - 12.5rem);
     }
   }
 
@@ -224,12 +223,11 @@
   @media (--max-content-width) {
     .tab-content {
       padding: 3rem 3rem 5rem 3rem;
-      height: calc(100vh - 12.5rem);
-      overflow-y: auto;
     }
   }
 
-  p + p {
+  p + p,
+  p + h2 {
     margin-top: 1.5rem;
   }
 
@@ -316,6 +314,8 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
+                <h2 class="body-bold desktop-visually-hidden">Mixing</h2>
+
                 <p class="body-regular">
                   Using our analog/digital hybrid setup, we have the tools and
                   ears to achieve the sound that you deserve.
@@ -392,6 +392,8 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
+                <h2 class="body-bold desktop-visually-hidden">Mastering</h2>
+
                 <p class="body-regular">
                   With our hybrid setup, we can make your song streaming-ready,
                   as well as vinyl-cut ready!
@@ -471,6 +473,8 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
+                <h2 class="body-bold desktop-visually-hidden">Recording</h2>
+
                 <p class="body-regular">
                   We have two very different recording spaces that you can
                   choose from:
@@ -533,12 +537,21 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
+                <h2 class="body-bold desktop-visually-hidden">Editing</h2>
+
                 <p class="body-regular">
-                  Using every tool at our disposal, we can fix any problem on
-                  your audio recording ranging from timing and pitching, for
-                  monophonic or polyphonic instruments, to the removal of pops,
-                  clicks, hum, hiss, crackle, and many other noises and
-                  artifacts.
+                  We offer music editing services, including timing or pitching,
+                  for monophonic or polyphonic instruments.
+                </p>
+
+                <h2 class="body-bold desktop-visually-hidden">Restoration</h2>
+
+                <p class="body-regular">
+                  Using every tool at our disposal, we can clean, fix and
+                  restore your audio recordings. Some of the most common issues
+                  we take care of are pops, clicks, hum, hiss, crackle, among
+                  other noises and artifacts, as well as the removal of clipping
+                  of an audio file.
                 </p>
               </li>
 
@@ -579,6 +592,8 @@
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
             <ul>
               <li>
+                <h2 class="body-bold desktop-visually-hidden">Production</h2>
+
                 <p class="body-regular">
                   We offer music production services in the genres of
                   hip-hop/trap, pop, and electronic music.
