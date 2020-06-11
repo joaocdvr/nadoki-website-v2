@@ -254,7 +254,7 @@
 
   .tab-content {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-    min-height: calc(100vh - 14.5rem);
+    /* min-height: calc(100vh - 14.5rem); */
     width: 100%;
     transition: height 300ms ease-in-out;
   }
