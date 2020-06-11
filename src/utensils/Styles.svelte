@@ -15,6 +15,25 @@
     --max-width: 48rem;
   }
 
+  /* Controls global font-size parameter */
+  @media only screen and (min-width: 1920px) {
+    :global(html) {
+      font-size: 120% !important;
+    }
+  }
+
+  @media only screen and (min-width: 2560px) {
+    :global(html) {
+      font-size: 180% !important;
+    }
+  }
+
+  @media only screen and (min-width: 4096px) {
+    :global(html) {
+      font-size: 220% !important;
+    }
+  }
+
   /* Removes scrollbar from body */
   :global(.body-is-not-visible) {
     overflow: hidden;
