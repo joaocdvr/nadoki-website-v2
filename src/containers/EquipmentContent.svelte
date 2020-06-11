@@ -23,8 +23,6 @@
     }
 
     if (equipmentTabs.includes(typeParam)) {
-      console.log("lol");
-
       handleEquipmentTabClick(typeParam);
     }
 
@@ -34,7 +32,7 @@
       if (equipmentTabs.includes(typeParam)) {
         setActiveEquipmentTab(typeParam);
       } else {
-        setActiveEquipmentTab("");
+        setActiveEquipmentTab("hardware");
       }
     });
   });
