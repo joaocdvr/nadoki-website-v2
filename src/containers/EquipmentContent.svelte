@@ -33,6 +33,7 @@
         setActiveEquipmentTab(typeParam);
       } else {
         setActiveEquipmentTab("hardware");
+        return;
       }
     });
   });
