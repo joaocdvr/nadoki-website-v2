@@ -30,7 +30,7 @@
 
   @media only screen and (min-width: 4096px) {
     :global(html) {
-      font-size: 220% !important;
+      font-size: 280% !important;
     }
   }
 
