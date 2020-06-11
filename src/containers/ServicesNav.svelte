@@ -1,15 +1,28 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
+  import { get } from "svelte/store";
   import { fade } from "svelte/transition";
   import {
-    servicesModalActive,
-    setServicesModalActive,
-    handleServicesModalClick,
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
+    animationOutEasing,
+    servicesModalActive,
+    setServicesModalActive,
+    handleServicesModalClick,
+    musicActiveTab,
+    setActiveMusicTab,
+    handleMusicTabClick,
+    filmActiveTab,
+    setActiveFilmTab,
+    handleFilmTabClick,
+    gameActiveTab,
+    setActiveGameTab,
+    handleGameTabClick,
+    brandingActiveTab,
+    setActiveBrandingTab,
+    handleBrandingTabClick
   } from "../utensils/stores.js";
   import { handleSVGAnimation } from "../utensils/utils.js";
 
@@ -99,7 +112,8 @@
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
-    on:click={() => handleServicesModalClick('music')}
+    on:click={() => setActiveMusicTab(get(musicActiveTab))}
+    on:click={() => handleServicesModalClick('music', get(musicActiveTab))}
     aria-label="Toggle music submenu"
     aria-pressed={$servicesModalActive === 'music'}
     class:button-is-clicked={$servicesModalActive === 'music'}>
@@ -172,7 +186,8 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServicesModalClick('film')}
+    on:click={() => setActiveFilmTab(get(filmActiveTab))}
+    on:click={() => handleServicesModalClick('film', get(filmActiveTab))}
     aria-label="Toggle film submenu"
     aria-pressed={$servicesModalActive === 'film'}
     class:button-is-clicked={$servicesModalActive === 'film'}>
@@ -201,7 +216,8 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServicesModalClick('game')}
+    on:click={() => setActiveGameTab(get(gameActiveTab))}
+    on:click={() => handleServicesModalClick('game', get(gameActiveTab))}
     aria-label="Toggle game submenu"
     aria-pressed={$servicesModalActive === 'game'}
     class:button-is-clicked={$servicesModalActive === 'game'}>
@@ -244,7 +260,8 @@
     </svg>
   </button>
   <button
-    on:click={() => handleServicesModalClick('branding')}
+    on:click={() => setActiveBrandingTab(get(brandingActiveTab))}
+    on:click={() => handleServicesModalClick('branding', get(brandingActiveTab))}
     aria-label="Toggle branding submenu"
     aria-pressed={$servicesModalActive === 'branding'}
     class:button-is-clicked={$servicesModalActive === 'branding'}

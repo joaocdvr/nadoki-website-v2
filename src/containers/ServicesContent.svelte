@@ -13,38 +13,18 @@
     setServicesModalActive,
     handleServicesModalClick,
     resetServicesModalActive,
-    isMusicFirstClicked,
-    handleMusicFirstSubmenuClick,
-    isMusicSecondClicked,
-    handleMusicSecondSubmenuClick,
-    isMusicThirdClicked,
-    handleMusicThirdSubmenuClick,
-    isMusicFourthClicked,
-    handleMusicFourthSubmenuClick,
-    isMusicFifthClicked,
-    handleMusicFifthSubmenuClick,
-    isFilmFirstClicked,
-    handleFilmFirstSubmenuClick,
-    isFilmSecondClicked,
-    handleFilmSecondSubmenuClick,
-    isFilmThirdClicked,
-    handleFilmThirdSubmenuClick,
-    isFilmFourthClicked,
-    handleFilmFourthSubmenuClick,
-    isGameFirstClicked,
-    handleGameFirstSubmenuClick,
-    isGameSecondClicked,
-    handleGameSecondSubmenuClick,
-    isGameThirdClicked,
-    handleGameThirdSubmenuClick,
-    isGameFourthClicked,
-    handleGameFourthSubmenuClick,
-    isBrandingFirstClicked,
-    handleBrandingFirstSubmenuClick,
-    isBrandingSecondClicked,
-    handleBrandingSecondSubmenuClick,
-    isBrandingThirdClicked,
-    handleBrandingThirdSubmenuClick
+    musicActiveTab,
+    setActiveMusicTab,
+    handleMusicTabClick,
+    filmActiveTab,
+    setActiveFilmTab,
+    handleFilmTabClick,
+    gameActiveTab,
+    setActiveGameTab,
+    handleGameTabClick,
+    brandingActiveTab,
+    setActiveBrandingTab,
+    handleBrandingTabClick
   } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import ServicesNav from "../containers/ServicesNav.svelte";
@@ -54,116 +34,174 @@
 
   onMount(() => {
     const url = new URL(document.location);
-    const projectParam = url.searchParams.get("name");
+    const nameParam = url.searchParams.get("name");
+    const typeParam = url.searchParams.get("type");
 
-    if (servicesSubpages.includes(projectParam)) {
-      handleServicesModalClick(projectParam);
+    if (servicesPages.includes(nameParam)) {
+      if (nameParam === "music" && musicTabs.includes(typeParam)) {
+        setActiveMusicTab(get(musicActiveTab));
+        handleServicesModalClick(nameParam, typeParam);
+      } else if (nameParam === "film" && filmTabs.includes(typeParam)) {
+        setActiveFilmTab(get(filmActiveTab));
+        handleServicesModalClick(nameParam, typeParam);
+      } else if (nameParam === "game" && gameTabs.includes(typeParam)) {
+        setActiveGameTab(get(gameActiveTab));
+        handleServicesModalClick(nameParam, typeParam);
+      } else if (nameParam === "branding" && brandingTabs.includes(typeParam)) {
+        setActiveBrandingTab(get(brandingActiveTab));
+        handleServicesModalClick(nameParam, typeParam);
+      }
     }
 
     window.addEventListener("popstate", function() {
       const url = new URL(document.location);
       const nameParam = url.searchParams.get("name");
-      if (servicesSubpages.includes(nameParam)) {
-        setServicesModalActive(nameParam);
+      const typeParam = url.searchParams.get("type");
+
+      console.log("nameParam: ", nameParam, "typeParam: ", typeParam);
+
+      if (servicesPages.includes(nameParam)) {
+        if (nameParam === "music" && musicTabs.includes(typeParam)) {
+          setServicesModalActive("music");
+          setActiveMusicTab(typeParam);
+        } else if (nameParam === "film" && filmTabs.includes(typeParam)) {
+          setServicesModalActive("film");
+          setActiveFilmTab(typeParam);
+        } else if (nameParam === "game" && gameTabs.includes(typeParam)) {
+          setServicesModalActive("game");
+          setActiveGameTab(typeParam);
+        } else if (
+          nameParam === "branding" &&
+          brandingTabs.includes(typeParam)
+        ) {
+          setServicesModalActive("branding");
+          setActiveBrandingTab(typeParam);
+        }
       } else {
         setServicesModalActive("");
+        return;
       }
     });
   });
 
-  const servicesSubpages = ["music", "film", "game", "branding"];
+  // Declaration of pages and their tabs
+  const servicesPages = ["music", "film", "game", "branding"];
+
+  const musicTabs = [
+    "mixing",
+    "mastering",
+    "recording",
+    "editing_restoration",
+    "production"
+  ];
+
+  const filmTabs = [
+    "re-recording_mixing",
+    "editing_restoration",
+    "sound_design",
+    "original_soundtrack"
+  ];
+
+  const gameTabs = [
+    "sound_design",
+    "original_soundtrack",
+    "integration",
+    "mixing"
+  ];
+
+  const brandingTabs = ["sonic_logo", "podcast", "post-production_for_ads"];
 
   $: isAnyServiceClicked = !!$servicesModalActive;
 
   $: musicTab = [
     {
       title: "MIXING",
-      function: handleMusicFirstSubmenuClick,
-      variable: $isMusicFirstClicked
+      function: () => handleMusicTabClick("mixing"),
+      variable: $musicActiveTab === "mixing"
     },
     {
       title: "MASTERING",
-      function: handleMusicSecondSubmenuClick,
-      variable: $isMusicSecondClicked
+      function: () => handleMusicTabClick("mastering"),
+      variable: $musicActiveTab === "mastering"
     },
     {
       title: "RECORDING",
-      function: handleMusicThirdSubmenuClick,
-      variable: $isMusicThirdClicked
+      function: () => handleMusicTabClick("recording"),
+      variable: $musicActiveTab === "recording"
     },
     {
       title: "EDITING | RESTORATION",
-      function: handleMusicFourthSubmenuClick,
-      variable: $isMusicFourthClicked
+      function: () => handleMusicTabClick("editing_restoration"),
+      variable: $musicActiveTab === "editing_restoration"
     },
     {
       title: "PRODUCTION",
-      function: handleMusicFifthSubmenuClick,
-      variable: $isMusicFifthClicked
+      function: () => handleMusicTabClick("production"),
+      variable: $musicActiveTab === "production"
     }
   ];
 
   $: filmTab = [
     {
       title: "RE-RECORDING MIXING",
-      function: handleFilmFirstSubmenuClick,
-      variable: $isFilmFirstClicked
+      function: () => handleFilmTabClick("re-recording_mixing"),
+      variable: $filmActiveTab === "re-recording_mixing"
     },
     {
       title: "EDITING | RESTORATION",
-      function: handleFilmSecondSubmenuClick,
-      variable: $isFilmSecondClicked
+      function: () => handleFilmTabClick("editing_restoration"),
+      variable: $filmActiveTab === "editing_restoration"
     },
     {
       title: "SOUND DESIGN",
-      function: handleFilmThirdSubmenuClick,
-      variable: $isFilmThirdClicked
+      function: () => handleFilmTabClick("sound_design"),
+      variable: $filmActiveTab === "sound_design"
     },
     {
       title: "ORIGINAL SOUNDTRACK",
-      function: handleFilmFourthSubmenuClick,
-      variable: $isFilmFourthClicked
+      function: () => handleFilmTabClick("original_soundtrack"),
+      variable: $filmActiveTab === "original_soundtrack"
     }
   ];
 
   $: gameTab = [
     {
       title: "SOUND DESIGN",
-      function: handleGameFirstSubmenuClick,
-      variable: $isGameFirstClicked
+      function: () => handleGameTabClick("sound_design"),
+      variable: $gameActiveTab === "sound_design"
     },
     {
       title: "ORIGINAL SOUNDTRACK",
-      function: handleGameSecondSubmenuClick,
-      variable: $isGameSecondClicked
+      function: () => handleGameTabClick("original_soundtrack"),
+      variable: $gameActiveTab === "original_soundtrack"
     },
     {
       title: "INTEGRATION",
-      function: handleGameThirdSubmenuClick,
-      variable: $isGameThirdClicked
+      function: () => handleGameTabClick("integration"),
+      variable: $gameActiveTab === "integration"
     },
     {
       title: "MIXING",
-      function: handleGameFourthSubmenuClick,
-      variable: $isGameFourthClicked
+      function: () => handleGameTabClick("mixing"),
+      variable: $gameActiveTab === "mixing"
     }
   ];
 
   $: brandingTab = [
     {
       title: "SONIC LOGO",
-      function: handleBrandingFirstSubmenuClick,
-      variable: $isBrandingFirstClicked
+      function: () => handleBrandingTabClick("sonic_logo"),
+      variable: $brandingActiveTab === "sonic_logo"
     },
     {
       title: "PODCAST",
-      function: handleBrandingSecondSubmenuClick,
-      variable: $isBrandingSecondClicked
+      function: () => handleBrandingTabClick("podcast"),
+      variable: $brandingActiveTab === "podcast"
     },
     {
       title: "POST-PRODUCTION FOR ADS",
-      function: handleBrandingThirdSubmenuClick,
-      variable: $isBrandingThirdClicked
+      function: () => handleBrandingTabClick("post-production_for_ads"),
+      variable: $brandingActiveTab === "post-production_for_ads"
     }
   ];
 </script>
@@ -317,7 +355,7 @@
     <main>
       <Tab variant="services" tab={musicTab} delay={$animationInDelay} />
       <div class="tab-content">
-        {#if $isMusicFirstClicked}
+        {#if $musicActiveTab === 'mixing'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -393,7 +431,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isMusicSecondClicked}
+        {:else if $musicActiveTab === 'mastering'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -473,7 +511,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isMusicThirdClicked}
+        {:else if $musicActiveTab === 'recording'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -537,7 +575,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isMusicFourthClicked}
+        {:else if $musicActiveTab === 'editing_restoration'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -592,7 +630,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isMusicFifthClicked}
+        {:else if $musicActiveTab === 'production'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -633,7 +671,7 @@
     <main>
       <Tab variant="services" tab={filmTab} delay={$animationInDelay} />
       <div class="tab-content">
-        {#if $isFilmFirstClicked}
+        {#if $filmActiveTab === 're-recording_mixing'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -679,7 +717,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isFilmSecondClicked}
+        {:else if $filmActiveTab === 'editing_restoration'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -733,7 +771,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isFilmThirdClicked}
+        {:else if $filmActiveTab === 'sound_design'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -767,7 +805,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isFilmFourthClicked}
+        {:else if $filmActiveTab === 'original_soundtrack'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -804,7 +842,7 @@
     <main>
       <Tab variant="services" tab={gameTab} delay={$animationInDelay} />
       <div class="tab-content">
-        {#if $isGameFirstClicked}
+        {#if $gameActiveTab === 'sound_design'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -839,7 +877,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isGameSecondClicked}
+        {:else if $gameActiveTab === 'original_soundtrack'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -868,7 +906,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isGameThirdClicked}
+        {:else if $gameActiveTab === 'integration'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -909,7 +947,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isGameFourthClicked}
+        {:else if $gameActiveTab === 'mixing'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -955,7 +993,7 @@
     <main>
       <Tab variant="services" tab={brandingTab} delay={$animationInDelay} />
       <div class="tab-content">
-        {#if $isBrandingFirstClicked}
+        {#if $brandingActiveTab === 'sonic_logo'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -989,7 +1027,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isBrandingSecondClicked}
+        {:else if $brandingActiveTab === 'podcast'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -1024,7 +1062,7 @@
               </li>
             </ul>
           </div>
-        {:else if $isBrandingThirdClicked}
+        {:else if $brandingActiveTab === 'post-production_for_ads'}
           <div
             in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
             out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
