@@ -55,6 +55,7 @@
   @media (--max-content-width) {
     menu {
       flex-wrap: nowrap;
+      width: 100%;
     }
 
     h2 {
@@ -80,6 +81,10 @@
   }
 
   @media (--not-touchscreen) {
+    button {
+      width: 25%;
+    }
+
     button:hover {
       background-color: var(--secondary-color);
     }
@@ -93,6 +98,12 @@
     position: relative;
     z-index: 1;
     margin-bottom: 0.5rem;
+  }
+
+  @media (--max-content-width) {
+    img {
+      width: calc(100% - 1rem);
+    }
   }
 
   h2 {
@@ -111,7 +122,7 @@
       flex-direction: column;
       top: 4.5rem;
       left: 0;
-      min-width: 25%;
+      width: 35%;
       height: calc(var(--vh, 1vh) * 100 - 4.5rem);
       border-right: 2px solid var(--dark);
     }

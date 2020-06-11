@@ -30,7 +30,7 @@
       position: sticky;
       top: 4.5rem;
       border-bottom: none;
-      min-width: 25%;
+      width: 35%;
       height: calc(var(--vh, 1vh) * 100 - 4.5rem);
       flex-direction: column;
       align-items: stretch;
