@@ -13,12 +13,18 @@
   import Footer from "../components/Footer.svelte";
 
   onMount(() => {
-    handleEquipmentTabClick("hardware");
-
     const url = new URL(document.location);
     const typeParam = url.searchParams.get("type");
 
+    if (typeParam === null && $equipmentActiveTab === "") {
+      handleEquipmentTabClick("hardware");
+    } else {
+      handleEquipmentTabClick($equipmentActiveTab);
+    }
+
     if (equipmentTabs.includes(typeParam)) {
+      console.log("lol");
+
       handleEquipmentTabClick(typeParam);
     }
 
