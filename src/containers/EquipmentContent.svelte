@@ -1,10 +1,10 @@
 <script>
+  import { onMount } from "svelte";
   import {
     scrollYPosition,
-    isEquipmentHardwareClicked,
-    isEquipmentSoftwareClicked,
-    handleHardwareSubmenuClick,
-    handleSoftwareSubmenuClick
+    equipmentActiveTab,
+    setActiveEquipmentTab,
+    handleEquipmentTabClick
   } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import Tab from "../components/Tab.svelte";
@@ -12,17 +12,40 @@
   import Button from "../components/Button.svelte";
   import Footer from "../components/Footer.svelte";
 
+  onMount(() => {
+    handleEquipmentTabClick("hardware");
+
+    const url = new URL(document.location);
+    const typeParam = url.searchParams.get("type");
+
+    if (equipmentTabs.includes(typeParam)) {
+      handleEquipmentTabClick(typeParam);
+    }
+
+    window.addEventListener("popstate", function() {
+      const url = new URL(document.location);
+      const typeParam = url.searchParams.get("type");
+      if (equipmentTabs.includes(typeParam)) {
+        setActiveEquipmentTab(typeParam);
+      } else {
+        setActiveEquipmentTab("");
+      }
+    });
+  });
+
+  const equipmentTabs = ["hardware", "software"];
+
   $: equipmentTab = [
     {
       title: "HARDWARE",
-      function: handleHardwareSubmenuClick,
-      variable: $isEquipmentHardwareClicked,
+      function: () => handleEquipmentTabClick("hardware"),
+      variable: $equipmentActiveTab === "hardware",
       justTwo: true
     },
     {
       title: "SOFTWARE",
-      function: handleSoftwareSubmenuClick,
-      variable: $isEquipmentSoftwareClicked,
+      function: () => handleEquipmentTabClick("software"),
+      variable: $equipmentActiveTab === "software",
       justTwo: true
     }
   ];
@@ -132,14 +155,14 @@
   <Tab tab={equipmentTab} />
 
   <ul>
-    {#if $isEquipmentHardwareClicked}
+    {#if $equipmentActiveTab === 'hardware'}
       {#each hardwareList as listItem, i}
         <List
           {listItem}
           {i}
           on:click={() => handleHardwareListToggle(listItem)} />
       {/each}
-    {:else}
+    {:else if $equipmentActiveTab === 'software'}
       {#each softwareList as listItem, i}
         <List
           {listItem}

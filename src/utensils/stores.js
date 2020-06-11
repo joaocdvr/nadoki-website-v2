@@ -27,17 +27,18 @@ export function setActivePage(name) {
 }
 
 // Equipment page tab handling
-export const isEquipmentHardwareClicked = writable(true);
-export const isEquipmentSoftwareClicked = writable(false);
+export const equipmentActiveTab = writable("");
 
-export function handleHardwareSubmenuClick() {
-  isEquipmentHardwareClicked.set(true);
-  isEquipmentSoftwareClicked.set(false);
+export function setActiveEquipmentTab(name) {
+  equipmentActiveTab.set(name);
 }
 
-export function handleSoftwareSubmenuClick() {
-  isEquipmentHardwareClicked.set(false);
-  isEquipmentSoftwareClicked.set(true);
+export function handleEquipmentTabClick(name) {
+  if (name !== undefined) {
+    const newUrl = `${window.location.pathname}?type=${name}`;
+    window.history.pushState("", "", newUrl);
+    setActiveEquipmentTab(name);
+  }
 }
 
 // Services page tab handling
