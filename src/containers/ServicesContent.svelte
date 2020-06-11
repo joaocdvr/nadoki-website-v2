@@ -234,7 +234,7 @@
     top: 0;
     left: 100vw;
     background-color: var(--main-color);
-    max-height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
     overflow-y: auto;
     z-index: 2;
     backface-visibility: hidden;
