@@ -197,6 +197,12 @@ export function setAboutUsActiveItem(name) {
   aboutUsActiveItem.set(name);
 }
 
+export function handleAboutUsItemClick(name) {
+  const newUrl = `${window.location.pathname}?name=${name}`;
+  window.history.pushState("", "", newUrl);
+  setAboutUsActiveItem(name);
+}
+
 // Work modal pages handling
 export const workModalActive = writable("");
 

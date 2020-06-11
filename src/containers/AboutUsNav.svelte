@@ -8,7 +8,8 @@
     animationOutDuration,
     animationOutEasing,
     aboutUsActiveItem,
-    setAboutUsActiveItem
+    setAboutUsActiveItem,
+    handleAboutUsItemClick
   } from "../utensils/stores.js";
   import { handleSVGAnimation } from "../utensils/utils.js";
 
@@ -41,12 +42,6 @@
   const aboutUsSubpages = ["alper", "elia", "joao", "julia"];
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
-
-  function handleAboutUsItemClick(name) {
-    const newUrl = `${window.location.pathname}?name=${name}`;
-    window.history.pushState("", "", newUrl);
-    setAboutUsActiveItem(name);
-  }
 </script>
 
 <style>
