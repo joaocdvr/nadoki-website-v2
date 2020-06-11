@@ -50,6 +50,8 @@
       } else if (nameParam === "branding" && brandingTabs.includes(typeParam)) {
         setActiveBrandingTab(get(brandingActiveTab));
         handleServicesModalClick(nameParam, typeParam);
+      } else {
+        return;
       }
     }
 
@@ -57,8 +59,6 @@
       const url = new URL(document.location);
       const nameParam = url.searchParams.get("name");
       const typeParam = url.searchParams.get("type");
-
-      console.log("nameParam: ", nameParam, "typeParam: ", typeParam);
 
       if (servicesPages.includes(nameParam)) {
         if (nameParam === "music" && musicTabs.includes(typeParam)) {
