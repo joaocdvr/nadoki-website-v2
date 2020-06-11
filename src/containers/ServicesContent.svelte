@@ -338,10 +338,8 @@
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
                   </a>
-                  your tracks (make sure they're according to our delivery
-                  requirements) or bring the files to an attended session with
-                  us. If you have any mix references, feel free to also send
-                  them.
+                  your tracks or bring the files to an attended session with us.
+                  If you have any mix references, feel free to also send them.
                 </p>
               </li>
 
@@ -416,10 +414,9 @@
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
                   </a>
-                  your tracks (make sure they're according to our delivery
-                  requirements) or bring the files to an attended session with
-                  us. If you have any mastering references, feel free to also
-                  send them.
+                  your tracks or bring the files to an attended session with us.
+                  If you have any mastering references, feel free to also send
+                  them.
                 </p>
               </li>
 
@@ -498,9 +495,9 @@
                     on:click={() => document.body.classList.remove('body-is-not-visible')}
                     href="/studio"
                     aria-label="Studio page">
-                    Click here
+                    Learn more
                   </a>
-                  if you want to learn more about these rooms.
+                  about these rooms.
                 </p>
 
                 <p class="body-regular">
