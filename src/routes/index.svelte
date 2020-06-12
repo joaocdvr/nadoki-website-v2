@@ -125,7 +125,8 @@
     out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
     <h2 class="homepage">
       <span>NADOKI</span>
-      IS A BERLIN BASED MUSIC STUDIO
+      <br />
+      BERLIN BASED MUSIC STUDIO
     </h2>
 
     <p class="body-bold">
