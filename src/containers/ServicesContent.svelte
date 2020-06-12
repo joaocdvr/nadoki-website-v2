@@ -408,7 +408,8 @@
                   — Multitrack export starting at &rArr; +35 EUR
                 </p>
                 <p class="body-small">
-                  We can export in whatever way is more useful to you.
+                  We will export your track in whatever way is more useful to
+                  you.
                 </p>
                 <p class="body-regular">— Tape finalization &rArr; +50 EUR</p>
                 <p class="body-small">
@@ -419,7 +420,7 @@
                 </p>
                 <p class="body-small">
                   If your recording is noisy or/and you have pitch/timing
-                  issues, we can fix it.
+                  issues, we fix it.
                 </p>
                 <p class="body-regular">
                   — Tracks submitted later &rArr; +35 EUR/hour
@@ -452,8 +453,8 @@
                 <h2 class="body-bold">Mastering</h2>
 
                 <p class="body-regular">
-                  With our hybrid setup, we can make your song streaming-ready,
-                  as well as vinyl-cut ready.
+                  With our hybrid setup, we make your song streaming-ready, as
+                  well as vinyl-cut ready.
                 </p>
 
                 <p class="body-regular">
@@ -501,7 +502,7 @@
                 </p>
                 <p class="body-regular">— Stem mastering &rArr; +70 EUR</p>
                 <p class="body-small">
-                  This gives us more options since we can process each
+                  This gives us more options since we will be able process each
                   individual stem differently.
                 </p>
 
@@ -616,11 +617,11 @@
                 <h2 class="body-bold">Restoration</h2>
 
                 <p class="body-regular">
-                  Using every tool at our disposal, we can clean, fix and
-                  restore your audio recordings. Some of the most common issues
-                  we take care of are pops, clicks, hum, hiss, crackle, among
-                  other noises and artifacts, as well as the removal of clipping
-                  of an audio file.
+                  Using every tool at our disposal, we clean, fix and restore
+                  your audio recordings. Some of the most common issues we take
+                  care of are pops, clicks, hum, hiss, crackle, among other
+                  noises and artifacts, as well as the removal of clipping of an
+                  audio file.
                 </p>
               </li>
 
@@ -701,10 +702,10 @@
                 <h2 class="body-bold">Re-recording Mixing</h2>
 
                 <p class="body-regular">
-                  We can mix the audio of your film production, meaning:
-                  balancing all dialog, ADR, sound effects, music, atmospheres
-                  and foleys so that it enhances the project’s storytelling
-                  without distracting from it.
+                  We mix the audio of your film production, meaning: balancing
+                  all dialog, ADR, sound effects, music, atmospheres and foleys
+                  so that it enhances the project’s storytelling without
+                  distracting from it.
                 </p>
 
                 <p class="body-regular">
@@ -750,10 +751,9 @@
                 <h2 class="body-bold">Restoration</h2>
 
                 <p class="body-regular">
-                  We can also clean, fix and restore your audio recordings.
-                  Anything from removing pops, clicks, hum, hiss, crackle, among
-                  other noises, to restoring clipped samples from your audio
-                  files.
+                  We also clean, fix and restore your audio recordings. Anything
+                  from removing pops, clicks, hum, hiss, crackle, among other
+                  noises, to restoring clipped samples from your audio files.
                 </p>
               </li>
 
@@ -774,8 +774,9 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
+                <p class="body-regular">— 35 EUR/hour</p>
                 <p class="body-regular">
-                  The pricing for this service is hourly based. You can
+                  You can
                   <a
                     target="_blank"
                     href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
@@ -796,10 +797,10 @@
               <li>
                 <h2 class="body-bold">Sound Design</h2>
                 <p class="body-regular">
-                  We can create the sound design of your film production to
-                  enhance your story to its full potential. Using high-quality
-                  industry standard samples and foley recording techniques, we
-                  are able to deliver the sound your production needs.
+                  We create the sound design of your film production to enhance
+                  your story to its full potential. Using high-quality industry
+                  standard samples and foley recording techniques, we are able
+                  to deliver the sound your production needs.
                 </p>
               </li>
 
@@ -824,7 +825,7 @@
                 <h2 class="body-bold">Original Soundtrack</h2>
 
                 <p class="body-regular">
-                  We can compose and produce a tailored music score to accompany
+                  We compose and produce a tailored music score to accompany
                   your film production. Using our hybrid setup, in-the-box
                   tools, as well as live instruments and synthesizers to create
                   the music that fits your movie.
@@ -867,10 +868,10 @@
                 </p>
 
                 <p class="body-regular">
-                  We can create the sound design for your game to enhance your
-                  story to its full potential. Using high-quality
-                  industry-standard samples and foley recording techniques, we
-                  can create the sound your project needs.
+                  We create the sound design for your game to enhance your story
+                  to its full potential. Using high-quality industry-standard
+                  samples and foley recording techniques, we create the sound
+                  your project needs.
                 </p>
               </li>
 
@@ -896,10 +897,10 @@
                 <h2 class="body-bold">Original Soundtrack</h2>
 
                 <p class="body-regular">
-                  We can compose tailored music to enrich your game. With the
+                  We compose tailored music to enrich your game. With the
                   unlimited possibilities of the in-the-box approach, together
-                  with analog instruments, we can translate your game’s message
-                  into music.
+                  with analog instruments, we translate your game’s message into
+                  music.
                 </p>
               </li>
 
@@ -929,9 +930,9 @@
                   has an important role in the immersion of the player. For the
                   finest interaction, precision in each moment of gameplay is
                   crucial and making sure that all audio assets (music,
-                  ambience, dialogue, and sound effects) load smoothly, trigger
-                  correctly, and playback in the highest quality at minimal
-                  processing power is key.
+                  ambience, dialogue, and sound effects) load smoothly, are
+                  triggered correctly, and playback in the highest quality at
+                  minimal processing power is key.
                 </p>
 
                 <p class="body-regular">
@@ -966,9 +967,9 @@
                 <h2 class="body-bold">Mixing</h2>
 
                 <p class="body-regular">
-                  Nadoki offers mixing services for the sound of your game
-                  balancing all dialog, ADR, sound effects, music, atmospheres
-                  and foleys for the best immersion of the player.
+                  We offer mixing services for the sound of your game balancing
+                  all dialog, ADR, sound effects, music, atmospheres and foleys
+                  for the best immersion of the player.
                 </p>
 
                 <p class="body-regular">
@@ -1083,8 +1084,8 @@
                 <p class="body-regular">
                   We offer audio post-production for your advertisements. Our
                   services include ADR recording, editing, restoration, sound
-                  designing, mixing, and finalizing. We can make your ad ready
-                  to be heard anywhere.
+                  designing, mixing, and finalizing. We make your ad ready to be
+                  heard anywhere.
                 </p>
               </li>
 
