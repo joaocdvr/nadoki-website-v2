@@ -430,16 +430,10 @@
               </li>
 
               <li>
-                <dt class="body-bold">Background</dt>
-                <dd class="body-regular">
-                  Producer, mixing engineer, DJ & financial analyst
-                </dd>
-              </li>
-              <li>
                 <dt class="body-bold">Interests</dt>
                 <dd class="body-regular">
                   Electronic music production, vocal recording, 3D audio,
-                  virtual reality & social media management
+                  virtual reality & social media management.
                 </dd>
               </li>
 
@@ -456,7 +450,10 @@
 
               <li>
                 <dt class="body-bold">About me</dt>
-                <dd class="body-regular">Energetic & supportive</dd>
+                <dd class="body-regular">
+                  Producer, mixing engineer, DJ & financial analyst. Energetic &
+                  supportive.
+                </dd>
               </li>
 
               <li>
@@ -580,15 +577,8 @@
                 <dd class="body-regular">
                   — Audio Engineering (BA)
                   <span class="body-small">SAE Institute Berlin</span>
-                  — Classical Music
-                  <span class="body-small">Conservatory of Bruno Maderna</span>
-                </dd>
-              </li>
-
-              <li>
-                <dt class="body-bold">Background</dt>
-                <dd class="body-regular">
-                  Failed musician searching for comfort in technology
+                  — Classical Music (MA)
+                  <span class="body-small">Conservatory Bruno Maderna</span>
                 </dd>
               </li>
 
@@ -611,8 +601,9 @@
               <li>
                 <dt class="body-bold">About me</dt>
                 <dd class="body-regular">
-                  Usually an audio engineer on the road. Right now everything
-                  else at home + studio
+                  Failed musician searching for comfort in technology. Usually
+                  an audio engineer on the road. Right now everything else at
+                  home + studio.
                 </dd>
               </li>
 
@@ -739,13 +730,8 @@
               </li>
 
               <li>
-                <dt class="body-bold">Background</dt>
-                <dd class="body-regular">???</dd>
-              </li>
-
-              <li>
                 <dt class="body-bold">Interests</dt>
-                <dd class="body-regular">Games, sound design & web design</dd>
+                <dd class="body-regular">Games, sound design & web design.</dd>
               </li>
 
               <li>
@@ -763,7 +749,7 @@
                 <dt class="body-bold">About me</dt>
                 <dd class="body-regular">
                   Gamer since Game Boy Color. Ocasional spearfisher. Retired
-                  double bassist
+                  double bassist.
                 </dd>
               </li>
 
@@ -772,16 +758,16 @@
                 <dd>
                   <table>
                     <tr>
-                      <th class="body-regular">undefined</th>
-                      <td class="header-big">?</td>
+                      <th class="body-regular">Average KDA</th>
+                      <td class="header-big">4.00</td>
                     </tr>
                     <tr>
-                      <th class="body-regular">undefined</th>
-                      <td class="header-big">?</td>
+                      <th class="body-regular">Clipper size</th>
+                      <td class="header-big">4</td>
                     </tr>
                     <tr>
-                      <th class="body-regular">undefined</th>
-                      <td class="header-big">?</td>
+                      <th class="body-regular">Windows version</th>
+                      <td class="header-big">10</td>
                     </tr>
                   </table>
                 </dd>
@@ -898,14 +884,8 @@
               </li>
 
               <li>
-                <dt class="body-bold">Background</dt>
-                <dd class="body-regular">
-                  Musician since an early age — mainly guitarist
-                </dd>
-              </li>
-              <li>
                 <dt class="body-bold">Interests</dt>
-                <dd class="body-regular">Technology, music, & Netflix</dd>
+                <dd class="body-regular">Technology, music, & Netflix.</dd>
               </li>
 
               <li>
@@ -924,7 +904,8 @@
               <li>
                 <dt class="body-bold">About me</dt>
                 <dd class="body-regular">
-                  Workaholic. Part-time OCD. Full-time nerd
+                  Musician since an early age — mainly guitarist. Workaholic.
+                  Part-time OCD. Full-time nerd.
                 </dd>
               </li>
 
