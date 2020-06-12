@@ -1,6 +1,5 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
-  import { get } from "svelte/store";
   import { fade } from "svelte/transition";
   import {
     scrollYPosition,
@@ -39,16 +38,16 @@
 
     if (servicesPages.includes(nameParam)) {
       if (nameParam === "music" && musicTabs.includes(typeParam)) {
-        setActiveMusicTab(get(musicActiveTab));
+        setActiveMusicTab(typeParam);
         handleServicesModalClick(nameParam, typeParam);
       } else if (nameParam === "film" && filmTabs.includes(typeParam)) {
-        setActiveFilmTab(get(filmActiveTab));
+        setActiveFilmTab(typeParam);
         handleServicesModalClick(nameParam, typeParam);
       } else if (nameParam === "game" && gameTabs.includes(typeParam)) {
-        setActiveGameTab(get(gameActiveTab));
+        setActiveGameTab(typeParam);
         handleServicesModalClick(nameParam, typeParam);
       } else if (nameParam === "branding" && brandingTabs.includes(typeParam)) {
-        setActiveBrandingTab(get(brandingActiveTab));
+        setActiveBrandingTab(typeParam);
         handleServicesModalClick(nameParam, typeParam);
       } else {
         return;
@@ -254,7 +253,7 @@
 
   .tab-content {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-    /* min-height: calc(100vh - 14.5rem); */
+    min-height: calc(100vh - 14.5rem);
     width: 100%;
     transition: height 300ms ease-in-out;
   }
