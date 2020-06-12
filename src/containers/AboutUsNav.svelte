@@ -124,7 +124,7 @@
       top: 4.5rem;
       left: 0;
       width: 35%;
-      height: calc(var(--vh, 1vh) * 100 - 4.5rem);
+      height: calc(100vh - 4.5rem);
       border-right: 2px solid var(--dark);
     }
   }
