@@ -43,7 +43,7 @@
       title: "Riverside Studios",
       size: "1700m²",
       content:
-        "The complex we are located at, is a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders. ",
+        "The complex we are located at is a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders. ",
       tags: "",
       link: true,
       linkHref: "https://riversidestudios.de/"
