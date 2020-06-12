@@ -120,6 +120,7 @@
     .menu-open {
       position: sticky;
       flex-direction: column;
+      align-items: stretch;
       top: 4.5rem;
       left: 0;
       width: 35%;

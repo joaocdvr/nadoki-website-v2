@@ -28,12 +28,13 @@
   @media (--max-content-width) {
     .services-tab-menu {
       position: sticky;
-      top: 4.5rem;
-      border-bottom: none;
-      width: 35%;
-      height: calc(var(--vh, 1vh) * 100 - 4.5rem);
       flex-direction: column;
       align-items: stretch;
+      top: 4.5rem;
+      left: 0;
+      width: 35%;
+      height: calc(var(--vh, 1vh) * 100 - 4.5rem);
+      border-bottom: none;
     }
   }
 
