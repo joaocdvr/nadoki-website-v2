@@ -138,6 +138,7 @@
 
   @media (--max-content-width) {
     .button-open {
+      flex: 0 0 auto;
       flex-grow: 1;
       width: 100%;
       text-align: right;
