@@ -86,10 +86,35 @@
     }
   }
 
+  .homepage {
+    font-family: "syne-extra", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: var(--dark);
+  }
+
+  .body-extra {
+    font-size: 1.08rem;
+  }
+
+  @media (--max-content-width) {
+    .body-extra {
+      font-size: 1.6rem;
+    }
+  }
+
+  .homepage + .body-extra {
+    margin-top: 0.5rem;
+  }
+
+  .body-extra + .body-extra {
+    margin-top: 0;
+  }
+
   h2,
   p {
     margin-top: 5rem;
-    max-width: var(--max-width);
+    max-width: calc(var(--max-width) - 3rem);
   }
 
   @media (--max-content-width) {
@@ -99,17 +124,9 @@
     }
   }
 
-  h2 > span {
-    font-size: 2rem;
-  }
-
   @media (--max-content-width) {
     h2 > span {
       font-size: 3rem;
-    }
-
-    .homepage {
-      font-size: 1.875rem;
     }
 
     .body-bold {
@@ -125,18 +142,17 @@
     out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
     <h2 class="homepage">
       <span>NADOKI</span>
-      <br />
-      BERLIN-BASED
-      <br />
-      MUSIC STUDIO
     </h2>
+
+    <p class="body-extra">BERLIN-BASED</p>
+    <p class="body-extra">MUSIC STUDIO</p>
 
     <p class="body-bold">
       We provide a wide-range of
       <a href="/services" aria-label="Services page" underlined>services</a>
       for all your multimedia needs. Check out our
-      <a href="/work" aria-label="Work page" underlined>work</a>
-      , our state of the art
+      <a href="/work" aria-label="Work page" underlined>work,</a>
+      our state of the art
       <a href="/studio" aria-label="Studio page" underlined>studio</a>
       and
       <a href="/equipment" aria-label="Equipment page" underlined>equipment</a>

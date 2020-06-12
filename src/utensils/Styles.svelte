@@ -151,17 +151,4 @@
     font-size: 0.75rem;
     color: var(--dark);
   }
-
-  :global(.homepage) {
-    font-family: "syne-extra", Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    font-size: 1.25rem;
-    color: var(--dark);
-  }
-
-  @media (--max-content-width) {
-    :global(.homepage) {
-      font-size: 1.875rem;
-    }
-  }
 </style>
