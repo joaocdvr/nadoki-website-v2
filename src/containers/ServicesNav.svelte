@@ -53,6 +53,7 @@
     position: relative;
     cursor: pointer;
     width: 50%;
+    min-height: 200px;
     padding: 1.5rem;
     background-color: var(--main-color);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;

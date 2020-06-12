@@ -134,6 +134,7 @@
 
   .contacts-wrapper {
     padding: 0 1.5rem 1.5rem 1.5rem;
+    z-index: 1;
   }
 
   .body-bold {
