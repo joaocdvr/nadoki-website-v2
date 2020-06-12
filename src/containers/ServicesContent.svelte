@@ -385,45 +385,57 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  labeled multitrack files separated and in the highest quality
-                  possible according to your session, preferably 44.1kHz or 88.2
-                  kHz sample rate and 24 or 32 bit depth.
+                  labeled multitrack separated track by track and in the highest
+                  quality possible according to your session, preferably 44.1kHz
+                  or 88.2 kHz sample rate and 24 or 32 bit depth.
                 </p>
 
                 <p class="body-regular">
                   Please make sure to send us the correct version of the tracks.
                   Tracks that are being handed in later, will be charged
-                  accordingly.
+                  according to the pricelist.
                 </p>
               </li>
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">
-                  — Starting at &rArr; 250 EUR per track
-                </p>
+                <p class="body-regular">— Starting at &rArr; 300 EUR/track</p>
                 <p class="body-small">
                   Includes three stereo exports: wav 24-bit, wav 16-bit, and
                   FLAC. Up to two revisions included as well.
                 </p>
-                <p class="body-regular">— Multitrack export &rArr; +35 EUR</p>
+                <p class="body-regular">
+                  — Multitrack export starting at &rArr; +35 EUR
+                </p>
                 <p class="body-small">
                   We can export in whatever way is more useful to you.
                 </p>
-                <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
+                <p class="body-regular">— Tape finalization &rArr; +50 EUR</p>
                 <p class="body-small">
                   We will process the final mix with tape machine.
                 </p>
                 <p class="body-regular">
-                  — Editing/Restoration &rArr; +35 EUR per hour
+                  — Editing/Restoration &rArr; +35 EUR/hour
                 </p>
                 <p class="body-small">
                   If your recording is noisy or/and you have pitch/timing
                   issues, we can fix it.
                 </p>
                 <p class="body-regular">
-                  — Other format exports &rArr; +10 EUR per export
+                  — Tracks submitted later &rArr; +35 EUR/hour
                 </p>
+                <p class="body-small">
+                  In case you need to resend us a faulty file after we already
+                  started working on your song.
+                </p>
+                <p class="body-regular">
+                  — Other format exports &rArr; +10 EUR/export
+                </p>
+                <p class="body-small">
+                  Anything from MP3, Vorbis, AAC, WavPack, etc.
+                </p>
+
+                <p class="body-regular">— Attended session &rArr; +20%</p>
                 <p class="body-regular reach-out">
                   <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
                   for a more precise quote.
@@ -441,7 +453,7 @@
 
                 <p class="body-regular">
                   With our hybrid setup, we can make your song streaming-ready,
-                  as well as vinyl-cut ready!
+                  as well as vinyl-cut ready.
                 </p>
 
                 <p class="body-regular">
@@ -482,9 +494,7 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">
-                  — Starting at &rArr; 60 EUR per track
-                </p>
+                <p class="body-regular">— Starting at &rArr; 60 EUR/track</p>
                 <p class="body-small">
                   Includes three stereo exports: wav 24-bit, wav 16-bit, and
                   FLAC. Up to two revisions included as well.
@@ -494,9 +504,17 @@
                   This gives us more options since we can process each
                   individual stem differently.
                 </p>
+
                 <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
                 <p class="body-small">
                   We will process the final mix with tape machine.
+                </p>
+                <p class="body-regular">
+                  — Tracks submitted later &rArr; +35 EUR/hour
+                </p>
+                <p class="body-small">
+                  In case you need to resend us a faulty file after we already
+                  started working on your song.
                 </p>
                 <p class="body-regular">— DDP Export &rArr; +50 EUR</p>
                 <p class="body-small">
@@ -504,6 +522,11 @@
                   code (optional) and CD Text (optional).
                 </p>
                 <p class="body-regular">— Mastered for iTunes &rArr; +10 EUR</p>
+                <p class="body-small">
+                  Set of rules (established by Apple) to optimise the mastering
+                  process for distribution on the iTunes digital platform.
+                </p>
+                <p class="body-regular">— Attended session &rArr; +20%</p>
                 <p class="body-regular reach-out">
                   <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
                   for a more precise quote.
@@ -520,10 +543,10 @@
                 <h2 class="body-bold">Recording</h2>
 
                 <p class="body-regular">
-                  We have two very different recording spaces that you can
-                  choose from:
+                  We have two different recording spaces that you can choose
+                  from:
                   <br />
-                  — Studio 10: our tracking booth for vocals and overdubs
+                  — Studio 10: our tracking booth for vocals and overdub
                   recordings. It is the perfect space for small-scaled projects.
                   <br />
                   — The Lab: a flexible live tracking room that is perfect for a
@@ -553,7 +576,9 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— Starting at &rArr; 200 EUR</p>
+                <p class="body-regular">
+                  — Starting at &rArr; 225 EUR (half day)
+                </p>
                 <p class="body-small">
                   Includes our control room, where a vocalist or single
                   instrument can be recorded, along with engineer and equipment.
@@ -607,17 +632,13 @@
                   session, preferably 44.1kHz or 88.2 kHz sample rate and 32 bit
                   depth (or 24bit if you’re using Logic).
                 </p>
-
-                <p class="body-regular">
-                  If applicable, please attach your OMF and make sure to include
-                  all audio files to the export.
-                </p>
               </li>
 
               <li>
                 <p class="body-bold">Pricing</p>
+                <p class="body-regular">— 35 EUR/hour</p>
                 <p class="body-regular">
-                  Hourly based. You can
+                  You can
                   <a
                     target="_blank"
                     href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
@@ -645,9 +666,9 @@
 
                 <p class="body-regular">
                   Using the endless possibilities of an in-the-box approach,
-                  together with live instruments available in our setup and
-                  studio musicians, anything is possible. We are open to
-                  collaborations as well.
+                  together with live instruments and synthesizers available in
+                  our setup and studio musicians, anything is possible. We are
+                  open to collaborations as well.
                 </p>
               </li>
 
@@ -687,11 +708,7 @@
                 </p>
 
                 <p class="body-regular">
-                  We offer both stereo and 5.1 surround mixing. If you're
-                  interested in other formats
-                  <a target="_blank" href="mailto:info@nadoki.com">
-                    get in touch.
-                  </a>
+                  We offer both stereo and 5.1 surround mixing.
                 </p>
               </li>
 
@@ -778,13 +795,6 @@
             <ul>
               <li>
                 <h2 class="body-bold">Sound Design</h2>
-
-                <p class="body-regular">
-                  Sound has an important role in storytelling in a film
-                  production - it allows the creation of atmospheres, emotion
-                  and it sets the tone of a movie.
-                </p>
-
                 <p class="body-regular">
                   We can create the sound design of your film production to
                   enhance your story to its full potential. Using high-quality
@@ -814,10 +824,10 @@
                 <h2 class="body-bold">Original Soundtrack</h2>
 
                 <p class="body-regular">
-                  We can compose a tailored music score to accompany your film
-                  production. Using our hybrid setup, in-the-box tools, as well
-                  as, analog instruments to create the sound that fits your
-                  movie.
+                  We can compose and produce a tailored music score to accompany
+                  your film production. Using our hybrid setup, in-the-box
+                  tools, as well as live instruments and synthesizers to create
+                  the music that fits your movie.
                 </p>
               </li>
 
@@ -857,7 +867,7 @@
                 </p>
 
                 <p class="body-regular">
-                  We can create the sound design of your game to enhance your
+                  We can create the sound design for your game to enhance your
                   story to its full potential. Using high-quality
                   industry-standard samples and foley recording techniques, we
                   can create the sound your project needs.
@@ -899,7 +909,7 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  with the scope of the project, including how many songs do you
+                  with the scope of the project, including how many songs you
                   plan to have, references, and description for a price
                   estimate.
                 </p>
@@ -925,9 +935,9 @@
                 </p>
 
                 <p class="body-regular">
-                  We use FMOD together with either Unreal Engine or Unity to
-                  integrate both music and sound effects into game projects. In
-                  case you have a proprietary engine
+                  We use FMOD together with Unreal Engine or Unity to integrate
+                  both music and sound effects into game projects. In case you
+                  have a proprietary engine
                   <a target="_blank" href="mailto:info@nadoki.com">
                     get in touch.
                   </a>
@@ -941,8 +951,8 @@
                     Send us an email
                   </a>
                   with the scope of the project, including an approximation of
-                  how many audio files you have to be implemented, references,
-                  and description for a price estimate.
+                  how many files have to be implemented, references, and
+                  description for a price estimate.
                 </p>
               </li>
             </ul>
@@ -962,11 +972,7 @@
                 </p>
 
                 <p class="body-regular">
-                  We offer both stereo and 5.1 surround mixing. For other
-                  formats, please
-                  <a target="_blank" href="mailto:info@nadoki.com">
-                    get in touch.
-                  </a>
+                  We offer both stereo and multichannel mixing.
                 </p>
               </li>
 
@@ -978,8 +984,7 @@
                   </a>
                   with the scope of the project, including an approximation of
                   how many different sounds (be it music or sound effects) there
-                  are in the game, references, and description for a price
-                  estimate.
+                  are in the game, references for a price estimate.
                 </p>
               </li>
             </ul>
@@ -1021,8 +1026,7 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  for us to discuss possibilities and eventually come up to a
-                  price estimate.
+                  to come up with a price estimate.
                 </p>
               </li>
             </ul>
