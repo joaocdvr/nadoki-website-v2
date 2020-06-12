@@ -126,7 +126,9 @@
     <h2 class="homepage">
       <span>NADOKI</span>
       <br />
-      BERLIN BASED MUSIC STUDIO
+      BERLIN-BASED
+      <br />
+      MUSIC STUDIO
     </h2>
 
     <p class="body-bold">
