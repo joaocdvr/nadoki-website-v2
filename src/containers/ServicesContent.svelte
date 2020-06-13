@@ -347,6 +347,7 @@
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
   class="modal-wrapper"
+  id="services-modal"
   class:modal-is-visible={isAnyServiceClicked}>
 
   {#if $servicesModalActive === 'music'}

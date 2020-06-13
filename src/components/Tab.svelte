@@ -11,6 +11,25 @@
   export let tab = [];
   export let delay = 0;
   export let variant = "";
+
+  function handleClick(event, callback) {
+    callback();
+    if (window.screen.width >= 768) {
+      const servicesModal = document.getElementById("services-modal");
+      if (servicesModal.scrollTop > 128) {
+        servicesModal.scrollTop = 128;
+      } else {
+        return;
+      }
+    } else {
+      const servicesMenu = document.getElementsByClassName("services-tab-menu");
+      const buttonBounds = event.target.getBoundingClientRect();
+      servicesMenu[0].scrollTo(
+        buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+        0
+      );
+    }
+  }
 </script>
 
 <style>
@@ -23,6 +42,7 @@
     overflow-x: auto;
     border-bottom: 0.125rem solid var(--dark);
     background-color: var(--dark);
+    scroll-behavior: smooth;
   }
 
   @media (--max-content-width) {
@@ -35,6 +55,7 @@
       width: 35%;
       height: calc(var(--vh, 1vh) * 100 - 4.5rem);
       border-bottom: none;
+      scroll-behavior: unset;
     }
   }
 
@@ -72,7 +93,7 @@
     background-color: var(--secondary-color);
   }
 
-  :global(.user-is-tabbing) button:focus p {
+  :global(.user-is-tabbing) button:focus span {
     color: var(--light);
   }
 
@@ -81,15 +102,17 @@
       background-color: var(--secondary-color);
     }
 
-    button:hover p {
+    button:hover span {
       color: var(--light);
     }
   }
 
-  p {
+  span {
     color: var(--dark);
     margin: 1rem 1.5rem;
     transition: color 300ms ease-in-out;
+    display: block;
+    pointer-events: none;
   }
 
   .button-is-selected {
@@ -97,7 +120,7 @@
     border-color: var(--dark);
   }
 
-  .p-is-selected {
+  .span-is-selected {
     color: var(--light);
   }
 
@@ -118,12 +141,14 @@
   {#each tab as tab}
     <button
       class="tab-button"
-      on:click={tab.function}
+      on:click={event => handleClick(event, tab.function)}
       aria-label="Toggle {tab.title} list"
       aria-pressed={tab.variable}
       class:just-two={tab.justTwo}
       class:button-is-selected={tab.variable}>
-      <p class="body-bold" class:p-is-selected={tab.variable}>{tab.title}</p>
+      <span class="body-bold" class:span-is-selected={tab.variable}>
+        {tab.title}
+      </span>
     </button>
   {/each}
 </menu>
