@@ -36,7 +36,7 @@
     if (window.screen.width >= 768) {
       const servicesModal = document.getElementById("services-modal");
       if (servicesModal.scrollTop > 128) {
-        servicesModal.scrollTop = 128;
+        servicesModal.scrollTop = 130;
       }
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
