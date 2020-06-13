@@ -1,7 +1,10 @@
 {
   "name": "nadoki",
-  "description": "Nadoki Website",
+  "description": "Nadoki's Website",
   "version": "0.0.1",
+  "author": "João Rodrugues <joaocdvrodrigues@gmail.com>",
+  "repository": "https://gitlab.com/nadoki/nadoki-website-2.0",
+  "license": "MIT",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
