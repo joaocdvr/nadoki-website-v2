@@ -61,7 +61,7 @@
           ),
         0
       );
-    }
+    } 
   });
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;

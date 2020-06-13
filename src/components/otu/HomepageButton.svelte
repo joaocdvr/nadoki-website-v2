@@ -9,6 +9,7 @@
   function handleHomepageClick() {
     restoreScrollYPosition();
     setActivePage("");
+    return;
   }
 </script>
 

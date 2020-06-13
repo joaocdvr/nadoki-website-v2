@@ -1,4 +1,3 @@
-import { get } from "svelte/store";
 import { writable, readable } from "svelte/store";
 import { quadInOut } from "svelte/easing";
 
@@ -15,6 +14,7 @@ export const isMenuClicked = writable(false);
 
 export function toggleIsMenuClicked() {
   isMenuClicked.update((n) => !n);
+  return;
 }
 
 // Scroll handling
@@ -25,6 +25,7 @@ export const activePage = writable("");
 
 export function setActivePage(name) {
   activePage.set(name);
+  return;
 }
 
 // Services modal pages handling
@@ -37,6 +38,7 @@ export function setServicesModalActive(name) {
   } else {
     document.body.classList.remove("body-is-not-visible");
   }
+  return;
 }
 
 export function handleServicesModalClick(name, type) {
@@ -50,12 +52,14 @@ export function handleServicesModalClick(name, type) {
       window.history.pushState("", "", newUrl);
     }
   }
+  return;
 }
 
 export function resetServicesModalActive() {
   const newUrl = `${window.location.pathname}`;
   window.history.pushState("", "", newUrl);
   setServicesModalActive("");
+  return;
 }
 
 // Services page tab handling
@@ -64,6 +68,7 @@ export const musicActiveTab = writable("mixing");
 
 export function setActiveMusicTab(name) {
   musicActiveTab.set(name);
+  return;
 }
 
 export function handleMusicTabClick(name) {
@@ -73,6 +78,7 @@ export function handleMusicTabClick(name) {
     window.history.pushState("", "", newUrl);
     setActiveMusicTab(name);
   }
+  return;
 }
 
 // Film submenu
@@ -80,6 +86,7 @@ export const filmActiveTab = writable("re-recording_mixing");
 
 export function setActiveFilmTab(name) {
   filmActiveTab.set(name);
+  return;
 }
 
 export function handleFilmTabClick(name) {
@@ -89,6 +96,7 @@ export function handleFilmTabClick(name) {
     window.history.pushState("", "", newUrl);
     setActiveFilmTab(name);
   }
+  return;
 }
 
 // Game submenu
@@ -96,6 +104,7 @@ export const gameActiveTab = writable("sound_design");
 
 export function setActiveGameTab(name) {
   gameActiveTab.set(name);
+  return;
 }
 
 export function handleGameTabClick(name) {
@@ -105,6 +114,7 @@ export function handleGameTabClick(name) {
     window.history.pushState("", "", newUrl);
     setActiveGameTab(name);
   }
+  return;
 }
 
 // Branding submenu
@@ -112,6 +122,7 @@ export const brandingActiveTab = writable("sonic_logo");
 
 export function setActiveBrandingTab(name) {
   brandingActiveTab.set(name);
+  return;
 }
 
 export function handleBrandingTabClick(name) {
@@ -121,6 +132,7 @@ export function handleBrandingTabClick(name) {
     window.history.pushState("", "", newUrl);
     setActiveBrandingTab(name);
   }
+  return;
 }
 
 // Work modal pages handling
@@ -133,6 +145,7 @@ export function setWorkModalActive(name) {
   } else {
     document.body.classList.remove("body-is-not-visible");
   }
+  return;
 }
 
 export function handleWorkModalClick(name) {
@@ -141,12 +154,14 @@ export function handleWorkModalClick(name) {
     window.history.pushState("", "", newUrl);
     setWorkModalActive(name);
   }
+  return;
 }
 
 export function resetWorkModalActive() {
   const newUrl = `${window.location.pathname}`;
   window.history.pushState("", "", newUrl);
   setWorkModalActive("");
+  return;
 }
 
 // Equipment page tab handling
@@ -154,6 +169,7 @@ export const equipmentActiveTab = writable("");
 
 export function setActiveEquipmentTab(name) {
   equipmentActiveTab.set(name);
+  return;
 }
 
 export function handleEquipmentTabClick(name) {
@@ -162,6 +178,7 @@ export function handleEquipmentTabClick(name) {
     window.history.pushState("", "", newUrl);
     setActiveEquipmentTab(name);
   }
+  return;
 }
 
 // About us page handling
@@ -169,10 +186,12 @@ export const aboutUsActiveItem = writable("");
 
 export function setAboutUsActiveItem(name) {
   aboutUsActiveItem.set(name);
+  return;
 }
 
 export function handleAboutUsItemClick(name) {
   const newUrl = `${window.location.pathname}?name=${name}`;
   window.history.pushState("", "", newUrl);
   setAboutUsActiveItem(name);
+  return;
 }

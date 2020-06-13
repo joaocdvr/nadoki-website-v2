@@ -23,28 +23,33 @@ export function focusOnlyWhenNeeded() {
   }
 
   window.addEventListener("keydown", handleFirstTab);
+  return;
 }
 
 // Function that listens and updates mobile vh
 export function updateVHVariable() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
+  return;
 }
 
 // Functions that save/restore/rest scroll Y position
 export function saveScrollYPosition() {
   scrollYPosition.set(window.scrollY);
+  return;
 }
 
 export function restoreScrollYPosition() {
   const currentYPosition = get(scrollYPosition);
   setTimeout(() => window.scroll(0, currentYPosition), 0);
   scrollYPosition.set(0);
+  return;
 }
 
 export function resetScrollYPosition() {
   setTimeout(() => window.scroll(0, 0), 0);
   scrollYPosition.set(0);
+  return;
 }
 
 // Function that animates SVGs
@@ -87,4 +92,5 @@ export function handleSVGAnimation(name, page, param, goalParam) {
     }
   }
   setTimeout(() => animate(), 0);
+  return;
 }

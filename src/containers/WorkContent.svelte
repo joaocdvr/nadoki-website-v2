@@ -29,6 +29,7 @@
       } else {
         setWorkModalActive("");
       }
+      return;
     });
   });
 

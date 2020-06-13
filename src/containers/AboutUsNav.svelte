@@ -28,7 +28,7 @@
         setAboutUsActiveItem(nameParam);
       } else {
         setAboutUsActiveItem("");
-      }
+      } return;
     });
   });
 

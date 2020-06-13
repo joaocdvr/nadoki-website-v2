@@ -13,6 +13,7 @@
       restoreScrollYPosition();
     }
     toggleIsMenuClicked();
+    return;
   }
 </script>
 

@@ -78,8 +78,8 @@
         }
       } else {
         setServicesModalActive("");
-        return;
       }
+      return;
     });
   });
 

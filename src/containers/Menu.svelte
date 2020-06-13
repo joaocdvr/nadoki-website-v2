@@ -10,6 +10,7 @@
   function handleMenuOptionsClick() {
     restoreScrollYPosition();
     toggleIsMenuClicked();
+    return;
   }
 </script>
 

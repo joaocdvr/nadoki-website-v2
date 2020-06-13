@@ -20,12 +20,6 @@
   p {
     margin: 1rem auto;
   }
-
-  @media (--mobile-landscape) {
-    h1 {
-      font-size: 4rem;
-    }
-  }
 </style>
 
 <svelte:head>
