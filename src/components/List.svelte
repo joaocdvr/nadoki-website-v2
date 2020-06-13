@@ -147,7 +147,7 @@
 
 <dl
   class:item-is-clicked={listItem.open}
-  in:fade={{ delay: $animationInDelay + i * 50, duration: $animationInDuration, easing: $animationInEasing }}
+  in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
   <button
     on:click
