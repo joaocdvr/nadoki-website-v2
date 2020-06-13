@@ -75,7 +75,7 @@ export function handleSVGAnimation(name, page, param, goalParam) {
           oy + 4 * Math.sin(x / 12 + offset),
           oy,
         ]);
-        offset += 0.1;
+        offset += 0.025;
         setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
       } else {
         mapping[goalParam] = false;
