@@ -15,7 +15,7 @@
       const selectedButton = document.getElementsByClassName(
         "button-is-selected"
       );
-      const buttonBounds = button[0].getBoundingClientRect();
+      const buttonBounds = selectedButton[0].getBoundingClientRect();
 
       servicesMenu[0].scrollTo(
         buttonBounds.left +
