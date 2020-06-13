@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import {
     animationInDelay,
@@ -7,6 +8,24 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
+
+  onMount(() => {
+    if (window.screen.width < 768) {
+      const servicesMenu = document.getElementsByClassName("services-tab-menu");
+      const selectedButton = document.getElementsByClassName(
+        "button-is-selected"
+      );
+      const buttonBounds = button[0].getBoundingClientRect();
+
+      servicesMenu[0].scrollTo(
+        buttonBounds.left +
+          servicesMenu[0].scrollLeft -
+          24 -
+          window.screen.width,
+        0
+      );
+    }
+  });
 
   export let tab = [];
   export let delay = 0;
@@ -18,8 +37,6 @@
       const servicesModal = document.getElementById("services-modal");
       if (servicesModal.scrollTop > 128) {
         servicesModal.scrollTop = 128;
-      } else {
-        return;
       }
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");

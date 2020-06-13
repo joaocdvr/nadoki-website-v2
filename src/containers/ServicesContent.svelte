@@ -49,8 +49,6 @@
       } else if (nameParam === "branding" && brandingTabs.includes(typeParam)) {
         setActiveBrandingTab(typeParam);
         handleServicesModalClick(nameParam, typeParam);
-      } else {
-        return;
       }
     }
 
