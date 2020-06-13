@@ -10,7 +10,10 @@
   } from "../utensils/stores.js";
 
   onMount(() => {
-    if (window.screen.width < 768) {
+    if (
+      window.screen.width < 768 &&
+      document.location.pathname === "services"
+    ) {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const selectedButton = document.getElementsByClassName(
         "button-is-selected"
