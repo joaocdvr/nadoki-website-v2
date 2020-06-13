@@ -12,10 +12,11 @@
     setActivePage,
     activePage
   } from "../utensils/stores.js";
-  import { handleSVGAnimation } from "../utensils/utils.js";
+  import { handleSVGAnimation, updateVHVariable } from "../utensils/utils.js";
   import Footer from "../components/Footer.svelte";
 
   onMount(() => {
+    updateVHVariable();
     if (get(activePage) !== "") {
       setActivePage("");
     }

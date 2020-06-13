@@ -1,22 +1,16 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
+  import { isMenuClicked } from "../utensils/stores.js";
   import {
     focusOnlyWhenNeeded,
-    resetScrollYPosition,
-    updateVHVariable
+    resetScrollYPosition
   } from "../utensils/utils.js";
-  import { isMenuClicked } from "../utensils/stores.js";
   import Styles from "../utensils/Styles.svelte";
   import NavBar from "../containers/NavBar.svelte";
 
   onMount(() => {
     focusOnlyWhenNeeded();
-    updateVHVariable();
     setTimeout(() => resetScrollYPosition(), 300);
-  });
-
-  afterUpdate(() => {
-    updateVHVariable();
   });
 </script>
 
