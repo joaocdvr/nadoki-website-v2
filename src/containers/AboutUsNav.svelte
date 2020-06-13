@@ -42,6 +42,17 @@
   const aboutUsSubpages = ["alper", "elia", "joao", "julia"];
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
+
+  function handleClick(event, callback) {
+    callback;
+    if (window.screen.width >= 768) {
+      const scrollYPosition = window.scrollY;
+      if (scrollYPosition > 128) {
+        window.scrollTo(0, 128);
+      }
+    }
+    return;
+  }
 </script>
 
 <style>
@@ -98,6 +109,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: 0.5rem;
+    pointer-events: none;
   }
 
   @media (--max-content-width) {
@@ -109,6 +121,7 @@
   h2 {
     position: relative;
     z-index: 1;
+    pointer-events: none;
   }
 
   /* Animation */
@@ -191,6 +204,7 @@
     transform: translate(-50%, -50%);
     height: 80%;
     max-width: 100%;
+    pointer-events: none;
   }
 
   @media (--max-content-width) {
@@ -207,7 +221,7 @@
   <button
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'alper'}
-    on:click={() => handleAboutUsItemClick('alper')}
+    on:click={event => handleClick(event, handleAboutUsItemClick('alper'))}
     aria-label="Toggle Alper Arslan's details"
     aria-pressed={$aboutUsActiveItem === 'alper'}>
 
@@ -232,7 +246,7 @@
   <button
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'elia'}
-    on:click={() => handleAboutUsItemClick('elia')}
+    on:click={event => handleClick(event, handleAboutUsItemClick('elia'))}
     aria-label="Toggle Elia Bertolaso's details"
     aria-pressed={$aboutUsActiveItem === 'elia'}>
 
@@ -257,7 +271,7 @@
   <button
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'joao'}
-    on:click={() => handleAboutUsItemClick('joao')}
+    on:click={event => handleClick(event, handleAboutUsItemClick('joao'))}
     aria-label="Toggle João Rodrigues's details"
     aria-pressed={$aboutUsActiveItem === 'joao'}>
 
@@ -282,7 +296,7 @@
   <button
     class:button-open={isAnyAboutUsItemActive}
     class:selected-button={$aboutUsActiveItem === 'julia'}
-    on:click={() => handleAboutUsItemClick('julia')}
+    on:click={event => handleClick(event, handleAboutUsItemClick('julia'))}
     aria-label="Toggle Julia Borelli's details"
     aria-pressed={$aboutUsActiveItem === 'julia'}>
 

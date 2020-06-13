@@ -322,6 +322,7 @@
     {#if isAnyAboutUsItemActive}
       <div
         class="personal-page-wrapper"
+        id="about-us-modal"
         in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
         out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
         {#if $aboutUsActiveItem === 'alper'}
