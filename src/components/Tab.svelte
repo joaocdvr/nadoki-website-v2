@@ -10,7 +10,7 @@
   } from "../utensils/stores.js";
 
   onMount(() => {
-    if (window.screen.width < 768 && variant === "services") {
+    if (window.innerWidth < 768 && variant === "services") {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const selectedButton = document.getElementsByClassName(
         "button-is-selected"
@@ -22,7 +22,7 @@
           buttonBounds.left +
           servicesMenu[0].scrollLeft -
           24 -
-          window.screen.width,
+          window.innerWidth,
         behavior: "smooth"
       });
     }
