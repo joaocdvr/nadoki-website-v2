@@ -12,7 +12,7 @@
   onMount(() => {
     if (
       window.screen.width < 768 &&
-      document.location.pathname === "services"
+      document.location.pathname === "/services"
     ) {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const selectedButton = document.getElementsByClassName(
@@ -39,15 +39,23 @@
     if (window.screen.width >= 768) {
       const servicesModal = document.getElementById("services-modal");
       if (servicesModal.scrollTop > 128) {
-        servicesModal.scrollTop = 130;
+        // servicesModal.scrollTop = 130;
+        servicesModal.scrollTo({
+          top: 130,
+          behavior: "smooth"
+        });
       }
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const buttonBounds = event.target.getBoundingClientRect();
-      servicesMenu[0].scrollTo(
-        buttonBounds.left + servicesMenu[0].scrollLeft - 24,
-        0
-      );
+      // servicesMenu[0].scrollTo(
+      //   buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+      //   0
+      // );
+      servicesMenu[0].scrollTo({
+        left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+        behavior: "smooth"
+      });
     }
   }
 </script>
