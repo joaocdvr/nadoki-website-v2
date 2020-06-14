@@ -234,9 +234,7 @@
     height: 100vh;
     overflow-y: auto;
     z-index: 2;
-    backface-visibility: hidden;
     transition: left 300ms ease-in-out;
-    backface-visibility: hidden;
   }
 
   .modal-is-visible {

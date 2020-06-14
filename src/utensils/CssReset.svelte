@@ -7,6 +7,8 @@
     font: inherit;
     vertical-align: baseline;
     max-width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   :global(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
     display: block;

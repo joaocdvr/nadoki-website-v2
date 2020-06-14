@@ -39,8 +39,6 @@
     position: absolute;
     z-index: -1;
     background-color: var(--dark);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     width: 100vw;
     height: 4.5rem;
     top: 0;
@@ -68,8 +66,6 @@
     position: absolute;
     z-index: -1;
     background-color: var(--dark);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     width: 100vw;
     height: 100vh;
     top: -100vh;
