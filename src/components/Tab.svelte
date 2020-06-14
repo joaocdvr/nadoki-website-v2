@@ -20,21 +20,13 @@
       );
       const buttonBounds = selectedButton[0].getBoundingClientRect();
 
-      // servicesMenu[0].scrollTo(
-      //   buttonBounds.left +
-      //     servicesMenu[0].scrollLeft -
-      //     24 -
-      //     window.screen.width,
-      //   0
-      // );
-      servicesMenu[0].scrollTo({
-        left:
-          buttonBounds.left +
+      servicesMenu[0].scrollTo(
+        buttonBounds.left +
           servicesMenu[0].scrollLeft -
           24 -
           window.screen.width,
-        behavior: "smooth"
-      });
+        0
+      );
     }
   });
 
@@ -47,23 +39,16 @@
     if (window.screen.width >= 768) {
       const servicesModal = document.getElementById("services-modal");
       if (servicesModal.scrollTop > 128) {
-        // servicesModal.scrollTop = 130;
-        servicesModal.scrollTo({
-          top: 130,
-          behavior: "smooth"
-        });
+        servicesModal.scrollTop = 130;
       }
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const buttonBounds = event.target.getBoundingClientRect();
-      // servicesMenu[0].scrollTo(
-      //   buttonBounds.left + servicesMenu[0].scrollLeft - 24,
-      //   0
-      // );
-      servicesMenu[0].scrollTo({
-        left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
-        behavior: "smooth"
-      });
+
+      servicesMenu[0].scrollTo(
+        buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+        0
+      );
     }
   }
 </script>
