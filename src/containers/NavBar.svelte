@@ -43,11 +43,10 @@
     height: 4.5rem;
     top: 0;
     right: -100vw;
-    -webkit-transition: -webkit-transform 500ms ease;
-    -moz-transition: transform 500ms ease;
-    -o-transition: transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    -moz-transition: transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
     transition-delay: 500ms;
   }
 
@@ -70,11 +69,10 @@
     height: 100vh;
     top: -100vh;
     left: 0;
-    -webkit-transition: -webkit-transform 500ms ease;
-    -moz-transition: transform 500ms ease;
-    -o-transition: transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    -moz-transition: transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
   }
 
   .menu-bg-is-activated {
