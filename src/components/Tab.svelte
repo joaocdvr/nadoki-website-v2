@@ -17,13 +17,6 @@
       );
       const buttonBounds = selectedButton[0].getBoundingClientRect();
 
-      // servicesMenu[0].scrollTo(
-      //   buttonBounds.left +
-      //     servicesMenu[0].scrollLeft -
-      //     24 -
-      //     window.screen.width,
-      //   0
-      // );
       servicesMenu[0].scrollTo({
         left:
           buttonBounds.left +
@@ -49,10 +42,7 @@
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const buttonBounds = event.target.getBoundingClientRect();
-      // servicesMenu[0].scrollTo(
-      //   buttonBounds.left + servicesMenu[0].scrollLeft - 24,
-      //   0
-      // );
+
       servicesMenu[0].scrollTo({
         left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
         behavior: "smooth"
