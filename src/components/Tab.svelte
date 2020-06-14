@@ -20,7 +20,7 @@
 
       if (menuBounds.left === 0) {
         servicesMenu[0].scrollTo({
-          left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+          left: buttonBounds.left - 24,
           behavior: "smooth"
         });
       } else {
