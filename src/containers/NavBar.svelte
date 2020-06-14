@@ -13,7 +13,6 @@
     z-index: 1;
     width: 100vw;
     background-color: var(--light);
-    backface-visibility: hidden;
     border-bottom: 0.125rem solid var(--dark);
     text-align: center;
   }
@@ -26,6 +25,7 @@
 
   @media (--max-content-width) {
     nav > div:first-child {
+      -webkit-transform: translateZ(0);
       -webkit-transform: translateX(calc(50vw - var(--max-width) / 2));
       -moz-transform: translateX(calc(50vw - var(--max-width) / 2));
       -ms-transform: translateX(calc(50vw - var(--max-width) / 2));
@@ -39,6 +39,8 @@
     position: absolute;
     z-index: -1;
     background-color: var(--dark);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     width: 100vw;
     height: 4.5rem;
     top: 0;
@@ -52,6 +54,7 @@
   }
 
   .nav-bg-is-activated {
+    -webkit-transform: translateZ(0);
     -webkit-transform: translateX(-100vw);
     -moz-transform: translateX(-100vw);
     -ms-transform: translateX(-100vw);
@@ -65,6 +68,8 @@
     position: absolute;
     z-index: -1;
     background-color: var(--dark);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     width: 100vw;
     height: 100vh;
     top: -100vh;
@@ -77,6 +82,7 @@
   }
 
   .menu-bg-is-activated {
+    -webkit-transform: translateZ(0);
     -webkit-transform: translateY(100vh);
     -moz-transform: translateY(100vh);
     -ms-transform: translateY(100vh);
