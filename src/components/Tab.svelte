@@ -16,15 +16,23 @@
         "button-is-selected"
       );
       const buttonBounds = selectedButton[0].getBoundingClientRect();
+      const menuBounds = servicesMenu[0].getBoundingClientRect();
 
-      servicesMenu[0].scrollTo({
-        left:
-          buttonBounds.left +
-          servicesMenu[0].scrollLeft -
-          24 -
-          window.innerWidth,
-        behavior: "smooth"
-      });
+      if (menuBounds.left === 0) {
+        servicesMenu[0].scrollTo({
+          left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+          behavior: "smooth"
+        });
+      } else {
+        servicesMenu[0].scrollTo({
+          left:
+            buttonBounds.left +
+            servicesMenu[0].scrollLeft -
+            24 -
+            window.innerWidth,
+          behavior: "smooth"
+        });
+      }
     }
   });
 
