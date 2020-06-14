@@ -20,13 +20,21 @@
       );
       const buttonBounds = selectedButton[0].getBoundingClientRect();
 
-      servicesMenu[0].scrollTo(
-        buttonBounds.left +
+      // servicesMenu[0].scrollTo(
+      //   buttonBounds.left +
+      //     servicesMenu[0].scrollLeft -
+      //     24 -
+      //     window.screen.width,
+      //   0
+      // );
+      servicesMenu[0].scrollTo({
+        left:
+          buttonBounds.left +
           servicesMenu[0].scrollLeft -
           24 -
           window.screen.width,
-        0
-      );
+        behavior: "smooth"
+      });
     }
   });
 
