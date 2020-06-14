@@ -26,6 +26,10 @@
 
   @media (--max-content-width) {
     nav > div:first-child {
+      -webkit-transform: translateX(calc(50vw - var(--max-width) / 2));
+      -moz-transform: translateX(calc(50vw - var(--max-width) / 2));
+      -ms-transform: translateX(calc(50vw - var(--max-width) / 2));
+      -o-transform: translateX(calc(50vw - var(--max-width) / 2));
       transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
@@ -39,11 +43,19 @@
     height: 4.5rem;
     top: 0;
     right: -100vw;
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: transform 500ms ease;
+    -o-transition: transform 500ms ease;
+    transition: transform 500ms ease;
     transition: transform 500ms ease;
     transition-delay: 500ms;
   }
 
   .nav-bg-is-activated {
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
     transform: translateX(-100vw);
     transition-delay: 0s;
   }
@@ -57,10 +69,18 @@
     height: 100vh;
     top: -100vh;
     left: 0;
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: transform 500ms ease;
+    -o-transition: transform 500ms ease;
+    transition: transform 500ms ease;
     transition: transform 500ms ease;
   }
 
   .menu-bg-is-activated {
+    -webkit-transform: translateY(100vh);
+    -moz-transform: translateY(100vh);
+    -ms-transform: translateY(100vh);
+    -o-transform: translateY(100vh);
     transform: translateY(100vh);
     transition-delay: 500ms;
   }
