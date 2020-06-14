@@ -10,23 +10,28 @@
   } from "../utensils/stores.js";
 
   onMount(() => {
-    if (
-      window.screen.width < 768 &&
-      document.location.pathname === "/services"
-    ) {
+    if (window.screen.width < 768 && variant === "services") {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const selectedButton = document.getElementsByClassName(
         "button-is-selected"
       );
       const buttonBounds = selectedButton[0].getBoundingClientRect();
 
-      servicesMenu[0].scrollTo(
-        buttonBounds.left +
+      // servicesMenu[0].scrollTo(
+      //   buttonBounds.left +
+      //     servicesMenu[0].scrollLeft -
+      //     24 -
+      //     window.screen.width,
+      //   0
+      // );
+      servicesMenu[0].scrollTo({
+        left:
+          buttonBounds.left +
           servicesMenu[0].scrollLeft -
           24 -
           window.screen.width,
-        0
-      );
+        behavior: "smooth"
+      });
     }
   });
 
@@ -44,11 +49,14 @@
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const buttonBounds = event.target.getBoundingClientRect();
-
-      servicesMenu[0].scrollTo(
-        buttonBounds.left + servicesMenu[0].scrollLeft - 24,
-        0
-      );
+      // servicesMenu[0].scrollTo(
+      //   buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+      //   0
+      // );
+      servicesMenu[0].scrollTo({
+        left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+        behavior: "smooth"
+      });
     }
   }
 </script>
