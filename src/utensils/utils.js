@@ -35,9 +35,14 @@ export function updateVHVariable() {
 
 // Functions that save/restore/rest scroll Y position
 export function saveScrollYPosition() {
-  scrollYPosition.set(
-    window.scrollY + document.documentElement.clientHeight - window.innerHeight
-  );
+  const mobileHeightDifference =
+    document.documentElement.clientHeight - window.innerHeight;
+
+  if (get(scrollYPosition) !== window.scrollY) {
+    scrollYPosition.set(window.scrollY - mobileHeightDifference);
+  } else {
+    return;
+  }
   return;
 }
 
