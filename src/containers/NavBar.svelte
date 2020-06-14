@@ -66,7 +66,9 @@
     z-index: -1;
     background-color: var(--dark);
     width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
+    max-height: 100vh;
     top: -100vh;
     left: 0;
     -webkit-transition: -webkit-transform 500ms ease;
