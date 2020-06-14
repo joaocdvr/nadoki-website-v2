@@ -18,7 +18,7 @@
   /* Hides scrollbar */
   .menu-is-open {
     overflow: hidden;
-    max-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
 </style>
 
