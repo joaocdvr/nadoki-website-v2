@@ -3,15 +3,13 @@
   import { isMenuClicked } from "../utensils/stores.js";
   import {
     focusOnlyWhenNeeded,
-    resetScrollYPosition,
-    updateVHVariable
+    resetScrollYPosition
   } from "../utensils/utils.js";
   import Styles from "../utensils/Styles.svelte";
   import NavBar from "../containers/NavBar.svelte";
 
   onMount(() => {
     focusOnlyWhenNeeded();
-    updateVHVariable();
     setTimeout(() => resetScrollYPosition(), 300);
   });
 </script>
