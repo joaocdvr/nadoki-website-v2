@@ -61,7 +61,7 @@
           ),
         0
       );
-    } 
+    }
   });
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem;
@@ -732,7 +732,9 @@
 
               <li>
                 <dt class="body-bold">Interests</dt>
-                <dd class="body-regular">Games, sound design & web design.</dd>
+                <dd class="body-regular">
+                  Games, sound design/music & web design.
+                </dd>
               </li>
 
               <li>
@@ -749,7 +751,7 @@
               <li>
                 <dt class="body-bold">About me</dt>
                 <dd class="body-regular">
-                  Gamer since Game Boy Color. Ocasional spearfisher. Retired
+                  Gamer since Game Boy Color. Occasional spearfisher. Retired
                   double bassist.
                 </dd>
               </li>
@@ -886,7 +888,7 @@
 
               <li>
                 <dt class="body-bold">Interests</dt>
-                <dd class="body-regular">Technology, music, & Netflix.</dd>
+                <dd class="body-regular">Technology, music & space.</dd>
               </li>
 
               <li>
