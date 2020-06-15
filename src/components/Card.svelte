@@ -129,12 +129,6 @@
   a {
     display: inline-block;
   }
-
-  @media (--max-content-width) {
-    .body-bold {
-      font-size: 1rem;
-    }
-  }
 </style>
 
 <ul class:work-cards={variant === 'work'}>
