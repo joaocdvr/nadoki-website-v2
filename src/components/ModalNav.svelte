@@ -7,6 +7,7 @@
     animationOutDuration,
     animationOutEasing
   } from "../utensils/stores.js";
+
   export let title = "";
 </script>
 
