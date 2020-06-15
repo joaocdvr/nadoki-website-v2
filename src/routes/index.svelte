@@ -149,14 +149,14 @@
     <p class="body-extra">MUSIC STUDIO</p>
 
     <p class="body-bold">
-      We provide a wide-range of
-      <a href="/services" aria-label="Services page" underlined>services</a>
-      for all your multimedia needs. Check out our
+      We provide a wide-range of multimedia
+      <a href="/services" aria-label="Services page" underlined>services.</a>
+      Check out our
       <a href="/work" aria-label="Work page" underlined>work,</a>
       our state of the art
       <a href="/studio" aria-label="Studio page" underlined>studio</a>
       and
-      <a href="/equipment" aria-label="Equipment page" underlined>equipment</a>
+      <a href="/equipment" aria-label="Equipment page" underlined>equipment,</a>
       or read more
       <a href="/about_us" aria-label="About Us page" underlined>about us</a>
       .
