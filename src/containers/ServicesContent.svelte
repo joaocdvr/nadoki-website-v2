@@ -277,7 +277,8 @@
     margin-top: 0;
   }
 
-  .body-small + .body-regular {
+  .body-small + .body-regular,
+  .no-description + .body-regular {
     margin-top: 0.5rem;
   }
 
@@ -382,15 +383,16 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  labeled multitrack separated track by track and in the highest
-                  quality possible according to your session, preferably 44.1kHz
-                  or 88.2 kHz sample rate and 24 or 32 bit depth.
+                  labeled multitrack, separated track by track. Be sure to sem
+                  them in the highest quality possible according to your
+                  session, preferably 44.1kHz or 88.2 kHz sample rate and 24 or
+                  32 bit depth.
                 </p>
 
                 <p class="body-regular">
                   Please make sure to send us the correct version of the tracks.
-                  Tracks that are being handed in later, will be charged
-                  according to the pricelist.
+                  Tracks that are handed in later will be charged according to
+                  the pricelist.
                 </p>
               </li>
 
@@ -399,25 +401,25 @@
                 <p class="body-regular">— Starting at &rArr; 300 EUR/track</p>
                 <p class="body-small">
                   Includes three stereo exports: wav 24-bit, wav 16-bit, and
-                  FLAC. Up to two revisions included as well.
+                  FLAC. Up to two revisions included.
                 </p>
                 <p class="body-regular">
                   — Multitrack export starting at &rArr; +35 EUR
                 </p>
                 <p class="body-small">
-                  We will export your track in whatever way is more useful to
+                  We will export your track in whatever way is most useful to
                   you.
                 </p>
                 <p class="body-regular">— Tape finalization &rArr; +50 EUR</p>
                 <p class="body-small">
-                  We will process the final mix with tape machine.
+                  We will process the final mix with a tape machine.
                 </p>
                 <p class="body-regular">
                   — Editing/Restoration &rArr; +35 EUR/hour
                 </p>
                 <p class="body-small">
-                  If your recording is noisy or/and you have pitch/timing
-                  issues, we fix it.
+                  If your recording is noisy and/or you have pitch/timing
+                  issues, we will fix it.
                 </p>
                 <p class="body-regular">
                   — Tracks submitted later &rArr; +35 EUR/hour
@@ -472,20 +474,20 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  mixdown in the highest quality possible according to your
-                  session, preferably 44.1kHz or 88.2 kHz sample rate and 32 bit
-                  depth (or 24bit if you’re using Logic).
+                  mixdown in the highest quality according to your session,
+                  preferably 44.1kHz or 88.2 kHz sample rate and 32 bit depth
+                  (or 24bit if you’re using Logic).
                 </p>
 
                 <p class="body-regular">
                   Please make sure to send us the correct version of the
-                  mixdown. Tracks that are being handed in later, will be
-                  charged accordingly.
+                  mixdown. Tracks that are handed in later will be charged
+                  accordingly.
                 </p>
 
                 <p class="body-regular">
                   If a DDP export is desired, please make sure to include the
-                  Catalogue number, track listing, the ISRC code (optional) and
+                  catalogue number, track listing, the ISRC code (optional) and
                   CD Text (optional).
                 </p>
               </li>
@@ -495,17 +497,15 @@
                 <p class="body-regular">— Starting at &rArr; 60 EUR/track</p>
                 <p class="body-small">
                   Includes three stereo exports: wav 24-bit, wav 16-bit, and
-                  FLAC. Up to two revisions included as well.
+                  FLAC. Up to two revisions included.
                 </p>
-                <p class="body-regular">— Stem mastering &rArr; +70 EUR</p>
-                <p class="body-small">
-                  This gives us more options since we will be able process each
-                  individual stem differently.
+                <p class="body-regular no-description">
+                  — Stem mastering &rArr; +70 EUR
                 </p>
 
                 <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
                 <p class="body-small">
-                  We will process the final mix with tape machine.
+                  We will process the final mix with a tape machine.
                 </p>
                 <p class="body-regular">
                   — Tracks submitted later &rArr; +35 EUR/hour
@@ -516,7 +516,7 @@
                 </p>
                 <p class="body-regular">— DDP Export &rArr; +50 EUR</p>
                 <p class="body-small">
-                  We will need the Catalogue number, track listing, the ISRC
+                  We will need the catalogue number, track listing, the ISRC
                   code (optional) and CD Text (optional).
                 </p>
                 <p class="body-regular">— Mastered for iTunes &rArr; +10 EUR</p>
@@ -561,13 +561,13 @@
 
                 <p class="body-regular">
                   A selection of industry-standard microphones from brands like
-                  Neumann, Shure, and AKG are available to use. And if desired,
+                  Neumann, Shure, and AKG are available to use. If desired,
                   other microphones are available upon request.
                   <a
                     on:click={() => document.body.classList.remove('body-is-not-visible')}
                     href="/equipment"
                     aria-label="Equipment page">
-                    Check our gear.
+                    Check out our gear.
                   </a>
                 </p>
               </li>
@@ -579,17 +579,14 @@
                 </p>
                 <p class="body-small">
                   Includes our control room, where a vocalist or single
-                  instrument can be recorded, along with engineer and equipment.
+                  instrument can be recorded, along with engineering and
+                  equipment.
                 </p>
-                <p class="body-regular">— Studio 10 &rArr; +100 EUR</p>
-                <p class="body-small">
-                  Grants access to the Studio 10, perfect for overdub
-                  recordings.
+                <p class="body-regular no-description">
+                  — Studio 10 &rArr; +100 EUR
                 </p>
-                <p class="body-regular">— The Lab &rArr; +200 EUR</p>
-                <p class="body-small">
-                  Grants access to The Lab, perfect for bigger projects like
-                  recording a full live band.
+                <p class="body-regular no-description">
+                  — The Lab &rArr; +200 EUR
                 </p>
                 <p class="body-regular reach-out">
                   <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
@@ -607,18 +604,17 @@
                 <h2 class="body-bold">Editing</h2>
 
                 <p class="body-regular">
-                  We offer music editing services, including timing or pitching,
-                  for monophonic or polyphonic instruments.
+                  We offer music editing services, including timing and
+                  pitching, for monophonic or polyphonic instruments.
                 </p>
 
                 <h2 class="body-bold">Restoration</h2>
 
                 <p class="body-regular">
-                  Using every tool at our disposal, we clean, fix and restore
-                  your audio recordings. Some of the most common issues we take
-                  care of are pops, clicks, hum, hiss, crackle, among other
-                  noises and artifacts, as well as the removal of clipping of an
-                  audio file.
+                  Using every tool at our disposal, we clean, fix, and restore
+                  your audio recordings. Common issues we solve: pops, clicks,
+                  hum, hiss, crackle, among other noises and artifacts. We also
+                  remove clippings from audio files.
                 </p>
               </li>
 
@@ -626,9 +622,9 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  audio files in the highest quality possible according to your
-                  session, preferably 44.1kHz or 88.2 kHz sample rate and 32 bit
-                  depth (or 24bit if you’re using Logic).
+                  mixdown in the highest quality according to your session,
+                  preferably 44.1kHz or 88.2 kHz sample rate and 32 bit depth
+                  (or 24bit if you’re using Logic).
                 </p>
               </li>
 
@@ -644,7 +640,7 @@
                     send us
                   </a>
                   the audio files to get a price estimate. Please make sure your
-                  files are according to our requirements.
+                  files follow our requirements.
                 </p>
               </li>
             </ul>
@@ -658,15 +654,15 @@
                 <h2 class="body-bold">Production</h2>
 
                 <p class="body-regular">
-                  We offer music production services in the genres of
+                  We offer music production services for the genres of
                   hip-hop/trap, pop, and electronic music.
                 </p>
 
                 <p class="body-regular">
                   Using the endless possibilities of an in-the-box approach,
-                  together with live instruments and synthesizers available in
-                  our setup and studio musicians, anything is possible. We are
-                  open to collaborations as well.
+                  alongside live instruments, synthesizers, and studio
+                  musicians, anything is possible. We are open to collaborations
+                  as well.
                 </p>
               </li>
 
@@ -699,10 +695,10 @@
                 <h2 class="body-bold">Re-recording Mixing</h2>
 
                 <p class="body-regular">
-                  We mix the audio of your film production, meaning: balancing
-                  all dialog, ADR, sound effects, music, atmospheres and foleys
-                  so that it enhances the project’s storytelling without
-                  distracting from it.
+                  We mix the audio of your film production to enhance your
+                  project's storytelling without distracting from it. We balance
+                  all dialog, ADR, sound effects, music, atmospheres, and
+                  foleys.
                 </p>
 
                 <p class="body-regular">
@@ -714,9 +710,9 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  audio files in the highest quality possible according to your
-                  session, preferably 48kHz or 96kHz sample rate and 24 or 32
-                  bit depth. Please export them as an OMF.
+                  audio files in the highest quality according to your session,
+                  preferably 48kHz or 96kHz sample rate and 24 or 32 bit depth.
+                  Please export them as an OMF.
                 </p>
               </li>
 
@@ -725,9 +721,9 @@
                 <p class="body-regular">
                   Project based. You can
                   <a target="_blank" href="mailto:info@nadoki.com">send us</a>
-                  a render of the video project together with the audio files to
-                  get a price estimate. Please make sure they are according to
-                  our requirements.
+                  a render of the video project along with the audio files to
+                  get a price estimate. Please make sure your files follow our
+                  requirements.
                 </p>
               </li>
             </ul>
@@ -748,9 +744,10 @@
                 <h2 class="body-bold">Restoration</h2>
 
                 <p class="body-regular">
-                  We also clean, fix and restore your audio recordings. Anything
-                  from removing pops, clicks, hum, hiss, crackle, among other
-                  noises, to restoring clipped samples from your audio files.
+                  Using every tool at our disposal, we clean, fix, and restore
+                  your audio recordings. Common issues we solve: pops, clicks,
+                  hum, hiss, crackle, among other noises and artifacts. We also
+                  remove clippings from audio files.
                 </p>
               </li>
 
@@ -758,9 +755,8 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  audio files in the highest quality possible according to your
-                  session, preferably 48kHz or 96kHz sample rate and 24 or 32
-                  bit depth.
+                  audio files in the highest quality according to your session,
+                  preferably 48kHz or 96kHz sample rate and 24 or 32 bit depth.
                 </p>
 
                 <p class="body-regular">
@@ -780,8 +776,8 @@
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
                   </a>
-                  the audio files to get a price estimate. Please make sure they
-                  are according to our requirements.
+                  the audio files to get a price estimate. Please make sure your
+                  files follow our requirements.
                 </p>
               </li>
             </ul>
@@ -807,8 +803,8 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  with the scope of the project, including duration, references,
-                  and description for a price estimate.
+                  with the scope of the project. Please include duration,
+                  references, and description for a price estimate.
                 </p>
               </li>
             </ul>
@@ -824,8 +820,8 @@
                 <p class="body-regular">
                   We compose and produce a tailored music score to accompany
                   your film production. Using our hybrid setup, in-the-box
-                  tools, as well as live instruments and synthesizers to create
-                  the music that fits your movie.
+                  tools, live instruments, and synthesizers, we create music
+                  that fits your movie.
                 </p>
               </li>
 
@@ -860,8 +856,8 @@
 
                 <p class="body-regular">
                   The multiplicity and variety of possibilities in sound
-                  composition in a game not only allow the creation of
-                  atmospheres and emotions, but also sets the tone of it.
+                  composition in a game not only allows the creation of
+                  atmospheres and emotions, but also sets the mood of it.
                 </p>
 
                 <p class="body-regular">
@@ -878,9 +874,9 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  with the scope of the project, including an approximation of
-                  how many sound effects you need, references, and description
-                  for a price estimate.
+                  with the scope of the project. Please include a description of
+                  the project, an approximation of how many sound effects you
+                  need, and references for a price estimate.
                 </p>
               </li>
             </ul>
@@ -895,8 +891,8 @@
 
                 <p class="body-regular">
                   We compose tailored music to enrich your game. With the
-                  unlimited possibilities of the in-the-box approach, together
-                  with analog instruments, we translate your game’s message into
+                  unlimited possibilities of the in-the-box approach along with
+                  analog instruments, we translate your game’s message into
                   music.
                 </p>
               </li>
@@ -907,9 +903,9 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  with the scope of the project, including how many songs you
-                  plan to have, references, and description for a price
-                  estimate.
+                  with the scope of the project. Please include a description of
+                  the project, an approximation of how many songs you plan to
+                  have, and references for a price estimate.
                 </p>
               </li>
             </ul>
@@ -926,14 +922,14 @@
                   The accuracy of sound integration to the environment of a game
                   has an important role in the immersion of the player. For the
                   finest interaction, precision in each moment of gameplay is
-                  crucial and making sure that all audio assets (music,
-                  ambience, dialogue, and sound effects) load smoothly, are
-                  triggered correctly, and playback in the highest quality at
-                  minimal processing power is key.
+                  crucial. Making sure that all audio assets (music, ambience,
+                  dialogue, and sound effects) load smoothly, are triggered
+                  correctly, and playback in the highest quality at minimal
+                  processing power is key.
                 </p>
 
                 <p class="body-regular">
-                  We use FMOD together with Unreal Engine or Unity to integrate
+                  We use FMOD along with Unreal Engine or Unity to integrate
                   both music and sound effects into game projects. In case you
                   have a proprietary engine
                   <a target="_blank" href="mailto:info@nadoki.com">
@@ -948,9 +944,9 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  with the scope of the project, including an approximation of
-                  how many files have to be implemented, references, and
-                  description for a price estimate.
+                  with the scope of the project. Please include a description of
+                  the project, an approximation of how many files need to be
+                  implemented, and references for a price estimate.
                 </p>
               </li>
             </ul>
@@ -964,8 +960,8 @@
                 <h2 class="body-bold">Mixing</h2>
 
                 <p class="body-regular">
-                  We offer mixing services for the sound of your game balancing
-                  all dialog, ADR, sound effects, music, atmospheres and foleys
+                  We offer mixing services for your game's sound. We balance all
+                  dialogue, ADR, sound effects, music, atmospheres, and foleys
                   for the best immersion of the player.
                 </p>
 
@@ -980,9 +976,10 @@
                   <a target="_blank" href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
-                  with the scope of the project, including an approximation of
-                  how many different sounds (be it music or sound effects) there
-                  are in the game, references for a price estimate.
+                  with the scope of the project. Please include a description of
+                  the project, approximation of how many different sounds (be it
+                  music or sound effects) there are in the game, and references
+                  for a price estimate.
                 </p>
               </li>
             </ul>
@@ -1013,7 +1010,7 @@
                 <p class="body-regular">
                   After a talk to understand the story and personality of your
                   brand, we will find your voice, and create a sonic logo
-                  customized for your company, to best translate your energy,
+                  customized for your company to best translate your energy,
                   message, and experience to your clients.
                 </p>
               </li>
@@ -1021,10 +1018,8 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
-                    Send us an email
-                  </a>
-                  to come up with a price estimate.
+                  <a target="_blank" href="mailto:info@nadoki.com">Email us</a>
+                  to talk about your project and a price estimate.
                 </p>
               </li>
             </ul>
@@ -1038,12 +1033,11 @@
                 <h2 class="body-bold">Podcast</h2>
 
                 <p class="body-regular">
-                  The fastest-growing media content for brands is used nowadays
-                  by several businesses to best connect with their customers at
-                  a personal level. Podcasts can be a key tool in the digital
-                  marketing strategy of your company to keep your clients
-                  connected to your brand and increase the reach and your
-                  participation with your community.
+                  Podcasts are the fastest-growing media content for brands
+                  nowadays to best connect with their customers at a personal
+                  level. They can be a key tool in your digital marketing
+                  strategy to increase customer reach and participation with
+                  your brand.
                 </p>
 
                 <p class="body-regular">
@@ -1055,11 +1049,8 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
-                    Send us an email
-                  </a>
-                  with the scope of the project, including duration, references,
-                  and description for a price estimate.
+                  <a target="_blank" href="mailto:info@nadoki.com">Email us</a>
+                  to talk about your project and a price estimate.
                 </p>
               </li>
             </ul>
@@ -1073,9 +1064,9 @@
                 <h2 class="body-bold">Post-Production for Ads</h2>
 
                 <p class="body-regular">
-                  Advertisements are around us every day. From radio spots to TV
-                  spots and now online streaming spots, it’s the most common
-                  advertising media.
+                  Advertisements are around us every day. From radio to TV spots
+                  and now even online streaming spots, the sounds in ads are
+                  more important now than ever.
                 </p>
 
                 <p class="body-regular">
@@ -1089,11 +1080,8 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
-                    Send us an email
-                  </a>
-                  with the scope of the project, including duration, references,
-                  and description for a price estimate.
+                  <a target="_blank" href="mailto:info@nadoki.com">Email us</a>
+                  to talk about your project and a price estimate.
                 </p>
               </li>
             </ul>
