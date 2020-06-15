@@ -64,7 +64,8 @@
     class="body-bold"
     href={button.href}
     aria-label={button.label}
-    target="_blank">
+    target="_blank"
+    rel="noopener">
     <span>
       <p>{button.text}</p>
     </span>

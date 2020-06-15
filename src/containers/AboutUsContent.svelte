@@ -356,6 +356,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Alper Arslan's Instagram page"
                       href="https://www.instagram.com/arslanofficial._">
                       <svg
@@ -392,6 +393,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Alper Arslan's LindedIn"
                       href="https://www.linkedin.com/in/nadokiarslan">
                       <svg
@@ -509,6 +511,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Elia Bertolaso's Instagram page"
                       href="https://www.instagram.com/eliabertolaso">
                       <svg
@@ -545,6 +548,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Elia Bertolaso's LindedIn"
                       href="https://www.linkedin.com/in/elia-bertolaso-97a807130">
                       <svg
@@ -660,6 +664,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="João Rodrigues' Instagram page"
                       href="https://www.instagram.com/joaocdvr">
                       <svg
@@ -696,6 +701,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="João Rodrigues' LindedIn"
                       href="https://www.linkedin.com/in/joaocdvr">
                       <svg
@@ -808,6 +814,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Julia Borelli's Instagram page"
                       href="https://www.instagram.com/juliaborelli">
                       <svg
@@ -844,6 +851,7 @@
                     <a
                       class="socials-a"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Julia Borelli's LindedIn"
                       href="https://www.linkedin.com/in/juliaborelli">
                       <svg

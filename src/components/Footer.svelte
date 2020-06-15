@@ -218,6 +218,7 @@
     <a
       class="body-extra email-a"
       target="_blank"
+      rel="noopener"
       aria-label="Nadoki's Email"
       href="mailto:info@nadoki.com">
       INFO@NADOKI.COM
@@ -230,6 +231,7 @@
       <p class="body-bold">
         <a
           target="_blank"
+          rel="noopener"
           aria-label="Nadoki's address"
           href="https://goo.gl/maps/gYojUUpPSQornBWh9">
           @
@@ -247,6 +249,7 @@
         <a
           class="socials-a"
           target="_blank"
+          rel="noopener"
           aria-label="Nadoki's Instagram page"
           href="https://www.instagram.com/nadokistudios">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -277,6 +280,7 @@
         <a
           class="socials-a"
           target="_blank"
+          rel="noopener"
           aria-label="Nadoki's Facebook page"
           href="https://www.facebook.com/nadokistudios">
           <svg viewBox="0 0 12 24" xmlns="http://www.w3.org/2000/svg">
@@ -291,6 +295,7 @@
         <a
           class="socials-a"
           target="_blank"
+          rel="noopener"
           aria-label="Nadoki's Messenger"
           href="https://www.m.me/nadokistudios">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -310,6 +315,7 @@
         <a
           class="socials-a"
           target="_blank"
+          rel="noopener"
           aria-label="Nadoki's WhatsApp"
           href="https://wa.me/4917643965731">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -351,6 +357,7 @@
         <a
           class="socials-a"
           target="_blank"
+          rel="noopener"
           aria-label="Nadoki's LindedIn"
           href="https://www.linkedin.com/company/nadokistudios">
           <svg viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">

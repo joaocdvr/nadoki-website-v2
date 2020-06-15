@@ -370,6 +370,7 @@
                   You can either
                   <a
                     target="_blank"
+                    rel="noopener"
                     href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
@@ -437,7 +438,12 @@
 
                 <p class="body-regular">— Attended session &rArr; +20%</p>
                 <p class="body-regular reach-out">
-                  <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Reach out
+                  </a>
                   for a more precise quote.
                 </p>
               </li>
@@ -460,6 +466,7 @@
                   You can either
                   <a
                     target="_blank"
+                    rel="noopener"
                     href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
@@ -526,7 +533,12 @@
                 </p>
                 <p class="body-regular">— Attended session &rArr; +20%</p>
                 <p class="body-regular reach-out">
-                  <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Reach out
+                  </a>
                   for a more precise quote.
                 </p>
               </li>
@@ -589,7 +601,12 @@
                   — The Lab &rArr; +200 EUR
                 </p>
                 <p class="body-regular reach-out">
-                  <a target="_blank" href="mailto:info@nadoki.com">Reach out</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Reach out
+                  </a>
                   for a more precise quote.
                 </p>
               </li>
@@ -635,6 +652,7 @@
                   You can
                   <a
                     target="_blank"
+                    rel="noopener"
                     href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
@@ -670,7 +688,10 @@
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
                   Project based.
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Get in touch.
                   </a>
                 </p>
@@ -720,7 +741,12 @@
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
                   Project based. You can
-                  <a target="_blank" href="mailto:info@nadoki.com">send us</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    send us
+                  </a>
                   a render of the video project along with the audio files to
                   get a price estimate. Please make sure your files follow our
                   requirements.
@@ -772,6 +798,7 @@
                   You can
                   <a
                     target="_blank"
+                    rel="noopener"
                     href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
                     aria-label="Nadoki's dropbox file delivery folder">
                     send us
@@ -800,7 +827,10 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
                   with the scope of the project. Please include duration,
@@ -828,7 +858,10 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
                   with the scope of the project, including duration, references,
@@ -871,7 +904,10 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
                   with the scope of the project. Please include a description of
@@ -900,7 +936,10 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
                   with the scope of the project. Please include a description of
@@ -932,7 +971,10 @@
                   We use FMOD along with Unreal Engine or Unity to integrate
                   both music and sound effects into game projects. In case you
                   have a proprietary engine
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     get in touch.
                   </a>
                 </p>
@@ -941,7 +983,10 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
                   with the scope of the project. Please include a description of
@@ -973,7 +1018,10 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
                     Send us an email
                   </a>
                   with the scope of the project. Please include a description of
@@ -1018,7 +1066,12 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">Email us</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Email us
+                  </a>
                   to talk about your project and a price estimate.
                 </p>
               </li>
@@ -1049,7 +1102,12 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">Email us</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Email us
+                  </a>
                   to talk about your project and a price estimate.
                 </p>
               </li>
@@ -1080,7 +1138,12 @@
               <li>
                 <p class="body-bold">Pricing</p>
                 <p class="body-regular">
-                  <a target="_blank" href="mailto:info@nadoki.com">Email us</a>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Email us
+                  </a>
                   to talk about your project and a price estimate.
                 </p>
               </li>

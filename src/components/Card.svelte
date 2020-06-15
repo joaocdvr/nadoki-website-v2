@@ -160,7 +160,11 @@
             </p>
 
             {#if card.link}
-              <a target="_blank" class="body-small" href={card.linkHref}>
+              <a
+                target="_blank"
+                rel="noopener"
+                class="body-small"
+                href={card.linkHref}>
                 Learn more
               </a>
             {/if}
