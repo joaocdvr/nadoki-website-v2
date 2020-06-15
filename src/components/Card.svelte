@@ -153,7 +153,6 @@
               class="div-header"
               class:div-header-border={variant === 'studio'}>
               <h2 class="header-small">{card.title.toUpperCase()}</h2>
-              <h3 class="body-bold">{card.size}</h3>
             </div>
 
             <p class="body-regular">
