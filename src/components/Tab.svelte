@@ -12,11 +12,12 @@
   onMount(() => {
     if (window.innerWidth < 768 && variant === "services") {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
+      const menuBounds = servicesMenu[0].getBoundingClientRect();
+
       const selectedButton = document.getElementsByClassName(
         "button-is-selected"
       );
       const buttonBounds = selectedButton[0].getBoundingClientRect();
-      const menuBounds = servicesMenu[0].getBoundingClientRect();
 
       if (menuBounds.left === 0) {
         servicesMenu[0].scrollTo({
