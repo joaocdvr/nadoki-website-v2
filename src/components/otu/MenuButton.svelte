@@ -23,7 +23,6 @@
     cursor: pointer;
     padding: 1.5rem;
     fill: var(--dark);
-    background-color: red;
     transition: background-color 300ms ease-in-out;
   }
 
