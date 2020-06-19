@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# twitter: http://ogp.me/ns/twitter# website: http://ogp.me/ns/website#">
+
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# twitter: http://ogp.me/ns/twitter# website: http://ogp.me/ns/website#">
+
     <!-- Google Tag Manager -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117155108-2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-117155108-2');
-    </script>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5PQHC35');</script>
     <!-- End Google Tag Manager -->
 
     <!-- Open graph data -->
     <meta property="og:title" content="Nadoki Studios" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.nadoki.com" />
-    <meta property="og:description" content="Nadoki is a mixing and mastering studio located at Riverside Studios. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves." />
+    <meta property="og:description"
+      content="Nadoki is a mixing and mastering studio located at Riverside Studios. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves." />
     <meta property="og:determiner" content="the" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image:url" content="https://www.nadoki.com/socials/nadoki_og.png" />
@@ -34,17 +38,18 @@
     <meta name="twitter:title" content="Nadoki Studios" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://www.nadoki.com" />
-    <meta name="twitter:description" content="Nadoki is a mixing and mastering studio located at Riverside Studios. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves." />
+    <meta name="twitter:description"
+      content="Nadoki is a mixing and mastering studio located at Riverside Studios. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves." />
     <meta name="twitter:image" content="https://www.nadoki.com/socials/twitter-image.png" />
     <meta name="twitter:image:alt" content="White letters spelling Nadoki on a black background." />
     <!-- End Twitter card data -->
- 
+
     <title>Nadoki Studios</title>
-    
+
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
 
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">  
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     %sapper.base%
 
@@ -61,17 +66,26 @@
     <meta name="theme-color" content="#000000">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nadoki is a mixing and mastering studio located at Riverside Studios. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves." />
-    <meta name="keywords" content="music studio, music studio berlin, audio studio, audio studio berlin, recording studio, recording studio berlin, mixing studio, mixing studio berlin, mastering studio, mastering studio berlin, ghost production, sound design studio, sound design studio berlin, music studio rent berlin, game sound design studio, game music studio" />
-    <meta name="author" content="João Rodrigues" >
+    <meta name="description"
+      content="Nadoki is a mixing and mastering studio located at Riverside Studios. Our studio was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves." />
+    <meta name="keywords"
+      content="music studio, music studio berlin, audio studio, audio studio berlin, recording studio, recording studio berlin, mixing studio, mixing studio berlin, mastering studio, mastering studio berlin, ghost production, sound design studio, sound design studio berlin, music studio rent berlin, game sound design studio, game music studio" />
+    <meta name="author" content="João Rodrigues">
 
     %sapper.styles% %sapper.head%
   </head>
+
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQHC35" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="sapper">%sapper.html%</div>
 
     %sapper.scripts%
     <script src="https://player.vimeo.com/api/player.js"></script>
-  </script>
+    </script>
   </body>
+
 </html>
