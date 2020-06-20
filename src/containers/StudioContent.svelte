@@ -6,7 +6,8 @@
 
   let studioCards = [
     {
-      src: "studio/nadoki_studios_1.jpg",
+      src: "studio/nadoki-studios.jpg",
+      srcset: "studio/nadoki-studios-medium.jpg 800w",
       ratio: "calc(810 / 1080 * 100%)",
       alt: "Nadoki Studios picture nº1",
       title: "Nadoki",
@@ -16,7 +17,8 @@
     },
 
     {
-      src: "studio/studio_10.jpg",
+      src: "studio/studio-10.jpg",
+      srcset: "studio/studio-10-medium.jpg 800w",
       ratio: "calc(755 / 1080 * 100%)",
       alt: "Studio 10 picture nº1",
       title: "Studio 10",
@@ -25,7 +27,8 @@
       tags: ""
     },
     {
-      src: "studio/the_lab_1.jpg",
+      src: "studio/the-lab-1.jpg",
+      srcset: "studio/the-lab-1-medium.jpg 800w",
       ratio: "calc(560 / 1080 * 100%)",
       alt: "The Lab picture nº1",
       title: "The Lab",
@@ -34,7 +37,8 @@
       tags: ""
     },
     {
-      src: "studio/riverside_1.jpg",
+      src: "studio/riverside-1.jpg",
+      srcset: "studio/riverside-1-medium.jpg 800w",
       ratio: "calc(675 / 1080 * 100%)",
       alt: "Riverside Studios picture nº1",
       title: "Riverside Studios",

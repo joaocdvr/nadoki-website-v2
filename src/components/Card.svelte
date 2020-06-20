@@ -139,7 +139,7 @@
       {#if variant === 'studio'}
         <div class="studio-card-wrapper">
           <div class="img-wrapper" style="padding-top:{card.ratio}">
-            <img src={card.src} alt={card.alt} />
+            <img src={card.src} srcset={card.srcset} alt={card.alt} />
           </div>
 
           <div class="div-text">
@@ -173,7 +173,7 @@
           aria-pressed={$workModalActive === card.url}>
 
           <div class="img-wrapper" style="padding-top:{card.ratio}">
-            <img src={card.src} alt={card.alt} />
+            <img src={card.src} srcset={card.srcset} alt={card.alt} />
           </div>
 
           <div class="div-text">

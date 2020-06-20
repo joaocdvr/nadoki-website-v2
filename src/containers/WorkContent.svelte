@@ -50,7 +50,8 @@
     {
       url: "we_gotta_live_together",
       ratio: "100%",
-      src: "work/we_gotta_live_together.jpg",
+      src: "work/we-gotta-live-together.jpg",
+      srcset: "work/we-gotta-live-together-medium.jpg 800w",
       alt: "'We Gotta Live Together' album cover art",
       title: "We Gotta Live Together",
       content: "Song by DJ FLAT.",
@@ -59,7 +60,8 @@
     {
       url: "glitter_against_terfs",
       ratio: "100%",
-      src: "work/glitter_against_terfs.jpg",
+      src: "work/glitter-against-terfs.jpg",
+      srcset: "work/glitter-against-terfs-medium.jpg 800w",
       alt: "'Glitter Against Terfs' album cover art",
       title: "Glitter Against Terfs",
       content: "EP by Lazy Rosario.",
@@ -68,7 +70,8 @@
     {
       url: "above_it_all",
       ratio: "100%",
-      src: "work/above_it_all.jpg",
+      src: "work/above-it-all.jpg",
+      srcset: "work/above-it-all-medium.jpg 800w",
       alt: "'Above It ALL' album cover art",
       title: "Above It All",
       content: "Song by Mind Against.",
@@ -78,6 +81,7 @@
       url: "parda",
       ratio: "calc(1527 / 1080 * 100%)",
       src: "work/parda.jpg",
+      srcset: "work/parda-medium.jpg 800w",
       alt: "'Parda' documentary cover art",
       title: "Parda",
       content: "A Brazilian documentary, directed by Tai Linhares.",
@@ -86,7 +90,8 @@
     {
       url: "love_hurts",
       ratio: "100%",
-      src: "work/love_hurts.jpg",
+      src: "work/love-hurts.jpg",
+      srcset: "work/love-hurts-medium.jpg 800w",
       alt: "'Love Hurts' single cover art",
       title: "Love Hurts",
       content: "Song by Osaka88.",
@@ -95,7 +100,8 @@
     {
       url: "der_hauptbahnhof",
       ratio: "calc(1528 / 1080 * 100%)",
-      src: "work/der_hauptbahnhof.jpg",
+      src: "work/der-hauptbahnhof.jpg",
+      srcset: "work/der-hauptbahnhof-medium.jpg 800w",
       alt: "'Der Hauptbanhof' documentary cover art",
       title: "Der Hauptbanhnof",
       content:
@@ -106,6 +112,7 @@
       url: "ertrinken",
       ratio: "calc(1080 / 1920 * 100%)",
       src: "work/ertrinken.jpg",
+      srcset: "work/ertrinken-medium.jpg 800w",
       alt: "Frame from 'Ertrinken' short film",
       title: "Ertrinken",
       content:
@@ -115,7 +122,8 @@
     {
       url: "a_juventude_por_ela_própria",
       ratio: "calc(1080 / 1920 * 100%)",
-      src: "work/a_juventude_por_ela_própria.jpg",
+      src: "work/a-juventude-por-ela-própria.jpg",
+      srcset: "work/a-juventude-por-ela-própria-medium.jpg 800w",
       alt: "Frame from 'A juventude por ela própria' documentary",
       title: "A juventude por ela própria",
       content:
