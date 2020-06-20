@@ -131,20 +131,6 @@
     }
   }
 
-  :global(.body-italic) {
-    font-family: "syne-italic", Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    font-size: 1.25rem;
-    color: var(--dark);
-  }
-
-  :global(.body-mono) {
-    font-family: "syne-mono", Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    font-size: 1.25rem;
-    color: var(--dark);
-  }
-
   :global(.caption) {
     font-family: "syne-regular", Arial, Helvetica, sans-serif;
     line-height: 2;

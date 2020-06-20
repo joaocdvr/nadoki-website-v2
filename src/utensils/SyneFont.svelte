@@ -5,6 +5,7 @@
       url(/fonts/Syne-Bold.woff) format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -13,22 +14,7 @@
       url(/fonts/Syne-Extra.woff) format("woff");
     font-weight: normal;
     font-style: normal;
-  }
-
-  @font-face {
-    font-family: "syne-italic";
-    src: url(/fonts/Syne-Italic.woff2) format("woff2"),
-      url(/fonts/Syne-Italic.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "syne-mono";
-    src: url(/fonts/Syne-Mono.woff2) format("woff2"),
-      url(/fonts/Syne-Mono.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -37,5 +23,6 @@
       url(/fonts/Syne-Regular.woff) format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 </style>
