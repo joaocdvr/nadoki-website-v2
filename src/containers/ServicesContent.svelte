@@ -565,7 +565,7 @@
                   <a
                     on:click={() => document.body.classList.remove('body-is-not-visible')}
                     href="/studio"
-                    aria-label="Studio page">
+                    aria-label="Studio">
                     Learn more
                   </a>
                   about these rooms.
@@ -578,7 +578,7 @@
                   <a
                     on:click={() => document.body.classList.remove('body-is-not-visible')}
                     href="/equipment"
-                    aria-label="Equipment page">
+                    aria-label="Equipment">
                     Check out our gear.
                   </a>
                 </p>

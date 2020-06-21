@@ -153,8 +153,8 @@
       width="360"
       height="111"
       viewBox="0 0 360 111"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Let's talk">
       <path
         d="M31.6527 76.7709V107.74H3.76185H0V3.4229H9.49962V76.7709H31.6527Z"
         fill="#00FF00" />
@@ -250,9 +250,12 @@
           class="socials-a"
           target="_blank"
           rel="noopener"
-          aria-label="Nadoki's Instagram page"
+          aria-label="Nadoki's Instagram"
           href="https://www.instagram.com/nadokistudios">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
             <path
               d="M12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16
               9.791 16 12C16 14.21 14.209 16 12 16Z" />
@@ -283,7 +286,10 @@
           rel="noopener"
           aria-label="Nadoki's Facebook page"
           href="https://www.facebook.com/nadokistudios">
-          <svg viewBox="0 0 12 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 12 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
             <path
               d="M3 8H0V12H3V24H8V12H11.642L12 8H8V6.333C8 5.378 8.192 5 9.115
               5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z" />
@@ -298,7 +304,10 @@
           rel="noopener"
           aria-label="Nadoki's Messenger"
           href="https://www.m.me/nadokistudios">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -318,7 +327,10 @@
           rel="noopener"
           aria-label="Nadoki's WhatsApp"
           href="https://wa.me/4917643965731">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -360,7 +372,10 @@
           rel="noopener"
           aria-label="Nadoki's LindedIn"
           href="https://www.linkedin.com/company/nadokistudios">
-          <svg viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 24 23"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
             <path
               d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02
               2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5

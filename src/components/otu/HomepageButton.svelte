@@ -56,9 +56,9 @@
   <svg
     class:is-white={$isMenuClicked}
     preserveAspectRatio="none"
-    alt="Nadoki logo"
     viewBox="0 0 40 24"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true">
     <path
       d="M6.878 1.20028L0.0902539 21.6895C0.00244457 21.9532 -0.0217469 22.2342
       0.0196766 22.5092C0.0611001 22.7842 0.166951 23.0453 0.328488

@@ -108,8 +108,8 @@
   <svg
     viewbox="0 0 24 24"
     preserveAspectRatio="none"
-    xmlns="http://www.w3.org/2000/svg">
-    >
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true">
     <rect
       height="24"
       width="4.8"

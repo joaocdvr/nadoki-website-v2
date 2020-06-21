@@ -144,13 +144,14 @@
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
-      aria-label="Services page"
+      aria-label="Services"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('services')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M9.71819 15.0132C9.95551 15.7416 10.9048 16.3054 12.566
           16.7048C14.2272 17.1043 16.4343 17.304 19.1872 17.304C21.0146 17.304
@@ -233,13 +234,14 @@
   <li class:studio-is-visible={$isMenuClicked}>
     <a
       href="/studio"
-      aria-label="Studio page"
+      aria-label="Studio"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('studio')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M12.8065 15.0132C13.1192 15.7416 14.3701 16.3054 16.5593
           16.7048C18.7484 17.1043 21.6568 17.304 25.2846 17.304C27.6926 17.304
@@ -302,13 +304,14 @@
   <li class:work-is-visible={$isMenuClicked}>
     <a
       href="/work"
-      aria-label="Work page"
+      aria-label="Work"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('work')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M101.109 0.705882L81.6774 23.2941H63.1243L50.6641 7.65882L38.2039
           23.2941H19.6509L0 0.705882H15.4792L29.3665 18.3176L42.3756
@@ -346,14 +349,15 @@
   <li class="equipment-li" class:equipment-is-visible={$isMenuClicked}>
     <a
       href="/equipment"
-      aria-label="Equipment page"
+      aria-label="Equipment"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('equipment')}>
       <svg
         class="equipment-svg"
         preserveAspectRatio="none"
         viewBox="0 0 312 30"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M29.2986
           16.3953V23.0233H0V0.697674H29.2406V7.32558H7.25212V10.1163H25.2374V13.6047H7.25212V16.3953H29.2986ZM68.7535
@@ -404,13 +408,14 @@
   <li class:about-us-is-visible={$isMenuClicked}>
     <a
       href={['alper', 'elia', 'joao', 'julia'].includes($aboutUsActiveItem) ? 'about_us?name=' + $aboutUsActiveItem : 'about_us'}
-      aria-label="About Us page"
+      aria-label="About Us"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('studio')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M27.8857 19.8767H11.7523L9.56182 23.2952H0L14.9164
           0.740087H24.5826L39.6381 23.2952H30.0763L27.8857 19.8767ZM24.513

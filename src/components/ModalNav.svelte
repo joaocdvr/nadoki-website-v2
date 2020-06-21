@@ -83,7 +83,8 @@
       <svg
         viewBox="0 0 40 24"
         preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M22.3783 3.021H10V0L0 5.39L10 11V8H22.3783C27.4967 8 31.6467 10.356
           31.6467 13.427C31.6467 16.498 27.4983 19 22.3783
@@ -97,6 +98,6 @@
       out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
       {title}
     </h1>
-    <span />
+    <span aria-hidden="true" />
   </div>
 </nav>
