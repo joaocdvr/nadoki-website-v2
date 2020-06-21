@@ -27,7 +27,7 @@
     background-color: var(--secondary-color);
   }
 
-  :global(.user-is-tabbing) button:focus dt {
+  :global(.user-is-tabbing) button:focus p {
     color: var(--light);
   }
 
@@ -41,7 +41,7 @@
       background-color: var(--secondary-color);
     }
 
-    button:hover dt {
+    button:hover p {
       color: var(--light);
     }
 
@@ -74,13 +74,13 @@
     }
   }
 
-  dl {
+  li {
     border-bottom: 0.125rem solid var(--dark);
     background-color: var(--light);
     transition: background-color 300ms ease-in-out;
   }
 
-  dt,
+  p,
   div {
     width: 100%;
     max-width: var(--max-width);
@@ -88,18 +88,18 @@
   }
 
   @media (--max-content-width) {
-    dt,
+    p,
     div {
       transform: translateX(calc(50vw - var(--max-width) / 2));
     }
   }
 
-  dt {
+  p {
     padding: 1.5rem;
     position: relative;
   }
 
-  dt span:after {
+  p span:after {
     content: "";
     position: absolute;
     top: 2.125rem;
@@ -109,7 +109,7 @@
     background-color: var(--dark);
   }
 
-  dt span:before {
+  p span:before {
     content: "";
     position: absolute;
     top: 1.75rem;
@@ -120,16 +120,17 @@
     transition: transform 300ms;
   }
 
-  .item-is-clicked dt span:before {
+  .item-is-clicked p span:before {
     transform: rotate(-90deg);
   }
 
-  div dd {
+  div p {
     padding: 0 1.5rem 1.5rem 1.5rem;
+    transform: translateX(0);
   }
 
   @media (--max-content-width) {
-    div dd {
+    div p {
       padding: 1.5rem;
     }
   }
@@ -145,7 +146,7 @@
   }
 </style>
 
-<dl
+<li
   class:item-is-clicked={listItem.open}
   in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -153,16 +154,16 @@
     on:click
     aria-label="Toggle {listItem.name} list"
     aria-pressed={listItem.open}>
-    <dt class="body-bold">
+    <p class="body-bold">
       {listItem.name}
       <span />
-    </dt>
+    </p>
   </button>
   <div class="list-content" class:list-open={listItem.open}>
     {#if listItem.open}
-      <dd transition:slide>
+      <p transition:slide>
         {@html listItem.content}
-      </dd>
+      </p>
     {/if}
   </div>
-</dl>
+</li>
