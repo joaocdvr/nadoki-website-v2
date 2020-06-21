@@ -65,7 +65,6 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     border-bottom: 0.125rem solid var(--dark);
@@ -110,14 +109,14 @@
   }
 
   @media (--max-content-width) {
-    button {
-      text-align: right;
-    }
-
     .services-tab-menu li {
       border-right: 0.125rem solid var(--dark);
       border-bottom: 0.125rem solid var(--dark);
       flex-grow: 1;
+    }
+
+    .services-tab-menu button {
+      text-align: right;
     }
 
     .services-tab-menu li:last-child {
