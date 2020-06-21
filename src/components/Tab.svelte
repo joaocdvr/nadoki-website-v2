@@ -61,7 +61,7 @@
 </script>
 
 <style>
-  menu {
+  ul {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -71,6 +71,12 @@
     border-bottom: 0.125rem solid var(--dark);
     background-color: var(--dark);
     scroll-behavior: smooth;
+  }
+
+  li {
+    min-height: 3.5rem;
+    flex: 0 0 auto;
+    border-right: 0.125rem solid var(--dark);
   }
 
   @media (--max-content-width) {
@@ -88,12 +94,11 @@
   }
 
   button {
-    min-height: 3.5rem;
+    width: 100%;
+    height: 100%;
     border: none;
-    border-right: 0.125rem solid var(--dark);
     cursor: pointer;
     text-align: center;
-    flex: 0 0 auto;
     background-color: var(--light);
     box-shadow: none;
     transition: background-color 300ms ease-in-out,
@@ -105,14 +110,17 @@
   }
 
   @media (--max-content-width) {
-    .services-tab-menu button {
-      border-right: 0.125rem solid var(--dark);
-      border-bottom: 0.125rem solid var(--dark);
-      flex-grow: 1;
+    button {
       text-align: right;
     }
 
-    .services-tab-menu button:last-child {
+    .services-tab-menu li {
+      border-right: 0.125rem solid var(--dark);
+      border-bottom: 0.125rem solid var(--dark);
+      flex-grow: 1;
+    }
+
+    .services-tab-menu li:last-child {
       border-bottom: none;
     }
   }
@@ -162,21 +170,22 @@
   }
 </style>
 
-<menu
+<ul
   class:services-tab-menu={variant === 'services'}
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   {#each tab as tab}
-    <button
-      class="tab-button"
-      on:click={event => handleClick(event, tab.function)}
-      aria-label="Toggle {tab.title} list"
-      aria-pressed={tab.variable}
-      class:just-two={tab.justTwo}
-      class:button-is-selected={tab.variable}>
-      <span class="body-bold" class:span-is-selected={tab.variable}>
-        {tab.title}
-      </span>
-    </button>
+    <li class:just-two={tab.justTwo}>
+      <button
+        class="tab-button"
+        on:click={event => handleClick(event, tab.function)}
+        aria-label="Toggle {tab.title} list"
+        aria-pressed={tab.variable}
+        class:button-is-selected={tab.variable}>
+        <span class="body-bold" class:span-is-selected={tab.variable}>
+          {tab.title}
+        </span>
+      </button>
+    </li>
   {/each}
-</menu>
+</ul>
