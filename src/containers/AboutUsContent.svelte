@@ -211,28 +211,28 @@
     }
   }
 
-  dt {
+  h3 {
     margin-bottom: 0.5rem;
   }
 
-  dd {
+  p {
     padding-top: 0.25rem;
   }
 
-  dd span {
+  p span {
     display: block;
     padding-bottom: 0.5rem;
   }
 
-  dd :last-child {
+  p :last-child {
     margin-bottom: 0;
   }
 
-  ul :last-child dt {
+  ul :last-child h3 {
     border-bottom: none;
   }
 
-  ul :last-child dd {
+  ul :last-child p {
     padding-top: 0;
   }
 
@@ -240,12 +240,7 @@
     border: 0.0625rem solid var(--dark);
     border-collapse: collapse;
     width: 100%;
-  }
-
-  @media (--max-content-width) {
-    table {
-      margin-top: 1rem;
-    }
+    margin-top: 1rem;
   }
 
   th,
@@ -409,70 +404,68 @@
             </li>
 
             <li>
-              <dt class="body-bold">Experience</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Experience</h3>
+              <p class="body-regular">
                 — Talent Manager of Electronic Music Artists (2 years)
                 <span class="body-small">Berlin, Germany (Freelancer)</span>
                 — DJ (8 years)
                 <span class="body-small">Miami, USA</span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Education</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Education</h3>
+              <p class="body-regular">
                 — Audio Engineering (BA)
                 <span class="body-small">SAE Institute Berlin</span>
                 — Finance (BA)
                 <span class="body-small">Marmara University</span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Interests</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Interests</h3>
+              <p class="body-regular">
                 Electronic music production, vocal recording, 3D audio, virtual
                 reality & social media management.
-              </dd>
+              </p>
             </li>
 
             <li>
 
-              <dt class="body-bold">Nationality</dt>
-              <dd class="body-regular">Turkish</dd>
+              <h3 class="body-bold">Nationality</h3>
+              <p class="body-regular">Turkish</p>
             </li>
 
             <li>
-              <dt class="body-bold">Languages</dt>
-              <dd class="body-regular">Turkish, English & German</dd>
+              <h3 class="body-bold">Languages</h3>
+              <p class="body-regular">Turkish, English & German</p>
             </li>
 
             <li>
-              <dt class="body-bold">About me</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">About me</h3>
+              <p class="body-regular">
                 Producer, mixing engineer, DJ & financial analyst. Energetic &
                 supportive.
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Highlights</dt>
-              <dd>
-                <table>
-                  <tr>
-                    <th class="body-regular">Vinyls owned</th>
-                    <td class="header-big">186</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Fastest speed</th>
-                    <td class="header-big">262</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Max. elevation</th>
-                    <td class="header-big">2800</td>
-                  </tr>
-                </table>
-              </dd>
+              <h3 class="body-bold">Highlights</h3>
+              <table>
+                <tr>
+                  <th class="body-regular">Vinyls owned</th>
+                  <td class="header-big">186</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Fastest speed</th>
+                  <td class="header-big">262</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Max. elevation</th>
+                  <td class="header-big">2800</td>
+                </tr>
+              </table>
             </li>
           </ul>
         {:else if $aboutUsActiveItem === 'elia'}
@@ -562,68 +555,66 @@
             </li>
 
             <li>
-              <dt class="body-bold">Experience</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Experience</h3>
+              <p class="body-regular">
                 — Tour Manager & Studio Consultant
                 <span class="body-small">Tale of Us</span>
                 — Audio Department Assistant
                 <span class="body-small">SAE Institute Berlin</span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Education</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Education</h3>
+              <p class="body-regular">
                 — Audio Engineering (BA)
                 <span class="body-small">SAE Institute Berlin</span>
                 — Classical Music (MA)
                 <span class="body-small">Conservatory Bruno Maderna</span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Interests</dt>
-              <dd class="body-regular">Technology &#8660 Music</dd>
+              <h3 class="body-bold">Interests</h3>
+              <p class="body-regular">Technology &#8660 Music</p>
             </li>
 
             <li>
 
-              <dt class="body-bold">Nationality</dt>
-              <dd class="body-regular">Italian</dd>
+              <h3 class="body-bold">Nationality</h3>
+              <p class="body-regular">Italian</p>
             </li>
 
             <li>
-              <dt class="body-bold">Languages</dt>
-              <dd class="body-regular">Italian, English & German (B1)</dd>
+              <h3 class="body-bold">Languages</h3>
+              <p class="body-regular">Italian, English & German (B1)</p>
             </li>
 
             <li>
-              <dt class="body-bold">About me</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">About me</h3>
+              <p class="body-regular">
                 Failed musician searching for comfort in technology. Usually an
                 audio engineer on the road. Right now everything else at home +
                 studio.
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Highlights</dt>
-              <dd>
-                <table>
-                  <tr>
-                    <th class="body-regular">Height</th>
-                    <td class="header-big">185</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Warzone victories</th>
-                    <td class="header-big">6</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Random highlights written</th>
-                    <td class="header-big">2</td>
-                  </tr>
-                </table>
-              </dd>
+              <h3 class="body-bold">Highlights</h3>
+              <table>
+                <tr>
+                  <th class="body-regular">Height</th>
+                  <td class="header-big">185</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Warzone victories</th>
+                  <td class="header-big">6</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Random highlights written</th>
+                  <td class="header-big">2</td>
+                </tr>
+              </table>
             </li>
           </ul>
         {:else if $aboutUsActiveItem === 'joao'}
@@ -713,8 +704,8 @@
             </li>
 
             <li>
-              <dt class="body-bold">Education</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Education</h3>
+              <p class="body-regular">
                 — Audio Engineering (BA)
                 <span class="body-small">SAE Institute Berlin</span>
                 — Sound Art (PgD)
@@ -725,53 +716,50 @@
                 <span class="body-small">
                   Faculty of Fine Arts of the University of Lisbon
                 </span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Interests</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Interests</h3>
+              <p class="body-regular">
                 Games, sound design/music & web design.
-              </dd>
+              </p>
             </li>
 
             <li>
-
-              <dt class="body-bold">Nationality</dt>
-              <dd class="body-regular">Portuguese</dd>
+              <h3 class="body-bold">Nationality</h3>
+              <p class="body-regular">Portuguese</p>
             </li>
 
             <li>
-              <dt class="body-bold">Languages</dt>
-              <dd class="body-regular">Portuguese & English</dd>
+              <h3 class="body-bold">Languages</h3>
+              <p class="body-regular">Portuguese & English</p>
             </li>
 
             <li>
-              <dt class="body-bold">About me</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">About me</h3>
+              <p class="body-regular">
                 Gamer since Game Boy Color. Occasional spearfisher. Retired
                 double bassist.
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Highlights</dt>
-              <dd>
-                <table>
-                  <tr>
-                    <th class="body-regular">Average KDA</th>
-                    <td class="header-big">4.00</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Clipper size</th>
-                    <td class="header-big">4</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Windows version</th>
-                    <td class="header-big">10</td>
-                  </tr>
-                </table>
-              </dd>
+              <h3 class="body-bold">Highlights</h3>
+              <table>
+                <tr>
+                  <th class="body-regular">Average KDA</th>
+                  <td class="header-big">4.00</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Clipper size</th>
+                  <td class="header-big">4</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Windows version</th>
+                  <td class="header-big">10</td>
+                </tr>
+              </table>
             </li>
           </ul>
         {:else if $aboutUsActiveItem === 'julia'}
@@ -861,73 +849,71 @@
             </li>
 
             <li>
-              <dt class="body-bold">Experience</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Experience</h3>
+              <p class="body-regular">
                 — Audio Department Assistant
                 <span class="body-small">SAE Institute Berlin</span>
                 — Assistant Engineer
                 <span class="body-small">Jazzanova Recording Studio</span>
                 — Production Assistant
                 <span class="body-small">Post Modern Mastering</span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Education</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Education</h3>
+              <p class="body-regular">
                 — Audio Engineering (BA)
                 <span class="body-small">SAE Institute Berlin</span>
                 — International Music Production & Sound Engineering Diploma
                 <span class="body-small">Point Blank</span>
                 — Summer Performance Program
                 <span class="body-small">Berklee College of Music</span>
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Interests</dt>
-              <dd class="body-regular">Technology, music & space.</dd>
+              <h3 class="body-bold">Interests</h3>
+              <p class="body-regular">Technology, music & space.</p>
             </li>
 
             <li>
 
-              <dt class="body-bold">Nationality</dt>
-              <dd class="body-regular">Brazilian</dd>
+              <h3 class="body-bold">Nationality</h3>
+              <p class="body-regular">Brazilian</p>
             </li>
 
             <li>
-              <dt class="body-bold">Languages</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">Languages</h3>
+              <p class="body-regular">
                 Portuguese, English, German (B1) & I pretend I speak Spanish
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">About me</dt>
-              <dd class="body-regular">
+              <h3 class="body-bold">About me</h3>
+              <p class="body-regular">
                 Musician since an early age — mainly guitarist. Workaholic.
                 Part-time OCD. Full-time nerd.
-              </dd>
+              </p>
             </li>
 
             <li>
-              <dt class="body-bold">Highlights</dt>
-              <dd>
-                <table>
-                  <tr>
-                    <th class="body-regular">Pairs of glasses</th>
-                    <td class="header-big">8</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Guitar strings</th>
-                    <td class="header-big">78</td>
-                  </tr>
-                  <tr>
-                    <th class="body-regular">Favourite Emoji</th>
-                    <td class="header-big">👽</td>
-                  </tr>
-                </table>
-              </dd>
+              <h3 class="body-bold">Highlights</h3>
+              <table>
+                <tr>
+                  <th class="body-regular">Pairs of glasses</th>
+                  <td class="header-big">8</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Guitar strings</th>
+                  <td class="header-big">78</td>
+                </tr>
+                <tr>
+                  <th class="body-regular">Favourite Emoji</th>
+                  <td class="header-big">👽</td>
+                </tr>
+              </table>
             </li>
           </ul>
         {/if}
