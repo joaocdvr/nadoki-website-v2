@@ -14,20 +14,18 @@
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const menuBounds = servicesMenu[0].getBoundingClientRect();
 
-      const selectedButton = document.getElementsByClassName(
-        "button-is-selected"
-      );
-      const buttonBounds = selectedButton[0].getBoundingClientRect();
+      const selectedTab = document.getElementsByClassName("a-is-selected");
+      const tabBounds = selectedTab[0].getBoundingClientRect();
 
       if (menuBounds.left === 0) {
         servicesMenu[0].scrollTo({
-          left: buttonBounds.left - 24,
+          left: tabBounds.left - 24,
           behavior: "smooth"
         });
       } else {
         servicesMenu[0].scrollTo({
           left:
-            buttonBounds.left +
+            tabBounds.left +
             servicesMenu[0].scrollLeft -
             24 -
             window.innerWidth,
@@ -42,6 +40,7 @@
   export let variant = "";
 
   function handleClick(event, callback) {
+    event.preventDefault();
     callback();
     if (window.screen.width >= 768) {
       const servicesModal = document.getElementById("services-modal");
@@ -50,10 +49,10 @@
       }
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
-      const buttonBounds = event.target.getBoundingClientRect();
+      const tabBounds = event.target.getBoundingClientRect();
 
       servicesMenu[0].scrollTo({
-        left: buttonBounds.left + servicesMenu[0].scrollLeft - 24,
+        left: tabBounds.left + servicesMenu[0].scrollLeft - 24,
         behavior: "smooth"
       });
     }
@@ -92,19 +91,22 @@
     }
   }
 
-  button {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     width: 100%;
     height: 100%;
     border: none;
     cursor: pointer;
-    text-align: center;
     background-color: var(--light);
     box-shadow: none;
     transition: background-color 300ms ease-in-out,
       border-color 300ms ease-in-out;
   }
 
-  button:last-child {
+  a:last-child {
     border: none;
   }
 
@@ -115,8 +117,8 @@
       flex-grow: 1;
     }
 
-    .services-tab-menu button {
-      text-align: right;
+    .services-tab-menu a {
+      justify-content: flex-end;
     }
 
     .services-tab-menu li:last-child {
@@ -124,20 +126,20 @@
     }
   }
 
-  :global(.user-is-tabbing) button:focus {
+  :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
   }
 
-  :global(.user-is-tabbing) button:focus span {
+  :global(.user-is-tabbing) a:focus span {
     color: var(--light);
   }
 
   @media (--not-touchscreen) {
-    button:hover {
+    a:hover {
       background-color: var(--secondary-color);
     }
 
-    button:hover span {
+    a:hover span {
       color: var(--light);
     }
   }
@@ -150,7 +152,7 @@
     pointer-events: none;
   }
 
-  .button-is-selected {
+  .a-is-selected {
     background-color: var(--dark);
     border-color: var(--dark);
   }
@@ -175,16 +177,16 @@
   out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
   {#each tab as tab}
     <li class:just-two={tab.justTwo}>
-      <button
-        class="tab-button"
+      <a
+        href={tab.path}
+        class="tab-a"
         on:click={event => handleClick(event, tab.function)}
-        aria-label="Toggle {tab.title} list"
         aria-pressed={tab.variable}
-        class:button-is-selected={tab.variable}>
+        class:a-is-selected={tab.variable}>
         <span class="body-bold" class:span-is-selected={tab.variable}>
           {tab.title}
         </span>
-      </button>
+      </a>
     </li>
   {/each}
 </ul>

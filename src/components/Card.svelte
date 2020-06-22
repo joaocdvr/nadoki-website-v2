@@ -14,20 +14,26 @@
 
   export let cards = [];
   export let variant = "";
+
+  function handleClick(event, callback) {
+    event.preventDefault();
+    callback;
+  }
 </script>
 
 <style>
-  button {
+  a {
     text-align: left;
+    display: inline-block;
+    text-decoration: none;
     cursor: pointer;
     width: 100vw;
-    line-height: 0;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
     padding: 3rem 3rem 7rem 3rem;
   }
 
   @media (--max-content-width) {
-    button {
+    a {
       padding: 3rem;
       margin: 3rem 0 6rem 0;
       width: calc(var(--max-width) * 0.75);
@@ -35,12 +41,12 @@
     }
   }
 
-  :global(.user-is-tabbing) button:focus {
+  :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
   }
 
-  :global(.user-is-tabbing) button:focus p,
-  :global(.user-is-tabbing) button:focus h2 {
+  :global(.user-is-tabbing) a:focus p,
+  :global(.user-is-tabbing) a:focus h2 {
     color: var(--light);
   }
 
@@ -58,16 +64,11 @@
   @media (--not-touchscreen) {
     a:hover {
       color: var(--secondary-color);
-    }
-  }
-
-  @media (--not-touchscreen) {
-    button:hover {
       background-color: var(--secondary-color);
     }
 
-    button:hover p,
-    button:hover h2 {
+    a:hover p,
+    a:hover h2 {
       color: var(--light);
     }
   }
@@ -77,8 +78,22 @@
   }
 
   @media (--not-touchscreen) {
-    button:hover :global(.tag-color) {
+    a:hover :global(.tag-color) {
       color: var(--secondary-color);
+    }
+  }
+
+  .studio-card-a {
+    padding: 0;
+    margin-bottom: 0;
+    transform: translateX(0);
+    width: auto;
+  }
+
+  @media (--not-touchscreen) {
+    .studio-card-a:hover {
+      color: var(--secondary-color);
+      background-color: transparent;
     }
   }
 
@@ -125,10 +140,6 @@
     margin-top: 1rem;
     text-decoration: underline;
   }
-
-  a {
-    display: inline-block;
-  }
 </style>
 
 <ul class:work-cards={variant === 'work'}>
@@ -157,8 +168,8 @@
               <a
                 target="_blank"
                 rel="noopener"
-                class="body-small"
-                href={card.linkHref}>
+                class="body-small studio-card-a"
+                href={card.path}>
                 Learn more
               </a>
             {/if}
@@ -167,8 +178,9 @@
       {/if}
 
       {#if variant === 'work'}
-        <button
-          on:click={() => handleWorkModalClick(card.url)}
+        <a
+          href={card.path}
+          on:click={event => handleClick(event, handleWorkModalClick(card.url))}
           aria-label="Toggle {card.title}'s details"
           aria-pressed={$workModalActive === card.url}>
 
@@ -189,7 +201,7 @@
 
             <p class="body-small">Learn more</p>
           </div>
-        </button>
+        </a>
       {/if}
 
     </li>

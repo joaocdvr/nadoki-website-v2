@@ -32,6 +32,11 @@
     handleSVGAnimation("svg-to-animate-game", "services", "name", null);
     handleSVGAnimation("svg-to-animate-branding", "services", "name", null);
   });
+
+  function handleClick(event, name, type) {
+    event.preventDefault();
+    handleServicesModalClick(name, type);
+  }
 </script>
 
 <style>
@@ -55,29 +60,29 @@
     }
   }
 
-  button {
+  a {
     cursor: pointer;
-    width: 100%;
+    display: inline-block;
     height: 100%;
-    padding: 1.5rem;
+    width: 100%;
     background-color: var(--main-color);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   }
 
-  :global(.user-is-tabbing) button:focus .text-svg {
+  :global(.user-is-tabbing) a:focus .text-svg {
     fill: var(--light);
   }
 
-  :global(.user-is-tabbing) button:focus .icon-svg {
+  :global(.user-is-tabbing) a:focus .icon-svg {
     fill: var(--secondary-color);
   }
 
   @media (--not-touchscreen) {
-    button:hover .text-svg {
+    a:hover .text-svg {
       fill: var(--light);
     }
 
-    button:hover .icon-svg {
+    a:hover .icon-svg {
       fill: var(--secondary-color);
     }
   }
@@ -112,12 +117,12 @@
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
 
   <li>
-    <button
+    <a
+      href="/services?name=music&type=mixing"
       on:click={() => setActiveMusicTab(get(musicActiveTab))}
-      on:click={() => handleServicesModalClick('music', get(musicActiveTab))}
-      aria-label="Toggle music submenu"
-      aria-pressed={$servicesModalActive === 'music'}
-      class:button-is-clicked={$servicesModalActive === 'music'}>
+      on:click={event => handleClick(event, 'music', get(musicActiveTab))}
+      aria-label="Music submenu"
+      aria-pressed={$servicesModalActive === 'music'}>
       <svg
         class="icon-svg"
         id="svg-to-animate-music"
@@ -190,16 +195,16 @@
           24.5139 118.802 24.5139C121.105 24.5139 122.794 24.0813 123.869
           23.2159C124.959 22.3505 125.666 21.1689 125.988 19.6711H131.977Z" />
       </svg>
-    </button>
+    </a>
   </li>
 
   <li>
-    <button
+    <a
+      href="/services?name=film&type=re-recording_mixing"
       on:click={() => setActiveFilmTab(get(filmActiveTab))}
-      on:click={() => handleServicesModalClick('film', get(filmActiveTab))}
-      aria-label="Toggle film submenu"
-      aria-pressed={$servicesModalActive === 'film'}
-      class:button-is-clicked={$servicesModalActive === 'film'}>
+      on:click={event => handleClick(event, 'film', get(filmActiveTab))}
+      aria-label="Film submenu"
+      aria-pressed={$servicesModalActive === 'film'}>
       <svg
         class="icon-svg"
         id="svg-to-animate-film"
@@ -226,16 +231,16 @@
           d="M132 0V34H123.914V16.575L113.564 34H103.861L93.5114
           16.6281V34H85.4256V0H93.5114L108.68 25.8188L123.914 0H132Z" />
       </svg>
-    </button>
+    </a>
   </li>
 
   <li>
-    <button
+    <a
+      href="/services?name=game&type=sound_design"
       on:click={() => setActiveGameTab(get(gameActiveTab))}
-      on:click={() => handleServicesModalClick('game', get(gameActiveTab))}
-      aria-label="Toggle game submenu"
-      aria-pressed={$servicesModalActive === 'game'}
-      class:button-is-clicked={$servicesModalActive === 'game'}>
+      on:click={event => handleClick(event, 'game', get(gameActiveTab))}
+      aria-label="Game submenu"
+      aria-pressed={$servicesModalActive === 'game'}>
       <svg
         class="icon-svg"
         id="svg-to-animate-game"
@@ -278,17 +283,16 @@
           d="M132
           23.5V33H106.606V0.999999H131.95V10.5H112.892V14.5H128.48V19.5H112.892V23.5H132Z" />
       </svg>
-    </button>
+    </a>
   </li>
 
   <li>
-    <button
+    <a
+      href="/services?name=branding&type=sonic_logo"
       on:click={() => setActiveBrandingTab(get(brandingActiveTab))}
-      on:click={() => handleServicesModalClick('branding', get(brandingActiveTab))}
-      aria-label="Toggle branding submenu"
-      aria-pressed={$servicesModalActive === 'branding'}
-      class:button-is-clicked={$servicesModalActive === 'branding'}
-      class="last-button">
+      on:click={event => handleClick(event, 'branding', get(brandingActiveTab))}
+      aria-label="Branding submenu"
+      aria-pressed={$servicesModalActive === 'branding'}>
       <svg
         class="icon-svg"
         id="svg-to-animate-branding"
@@ -363,6 +367,6 @@
           119.095 21.5833 119.928 22.75C120.761 23.9167 122.132 24.5 124.041
           24.5C126.193 24.5 127.873 23.5667 129.08 21.7H124.518V16.45H132V33Z" />
       </svg>
-    </button>
+    </a>
   </li>
 </ul>

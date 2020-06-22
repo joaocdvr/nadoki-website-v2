@@ -142,11 +142,13 @@
     display: flex;
     flex-direction: row;
     width: fit-content;
+    padding-top: 0.5rem;
   }
 
   @media (--max-content-width) {
     .socials-ul {
       width: 100%;
+      padding-top: 6rem;
       padding-bottom: 3.5rem;
       border-bottom: 2px solid var(--dark);
     }
@@ -169,7 +171,7 @@
   @media (--max-content-width) {
     .socials-li {
       width: initial;
-      min-width: 3.5rem;
+      min-width: 5rem;
     }
   }
 
@@ -187,6 +189,10 @@
   @media (--max-content-width) {
     .socials-a:hover {
       background-color: var(--secondary-color);
+    }
+
+    .socials-a svg {
+      margin: 0.5rem 0;
     }
 
     .socials-a:hover svg {
@@ -273,13 +279,14 @@
     position: absolute;
     fill: var(--light);
     top: 0;
-    left: -3rem;
+    left: -1.5rem;
     height: 100%;
     width: 100vw;
   }
 
   @media (--max-content-width) {
     .texture-svg {
+      left: 0;
       height: 100%;
       width: 100%;
     }

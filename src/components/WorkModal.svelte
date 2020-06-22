@@ -10,6 +10,11 @@
   } from "../utensils/stores.js";
   import ModalNav from "../components/ModalNav.svelte";
   import Footer from "../components/Footer.svelte";
+
+  function handleBackClick(event, callback) {
+    event.preventDefault();
+    callback;
+  }
 </script>
 
 <style>
@@ -48,7 +53,11 @@
 </style>
 
 <div>
-  <ModalNav title="Work" on:click={() => resetWorkModalActive()} />
+  <ModalNav
+    on:click={event => handleBackClick(event, resetWorkModalActive())}
+    title="Work"
+    path="/work"
+    label="Back to work" />
   <main
     in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
     out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>

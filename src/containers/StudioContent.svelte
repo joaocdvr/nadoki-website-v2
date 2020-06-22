@@ -8,7 +8,7 @@
     {
       src: "studio/nadoki-studios.jpg",
       srcset: "studio/nadoki-studios-medium.jpg 800w",
-      ratio: "calc(810 / 1080 * 100%)",
+      ratio: "calc(750 / 1000 * 100%)",
       alt: "Nadoki Studios picture nº1",
       title: "Nadoki",
       content:
@@ -19,7 +19,7 @@
     {
       src: "studio/studio-10.jpg",
       srcset: "studio/studio-10-medium.jpg 800w",
-      ratio: "calc(755 / 1080 * 100%)",
+      ratio: "calc(699 / 1000 * 100%)",
       alt: "Studio 10 picture nº1",
       title: "Studio 10",
       content:
@@ -29,7 +29,7 @@
     {
       src: "studio/the-lab-1.jpg",
       srcset: "studio/the-lab-1-medium.jpg 800w",
-      ratio: "calc(560 / 1080 * 100%)",
+      ratio: "calc(560 / 1000 * 100%)",
       alt: "The Lab picture nº1",
       title: "The Lab",
       content:
@@ -39,14 +39,14 @@
     {
       src: "studio/riverside-1.jpg",
       srcset: "studio/riverside-1-medium.jpg 800w",
-      ratio: "calc(675 / 1080 * 100%)",
+      ratio: "calc(625 / 1000 * 100%)",
       alt: "Riverside Studios picture nº1",
       title: "Riverside Studios",
       content:
         "We are part of the Riverside Studio complex, a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders.",
       tags: "",
       link: true,
-      linkHref: "https://riversidestudios.de/"
+      path: "https://riversidestudios.de/"
     }
   ];
 </script>

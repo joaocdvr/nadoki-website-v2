@@ -55,7 +55,8 @@
       alt: "'We Gotta Live Together' album cover art",
       title: "We Gotta Live Together",
       content: "Song by DJ FLAT.",
-      tags: "Master"
+      tags: "Master",
+      path: "/work?project=we_gotta_live_together"
     },
     {
       url: "glitter_against_terfs",
@@ -65,7 +66,8 @@
       alt: "'Glitter Against Terfs' album cover art",
       title: "Glitter Against Terfs",
       content: "EP by Lazy Rosario.",
-      tags: "Master"
+      tags: "Master",
+      path: "/work?project=glitter_against_terfs"
     },
     {
       url: "above_it_all",
@@ -75,17 +77,19 @@
       alt: "'Above It ALL' album cover art",
       title: "Above It All",
       content: "Song by Mind Against.",
-      tags: "Master"
+      tags: "Master",
+      path: "/work?project=above_it_all"
     },
     {
       url: "parda",
-      ratio: "calc(1527 / 1080 * 100%)",
+      ratio: "calc(1414 / 1000 * 100%)",
       src: "work/parda.jpg",
       srcset: "work/parda-medium.jpg 800w",
       alt: "'Parda' documentary cover art",
       title: "Parda",
       content: "A Brazilian documentary, directed by Tai Linhares.",
-      tags: "5.1 Mix"
+      tags: "5.1 Mix",
+      path: "/work?project=parda"
     },
     {
       url: "love_hurts",
@@ -95,40 +99,32 @@
       alt: "'Love Hurts' single cover art",
       title: "Love Hurts",
       content: "Song by Osaka88.",
-      tags: "Mix, Master"
+      tags: "Mix, Master",
+      path: "/work?project=love_hurts"
     },
     {
       url: "der_hauptbahnhof",
-      ratio: "calc(1528 / 1080 * 100%)",
+      ratio: "calc(1415 / 1000 * 100%)",
       src: "work/der-hauptbahnhof.jpg",
       srcset: "work/der-hauptbahnhof-medium.jpg 800w",
       alt: "'Der Hauptbanhof' documentary cover art",
       title: "Der Hauptbanhnof",
       content:
         "A documentary written, directed and filmed by Jordi Garcia Rodriguez.",
-      tags: "Sound Design, Post-Production"
+      tags: "Sound Design, Post-Production",
+      path: "/work?project=der_hauptbahnhof"
     },
     {
       url: "ertrinken",
-      ratio: "calc(1080 / 1920 * 100%)",
+      ratio: "calc(563 / 1000 * 100%)",
       src: "work/ertrinken.jpg",
       srcset: "work/ertrinken-medium.jpg 800w",
       alt: "Frame from 'Ertrinken' short film",
       title: "Ertrinken",
       content:
         "A short story directed by Pedro Harres and produced by Cléo Campe.",
-      tags: "Sound Design"
-    },
-    {
-      url: "a_juventude_por_ela_própria",
-      ratio: "calc(1080 / 1920 * 100%)",
-      src: "work/a-juventude-por-ela-própria.jpg",
-      srcset: "work/a-juventude-por-ela-própria-medium.jpg 800w",
-      alt: "Frame from 'A juventude por ela própria' documentary",
-      title: "A juventude por ela própria",
-      content:
-        "A documentary produced by Agora, irrepetível. and edited by Guilherme Sousa.",
-      tags: "Soundtrack"
+      tags: "Sound Design",
+      path: "/work?project=ertrinken"
     }
   ];
 </script>

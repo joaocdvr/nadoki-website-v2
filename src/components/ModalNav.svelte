@@ -9,10 +9,12 @@
   } from "../utensils/stores.js";
 
   export let title = "";
+  export let path = "";
+  export let label = "";
 </script>
 
 <style>
-  button {
+  a {
     border: none;
     cursor: pointer;
     padding: 1.5rem;
@@ -20,13 +22,13 @@
     transition: background-color 300ms ease-in-out, fill 300ms ease-in-out;
   }
 
-  :global(.user-is-tabbing) button:focus {
+  :global(.user-is-tabbing) a:focus {
     fill: var(--light);
     background-color: var(--secondary-color);
   }
 
   @media (--not-touchscreen) {
-    button:hover {
+    a:hover {
       fill: var(--secondary-color);
     }
   }
@@ -79,7 +81,7 @@
 
 <nav>
   <div>
-    <button on:click aria-label="Back">
+    <a on:click href={path} aria-label={label}>
       <svg
         viewBox="0 0 40 24"
         preserveAspectRatio="none"
@@ -91,7 +93,7 @@
           19H10V24H22.3783C32.1117 24 40 19.266 40 13.427C40 7.588 32.1117 3.021
           22.3783 3.021Z" />
       </svg>
-    </button>
+    </a>
     <h1
       class="body-bold"
       in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}

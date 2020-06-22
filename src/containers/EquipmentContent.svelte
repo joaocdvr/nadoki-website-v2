@@ -45,13 +45,15 @@
       title: "HARDWARE",
       function: () => handleEquipmentTabClick("hardware"),
       variable: $equipmentActiveTab === "hardware",
-      justTwo: true
+      justTwo: true,
+      path: "/equipment?type=hardware"
     },
     {
       title: "SOFTWARE",
       function: () => handleEquipmentTabClick("software"),
       variable: $equipmentActiveTab === "software",
-      justTwo: true
+      justTwo: true,
+      path: "/equipment?type=software"
     }
   ];
 

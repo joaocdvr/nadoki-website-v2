@@ -114,27 +114,32 @@
     {
       title: "MIXING",
       function: () => handleMusicTabClick("mixing"),
-      variable: $musicActiveTab === "mixing"
+      variable: $musicActiveTab === "mixing",
+      path: "/services?name=music&type=mixing"
     },
     {
       title: "MASTERING",
       function: () => handleMusicTabClick("mastering"),
-      variable: $musicActiveTab === "mastering"
+      variable: $musicActiveTab === "mastering",
+      path: "/services?name=music&type=mastering"
     },
     {
       title: "RECORDING",
       function: () => handleMusicTabClick("recording"),
-      variable: $musicActiveTab === "recording"
+      variable: $musicActiveTab === "recording",
+      path: "/services?name=music&type=recording"
     },
     {
       title: "EDITING | RESTORATION",
       function: () => handleMusicTabClick("editing_restoration"),
-      variable: $musicActiveTab === "editing_restoration"
+      variable: $musicActiveTab === "editing_restoration",
+      path: "/services?name=music&type=editing_restoration"
     },
     {
       title: "PRODUCTION",
       function: () => handleMusicTabClick("production"),
-      variable: $musicActiveTab === "production"
+      variable: $musicActiveTab === "production",
+      path: "/services?name=music&type=production"
     }
   ];
 
@@ -142,22 +147,26 @@
     {
       title: "RE-RECORDING MIXING",
       function: () => handleFilmTabClick("re-recording_mixing"),
-      variable: $filmActiveTab === "re-recording_mixing"
+      variable: $filmActiveTab === "re-recording_mixing",
+      path: "/services?name=film&type=re-recording_mixing"
     },
     {
       title: "EDITING | RESTORATION",
       function: () => handleFilmTabClick("editing_restoration"),
-      variable: $filmActiveTab === "editing_restoration"
+      variable: $filmActiveTab === "editing_restoration",
+      path: "/services?name=film&type=editing_restoration"
     },
     {
       title: "SOUND DESIGN",
       function: () => handleFilmTabClick("sound_design"),
-      variable: $filmActiveTab === "sound_design"
+      variable: $filmActiveTab === "sound_design",
+      path: "/services?name=film&type=sound_design"
     },
     {
       title: "ORIGINAL SOUNDTRACK",
       function: () => handleFilmTabClick("original_soundtrack"),
-      variable: $filmActiveTab === "original_soundtrack"
+      variable: $filmActiveTab === "original_soundtrack",
+      path: "/services?name=film&type=original_soundtrack"
     }
   ];
 
@@ -165,22 +174,26 @@
     {
       title: "SOUND DESIGN",
       function: () => handleGameTabClick("sound_design"),
-      variable: $gameActiveTab === "sound_design"
+      variable: $gameActiveTab === "sound_design",
+      path: "/services?name=game&type=sound_design"
     },
     {
       title: "ORIGINAL SOUNDTRACK",
       function: () => handleGameTabClick("original_soundtrack"),
-      variable: $gameActiveTab === "original_soundtrack"
+      variable: $gameActiveTab === "original_soundtrack",
+      path: "/services?name=game&type=original_soundtrack"
     },
     {
       title: "INTEGRATION",
       function: () => handleGameTabClick("integration"),
-      variable: $gameActiveTab === "integration"
+      variable: $gameActiveTab === "integration",
+      path: "/services?name=game&type=integration"
     },
     {
       title: "MIXING",
       function: () => handleGameTabClick("mixing"),
-      variable: $gameActiveTab === "mixing"
+      variable: $gameActiveTab === "mixing",
+      path: "/services?name=game&type=mixing"
     }
   ];
 
@@ -188,19 +201,27 @@
     {
       title: "SONIC LOGO",
       function: () => handleBrandingTabClick("sonic_logo"),
-      variable: $brandingActiveTab === "sonic_logo"
+      variable: $brandingActiveTab === "sonic_logo",
+      path: "/services?name=branding&type=sonic_logo"
     },
     {
       title: "PODCAST",
       function: () => handleBrandingTabClick("podcast"),
-      variable: $brandingActiveTab === "podcast"
+      variable: $brandingActiveTab === "podcast",
+      path: "/services?name=branding&type=podcast"
     },
     {
       title: "POST-PRODUCTION FOR ADS",
       function: () => handleBrandingTabClick("post-production_for_ads"),
-      variable: $brandingActiveTab === "post-production_for_ads"
+      variable: $brandingActiveTab === "post-production_for_ads",
+      path: "/services?name=branding&type=post-production_for_ads"
     }
   ];
+
+  function handleBackClick(event, callback) {
+    event.preventDefault();
+    callback;
+  }
 </script>
 
 <style>
@@ -348,7 +369,11 @@
   class:modal-is-visible={isAnyServiceClicked}>
 
   {#if $servicesModalActive === 'music'}
-    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
+    <ModalNav
+      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services" />
     <Header variant="music" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={musicTab} delay={$animationInDelay} />
@@ -702,7 +727,11 @@
       </div>
     </main>
   {:else if $servicesModalActive === 'film'}
-    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
+    <ModalNav
+      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services" />
     <Header variant="film" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={filmTab} delay={$animationInDelay} />
@@ -874,7 +903,11 @@
       </div>
     </main>
   {:else if $servicesModalActive === 'game'}
-    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
+    <ModalNav
+      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services" />
     <Header variant="game" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={gameTab} delay={$animationInDelay} />
@@ -1036,7 +1069,11 @@
       </div>
     </main>
   {:else if $servicesModalActive === 'branding'}
-    <ModalNav on:click={() => resetServicesModalActive()} title="Services" />
+    <ModalNav
+      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services" />
     <Header variant="branding" delay={$animationInDelay} />
     <main>
       <Tab variant="services" tab={brandingTab} delay={$animationInDelay} />
