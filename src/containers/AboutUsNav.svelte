@@ -183,7 +183,7 @@
   }
 
   .a-open svg {
-    opacity: 0;
+    display: none;
   }
 
   .img-open {
@@ -216,7 +216,6 @@
   }
 
   svg {
-    opacity: 1;
     position: absolute;
     fill: var(--light);
     top: 50%;
