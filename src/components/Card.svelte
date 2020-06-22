@@ -36,8 +36,8 @@
     a {
       padding: 3rem;
       margin: 3rem 0 6rem 0;
-      width: calc(var(--max-width) * 0.75);
-      transform: translateX(calc(50vw - var(--max-width) * 0.375));
+      width: calc(var(--max-width) * 0.65);
+      transform: translateX(calc(50vw - var(--max-width) * 0.325));
     }
   }
 

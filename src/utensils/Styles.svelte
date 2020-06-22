@@ -56,6 +56,7 @@
     line-height: 1.5;
     font-size: 1.625rem;
     color: var(--dark);
+    letter-spacing: 0.1rem;
     word-break: break-word;
     hyphens: auto;
   }
@@ -71,6 +72,9 @@
     line-height: 2;
     font-size: 1rem;
     color: var(--dark);
+    letter-spacing: 0.1rem;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   @media (--max-content-width) {
