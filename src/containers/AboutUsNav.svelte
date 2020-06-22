@@ -180,6 +180,10 @@
       border-bottom: none;
       text-transform: uppercase;
     }
+
+    .a-open:hover h2 {
+      color: var(--light);
+    }
   }
 
   .a-open svg {
