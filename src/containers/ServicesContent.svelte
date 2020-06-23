@@ -409,7 +409,7 @@
                 <p class="body-bold">Delivery Requirements</p>
                 <p class="body-regular">
                   In order to deliver the best product possible, send us your
-                  labeled multitrack, separated track by track. Be sure to sem
+                  labeled multitrack, separated track by track. Be sure to send
                   them in the highest quality possible according to your
                   session, preferably 44.1kHz or 88.2 kHz sample rate and 24 or
                   32 bit depth.
