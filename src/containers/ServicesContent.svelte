@@ -672,7 +672,7 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— 35 EUR/hour</p>
+                <p class="body-regular">— 60 EUR/hour</p>
                 <p class="body-regular">
                   You can
                   <a
@@ -822,7 +822,7 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— 35 EUR/hour</p>
+                <p class="body-regular">— 60 EUR/hour</p>
                 <p class="body-regular">
                   You can
                   <a
