@@ -153,8 +153,7 @@
       and
       <a href="/equipment" underlined>equipment,</a>
       or read more
-      <a href="/about_us" underlined>about us</a>
-      .
+      <a href="/about_us" underlined>about us.</a>      
     </p>
     <svg
       id="svg-to-animate-homepage"
