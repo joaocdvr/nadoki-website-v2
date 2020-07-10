@@ -89,7 +89,8 @@
     "mastering",
     "recording",
     "editing_restoration",
-    "production"
+    "production",
+    "consultation"
   ];
 
   const filmTabs = [
@@ -140,6 +141,12 @@
       function: () => handleMusicTabClick("production"),
       variable: $musicActiveTab === "production",
       path: "/services?name=music&type=production"
+    },
+    {
+      title: "CONSULTATION",
+      function: () => handleMusicTabClick("consultation"),
+      variable: $musicActiveTab === "consultation",
+      path: "/services?name=music&type=consultation"
     }
   ];
 
@@ -719,6 +726,36 @@
                     href="mailto:info@nadoki.com">
                     Get in touch.
                   </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $musicActiveTab === 'consultation'}
+          <div
+            in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
+            out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+            <ul>
+              <li>
+                <h2 class="body-bold">Consultation</h2>
+
+                <p class="body-regular">
+                  If you're a bit lost and just need a push in the right direction, we also offer feedback on your music project.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  — Starting at &rArr; 30 EUR 
+                </p>
+                <p class="body-regular reach-out">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com">
+                    Reach out
+                  </a>
+                  for a more precise quote.
                 </p>
               </li>
             </ul>
