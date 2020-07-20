@@ -34,6 +34,8 @@
   });
 
   const workSubpages = [
+    "bold-gestures",
+    "ambrosia",
     "we_gotta_live_together",
     "glitter_against_terfs",
     "above_it_all",
@@ -47,6 +49,28 @@
   $: isAnyWorkModalActive = !!$workModalActive;
 
   let workCards = [
+    {
+      url: "bold-gestures",
+      ratio: "100%",
+      src: "work/bold-gestures.jpg",
+      srcset: "work/bold-gestures-medium.jpg 800w",
+      alt: "'Bold Gestures' podcast cover art",
+      title: "Bold Gestures",
+      content: "Podcast by Rich, Hank & Tobi.",
+      tags: "Post-production",
+      path: "/work?project=bold-gestures"
+    },
+    {
+      url: "ambrosia",
+      ratio: "100%",
+      src: "work/ambrosia.jpg",
+      srcset: "work/ambrosia-medium.jpg 800w",
+      alt: "'Ambrosia' album cover art",
+      title: "Ambrosia",
+      content: "Album by SOEL.",
+      tags: "Master",
+      path: "/work?project=ambrosia"
+    },
     {
       url: "we_gotta_live_together",
       ratio: "100%",
@@ -63,7 +87,7 @@
       ratio: "100%",
       src: "work/glitter-against-terfs.jpg",
       srcset: "work/glitter-against-terfs-medium.jpg 800w",
-      alt: "'Glitter Against Terfs' album cover art",
+      alt: "'Glitter Against Terfs' EP cover art",
       title: "Glitter Against Terfs",
       content: "EP by Lazy Rosario.",
       tags: "Master",
@@ -183,15 +207,32 @@
     }
   }
 
-  .spotify-iframe {
+  .spotify-track-iframe {
     width: 100%;
     height: calc(100vw + 80px);
   }
 
+  .spotify-album-iframe {
+    width: 100%;
+  }
+
+  .spotify-podcast-iframe {
+    width: 100%;
+    height: 232px;
+  }
+
   @media (--max-content-width) {
-    .spotify-iframe {
+    .spotify-track-iframe {
       padding: 0 1.5rem;
       height: calc(var(--max-width) - 6rem);
+    }
+
+    .spotify-album-iframe {
+      padding: 0 1.5rem;
+    }
+
+    .spotify-podcast-iframe {
+      padding: 0 1.5rem;
     }
   }
 </style>
@@ -205,13 +246,77 @@
 </div>
 
 <div class="modal-wrapper" class:modal-is-visible={isAnyWorkModalActive}>
-  {#if $workModalActive === 'we_gotta_live_together'}
+  {#if $workModalActive === 'bold-gestures'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Bold Gestures' by Rich, Hank and Tobi"
+        src="https://open.spotify.com/embed-podcast/show/2BJpkoJl24es7GCKvVo8uZ"
+        class="spotify-podcast-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media" />
+
+      <h2 slot="title" class="body-extra">Bold Gestures</h2>
+
+      <p slot="year" class="body-bold">2020</p>
+
+      <div slot="tag">
+        <Tag tags="Post-Production" />
+      </div>
+
+      <span slot="credits" class="body-regular">
+        Podcasters
+        <span class="body-bold">Rich, Hank and Tobi</span>
+        <br />
+        Produced by
+        <span class="body-bold">VGL Marketing</span>
+        <br />
+        Co-produced by
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Post-production by
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
+    </WorkModal>
+  {:else if $workModalActive === 'ambrosia'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Ambrosia' by SOEL"
+        src="https://open.spotify.com/embed/album/7MUXZB7K88izSQvbXrJ2vo"
+        class="spotify-album-iframe"
+        height="360"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media" />
+
+      <h2 slot="title" class="body-extra">AMBROSIA</h2>
+
+      <p slot="year" class="body-bold">2020</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <span slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">SOEL</span>
+        <br />
+        Mixing
+        <span class="body-bold">SOEL</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
+      </span>
+    </WorkModal>
+  {:else if $workModalActive === 'we_gotta_live_together'}
     <WorkModal>
       <iframe
         slot="media"
         title="'We Gotta Live Together' by DJ Flat"
         src="https://open.spotify.com/embed/track/0v2IrjcP4tPmMWRkCBSkCk"
-        class="spotify-iframe"
+        class="spotify-track-iframe"
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media" />
@@ -239,9 +344,10 @@
     <WorkModal>
       <iframe
         slot="media"
-        title="'Glitter Against Terfs' by Lazy Rozario"
-        src="https://open.spotify.com/embed/track/3ZUxwyfhShxKdaBHYJkyXl"
-        class="spotify-iframe"
+        title="'Glitter Against Terfs' EP by Lazy Rozario"
+        src="https://open.spotify.com/embed/album/5zWKcWRiCURalAmtGoHJkK"
+        class="spotify-album-iframe"
+        height="152"
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media" />
@@ -409,7 +515,7 @@
         slot="media"
         title="'Love Hurts' by Osaka88"
         src="https://open.spotify.com/embed/track/1ClR5vHqlOlK6fj6hLKnNY"
-        class="spotify-iframe"
+        class="spotify-track-iframe"
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media" />
