@@ -42,8 +42,7 @@
     "parda",
     "love_hurts",
     "der_hauptbahnhof",
-    "ertrinken",
-    "a_juventude_por_ela_própria"
+    "ertrinken"
   ];
 
   $: isAnyWorkModalActive = !!$workModalActive;
@@ -154,6 +153,23 @@
 </script>
 
 <style>
+  a {
+    color: var(--dark);
+    display: inline-block;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    color: var(--light);
+    background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover {
+      color: var(--secondary-color);
+    }
+  }
+
   .content-wrapper {
     background-color: var(--main-color);
     margin-top: 4.5rem;
@@ -235,6 +251,10 @@
       padding: 0 1.5rem;
     }
   }
+
+  .span-a {
+    white-space: nowrap;
+  }
 </style>
 
 <div
@@ -276,7 +296,16 @@
         <span class="body-bold">Nadoki Studios</span>
         <br />
         Post-production by
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {:else if $workModalActive === 'ambrosia'}
@@ -307,7 +336,20 @@
         <span class="body-bold">SOEL</span>
         <br />
         Mastering
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=joao">
+              João Rodrigues
+            </a>
+            +
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {:else if $workModalActive === 'we_gotta_live_together'}
@@ -337,7 +379,16 @@
         <span class="body-bold">DJ Flat</span>
         <br />
         Mastering
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {:else if $workModalActive === 'glitter_against_terfs'}
@@ -368,7 +419,16 @@
         <span class="body-bold">Lazy Rozario</span>
         <br />
         Mastering
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {:else if $workModalActive === 'above_it_all'}
@@ -423,7 +483,20 @@
         <span class="body-bold">Mind Against</span>
         <br />
         Mastering
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=elia">
+              Elia Bertolaso
+            </a>
+            +
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </p>
     </WorkModal>
   {:else if $workModalActive === 'parda'}
@@ -506,7 +579,20 @@
         <span class="body-bold">Mariana Bahia</span>
         <br />
         5.1 Mix by
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=joao">
+              João Rodrigues
+            </a>
+            +
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {:else if $workModalActive === 'love_hurts'}
@@ -539,10 +625,36 @@
         <span class="body-bold">Mo$sart</span>
         <br />
         Mixing
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=joao">
+              João Rodrigues
+            </a>
+            +
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
         <br />
         Mastering
-        <span class="body-bold">Nadoki Studios</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=joao">
+              João Rodrigues
+            </a>
+            +
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {:else if $workModalActive === 'der_hauptbahnhof'}
@@ -595,7 +707,17 @@
         <span class="body-bold">Lyz Pfister</span>
         <br />
         Sound Mix and Sound Design
-        <span class="body-bold">Nadoki Studios and Claudine Fanilia</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+          and Claudine Fanilia
+        </span>
         <br />
         Music
         <span class="body-bold">
@@ -683,49 +805,16 @@
         <span class="body-bold">Maria Teixeira</span>
         <br />
         Sound Design
-        <span class="body-bold">Nadoki Studios</span>
-      </span>
-    </WorkModal>
-  {:else if $workModalActive === 'a_juventude_por_ela_própria'}
-    <WorkModal>
-      <iframe
-        slot="media"
-        title="'A juventude por ela própria' by Agora Irrepetível"
-        src="https://www.youtube.com/embed/iSD3Gwa0oLs"
-        class="youtube-iframe"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope;
-        picture-in-picture"
-        allowfullscreen />
-
-      <h2 slot="title" class="body-extra">A JUVENTUDE POR ELA PRÓPRIA</h2>
-
-      <p slot="year" class="body-bold">2015</p>
-
-      <div slot="tag">
-        <Tag tags="Soundtrack" />
-      </div>
-
-      <p slot="description" class="quote body-regular">
-        In 2015, the project of the students of Communication Design at FBAUL
-        consisted of the theme “Youth on the Move”. Fourteen working groups gave
-        very different responses to the initial motto, through projects that
-        addressed issues related to education, current political and social
-        context, as well as this generation’s youth. On the day of the
-        assessment, we asked one member of each group to talk about the
-        experience of working on this topic and the testimonies of the students
-        were brought together in this document.
-      </p>
-
-      <span slot="credits" class="body-regular">
-        Realization
-        <span class="body-bold">Agora, irrepetível.</span>
-        <br />
-        Editing
-        <span class="body-bold">Guilherme Sousa</span>
-        <br />
-        Soundtrack
-        <span class="body-bold">Nadoki Studios and Mariana Freitas</span>
+        <span class="body-bold">
+          Nadoki Studios
+          <span class="span-a">
+            [
+            <a target="_blank" rel="noopener" href="/about_us?name=julia">
+              Julia Borelli
+            </a>
+            ]
+          </span>
+        </span>
       </span>
     </WorkModal>
   {/if}
