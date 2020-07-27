@@ -383,6 +383,10 @@
           Nadoki Studios
           <span class="span-a">
             [
+            <a target="_blank" rel="noopener" href="/about_us?name=elia">
+              Elia Bertolaso
+            </a>
+            +
             <a target="_blank" rel="noopener" href="/about_us?name=julia">
               Julia Borelli
             </a>
