@@ -13,7 +13,7 @@
 
 Nadoki is a mixing and mastering studio located at [Riverside Studios](https://riversidestudios.de/), a unique collective of renowned music artists and professionals in the heart of Berlin.
 
-This is the repository of it's website. Check the live version at nadoki.com and get to know a bit more about the studio and it's members.
+This is the repository of it's website. Check the live version at [nadoki.com](https://www.nadoki.com/) and get to know a bit more about the studio and it's members.
 
 ## Technologies
 
@@ -36,7 +36,7 @@ This website is created with:
 
 ## Setup
 
-To run this project, start by cloning it and then install it locally using npm:
+To run this project, start by cloning it and then install it locally using [npm](https://nodejs.org/en/):
 
 ```
 cd [project folder path]
@@ -44,7 +44,7 @@ npm install
 npm run dev
 ```
 
-This will install its dependencies, and start a server on [localhost:3000](http://localhost:3000/).
+This will install its dependencies, and start a local server on [localhost:3000](http://localhost:3000/).
 
 ## Contributing
 
