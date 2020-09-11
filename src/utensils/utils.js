@@ -1,9 +1,8 @@
-// Imports
 import { get } from "svelte/store";
 import Warp from "warpjs";
 import { scrollYPosition, activePage } from "./stores.js";
 
-// Function that identifies if the user is navigating with a mouse or tab
+// Identifies if the user is navigating with a mouse or tab
 export function focusOnlyWhenNeeded() {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
@@ -26,14 +25,14 @@ export function focusOnlyWhenNeeded() {
   return;
 }
 
-// Function that listens and updates mobile vh
+// Updates custom "mobile" vh property that takes in consideration the visible browser UI
 export function updateVHVariable() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
   return;
 }
 
-// Functions that save/restore/rest scroll Y position
+// Saves/restores/resets scroll Y position store
 export function saveScrollYPosition() {
   scrollYPosition.set(window.scrollY);
   return;
@@ -52,11 +51,12 @@ export function resetScrollYPosition() {
   return;
 }
 
-// Function that animates SVGs
+// Animates SVGs (warp.js)
 const mapping = {};
 
 export function handleSVGAnimation(name, page, param, goalParam) {
   if (goalParam && mapping[goalParam]) {
+    // if mapping[goalParam] = true, the function was already ran one time. This prevents the creation of multiple svg animations for the same svg
     return;
   }
 
@@ -81,7 +81,7 @@ export function handleSVGAnimation(name, page, param, goalParam) {
           oy,
         ]);
         offset += 0.025;
-        setTimeout(() => requestAnimationFrame(animate), 1000 / 30);
+        setTimeout(() => requestAnimationFrame(animate), 1000 / 30); // 30fps
       } else {
         mapping[goalParam] = false;
         return;

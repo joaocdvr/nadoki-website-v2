@@ -50,7 +50,7 @@
     white-space: nowrap; /* added line */
   }
 
-  /* Text */
+  /* Text global styles*/
   :global(.header-big) {
     font-family: "syne-extra", Arial, Helvetica, sans-serif;
     line-height: 1.5;
