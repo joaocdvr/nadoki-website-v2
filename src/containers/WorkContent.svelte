@@ -23,9 +23,9 @@
 
     window.addEventListener("popstate", function() {
       const url = new URL(document.location);
-      const nameParam = url.searchParams.get("project");
-      if (workSubpages.includes(nameParam)) {
-        setWorkModalActive(nameParam);
+      const projectParam = url.searchParams.get("project");
+      if (workSubpages.includes(projectParam)) {
+        setWorkModalActive(projectParam);
       } else {
         setWorkModalActive("");
       }
@@ -34,6 +34,17 @@
   });
 
   const workSubpages = [
+    /* 
+    Every time there's a new "works" entry, it's desired url string must be added manually to this array.
+    
+    This array is used by the popstate event listener to check if the url project parameter includes any of these strings.
+    If it doesn't, no modal will be activated. This means that the user will be able to continue scrolling on the "Works" page.
+
+    Let's look at an example: www.nadoki.com/work?project=example 
+    Since this array (workSubpages) doesn't include an "example" string, 
+    the example url (in practice) would behave as if it didn't have the project parameter (www.nadoki.com/work) 
+    */
+    "ovoo",
     "bold-gestures",
     "ambrosia",
     "we_gotta_live_together",
@@ -48,6 +59,19 @@
   $: isAnyWorkModalActive = !!$workModalActive;
 
   let workCards = [
+    // Every time there's a new "works" entry, it's data must be added manually to this array.
+    {
+      url: "ovoo",
+      ratio: "100%",
+      src: "work/ovoo.jpg",
+      srcset: "work/ovoo-medium.jpg 800w",
+      alt: "'Ovoo' project artwork",
+      title: "Ovoo",
+      content:
+        "360º visual project by Ali M. Demirel in collaboration with Arts Council of Mongolia and TodaysArt.",
+      tags: "Sountrack",
+      path: "/work?project=ovoo"
+    },
     {
       url: "bold-gestures",
       ratio: "100%",
@@ -55,7 +79,8 @@
       srcset: "work/bold-gestures-medium.jpg 800w",
       alt: "'Bold Gestures' podcast cover art",
       title: "Bold Gestures",
-      content: "Podcast by Rich, Hank & Tobi.",
+      content:
+        "A podcast where three friends attempt to make sense of this bizarro world and the people who live in it.",
       tags: "Post-production",
       path: "/work?project=bold-gestures"
     },
@@ -66,7 +91,7 @@
       srcset: "work/ambrosia-medium.jpg 800w",
       alt: "'Ambrosia' album cover art",
       title: "Ambrosia",
-      content: "Album by SOEL.",
+      content: "SOEL's debut album on ORACOLO Records. ",
       tags: "Master",
       path: "/work?project=ambrosia"
     },
@@ -77,7 +102,7 @@
       srcset: "work/we-gotta-live-together-medium.jpg 800w",
       alt: "'We Gotta Live Together' album cover art",
       title: "We Gotta Live Together",
-      content: "Song by DJ FLAT.",
+      content: "DJ FLAT's debut single.",
       tags: "Master",
       path: "/work?project=we_gotta_live_together"
     },
@@ -88,7 +113,7 @@
       srcset: "work/glitter-against-terfs-medium.jpg 800w",
       alt: "'Glitter Against Terfs' EP cover art",
       title: "Glitter Against Terfs",
-      content: "EP by Lazy Rosario.",
+      content: "Lazy Rosario's fourth EP.",
       tags: "Master",
       path: "/work?project=glitter_against_terfs"
     },
@@ -99,7 +124,8 @@
       srcset: "work/above-it-all-medium.jpg 800w",
       alt: "'Above It ALL' album cover art",
       title: "Above It All",
-      content: "Song by Mind Against.",
+      content:
+        "Mind Against contribution for Unity — a symbol of togetherness curated by Tale Of Us.",
       tags: "Master",
       path: "/work?project=above_it_all"
     },
@@ -121,7 +147,7 @@
       srcset: "work/love-hurts-medium.jpg 800w",
       alt: "'Love Hurts' single cover art",
       title: "Love Hurts",
-      content: "Song by Osaka88.",
+      content: "Osaka88's debut single.",
       tags: "Mix, Master",
       path: "/work?project=love_hurts"
     },
@@ -208,6 +234,19 @@
     }
   }
 
+  .instagram-iframe {
+    width: 100vw;
+    min-height: 450px;
+    height: calc(100vw);
+  }
+
+  @media (--max-content-width) {
+    .instagram-iframe {
+      padding: 0 1.5rem;
+      height: calc(var(--max-width) * 0.7);
+    }
+  }
+
   .vimeo-iframe {
     position: absolute;
     top: 0;
@@ -251,10 +290,6 @@
       padding: 0 1.5rem;
     }
   }
-
-  .span-a {
-    white-space: nowrap;
-  }
 </style>
 
 <div
@@ -266,7 +301,88 @@
 </div>
 
 <div class="modal-wrapper" class:modal-is-visible={isAnyWorkModalActive}>
-  {#if $workModalActive === 'bold-gestures'}
+  <!-- 
+  Every time there's a new "works" entry:
+    1. Swap the #if statement to an :else if;
+    1. Create a new #if statement with the new "works" entry url string previously added to the workSubpages array;
+    3. Copy any other :else if content to start already with the basic modal data structure;
+    4. Edit it to display the information related to the new entry;
+    5. Check a modal that already implemented the media platform (Spotify/Vimeo/YouTube) you intend to use and copy its styling.
+  -->
+  {#if $workModalActive === 'ovoo'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Ovoo' by Ali M. Demirel"
+        src="https://www.instagram.com/p/CCTc4aqI7HJ/embed/"
+        class="instagram-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope;
+        picture-in-picture"
+        allowfullscreen />
+
+      <h2 slot="title" class="body-extra">OVOO</h2>
+
+      <p slot="year" class="body-bold">2020</p>
+
+      <div slot="tag">
+        <Tag tags="Soundtrack" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        360º visual project (work in progress) by Ali M. Demirel in
+        collaboration with Arts Council of Mongolia + TodaysArt.
+        <br />
+        <br />
+        The project was premiered on July 8th at Ulaanbaatar International Media
+        Art Festival.
+        <br />
+        <br />
+        We worked together with Carlota Marques and Emilio Arias to create a
+        soundscape to this visually immersive experience. No public video of the
+        project was published yet.
+      </p>
+
+      <p slot="quote" class="body-regular quote">
+        <span class="body-extra" style="text-transform: uppercase;">
+          "I was invited to Mongolia this summer to produce a new work for
+          Ulaanbaatar International Media Art Festival.
+        </span>
+        <br />
+        <br />
+        Unfortunately my visit couldn’t happen because of the pandemic. However,
+        we have decided with the team to start the production process and I have
+        created my fantasy of Mongolia with my archive footage from around the
+        world. This is the starting point of a work in progress."
+        <br />
+        <br />
+        <span class="body-bold">Ali M. Demirel</span>
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Project by
+        <span class="body-bold">Ali M. Demirel</span>
+        <br />
+        Produced by
+        <span class="body-bold">Arts Council of Mongolia + TodaysArt</span>
+        <br />
+        Soundtrack by
+        <span class="body-bold">
+          Carlota Marques, Emilio Arias and Nadoki Studios
+        </span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'bold-gestures'}
     <WorkModal>
       <iframe
         slot="media"
@@ -277,7 +393,7 @@
         allowtransparency="true"
         allow="encrypted-media" />
 
-      <h2 slot="title" class="body-extra">Bold Gestures</h2>
+      <h2 slot="title" class="body-extra">BOLD GESTURES</h2>
 
       <p slot="year" class="body-bold">2020</p>
 
@@ -285,7 +401,17 @@
         <Tag tags="Post-Production" />
       </div>
 
-      <span slot="credits" class="body-regular">
+      <p slot="description" class="body-regular description">
+        A podcast where three friends attempt to make sense of this bizarro
+        world and the people who live in it. Tobi, Hank, and Tobi search their
+        minds, every week, for wisdom but will likely offer none.
+        <br />
+        <br />
+        They give opinions that don't matter during desperate times...because it
+        matters!
+      </p>
+
+      <p slot="credits" class="body-regular">
         Podcasters
         <span class="body-bold">Rich, Hank and Tobi</span>
         <br />
@@ -296,17 +422,18 @@
         <span class="body-bold">Nadoki Studios</span>
         <br />
         Post-production by
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        is responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'ambrosia'}
     <WorkModal>
@@ -328,7 +455,14 @@
         <Tag tags="Master" />
       </div>
 
-      <span slot="credits" class="body-regular">
+      <p slot="description" class="body-regular description">
+        SOEL's debut album on ORACOLO Records, released on June 8th, features
+        nine of his long-awaited tracks, extending over two, 12-inch
+        double-vinyls. Ambrosia also had a digital release two weeks later, on
+        June 26th.
+      </p>
+
+      <p slot="credits" class="body-regular">
         Music by
         <span class="body-bold">SOEL</span>
         <br />
@@ -336,21 +470,26 @@
         <span class="body-bold">SOEL</span>
         <br />
         Mastering
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=joao">
-              João Rodrigues
-            </a>
-            +
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=joao">
+          João Rodrigues
+        </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        were responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'we_gotta_live_together'}
     <WorkModal>
@@ -371,7 +510,11 @@
         <Tag tags="Master" />
       </div>
 
-      <span slot="credits" class="body-regular">
+      <p slot="description" class="body-regular description">
+        Debut single from Instanbul-born, Berlin-based DJ and producer, DJ FLAT.
+      </p>
+
+      <p slot="credits" class="body-regular">
         Music by
         <span class="body-bold">DJ Flat</span>
         <br />
@@ -379,21 +522,26 @@
         <span class="body-bold">DJ Flat</span>
         <br />
         Mastering
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=elia">
-              Elia Bertolaso
-            </a>
-            +
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia">
+          Elia Bertolaso
+        </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        were responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'glitter_against_terfs'}
     <WorkModal>
@@ -415,7 +563,11 @@
         <Tag tags="Master" />
       </div>
 
-      <span slot="credits" class="body-regular">
+      <p slot="description" class="body-regular description">
+        Fourth EP from Berlin-based DJ and producer, Lazy Roszario.
+      </p>
+
+      <p slot="credits" class="body-regular">
         Music by
         <span class="body-bold">Lazy Rozario</span>
         <br />
@@ -423,17 +575,18 @@
         <span class="body-bold">Lazy Rozario</span>
         <br />
         Mastering
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        was responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'above_it_all'}
     <WorkModal>
@@ -449,7 +602,7 @@
 
       <h2 slot="title" class="body-extra">ABOVE IT ALL</h2>
 
-      <p slot="year" class="body-bold">2019</p>
+      <p slot="year" class="body-bold">2020</p>
 
       <div slot="tag">
         <Tag tags="Master" />
@@ -459,6 +612,8 @@
         Out of darkness can only come light. 'Above It All' is one of the
         31-tracks from 'Unity', a symbol of togetherness curated by Tale Of Us,
         including artists already on Afterlife and some new names to the label.
+        <br />
+        <br />
         Accompanied by a continuous journey through this new music, mixed by
         Tale Of Us, we hope this compilation brings some escape at a challenging
         time.
@@ -487,20 +642,25 @@
         <span class="body-bold">Mind Against</span>
         <br />
         Mastering
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=elia">
-              Elia Bertolaso
-            </a>
-            +
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia">
+          Elia Bertolaso
+        </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'parda'}
@@ -555,7 +715,7 @@
         <span class="body-bold">Tai Linhares</span>
       </p>
 
-      <span slot="credits" class="body-regular">
+      <p slot="credits" class="body-regular">
         Directed, Written and Produced by
         <span class="body-bold">Tai Linhares</span>
         <br />
@@ -583,21 +743,26 @@
         <span class="body-bold">Mariana Bahia</span>
         <br />
         5.1 Mix by
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=joao">
-              João Rodrigues
-            </a>
-            +
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=joao">
+          João Rodrigues
+        </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        were responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'love_hurts'}
     <WorkModal>
@@ -618,7 +783,12 @@
         <Tag tags="Mix, Master" />
       </div>
 
-      <span slot="credits" class="body-regular">
+      <p slot="description" class="description body-regular">
+        Formerly known as OSVKV, Osaka wrote "Love Hurts" — produced together
+        with 80root — as his new alias debut: Osaka88.
+      </p>
+
+      <p slot="credits" class="body-regular">
         Lyrics and Performance
         <span class="body-bold">Osaka88</span>
         <br />
@@ -629,37 +799,29 @@
         <span class="body-bold">Mo$sart</span>
         <br />
         Mixing
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=joao">
-              João Rodrigues
-            </a>
-            +
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         Mastering
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=joao">
-              João Rodrigues
-            </a>
-            +
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=joao">
+          João Rodrigues
+        </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        were responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'der_hauptbahnhof'}
     <WorkModal>
@@ -703,7 +865,7 @@
         <span class="body-bold">Word from the crew</span>
       </p>
 
-      <span slot="credits" class="body-regular">
+      <p slot="credits" class="body-regular">
         Written, Directed and Filmed by
         <span class="body-bold">Jordi Garcia Rodriguez</span>
         <br />
@@ -711,17 +873,7 @@
         <span class="body-bold">Lyz Pfister</span>
         <br />
         Sound Mix and Sound Design
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-          and Claudine Fanilia
-        </span>
+        <span class="body-bold">Claudine Fanilia and Nadoki Studios</span>
         <br />
         Music
         <span class="body-bold">
@@ -734,7 +886,17 @@
         <br />
         Extra Footage
         <span class="body-bold">Ryan Frame and Patrick Baumhöfer</span>
-      </span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        was responsible for this project.
+      </p>
     </WorkModal>
   {:else if $workModalActive === 'ertrinken'}
     <WorkModal>
@@ -798,7 +960,7 @@
         Filme zur großen Vermächtnisstudie”, Public Prize – Best Short
       </p>
 
-      <span slot="credits" class="body-regular">
+      <p slot="credits" class="body-regular">
         Director
         <span class="body-bold">Pedro Harres</span>
         <br />
@@ -809,17 +971,18 @@
         <span class="body-bold">Maria Teixeira</span>
         <br />
         Sound Design
-        <span class="body-bold">
-          Nadoki Studios
-          <span class="span-a">
-            [
-            <a target="_blank" rel="noopener" href="/about_us?name=julia">
-              Julia Borelli
-            </a>
-            ]
-          </span>
-        </span>
-      </span>
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        was responsible for this project.
+      </p>
     </WorkModal>
   {/if}
 </div>

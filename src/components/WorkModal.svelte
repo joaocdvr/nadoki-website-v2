@@ -45,7 +45,7 @@
   }
 
   :global(.work-modal-content-wrapper h2 + p) {
-    /* P inside modal always has margin-top except P below H2 */
+    /* p inside modal always has margin-top except when p is below h2 */
     margin-top: 0.5rem;
     border-bottom: 0;
     padding: 0;
