@@ -70,7 +70,7 @@
     }
   }
 
-  /* Menu cross */
+  /* Menu cross state */
   .left-rect-cross {
     fill: var(--light);
     transform-origin: top left;
@@ -87,7 +87,7 @@
     transform: translate(-85%, 0%) rotate(-45deg) scale(1, 1.21375);
   }
 
-  /* Menu cross hover animation */
+  /* Menu cross state hover animation */
   @media (--not-touchscreen) {
     button:hover .left-rect-cross {
       fill: var(--secondary-color);
@@ -105,6 +105,8 @@
   on:click={handleMenuClick}
   aria-label="Toggle main menu"
   aria-pressed={$isMenuClicked}>
+
+  <!-- Menu icon -->
   <svg
     viewbox="0 0 24 24"
     preserveAspectRatio="none"

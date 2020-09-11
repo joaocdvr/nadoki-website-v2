@@ -60,6 +60,7 @@
 <div
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+
   <a
     class="body-bold"
     href={button.href}

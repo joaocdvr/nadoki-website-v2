@@ -41,7 +41,8 @@
     transition-delay: 0;
     transition: fill 300ms ease-in-out;
   }
-  /* Fill animation */
+
+  /* svg fill animation */
   .is-white {
     fill: var(--light);
     transition-delay: 100ms;
@@ -53,6 +54,8 @@
   aria-label="Homepage"
   on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
   on:click={() => handleHomepageClick()}>
+
+  <!-- Nadoki simplified logo -->
   <svg
     class:is-white={$isMenuClicked}
     preserveAspectRatio="none"
