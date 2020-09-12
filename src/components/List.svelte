@@ -150,6 +150,7 @@
   class:item-is-clicked={listItem.open}
   in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+
   <button
     on:click
     aria-label="Toggle {listItem.name} list"
@@ -159,6 +160,7 @@
       <span />
     </p>
   </button>
+
   <div class="list-content" class:list-open={listItem.open}>
     {#if listItem.open}
       <p transition:slide>

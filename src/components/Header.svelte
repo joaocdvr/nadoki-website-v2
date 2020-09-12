@@ -43,7 +43,7 @@
     }
   }
 
-  /* Equipment height fix */
+  /* Equipment height fix — it has different height because of letter Q */
   .equipment-svg {
     height: 1.875rem;
   }

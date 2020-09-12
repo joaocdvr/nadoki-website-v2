@@ -94,12 +94,14 @@
           22.3783 3.021Z" />
       </svg>
     </a>
+
     <h1
       class="body-bold"
       in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
       out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
       {title}
     </h1>
+
     <span aria-hidden="true" />
   </div>
 </nav>

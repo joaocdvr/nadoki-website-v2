@@ -55,7 +55,6 @@
   on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
   on:click={() => handleHomepageClick()}>
 
-  <!-- Nadoki simplified logo -->
   <svg
     class:is-white={$isMenuClicked}
     preserveAspectRatio="none"

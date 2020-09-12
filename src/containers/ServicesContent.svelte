@@ -739,15 +739,14 @@
                 <h2 class="body-bold">Consultation</h2>
 
                 <p class="body-regular">
-                  If you're a bit lost and just need a push in the right direction, we also offer feedback on your music project.
+                  If you're a bit lost and just need a push in the right
+                  direction, we also offer feedback on your music project.
                 </p>
               </li>
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">
-                  — Starting at &rArr; 30 EUR 
-                </p>
+                <p class="body-regular">— Starting at &rArr; 30 EUR</p>
                 <p class="body-regular reach-out">
                   <a
                     target="_blank"

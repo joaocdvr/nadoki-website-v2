@@ -106,7 +106,6 @@
   aria-label="Toggle main menu"
   aria-pressed={$isMenuClicked}>
 
-  <!-- Menu icon -->
   <svg
     viewbox="0 0 24 24"
     preserveAspectRatio="none"

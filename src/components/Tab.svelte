@@ -10,6 +10,8 @@
   } from "../utensils/stores.js";
 
   onMount(() => {
+    // On mobile, if a tab item was previously selected, that item is shown as selected.
+    // It also scrolls the tab component until the selected item is either shown 24px of the left margin or at an edge.
     if (window.innerWidth < 768 && variant === "services") {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const menuBounds = servicesMenu[0].getBoundingClientRect();
@@ -42,11 +44,13 @@
   function handleClick(event, callback) {
     event.preventDefault();
     callback();
+
     if (window.screen.width >= 768) {
       const servicesModal = document.getElementById("services-modal");
       if (servicesModal.scrollTop > 128) {
         servicesModal.scrollTop = 130;
       }
+      // Scrolls the tab component until the selected item is either shown 24px of the left margin or at an edge.
     } else {
       const servicesMenu = document.getElementsByClassName("services-tab-menu");
       const tabBounds = event.target.getBoundingClientRect();
@@ -175,6 +179,7 @@
   class:services-tab-menu={variant === 'services'}
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
+
   {#each tab as tab}
     <li class:just-two={tab.justTwo}>
       <a
@@ -183,6 +188,7 @@
         on:click={event => handleClick(event, tab.function)}
         aria-pressed={tab.variable}
         class:a-is-selected={tab.variable}>
+
         <span class="body-bold" class:span-is-selected={tab.variable}>
           {tab.title}
         </span>

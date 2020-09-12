@@ -141,6 +141,7 @@
 </style>
 
 <ul class:menu-is-visible={$isMenuClicked}>
+
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
@@ -231,6 +232,7 @@
       </svg>
     </a>
   </li>
+
   <li class:studio-is-visible={$isMenuClicked}>
     <a
       href="/studio"
@@ -301,6 +303,7 @@
       </svg>
     </a>
   </li>
+
   <li class:work-is-visible={$isMenuClicked}>
     <a
       href="/work"
@@ -346,6 +349,7 @@
       </svg>
     </a>
   </li>
+
   <li class="equipment-li" class:equipment-is-visible={$isMenuClicked}>
     <a
       href="/equipment"
@@ -405,6 +409,7 @@
 
     </a>
   </li>
+
   <li class:about-us-is-visible={$isMenuClicked}>
     <a
       href={['alper', 'elia', 'joao', 'julia'].includes($aboutUsActiveItem) ? 'about_us?name=' + $aboutUsActiveItem : 'about_us'}

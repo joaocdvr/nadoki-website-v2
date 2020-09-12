@@ -129,8 +129,8 @@
     margin-bottom: 0.5rem;
   }
 
+  /* Exceptions for the studio cards */
   .div-header-border {
-    /* Exceptions for the studio cards */
     border-bottom: 2px solid var(--dark);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
@@ -147,6 +147,7 @@
     <li
       in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
       out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
+
       {#if variant === 'studio'}
         <div class="studio-card-wrapper">
           <div class="img-wrapper" style="padding-top:{card.ratio}">
