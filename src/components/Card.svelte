@@ -190,7 +190,11 @@
           aria-pressed={$workModalActive === card.url}>
 
           <div class="img-wrapper" style="padding-top:{card.ratio}">
-            <img src={card.src} srcset={card.srcset} alt={card.alt} />
+            <img
+              src={card.src}
+              srcset={card.srcset}
+              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
+              alt={card.alt} />
           </div>
 
           <div class="div-text">

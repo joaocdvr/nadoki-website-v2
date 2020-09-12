@@ -63,8 +63,9 @@
     {
       url: "ovoo",
       ratio: "100%",
-      src: "work/ovoo.jpg",
-      srcset: "work/ovoo-medium.jpg 800w",
+      src: "work/ovoo-720.jpg",
+      srcset:
+        "work/ovoo-480.jpg 480w, work/ovoo-720.jpg 720w, work/ovoo-1080.jpg 1080w",
       alt: "'Ovoo' project artwork",
       title: "Ovoo",
       content:
@@ -75,8 +76,9 @@
     {
       url: "bold-gestures",
       ratio: "100%",
-      src: "work/bold-gestures.jpg",
-      srcset: "work/bold-gestures-medium.jpg 800w",
+      src: "work/bold-gestures-720.jpg",
+      srcset:
+        "work/bold-gestures-480.jpg 480w, work/bold-gestures-720.jpg 720w, work/bold-gestures-1080.jpg 1080w",
       alt: "'Bold Gestures' podcast cover art",
       title: "Bold Gestures",
       content:
@@ -87,8 +89,9 @@
     {
       url: "ambrosia",
       ratio: "100%",
-      src: "work/ambrosia.jpg",
-      srcset: "work/ambrosia-medium.jpg 800w",
+      src: "work/ambrosia-720.jpg",
+      srcset:
+        "work/ambrosia-480.jpg 480w, work/ambrosia-720.jpg 720w, work/ambrosia-1080.jpg 1080w",
       alt: "'Ambrosia' album cover art",
       title: "Ambrosia",
       content: "SOEL's debut album on ORACOLO Records. ",
@@ -98,8 +101,9 @@
     {
       url: "we_gotta_live_together",
       ratio: "100%",
-      src: "work/we-gotta-live-together.jpg",
-      srcset: "work/we-gotta-live-together-medium.jpg 800w",
+      src: "work/we-gotta-live-together-720.jpg",
+      srcset:
+        "work/we-gotta-live-together-480.jpg 480w, work/we-gotta-live-together-720.jpg 720w, work/we-gotta-live-together-1080.jpg 1080w",
       alt: "'We Gotta Live Together' album cover art",
       title: "We Gotta Live Together",
       content: "DJ FLAT's debut single.",
@@ -109,8 +113,9 @@
     {
       url: "glitter_against_terfs",
       ratio: "100%",
-      src: "work/glitter-against-terfs.jpg",
-      srcset: "work/glitter-against-terfs-medium.jpg 800w",
+      src: "work/glitter-against-terfs-720.jpg",
+      srcset:
+        "work/glitter-against-terfs-480.jpg 480w, work/glitter-against-terfs-720.jpg 720w, work/glitter-against-terfs-1080.jpg 1080w",
       alt: "'Glitter Against Terfs' EP cover art",
       title: "Glitter Against Terfs",
       content: "Lazy Rosario's fourth EP.",
@@ -120,8 +125,9 @@
     {
       url: "above_it_all",
       ratio: "100%",
-      src: "work/above-it-all.jpg",
-      srcset: "work/above-it-all-medium.jpg 800w",
+      src: "work/above-it-all-720.jpg",
+      srcset:
+        "work/above-it-all-480.jpg 480w, work/above-it-all-720.jpg 720w, work/above-it-all-1080.jpg 1080w",
       alt: "'Above It ALL' album cover art",
       title: "Above It All",
       content:
@@ -132,8 +138,9 @@
     {
       url: "parda",
       ratio: "calc(1414 / 1000 * 100%)",
-      src: "work/parda.jpg",
-      srcset: "work/parda-medium.jpg 800w",
+      src: "work/parda-720.jpg",
+      srcset:
+        "work/parda-480.jpg 480w, work/parda-720.jpg 720w, work/parda-1080.jpg 1080w",
       alt: "'Parda' documentary cover art",
       title: "Parda",
       content: "A Brazilian documentary, directed by Tai Linhares.",
@@ -143,8 +150,9 @@
     {
       url: "love_hurts",
       ratio: "100%",
-      src: "work/love-hurts.jpg",
-      srcset: "work/love-hurts-medium.jpg 800w",
+      src: "work/love-hurts-720.jpg",
+      srcset:
+        "work/love-hurts-480.jpg 480w, work/love-hurts-720.jpg 720w, work/love-hurts-1080.jpg 1080w",
       alt: "'Love Hurts' single cover art",
       title: "Love Hurts",
       content: "Osaka88's debut single.",
@@ -154,8 +162,9 @@
     {
       url: "der_hauptbahnhof",
       ratio: "calc(1415 / 1000 * 100%)",
-      src: "work/der-hauptbahnhof.jpg",
-      srcset: "work/der-hauptbahnhof-medium.jpg 800w",
+      src: "work/der-hauptbahnhof-720.jpg",
+      srcset:
+        "work/der-hauptbahnhof-480.jpg 480w, work/der-hauptbahnhof-720.jpg 720w, work/der-hauptbahnhof-1080.jpg 1080w",
       alt: "'Der Hauptbanhof' documentary cover art",
       title: "Der Hauptbanhnof",
       content:
@@ -166,8 +175,9 @@
     {
       url: "ertrinken",
       ratio: "calc(563 / 1000 * 100%)",
-      src: "work/ertrinken.jpg",
-      srcset: "work/ertrinken-medium.jpg 800w",
+      src: "work/ertrinken-720.jpg",
+      srcset:
+        "work/ertrinken-480.jpg 480w, work/ertrinken-720.jpg 720w, work/ertrinken-1080.jpg 1080w",
       alt: "Frame from 'Ertrinken' short film",
       title: "Ertrinken",
       content:
