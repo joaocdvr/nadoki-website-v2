@@ -325,7 +325,8 @@
               <img
                 class:specific-img-open={isAnyAboutUsItemActive}
                 src="about_us/alper.png"
-                alt="Alper Arslan" />
+                alt="Arslan Alper's face in a meat package created with an
+                Instagram filter" />
 
               <svg
                 id="svg-to-animate-alper-2"
@@ -476,7 +477,8 @@
               <img
                 class:specific-img-open={isAnyAboutUsItemActive}
                 src="about_us/elia.png"
-                alt="Elia Bertolaso" />
+                alt="Elia Bertolaso's face in a meat package created with an
+                Instagram filter" />
 
               <svg
                 id="svg-to-animate-elia-2"
@@ -625,7 +627,8 @@
               <img
                 class:specific-img-open={isAnyAboutUsItemActive}
                 src="about_us/joao.png"
-                alt="João Rodrigues" />
+                alt="João Rodrigues' face in a meat package created with an
+                Instagram filter" />
 
               <svg
                 id="svg-to-animate-joao-2"
@@ -722,7 +725,7 @@
             <li>
               <h3 class="body-bold">Interests</h3>
               <p class="body-regular">
-                Games, sound design/music & web design.
+                Web design/development, sound design/music & games.
               </p>
             </li>
 
@@ -770,7 +773,8 @@
               <img
                 class:specific-img-open={isAnyAboutUsItemActive}
                 src="about_us/julia.png"
-                alt="Julia Borelli" />
+                alt="Julia Borelli's face in a meat package created with an
+                Instagram filter" />
 
               <svg
                 id="svg-to-animate-julia-2"

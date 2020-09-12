@@ -7,6 +7,7 @@
     animationInEasing,
     animationOutDuration,
     animationOutEasing,
+    scrollYPosition,
     aboutUsActiveItem,
     setAboutUsActiveItem,
     handleAboutUsItemClick
@@ -38,7 +39,16 @@
     handleSVGAnimation("svg-to-animate-elia", "about_us", "name", null);
     handleSVGAnimation("svg-to-animate-joao", "about_us", "name", null);
     handleSVGAnimation("svg-to-animate-julia", "about_us", "name", null);
+
+    // Fixes the left submenu to the navbar when the menu is clicked and the page is alread scrolled past the "About us" page title
+    if ($scrollYPosition === 0) {
+      compensatedScrollYPosition = 0;
+    } else if ($scrollYPosition >= 128) {
+      compensatedScrollYPosition = $scrollYPosition - 128;
+    }
   });
+
+  let compensatedScrollYPosition = 0;
 
   const aboutUsSubpages = ["alper", "elia", "joao", "julia"];
 
@@ -47,6 +57,8 @@
   function handleClick(event, callback) {
     event.preventDefault();
     callback;
+
+    // Resets individual content area scroll position
     if (window.screen.width >= 768) {
       const scrollYPosition = window.scrollY;
       if (scrollYPosition > 128) {
@@ -132,7 +144,7 @@
     pointer-events: none;
   }
 
-  /* Animation */
+  /* Animations */
   .menu-open {
     min-height: 0;
   }
@@ -239,6 +251,7 @@
 </style>
 
 <ul
+  style="transform: translateY({compensatedScrollYPosition}px)"
   class:menu-open={isAnyAboutUsItemActive}
   in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
   out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
@@ -255,7 +268,8 @@
         <img
           class:img-open={isAnyAboutUsItemActive}
           src="about_us/alper.png"
-          alt="Alper Arslan" />
+          alt="Alper Arslan's face in a meat package created with an Instagram
+          filter" />
 
         <h2
           class="body-bold"
@@ -290,7 +304,8 @@
         <img
           class:img-open={isAnyAboutUsItemActive}
           src="about_us/elia.png"
-          alt="Elia Bertolaso" />
+          alt="Elia Bertolaso's face in a meat package created with an Instagram
+          filter" />
 
         <h2
           class="body-bold"
@@ -325,7 +340,8 @@
         <img
           class:img-open={isAnyAboutUsItemActive}
           src="about_us/joao.png"
-          alt="João Rodrigues" />
+          alt="João Rodrigues' face in a meat package created with an Instagram
+          filter" />
 
         <h2
           class="body-bold"
@@ -360,7 +376,8 @@
         <img
           class:img-open={isAnyAboutUsItemActive}
           src="about_us/julia.png"
-          alt="Julia Borelli" />
+          alt="Julia Borelli's face in a meat package created with an Instagram
+          filter" />
 
         <h2
           class="body-bold"
