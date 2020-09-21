@@ -1,15 +1,14 @@
-# Nadoki Website
+# Nadoki Website [![GitLab License](https://img.shields.io/badge/license-MIT-brightgreen)](https://gitlab.com/nadoki/nadoki-website-v2/blob/master/LICENSE) [![Netlify Status](https://api.netlify.com/api/v1/badges/94a2495d-c888-4c48-8ee0-cd56588b9144/deploy-status)](https://app.netlify.com/sites/nadoki/deploys) [![Lighthouse Report](https://img.shields.io/badge/lighthouse-report-orange)](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A%2F%2Fwww.nadoki.com%2F)
 
 ## Table of contents
 
-- [General info](#general-info)
+- [About](#about)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Contributing](#contributing)
 - [Authors and acknowledgment](#authors-and-acknowledgment)
-- [License](#license)
 
-## General info
+## About
 
 Nadoki is a mixing and mastering studio located at [Riverside Studios](https://riversidestudios.de/), a unique collective of renowned music artists and professionals in the heart of Berlin.
 
@@ -17,26 +16,11 @@ This is the repository of it's website. Check the live version at [nadoki.com](h
 
 ## Technologies
 
-This website is created with:
-
-### Dependencies
-
-- [Compression — v1.7.1](https://www.npmjs.com/package/compression/v/1.7.1)
-- [Polka — v0.5.2](https://www.npmjs.com/package/polka)
-- [Sirv — v0.4.6](https://www.npmjs.com/package/sirv)
-
-### DevDependencies
-
-- [Svelte — v3.23.0](https://svelte.dev/)
-- [Sapper — v0.27.13](https://sapper.svelte.dev/)
-- [Rollup.js — v2.12.0](https://rollupjs.org/guide/en/)
-- [Babel — v7.10.2](https://babeljs.io/)
-- [PostCSS — v7.0.32](https://postcss.org/)
-- [Warp.js — v1.0.8](https://benjamminf.github.io/warpjs/)
+This website is created with [Svelte](https://svelte.dev/) and [PostCSS](https://postcss.org/) on top of [Sapper](https://sapper.svelte.dev/). [Warp](https://benjamminf.github.io/warpjs/) was used to create the cool SVGs animations.
 
 ## Setup
 
-To run this project, start by cloning it and then install it locally using [npm](https://nodejs.org/en/):
+To run this project, start by cloning it and then install it locally using [Node.js](https://nodejs.org/en/):
 
 ```
 cd [project folder path]
@@ -52,10 +36,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Authors and acknowledgment
 
-Designed and coded by [João Rodrigues](@joaocdvr).
+Designed and developed by [João Rodrigues](@joaocdvr).
 
 Mentorship by [Margarida Botelho](@mmbotelho) and [Sandrina Pereira](@sandrina-p).
 
-## License
-
-[MIT](/LICENSE)
+![Homepage](/documentation/nadoki-website-01.jpg)
+![Pages](/documentation/nadoki-website-02.jpg)
+![Footer](/documentation/nadoki-website-03.jpg)
