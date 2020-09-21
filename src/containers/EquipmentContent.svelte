@@ -142,7 +142,7 @@
 
   let equipmentListPdf = {
     text: "PDF VERSION",
-    href: "/documents/nadoki_equipment_list.pdf",
+    href: "/documents/nadoki-equipment-list.pdf",
     label: "PDF version of the equipment list"
   };
 </script>
