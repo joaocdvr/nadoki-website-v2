@@ -44,6 +44,7 @@
     Since this array (workSubpages) doesn't include an "example" string, 
     the example url (in practice) would behave as if it didn't have the project parameter (www.nadoki.com/work) 
     */
+    "desolator",
     "pharlight",
     "sin_thetik",
     "ovoo",
@@ -63,6 +64,18 @@
   let workCards = [
     // Every time there's a new "works" entry, it's data must be added manually to this array.
     {
+      url: "desolator",
+      ratio: "100%",
+      src: "work/desolator-720.jpg",
+      srcset:
+        "work/desolator-480.jpg 480w, work/desolator-720.jpg 720w, work/desolator-1080.jpg 1080w",
+      alt: "'Desolator's artwork",
+      title: "Desolator",
+      content: "Karlo Wanny's second EP released on Us & Them Records.",
+      tags: "Master",
+      path: "/work?project=desolator",
+    },
+    {
       url: "pharlight",
       ratio: "100%",
       src: "work/pharlight-720.jpg",
@@ -71,7 +84,7 @@
       alt: "'Pharlight' artwork made by Maik Siemer",
       title: "Pharlight",
       content:
-        "Vocal-based granular instrument for artists, composers, musicians, and sound designers, developed by the team behind STRAYLIGHT.",
+        "Vocal-based granular instrument developed by the team behind STRAYLIGHT for Native Instrument's Komplete.",
       tags: "Sample Production",
       path: "/work?project=pharlight",
     },
@@ -347,7 +360,52 @@
     4. Edit it to display the information related to the new entry;
     5. Check a modal that already implemented the media platform (Spotify/Vimeo/YouTube) you intend to use and copy its styling.
   -->
-  {#if $workModalActive === 'pharlight'}
+  {#if $workModalActive === 'desolator'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Desolator' EP by Karlo Wanny"
+        src="https://open.spotify.com/embed/album/3ZDtf23MW76hnni9425qf1"
+        class="spotify-album-iframe"
+        height="152"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media" />
+
+      <h2 slot="title" class="body-extra">DESOLATOR</h2>
+
+      <p slot="year" class="body-bold">2020</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Second EP from producer Karlo Wanny.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Karlo Wanny</span>
+        <br />
+        Mixing
+        <span class="body-bold">Karlo Wanny</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia">
+          Julia Borelli
+        </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'pharlight'}
     <WorkModal>
       <iframe
         slot="media"
@@ -369,12 +427,19 @@
 
       <p slot="description" class="body-regular description">
         PHARLIGHT is a vocal-based granular instrument for artists, composers,
-        musicians, and sound designers, developed by the team behind STRAYLIGHT.
-        Its idiosyncratic sample library packs unconventional sounds designed
-        and recorded specifically for two unique playback modules. <br /><br /> From
-        cinematic soundscapes and pulsating ambiences to haymaker hooks, PHARLIGHT
-        is all about injecting incredible sound, imaginative modulation, and organic,
-        melodic timbres into your music.
+        musicians, and sound designers, developed by the team behind STRAYLIGHT
+        for
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://www.native-instruments.com/en/products/komplete/vocal/pharlight/">
+          Native Instrument's Komplete
+        </a>. Its idiosyncratic sample library packs unconventional sounds
+        designed and recorded specifically for two unique playback modules.
+        <br /><br />
+        From cinematic soundscapes and pulsating ambiences to haymaker hooks,
+        PHARLIGHT is all about injecting incredible sound, imaginative
+        modulation, and organic, melodic timbres into your music.
       </p>
 
       <p slot="quote" class="body-regular quote">
@@ -383,31 +448,40 @@
           engine and sophisticated modulation tools,
         </span>
         <br />
-        <br /> while musicians and composers will adore the rich and evolving sound
-        and the way Pharlight responds to expressive performance inputs." <br />
+        <br />
+        while musicians and composers will adore the rich and evolving sound and
+        the way Pharlight responds to expressive performance inputs."
+        <br />
         <br />
         <span class="body-bold">Adam Crute @ Music Tech</span>
       </p>
 
       <p slot="credits" class="body-regular">
-        Product Concept, Design, Programming and Production <span class="body-bold">Frank
-          Elting</span>
-        <br /> Vocal Artists <span class="body-bold">Eva Thärichen, Pat
-          Appleton, Ksenija Ladic, Beatboxartist Mando, Anselm Ndoung and Bodek
-          Jahnke</span>
-        <br /> Sample Content Production <span class="body-bold">
-          Frank Elting, Julia Borelli and Arovane
-        </span>
-        <br /> Library Concept <span class="body-bold"> Frank Elting </span>
-        <br /> Sound Presets <span class="body-bold">
+        Product Concept, Design, Programming and Production
+        <span class="body-bold">Frank Elting</span>
+        <br />
+        Vocal Artists
+        <span class="body-bold">Eva Thärichen, Pat Appleton, Ksenija Ladic,
+          Beatboxartist Mando, Anselm Ndoung and Bodek Jahnke</span>
+        <br />
+        Sample Content Production
+        <span class="body-bold"> Frank Elting, Julia Borelli and Arovane </span>
+        <br />
+        Library Concept
+        <span class="body-bold"> Frank Elting </span>
+        <br />
+        Sound Presets
+        <span class="body-bold">
           Arovane, Andreas Koslik, Jamie Wilder, Jeremiah Savage, Jeremy
           Leaird-Koch, Joerg Huettner, John Valasis, Ksenija Ladic, Noah Pred,
           Patrick Burniston, The Solos and Frank Elting
         </span>
-        <br /> Quality Assurance <span class="body-bold">
-          Francesco Sabatini
-        </span>
-        <br /> Artwork <span class="body-bold"> Maik Siemer </span>
+        <br />
+        Quality Assurance
+        <span class="body-bold"> Francesco Sabatini </span>
+        <br />
+        Artwork
+        <span class="body-bold"> Maik Siemer </span>
         <br />
         <br />
         <a
@@ -416,13 +490,16 @@
           class="body-bold"
           href="/about_us?name=joao">
           João Rodrigues
-        </a> + <a
+        </a>
+        +
+        <a
           target="_blank"
           rel="noopener"
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> were responsible for this project.
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'sin_thetik'}
@@ -447,9 +524,9 @@
 
       <p slot="description" class="body-regular description">
         Richie Hawtin has adopted his Plastikman alias to compose an original
-        soundtrack for Prada’s Spring / Summer 2021 Womenswear Show. <br /><br />The
-        12-minute track is titled ‘Sin Thetik’, and also arrives alongside a
-        20-minute ambient version.
+        soundtrack for Prada’s Spring / Summer 2021 Womenswear Show.
+        <br /><br />The 12-minute track is titled ‘Sin Thetik’, and also arrives
+        alongside a 20-minute ambient version.
       </p>
 
       <p slot="quote" class="body-regular quote">
@@ -460,17 +537,21 @@
         <br />
         <br />The process was new to me, however I always felt the respect and
         openness from Raf and Miuccia to allow me to explore where the sound of
-        Plastikman would fit in this new context." <br />
+        Plastikman would fit in this new context."
+        <br />
         <br />
         <span class="body-bold">Richie Hawtin</span>
       </p>
 
       <p slot="credits" class="body-regular">
-        Music by <span class="body-bold">Richie Hawtin</span>
-        <br /> Master <span class="body-bold">Nadoki Studios</span>
-        <br /> Co-Creative Directors <span class="body-bold">
-          Raf Simons and Miuccia Prada
-        </span>
+        Music by
+        <span class="body-bold">Richie Hawtin</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Co-Creative Directors
+        <span class="body-bold"> Raf Simons and Miuccia Prada </span>
         <br />
         <br />
         <a
@@ -479,7 +560,8 @@
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> was responsible for this project.
+        </a>
+        was responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'ovoo'}
@@ -504,11 +586,15 @@
 
       <p slot="description" class="body-regular description">
         360º visual project (work in progress) by Ali M. Demirel in
-        collaboration with Arts Council of Mongolia + TodaysArt. <br />
-        <br /> The project was premiered on July 8th at Ulaanbaatar International
-        Media Art Festival. <br />
-        <br /> We worked together with Carlota Marques and Emilio Arias to create
-        a soundscape to this visually immersive experience. No public video of the
+        collaboration with Arts Council of Mongolia + TodaysArt.
+        <br />
+        <br />
+        The project was premiered on July 8th at Ulaanbaatar International Media
+        Art Festival.
+        <br />
+        <br />
+        We worked together with Carlota Marques and Emilio Arias to create a
+        soundscape to this visually immersive experience. No public video of the
         project was published yet.
       </p>
 
@@ -518,19 +604,25 @@
           Ulaanbaatar International Media Art Festival.
         </span>
         <br />
-        <br /> Unfortunately my visit couldn’t happen because of the pandemic. However,
+        <br />
+        Unfortunately my visit couldn’t happen because of the pandemic. However,
         we have decided with the team to start the production process and I have
-        created my fantasy of Mongolia with my archive footage from around the world.
-        This is the starting point of a work in progress." <br />
+        created my fantasy of Mongolia with my archive footage from around the
+        world. This is the starting point of a work in progress."
+        <br />
         <br />
         <span class="body-bold">Ali M. Demirel</span>
       </p>
 
       <p slot="credits" class="body-regular">
-        Project by <span class="body-bold">Ali M. Demirel</span>
-        <br /> Produced by <span class="body-bold">Arts Council of Mongolia +
-          TodaysArt</span>
-        <br /> Soundtrack by <span class="body-bold">
+        Project by
+        <span class="body-bold">Ali M. Demirel</span>
+        <br />
+        Produced by
+        <span class="body-bold">Arts Council of Mongolia + TodaysArt</span>
+        <br />
+        Soundtrack by
+        <span class="body-bold">
           Carlota Marques, Emilio Arias and Nadoki Studios
         </span>
         <br />
@@ -541,7 +633,8 @@
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> was responsible for this project.
+        </a>
+        was responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'bold_gestures'}
@@ -566,16 +659,25 @@
       <p slot="description" class="body-regular description">
         A podcast where three friends attempt to make sense of this bizarro
         world and the people who live in it. Tobi, Hank, and Tobi search their
-        minds, every week, for wisdom but will likely offer none. <br />
-        <br /> They give opinions that don't matter during desperate times...because
-        it matters!
+        minds, every week, for wisdom but will likely offer none.
+        <br />
+        <br />
+        They give opinions that don't matter during desperate times...because it
+        matters!
       </p>
 
       <p slot="credits" class="body-regular">
-        Podcasters <span class="body-bold">Rich, Hank and Tobi</span>
-        <br /> Produced by <span class="body-bold">VGL Marketing</span>
-        <br /> Co-produced by <span class="body-bold">Nadoki Studios</span>
-        <br /> Post-production by <span class="body-bold">Nadoki Studios</span>
+        Podcasters
+        <span class="body-bold">Rich, Hank and Tobi</span>
+        <br />
+        Produced by
+        <span class="body-bold">VGL Marketing</span>
+        <br />
+        Co-produced by
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Post-production by
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -584,7 +686,8 @@
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> is responsible for this project.
+        </a>
+        is responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'ambrosia'}
@@ -615,9 +718,14 @@
       </p>
 
       <p slot="credits" class="body-regular">
-        Music by <span class="body-bold">SOEL</span>
-        <br /> Mixing <span class="body-bold">SOEL</span>
-        <br /> Mastering <span class="body-bold">Nadoki Studios</span>
+        Music by
+        <span class="body-bold">SOEL</span>
+        <br />
+        Mixing
+        <span class="body-bold">SOEL</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -626,13 +734,16 @@
           class="body-bold"
           href="/about_us?name=joao">
           João Rodrigues
-        </a> + <a
+        </a>
+        +
+        <a
           target="_blank"
           rel="noopener"
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> were responsible for this project.
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'we_gotta_live_together'}
@@ -659,9 +770,14 @@
       </p>
 
       <p slot="credits" class="body-regular">
-        Music by <span class="body-bold">DJ Flat</span>
-        <br /> Mixing <span class="body-bold">DJ Flat</span>
-        <br /> Mastering <span class="body-bold">Nadoki Studios</span>
+        Music by
+        <span class="body-bold">DJ Flat</span>
+        <br />
+        Mixing
+        <span class="body-bold">DJ Flat</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -670,13 +786,16 @@
           class="body-bold"
           href="/about_us?name=elia">
           Elia Bertolaso
-        </a> + <a
+        </a>
+        +
+        <a
           target="_blank"
           rel="noopener"
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> were responsible for this project.
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'glitter_against_terfs'}
@@ -704,9 +823,14 @@
       </p>
 
       <p slot="credits" class="body-regular">
-        Music by <span class="body-bold">Lazy Rozario</span>
-        <br /> Mixing <span class="body-bold">Lazy Rozario</span>
-        <br /> Mastering <span class="body-bold">Nadoki Studios</span>
+        Music by
+        <span class="body-bold">Lazy Rozario</span>
+        <br />
+        Mixing
+        <span class="body-bold">Lazy Rozario</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -715,7 +839,8 @@
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> was responsible for this project.
+        </a>
+        was responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'above_it_all'}
@@ -741,9 +866,11 @@
       <p slot="description" class="body-regular description">
         Out of darkness can only come light. 'Above It All' is one of the
         31-tracks from 'Unity', a symbol of togetherness curated by Tale Of Us,
-        including artists already on Afterlife and some new names to the label. <br />
-        <br /> Accompanied by a continuous journey through this new music, mixed
-        by Tale Of Us, we hope this compilation brings some escape at a challenging
+        including artists already on Afterlife and some new names to the label.
+        <br />
+        <br />
+        Accompanied by a continuous journey through this new music, mixed by
+        Tale Of Us, we hope this compilation brings some escape at a challenging
         time.
       </p>
 
@@ -752,18 +879,25 @@
           "All the tracks in Unity have been carefully selected by Tale Of Us.
         </span>
         <br />
-        <br /> The mix includes some amazing tunes from Agents of Time, Stephan Bodzin,
-        Fideles, Mathame, Recondite and others. As the records go by, you will find
-        yourself immersed in a simphony of Afterlife sounds, where music is the one
-        and only way to reach your soul." <br />
+        <br />
+        The mix includes some amazing tunes from Agents of Time, Stephan Bodzin,
+        Fideles, Mathame, Recondite and others. As the records go by, you will
+        find yourself immersed in a simphony of Afterlife sounds, where music is
+        the one and only way to reach your soul."
+        <br />
         <br />
         <span class="body-bold">Sol Di Tomasso</span>
       </p>
 
       <p slot="credits" class="body-regular">
-        Music by <span class="body-bold">Mind Against</span>
-        <br /> Mixing <span class="body-bold">Mind Against</span>
-        <br /> Mastering <span class="body-bold">Nadoki Studios</span>
+        Music by
+        <span class="body-bold">Mind Against</span>
+        <br />
+        Mixing
+        <span class="body-bold">Mind Against</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -772,13 +906,16 @@
           class="body-bold"
           href="/about_us?name=elia">
           Elia Bertolaso
-        </a> + <a
+        </a>
+        +
+        <a
           target="_blank"
           rel="noopener"
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> were responsible for this project.
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'parda'}
@@ -805,10 +942,14 @@
         We had the pleasure to do the 5.1 mix of this touching independent movie
         from the Brazilian filmmaker and director Tai Linhares. It questions
         race and self-identification midst of an authoritarian regime that plans
-        to restore white supremacy. <br />
-        <br /> Parda played in Finland during the <span
-          class="body-bold">Cinemaissí Festival</span> and in Brazil during the <span
-          class="body-bold">Mostra Sesc de Cinema</span> .
+        to restore white supremacy.
+        <br />
+        <br />
+        Parda played in Finland during the
+        <span class="body-bold">Cinemaissí Festival</span>
+        and in Brazil during the
+        <span class="body-bold">Mostra Sesc de Cinema</span>
+        .
       </p>
 
       <p slot="quote" class="quote body-regular">
@@ -816,28 +957,48 @@
           "An authoritarian regime plans to restore white supremacy in Brazil.
         </span>
         <br />
-        <br /> Their first act is to demand the return of all white Brazilian citizens
-        living abroad. In the midst of this political chaos, Tai needs to prove that
-        she is not white, but is faced with uncertainty about her own racial identity.
-        The film delves into the ambiguous concept of race in Brazil, exploring the
-        traces left by its colonial past and the family history of the director.
-        An exploratory journey between fiction and documentary." <br />
+        <br />
+        Their first act is to demand the return of all white Brazilian citizens
+        living abroad. In the midst of this political chaos, Tai needs to prove
+        that she is not white, but is faced with uncertainty about her own
+        racial identity. The film delves into the ambiguous concept of race in
+        Brazil, exploring the traces left by its colonial past and the family
+        history of the director. An exploratory journey between fiction and
+        documentary."
+        <br />
         <br />
         <span class="body-bold">Tai Linhares</span>
       </p>
 
       <p slot="credits" class="body-regular">
-        Directed, Written and Produced by <span class="body-bold">Tai Linhares</span>
-        <br /> Directors of Photography <span class="body-bold">
+        Directed, Written and Produced by
+        <span class="body-bold">Tai Linhares</span>
+        <br />
+        Directors of Photography
+        <span class="body-bold">
           Aline Juárez, Marcos Lamoreux and Sanni Est
         </span>
-        <br /> Assistant Director <span class="body-bold">João Xavi</span>
-        <br /> Editors <span class="body-bold">Tai Linhares and Sully Ceccopieri</span>
-        <br /> Music by <span class="body-bold">The Cosmic Race</span>
-        <br /> Location Sound <span class="body-bold">Elissa Brito</span>
-        <br /> Sound Editor <span class="body-bold">Caio Cesar Loures</span>
-        <br /> 2.0 Mix by <span class="body-bold">Mariana Bahia</span>
-        <br /> 5.1 Mix by <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Assistant Director
+        <span class="body-bold">João Xavi</span>
+        <br />
+        Editors
+        <span class="body-bold">Tai Linhares and Sully Ceccopieri</span>
+        <br />
+        Music by
+        <span class="body-bold">The Cosmic Race</span>
+        <br />
+        Location Sound
+        <span class="body-bold">Elissa Brito</span>
+        <br />
+        Sound Editor
+        <span class="body-bold">Caio Cesar Loures</span>
+        <br />
+        2.0 Mix by
+        <span class="body-bold">Mariana Bahia</span>
+        <br />
+        5.1 Mix by
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -846,13 +1007,16 @@
           class="body-bold"
           href="/about_us?name=joao">
           João Rodrigues
-        </a> + <a
+        </a>
+        +
+        <a
           target="_blank"
           rel="noopener"
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> were responsible for this project.
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'love_hurts'}
@@ -880,11 +1044,20 @@
       </p>
 
       <p slot="credits" class="body-regular">
-        Lyrics and Performance <span class="body-bold">Osaka88</span>
-        <br /> Producer <span class="body-bold">80root</span>
-        <br /> Recording <span class="body-bold">Mo$sart</span>
-        <br /> Mixing <span class="body-bold">Nadoki Studios</span>
-        <br /> Mastering <span class="body-bold">Nadoki Studios</span>
+        Lyrics and Performance
+        <span class="body-bold">Osaka88</span>
+        <br />
+        Producer
+        <span class="body-bold">80root</span>
+        <br />
+        Recording
+        <span class="body-bold">Mo$sart</span>
+        <br />
+        Mixing
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Mastering
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -893,13 +1066,16 @@
           class="body-bold"
           href="/about_us?name=joao">
           João Rodrigues
-        </a> + <a
+        </a>
+        +
+        <a
           target="_blank"
           rel="noopener"
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> were responsible for this project.
+        </a>
+        were responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'der_hauptbahnhof'}
@@ -930,31 +1106,41 @@
           manage to find ways instead of making excuses.
         </span>
         <br />
-        <br /> To everyone who prefers to spend time, sweat and tears, rather than
-        to spend money. To everyone who believes in deals made with handshakes, rather
-        than signatures. To everyone with a burning heart. To everyone who believed
-        in a train station in the South African desert. Yes, it happened. Yes, we
-        manifested our dream in the sun going down over the horizon. And your energy
-        is what keeps the fire burning. You are the ones who put trust into strangers
-        without blinking. The ones who keep this spirit that lives deeply in our
-        hearts alive and kicking..." <br />
+        <br />
+        To everyone who prefers to spend time, sweat and tears, rather than to
+        spend money. To everyone who believes in deals made with handshakes,
+        rather than signatures. To everyone with a burning heart. To everyone
+        who believed in a train station in the South African desert. Yes, it
+        happened. Yes, we manifested our dream in the sun going down over the
+        horizon. And your energy is what keeps the fire burning. You are the
+        ones who put trust into strangers without blinking. The ones who keep
+        this spirit that lives deeply in our hearts alive and kicking..."
+        <br />
         <br />
         <span class="body-bold">Word from the crew</span>
       </p>
 
       <p slot="credits" class="body-regular">
-        Written, Directed and Filmed by <span class="body-bold">Jordi Garcia
-          Rodriguez</span>
-        <br /> Text Editor and Narrator <span class="body-bold">Lyz Pfister</span>
-        <br /> Sound Mix and Sound Design <span class="body-bold">Claudine
-          Fanilia and Nadoki Studios</span>
-        <br /> Music <span class="body-bold">
+        Written, Directed and Filmed by
+        <span class="body-bold">Jordi Garcia Rodriguez</span>
+        <br />
+        Text Editor and Narrator
+        <span class="body-bold">Lyz Pfister</span>
+        <br />
+        Sound Mix and Sound Design
+        <span class="body-bold">Claudine Fanilia and Nadoki Studios</span>
+        <br />
+        Music
+        <span class="body-bold">
           Cal Kahoone, Thor Rixon with James Tuft, Wagner, Tchaikovsky and
           Xavier
         </span>
-        <br /> Drone Footage <span class="body-bold">Skyhook</span>
-        <br /> Extra Footage <span class="body-bold">Ryan Frame and Patrick
-          Baumhöfer</span>
+        <br />
+        Drone Footage
+        <span class="body-bold">Skyhook</span>
+        <br />
+        Extra Footage
+        <span class="body-bold">Ryan Frame and Patrick Baumhöfer</span>
         <br />
         <br />
         <a
@@ -963,7 +1149,8 @@
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> was responsible for this project.
+        </a>
+        was responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'ertrinken'}
@@ -987,40 +1174,59 @@
       </div>
 
       <p slot="description" class="description body-regular">
-        What the ubiquitous flood of images and information actually does. <br />
-        <br /> Never before have we been surrounded by so many images, texts, videos
-        and bits of information – we could drown in it. <br />
-        <br /> A view to the Legacy study: with advancing digitization, the older
-        members of the population feel increasingly outpaced by the younger – there
-        is no connection. Like the protagonist in this animated film, they go under
-        in the flood.
+        What the ubiquitous flood of images and information actually does.
+        <br />
+        <br />
+        Never before have we been surrounded by so many images, texts, videos
+        and bits of information – we could drown in it.
+        <br />
+        <br />
+        A view to the Legacy study: with advancing digitization, the older
+        members of the population feel increasingly outpaced by the younger –
+        there is no connection. Like the protagonist in this animated film, they
+        go under in the flood.
       </p>
 
       <p slot="quote" class="quote body-regular">
         <span class="body-bold">Synospis</span>
-        <br /> Hans is not as young as he used to be. In order to avoid his loneliness,
-        he must learn how to swim in the big sea of information that is the Internet
-        nowadays. Is he prepared for the overwhelming amount of distractions and
-        traps that the online world can offer? <br />
+        <br />
+        Hans is not as young as he used to be. In order to avoid his loneliness,
+        he must learn how to swim in the big sea of information that is the
+        Internet nowadays. Is he prepared for the overwhelming amount of
+        distractions and traps that the online world can offer?
+        <br />
         <br />
 
         <span class="body-bold">Festivals</span>
-        <br /> — Open-Air Filmfest Weiterstadt 2018 <br /> — Open World Animation
-        Festival 2018 <br /> — BIT BANG 2018 <br /> — International Tour Film Fest
-        2018 <br />
+        <br />
+        — Open-Air Filmfest Weiterstadt 2018
+        <br />
+        — Open World Animation Festival 2018
+        <br />
+        — BIT BANG 2018
+        <br />
+        — International Tour Film Fest 2018
+        <br />
         <br />
 
         <span class="body-bold">Prizes</span>
-        <br /> Die Zeit Short Film Competition “Die Welt, die wir uns wünschen. Die
+        <br />
+        Die Zeit Short Film Competition “Die Welt, die wir uns wünschen. Die
         Filme zur großen Vermächtnisstudie”, Public Prize – Best Short
       </p>
 
       <p slot="credits" class="body-regular">
-        Director <span class="body-bold">Pedro Harres</span>
-        <br /> Executive Producer <span class="body-bold">Cléo Campe</span>
-        <br /> Assistant Direction and Storyboard <span class="body-bold">Maria
-          Teixeira</span>
-        <br /> Sound Design <span class="body-bold">Nadoki Studios</span>
+        Director
+        <span class="body-bold">Pedro Harres</span>
+        <br />
+        Executive Producer
+        <span class="body-bold">Cléo Campe</span>
+        <br />
+        Assistant Direction and Storyboard
+        <span class="body-bold">Maria Teixeira</span>
+        <br />
+        Sound Design
+        <span class="body-bold">Nadoki Studios</span>
         <br />
         <br />
         <a
@@ -1029,7 +1235,8 @@
           class="body-bold"
           href="/about_us?name=julia">
           Julia Borelli
-        </a> was responsible for this project.
+        </a>
+        was responsible for this project.
       </p>
     </WorkModal>
   {/if}
