@@ -23,7 +23,7 @@
     handleGameTabClick,
     brandingActiveTab,
     setActiveBrandingTab,
-    handleBrandingTabClick
+    handleBrandingTabClick,
   } from "../utensils/stores.js";
   import Header from "../components/Header.svelte";
   import ServicesNav from "../containers/ServicesNav.svelte";
@@ -52,7 +52,7 @@
       }
     }
 
-    window.addEventListener("popstate", function() {
+    window.addEventListener("popstate", function () {
       const url = new URL(document.location);
       const nameParam = url.searchParams.get("name");
       const typeParam = url.searchParams.get("type");
@@ -90,21 +90,21 @@
     "recording",
     "editing_restoration",
     "production",
-    "consultation"
+    "consultation",
   ];
 
   const filmTabs = [
     "re-recording_mixing",
     "editing_restoration",
     "sound_design",
-    "original_soundtrack"
+    "original_soundtrack",
   ];
 
   const gameTabs = [
     "sound_design",
     "original_soundtrack",
     "integration",
-    "mixing"
+    "mixing",
   ];
 
   const brandingTabs = ["sonic_logo", "podcast", "post-production_for_ads"];
@@ -116,38 +116,38 @@
       title: "MIXING",
       function: () => handleMusicTabClick("mixing"),
       variable: $musicActiveTab === "mixing",
-      path: "/services?name=music&type=mixing"
+      path: "/services?name=music&type=mixing",
     },
     {
       title: "MASTERING",
       function: () => handleMusicTabClick("mastering"),
       variable: $musicActiveTab === "mastering",
-      path: "/services?name=music&type=mastering"
+      path: "/services?name=music&type=mastering",
     },
     {
       title: "RECORDING",
       function: () => handleMusicTabClick("recording"),
       variable: $musicActiveTab === "recording",
-      path: "/services?name=music&type=recording"
+      path: "/services?name=music&type=recording",
     },
     {
       title: "EDITING | RESTORATION",
       function: () => handleMusicTabClick("editing_restoration"),
       variable: $musicActiveTab === "editing_restoration",
-      path: "/services?name=music&type=editing_restoration"
+      path: "/services?name=music&type=editing_restoration",
     },
     {
       title: "PRODUCTION",
       function: () => handleMusicTabClick("production"),
       variable: $musicActiveTab === "production",
-      path: "/services?name=music&type=production"
+      path: "/services?name=music&type=production",
     },
     {
       title: "CONSULTATION",
       function: () => handleMusicTabClick("consultation"),
       variable: $musicActiveTab === "consultation",
-      path: "/services?name=music&type=consultation"
-    }
+      path: "/services?name=music&type=consultation",
+    },
   ];
 
   $: filmTab = [
@@ -155,26 +155,26 @@
       title: "RE-RECORDING MIXING",
       function: () => handleFilmTabClick("re-recording_mixing"),
       variable: $filmActiveTab === "re-recording_mixing",
-      path: "/services?name=film&type=re-recording_mixing"
+      path: "/services?name=film&type=re-recording_mixing",
     },
     {
       title: "EDITING | RESTORATION",
       function: () => handleFilmTabClick("editing_restoration"),
       variable: $filmActiveTab === "editing_restoration",
-      path: "/services?name=film&type=editing_restoration"
+      path: "/services?name=film&type=editing_restoration",
     },
     {
       title: "SOUND DESIGN",
       function: () => handleFilmTabClick("sound_design"),
       variable: $filmActiveTab === "sound_design",
-      path: "/services?name=film&type=sound_design"
+      path: "/services?name=film&type=sound_design",
     },
     {
       title: "ORIGINAL SOUNDTRACK",
       function: () => handleFilmTabClick("original_soundtrack"),
       variable: $filmActiveTab === "original_soundtrack",
-      path: "/services?name=film&type=original_soundtrack"
-    }
+      path: "/services?name=film&type=original_soundtrack",
+    },
   ];
 
   $: gameTab = [
@@ -182,26 +182,26 @@
       title: "SOUND DESIGN",
       function: () => handleGameTabClick("sound_design"),
       variable: $gameActiveTab === "sound_design",
-      path: "/services?name=game&type=sound_design"
+      path: "/services?name=game&type=sound_design",
     },
     {
       title: "ORIGINAL SOUNDTRACK",
       function: () => handleGameTabClick("original_soundtrack"),
       variable: $gameActiveTab === "original_soundtrack",
-      path: "/services?name=game&type=original_soundtrack"
+      path: "/services?name=game&type=original_soundtrack",
     },
     {
       title: "INTEGRATION",
       function: () => handleGameTabClick("integration"),
       variable: $gameActiveTab === "integration",
-      path: "/services?name=game&type=integration"
+      path: "/services?name=game&type=integration",
     },
     {
       title: "MIXING",
       function: () => handleGameTabClick("mixing"),
       variable: $gameActiveTab === "mixing",
-      path: "/services?name=game&type=mixing"
-    }
+      path: "/services?name=game&type=mixing",
+    },
   ];
 
   $: brandingTab = [
@@ -209,20 +209,20 @@
       title: "SONIC LOGO",
       function: () => handleBrandingTabClick("sonic_logo"),
       variable: $brandingActiveTab === "sonic_logo",
-      path: "/services?name=branding&type=sonic_logo"
+      path: "/services?name=branding&type=sonic_logo",
     },
     {
       title: "PODCAST",
       function: () => handleBrandingTabClick("podcast"),
       variable: $brandingActiveTab === "podcast",
-      path: "/services?name=branding&type=podcast"
+      path: "/services?name=branding&type=podcast",
     },
     {
       title: "POST-PRODUCTION FOR ADS",
       function: () => handleBrandingTabClick("post-production_for_ads"),
       variable: $brandingActiveTab === "post-production_for_ads",
-      path: "/services?name=branding&type=post-production_for_ads"
-    }
+      path: "/services?name=branding&type=post-production_for_ads",
+    },
   ];
 
   function handleBackClick(event, callback) {
@@ -374,10 +374,9 @@
   class="modal-wrapper"
   id="services-modal"
   class:modal-is-visible={isAnyServiceClicked}>
-
   {#if $servicesModalActive === 'music'}
     <ModalNav
-      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
       path="/services"
       label="Back to services"
       title="Services" />
@@ -533,13 +532,13 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— Starting at &rArr; 60 EUR/track</p>
+                <p class="body-regular">— Starting at &rArr; 80 EUR/track</p>
                 <p class="body-small">
                   Includes three stereo exports: wav 24-bit, wav 16-bit, and
                   FLAC. Up to two revisions included.
                 </p>
                 <p class="body-regular no-description">
-                  — Stem mastering &rArr; +70 EUR
+                  — Stem mastering &rArr; +100 EUR
                 </p>
 
                 <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
@@ -764,7 +763,7 @@
     </main>
   {:else if $servicesModalActive === 'film'}
     <ModalNav
-      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
       path="/services"
       label="Back to services"
       title="Services" />
@@ -940,7 +939,7 @@
     </main>
   {:else if $servicesModalActive === 'game'}
     <ModalNav
-      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
       path="/services"
       label="Back to services"
       title="Services" />
@@ -1106,7 +1105,7 @@
     </main>
   {:else if $servicesModalActive === 'branding'}
     <ModalNav
-      on:click={event => handleBackClick(event, resetServicesModalActive())}
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
       path="/services"
       label="Back to services"
       title="Services" />
