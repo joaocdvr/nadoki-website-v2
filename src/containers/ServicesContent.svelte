@@ -430,44 +430,6 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— Starting at &rArr; 300 EUR/track</p>
-                <p class="body-small">
-                  Includes three stereo exports: wav 24-bit, wav 16-bit, and
-                  FLAC. Up to two revisions included.
-                </p>
-                <p class="body-regular">
-                  — Multitrack export starting at &rArr; +35 EUR
-                </p>
-                <p class="body-small">
-                  We will export your track in whatever way is most useful to
-                  you.
-                </p>
-                <p class="body-regular">— Tape finalization &rArr; +50 EUR</p>
-                <p class="body-small">
-                  We will process the final mix with a tape machine.
-                </p>
-                <p class="body-regular">
-                  — Editing/Restoration &rArr; +35 EUR/hour
-                </p>
-                <p class="body-small">
-                  If your recording is noisy and/or you have pitch/timing
-                  issues, we will fix it.
-                </p>
-                <p class="body-regular">
-                  — Tracks submitted later &rArr; +35 EUR/hour
-                </p>
-                <p class="body-small">
-                  In case you need to resend us a faulty file after we already
-                  started working on your song.
-                </p>
-                <p class="body-regular">
-                  — Other format exports &rArr; +10 EUR/export
-                </p>
-                <p class="body-small">
-                  Anything from MP3, Vorbis, AAC, WavPack, etc.
-                </p>
-
-                <p class="body-regular">— Attended session &rArr; +20%</p>
                 <p class="body-regular reach-out">
                   <a
                     target="_blank"
@@ -475,7 +437,7 @@
                     href="mailto:info@nadoki.com">
                     Reach out
                   </a>
-                  for a more precise quote.
+                  for a quote.
                 </p>
               </li>
             </ul>
@@ -532,37 +494,6 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— Starting at &rArr; 80 EUR/track</p>
-                <p class="body-small">
-                  Includes three stereo exports: wav 24-bit, wav 16-bit, and
-                  FLAC. Up to two revisions included.
-                </p>
-                <p class="body-regular no-description">
-                  — Stem mastering &rArr; +100 EUR
-                </p>
-
-                <p class="body-regular">— Tape finalization &rArr; +35 EUR</p>
-                <p class="body-small">
-                  We will process the final mix with a tape machine.
-                </p>
-                <p class="body-regular">
-                  — Tracks submitted later &rArr; +35 EUR/hour
-                </p>
-                <p class="body-small">
-                  In case you need to resend us a faulty file after we already
-                  started working on your song.
-                </p>
-                <p class="body-regular">— DDP Export &rArr; +50 EUR</p>
-                <p class="body-small">
-                  We will need the catalogue number, track listing, the ISRC
-                  code (optional) and CD Text (optional).
-                </p>
-                <p class="body-regular">— Mastered for iTunes &rArr; +10 EUR</p>
-                <p class="body-small">
-                  Set of rules (established by Apple) to optimise the mastering
-                  process for distribution on the iTunes digital platform.
-                </p>
-                <p class="body-regular">— Attended session &rArr; +20%</p>
                 <p class="body-regular reach-out">
                   <a
                     target="_blank"
@@ -570,7 +501,7 @@
                     href="mailto:info@nadoki.com">
                     Reach out
                   </a>
-                  for a more precise quote.
+                  for a quote.
                 </p>
               </li>
             </ul>
@@ -617,20 +548,6 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">
-                  — Starting at &rArr; 225 EUR (half day)
-                </p>
-                <p class="body-small">
-                  Includes our control room, where a vocalist or single
-                  instrument can be recorded, along with engineering and
-                  equipment.
-                </p>
-                <p class="body-regular no-description">
-                  — Studio 10 &rArr; +100 EUR
-                </p>
-                <p class="body-regular no-description">
-                  — The Lab &rArr; +200 EUR
-                </p>
                 <p class="body-regular reach-out">
                   <a
                     target="_blank"
@@ -638,7 +555,7 @@
                     href="mailto:info@nadoki.com">
                     Reach out
                   </a>
-                  for a more precise quote.
+                  for a quote.
                 </p>
               </li>
             </ul>
@@ -678,7 +595,6 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— 60 EUR/hour</p>
                 <p class="body-regular">
                   You can
                   <a
@@ -745,7 +661,6 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— Starting at &rArr; 30 EUR</p>
                 <p class="body-regular reach-out">
                   <a
                     target="_blank"
@@ -753,7 +668,7 @@
                     href="mailto:info@nadoki.com">
                     Reach out
                   </a>
-                  for a more precise quote.
+                  for a quote.
                 </p>
               </li>
             </ul>
@@ -857,7 +772,6 @@
 
               <li>
                 <p class="body-bold">Pricing</p>
-                <p class="body-regular">— 60 EUR/hour</p>
                 <p class="body-regular">
                   You can
                   <a
@@ -1144,7 +1058,7 @@
                     href="mailto:info@nadoki.com">
                     Email us
                   </a>
-                  to talk about your project and a price estimate.
+                  to talk about your project so we can get to a price estimate.
                 </p>
               </li>
             </ul>
@@ -1180,7 +1094,7 @@
                     href="mailto:info@nadoki.com">
                     Email us
                   </a>
-                  to talk about your project and a price estimate.
+                  to talk about your project so we can get to a price estimate.
                 </p>
               </li>
             </ul>
@@ -1216,7 +1130,7 @@
                     href="mailto:info@nadoki.com">
                     Email us
                   </a>
-                  to talk about your project and a price estimate.
+                  to talk about your project so we can get to a price estimate.
                 </p>
               </li>
             </ul>
