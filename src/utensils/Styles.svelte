@@ -1,3 +1,8 @@
+<script>
+  import CssReset from "./CssReset.svelte";
+  import SyneFont from "./SyneFont.svelte";
+</script>
+
 <style global>
   :global(:root) {
     /* Colors */
