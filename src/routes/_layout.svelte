@@ -5,6 +5,7 @@
     focusOnlyWhenNeeded,
     resetScrollYPosition,
   } from '../utensils/utils.js'
+  import Styles from '../utensils/Styles.svelte'
   import NavBar from '../containers/NavBar.svelte'
 
   onMount(() => {
