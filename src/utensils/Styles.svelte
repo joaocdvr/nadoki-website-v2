@@ -6,8 +6,8 @@
 <style global>
   :global(:root) {
     /* Colors */
-    --main-color: #7766ff;
-    --secondary-color: #ffba66;
+    --main-color: #ccccce;
+    --secondary-color: #ff9900;
     --light: #ffffff;
     --dark: #000000;
 
