@@ -1,13 +1,13 @@
 <script>
-  import CssReset from "./CssReset.svelte";
-  import SyneFont from "./SyneFont.svelte";
+  import CssReset from './CssReset.svelte'
+  import SyneFont from './SyneFont.svelte'
 </script>
 
 <style global>
   :global(:root) {
     /* Colors */
-    --main-color: #00ff00;
-    --secondary-color: #6400ff;
+    --main-color: #6400ff;
+    --secondary-color: #00ff00;
     --light: #ffffff;
     --dark: #000000;
 
