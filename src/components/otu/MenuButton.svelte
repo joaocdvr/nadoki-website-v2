@@ -1,21 +1,57 @@
 <script>
-  import { get } from "svelte/store";
-  import { isMenuClicked, toggleIsMenuClicked } from "../../utensils/stores.js";
+  import { get } from 'svelte/store'
+  import { isMenuClicked, toggleIsMenuClicked } from '../../utensils/stores.js'
   import {
     saveScrollYPosition,
-    restoreScrollYPosition
-  } from "../../utensils/utils.js";
+    restoreScrollYPosition,
+  } from '../../utensils/utils.js'
 
   function handleMenuClick() {
     if (get(isMenuClicked) === false) {
-      saveScrollYPosition();
+      saveScrollYPosition()
     } else {
-      restoreScrollYPosition();
+      restoreScrollYPosition()
     }
-    toggleIsMenuClicked();
-    return;
+    toggleIsMenuClicked()
+    return
   }
 </script>
+
+<button
+  on:click={handleMenuClick}
+  aria-label="Toggle main menu"
+  aria-pressed={$isMenuClicked}>
+  <svg
+    viewbox="0 0 24 24"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true">
+    <rect
+      height="24"
+      width="4.8"
+      x="0"
+      y="0"
+      class:left-rect-cross={$isMenuClicked}
+      class="left-rect-menu"
+    />
+    <rect
+      height="24"
+      width="4.8"
+      x="9.6"
+      y="0"
+      class:middle-rect-cross={$isMenuClicked}
+      class="middle-rect-menu"
+    />
+    <rect
+      height="24"
+      width="4.8"
+      x="19.2"
+      y="0"
+      class:right-rect-cross={$isMenuClicked}
+      class="right-rect-menu"
+    />
+  </svg>
+</button>
 
 <style>
   button {
@@ -100,37 +136,3 @@
     }
   }
 </style>
-
-<button
-  on:click={handleMenuClick}
-  aria-label="Toggle main menu"
-  aria-pressed={$isMenuClicked}>
-
-  <svg
-    viewbox="0 0 24 24"
-    preserveAspectRatio="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true">
-    <rect
-      height="24"
-      width="4.8"
-      x="0"
-      y="0"
-      class:left-rect-cross={$isMenuClicked}
-      class="left-rect-menu" />
-    <rect
-      height="24"
-      width="4.8"
-      x="9.6"
-      y="0"
-      class:middle-rect-cross={$isMenuClicked}
-      class="middle-rect-menu" />
-    <rect
-      height="24"
-      width="4.8"
-      x="19.2"
-      y="0"
-      class:right-rect-cross={$isMenuClicked}
-      class="right-rect-menu" />
-  </svg>
-</button>

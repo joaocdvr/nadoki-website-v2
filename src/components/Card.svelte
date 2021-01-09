@@ -1,5 +1,5 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
@@ -7,19 +7,101 @@
     animationOutDuration,
     animationOutEasing,
     workModalActive,
-    setWorkModalActive,
-    handleWorkModalClick
-  } from "../utensils/stores.js";
-  import Tag from "./Tag.svelte";
+    handleWorkModalClick,
+  } from '../utensils/stores.js'
+  import Tag from './Tag.svelte'
 
-  export let cards = [];
-  export let variant = "";
+  export let cards = []
+  export let variant = ''
 
   function handleClick(event, callback) {
-    event.preventDefault();
-    callback;
+    event.preventDefault()
+    callback
   }
 </script>
+
+<ul class:work-cards={variant === 'work'}>
+  {#each cards as card, i}
+    <li
+      in:fade={{
+        delay: $animationInDelay + i * 250,
+        duration: $animationInDuration + 700,
+        easing: $animationInEasing,
+      }}
+      out:fade={{
+        duration: $animationOutDuration,
+        easing: $animationOutEasing,
+      }}
+    >
+      {#if variant === 'studio'}
+        <div class="studio-card-wrapper">
+          <div class="img-wrapper" style="padding-top:{card.ratio}">
+            <img
+              src={card.src}
+              srcset={card.srcset}
+              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
+              alt={card.alt}
+            />
+          </div>
+
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}
+            >
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+            </div>
+
+            <p class="body-regular">
+              {@html card.content}
+            </p>
+
+            {#if card.link}
+              <a
+                target="_blank"
+                rel="noopener"
+                class="body-small studio-card-a"
+                href={card.path}> Learn more </a>
+            {/if}
+          </div>
+        </div>
+      {/if}
+
+      {#if variant === 'work'}
+        <a
+          href={card.path}
+          on:click={(event) =>
+            handleClick(event, handleWorkModalClick(card.url))}
+          aria-label="Toggle {card.title}'s details"
+          aria-pressed={$workModalActive === card.url}>
+          <div class="img-wrapper" style="padding-top:{card.ratio}">
+            <img
+              src={card.src}
+              srcset={card.srcset}
+              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
+              alt={card.alt}
+            />
+          </div>
+
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}
+            >
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+            </div>
+
+            <p class="body-regular">{card.content}</p>
+
+            <Tag tags={card.tags} />
+
+            <p class="body-small">Learn more</p>
+          </div>
+        </a>
+      {/if}
+    </li>
+  {/each}
+</ul>
 
 <style>
   a {
@@ -141,78 +223,3 @@
     text-decoration: underline;
   }
 </style>
-
-<ul class:work-cards={variant === 'work'}>
-  {#each cards as card, i}
-    <li
-      in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
-      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-
-      {#if variant === 'studio'}
-        <div class="studio-card-wrapper">
-          <div class="img-wrapper" style="padding-top:{card.ratio}">
-            <img
-              src={card.src}
-              srcset={card.srcset}
-              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
-              alt={card.alt} />
-          </div>
-
-          <div class="div-text">
-            <div
-              class="div-header"
-              class:div-header-border={variant === 'studio'}>
-              <h2 class="header-small">{card.title.toUpperCase()}</h2>
-            </div>
-
-            <p class="body-regular">
-              {@html card.content}
-            </p>
-
-            {#if card.link}
-              <a
-                target="_blank"
-                rel="noopener"
-                class="body-small studio-card-a"
-                href={card.path}>
-                Learn more
-              </a>
-            {/if}
-          </div>
-        </div>
-      {/if}
-
-      {#if variant === 'work'}
-        <a
-          href={card.path}
-          on:click={event => handleClick(event, handleWorkModalClick(card.url))}
-          aria-label="Toggle {card.title}'s details"
-          aria-pressed={$workModalActive === card.url}>
-
-          <div class="img-wrapper" style="padding-top:{card.ratio}">
-            <img
-              src={card.src}
-              srcset={card.srcset}
-              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
-              alt={card.alt} />
-          </div>
-
-          <div class="div-text">
-            <div
-              class="div-header"
-              class:div-header-border={variant === 'studio'}>
-              <h2 class="header-small">{card.title.toUpperCase()}</h2>
-            </div>
-
-            <p class="body-regular">{card.content}</p>
-
-            <Tag tags={card.tags} />
-
-            <p class="body-small">Learn more</p>
-          </div>
-        </a>
-      {/if}
-
-    </li>
-  {/each}
-</ul>

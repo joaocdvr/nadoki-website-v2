@@ -1,197 +1,197 @@
-import { writable, readable } from "svelte/store";
-import { quadInOut } from "svelte/easing";
+import { writable, readable } from 'svelte/store'
+import { quadInOut } from 'svelte/easing'
 
 // Animation timers and easing
-export const animationInDelay = readable(300);
-export const animationInDuration = readable(300);
-export const animationInEasing = readable(quadInOut);
+export const animationInDelay = readable(300)
+export const animationInDuration = readable(300)
+export const animationInEasing = readable(quadInOut)
 
-export const animationOutDuration = readable(100);
-export const animationOutEasing = readable(quadInOut);
+export const animationOutDuration = readable(100)
+export const animationOutEasing = readable(quadInOut)
 
 // Menu handling
-export const isMenuClicked = writable(false);
+export const isMenuClicked = writable(false)
 
 export function toggleIsMenuClicked() {
-  isMenuClicked.update((n) => !n);
-  return;
+  isMenuClicked.update((n) => !n)
+  return
 }
 
 // Scroll handling
-export const scrollYPosition = writable(0);
+export const scrollYPosition = writable(0)
 
 // Page handling
-export const activePage = writable("");
+export const activePage = writable('')
 
 export function setActivePage(name) {
-  activePage.set(name);
-  return;
+  activePage.set(name)
+  return
 }
 
 // Services modal pages handling
-export const servicesModalActive = writable("");
+export const servicesModalActive = writable('')
 
 export function setServicesModalActive(name) {
-  servicesModalActive.set(name);
-  if (name !== "") {
-    document.body.classList.add("body-is-not-visible");
+  servicesModalActive.set(name)
+  if (name !== '') {
+    document.body.classList.add('body-is-not-visible')
   } else {
-    document.body.classList.remove("body-is-not-visible");
+    document.body.classList.remove('body-is-not-visible')
   }
-  return;
+  return
 }
 
 export function handleServicesModalClick(name, type) {
   if (name !== null && type !== null) {
-    setServicesModalActive(name);
+    setServicesModalActive(name)
 
-    const currentUrl = document.location.href;
-    const newUrl = `${window.location.pathname}?name=${name}&type=${type}`;
+    const currentUrl = document.location.href
+    const newUrl = `${window.location.pathname}?name=${name}&type=${type}`
 
     if (currentUrl !== newUrl) {
-      window.history.pushState("", "", newUrl);
+      window.history.pushState('', '', newUrl)
     }
   }
-  return;
+  return
 }
 
 export function resetServicesModalActive() {
-  const newUrl = `${window.location.pathname}`;
-  window.history.pushState("", "", newUrl);
-  setServicesModalActive("");
-  return;
+  const newUrl = `${window.location.pathname}`
+  window.history.pushState('', '', newUrl)
+  setServicesModalActive('')
+  return
 }
 
 // Services page tab handling
 // Music submenu
-export const musicActiveTab = writable("mixing");
+export const musicActiveTab = writable('mixing')
 
 export function setActiveMusicTab(name) {
-  musicActiveTab.set(name);
-  return;
+  musicActiveTab.set(name)
+  return
 }
 
 export function handleMusicTabClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?name=music&type=${name}`;
+    const newUrl = `${window.location.pathname}?name=music&type=${name}`
 
-    window.history.pushState("", "", newUrl);
-    setActiveMusicTab(name);
+    window.history.pushState('', '', newUrl)
+    setActiveMusicTab(name)
   }
-  return;
+  return
 }
 
 // Film submenu
-export const filmActiveTab = writable("re-recording_mixing");
+export const filmActiveTab = writable('re-recording_mixing')
 
 export function setActiveFilmTab(name) {
-  filmActiveTab.set(name);
-  return;
+  filmActiveTab.set(name)
+  return
 }
 
 export function handleFilmTabClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?name=film&type=${name}`;
+    const newUrl = `${window.location.pathname}?name=film&type=${name}`
 
-    window.history.pushState("", "", newUrl);
-    setActiveFilmTab(name);
+    window.history.pushState('', '', newUrl)
+    setActiveFilmTab(name)
   }
-  return;
+  return
 }
 
 // Game submenu
-export const gameActiveTab = writable("sound_design");
+export const gameActiveTab = writable('sound_design')
 
 export function setActiveGameTab(name) {
-  gameActiveTab.set(name);
-  return;
+  gameActiveTab.set(name)
+  return
 }
 
 export function handleGameTabClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?name=game&type=${name}`;
+    const newUrl = `${window.location.pathname}?name=game&type=${name}`
 
-    window.history.pushState("", "", newUrl);
-    setActiveGameTab(name);
+    window.history.pushState('', '', newUrl)
+    setActiveGameTab(name)
   }
-  return;
+  return
 }
 
 // Branding submenu
-export const brandingActiveTab = writable("sonic_logo");
+export const brandingActiveTab = writable('sonic_logo')
 
 export function setActiveBrandingTab(name) {
-  brandingActiveTab.set(name);
-  return;
+  brandingActiveTab.set(name)
+  return
 }
 
 export function handleBrandingTabClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?name=branding&type=${name}`;
+    const newUrl = `${window.location.pathname}?name=branding&type=${name}`
 
-    window.history.pushState("", "", newUrl);
-    setActiveBrandingTab(name);
+    window.history.pushState('', '', newUrl)
+    setActiveBrandingTab(name)
   }
-  return;
+  return
 }
 
 // Work modal pages handling
-export const workModalActive = writable("");
+export const workModalActive = writable('')
 
 export function setWorkModalActive(name) {
-  workModalActive.set(name);
-  if (name !== "") {
-    document.body.classList.add("body-is-not-visible");
+  workModalActive.set(name)
+  if (name !== '') {
+    document.body.classList.add('body-is-not-visible')
   } else {
-    document.body.classList.remove("body-is-not-visible");
+    document.body.classList.remove('body-is-not-visible')
   }
-  return;
+  return
 }
 
 export function handleWorkModalClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?project=${name}`;
-    window.history.pushState("", "", newUrl);
-    setWorkModalActive(name);
+    const newUrl = `${window.location.pathname}?project=${name}`
+    window.history.pushState('', '', newUrl)
+    setWorkModalActive(name)
   }
-  return;
+  return
 }
 
 export function resetWorkModalActive() {
-  const newUrl = `${window.location.pathname}`;
-  window.history.pushState("", "", newUrl);
-  setWorkModalActive("");
-  return;
+  const newUrl = `${window.location.pathname}`
+  window.history.pushState('', '', newUrl)
+  setWorkModalActive('')
+  return
 }
 
 // Equipment page tab handling
-export const equipmentActiveTab = writable("");
+export const equipmentActiveTab = writable('')
 
 export function setActiveEquipmentTab(name) {
-  equipmentActiveTab.set(name);
-  return;
+  equipmentActiveTab.set(name)
+  return
 }
 
 export function handleEquipmentTabClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?type=${name}`;
-    window.history.pushState("", "", newUrl);
-    setActiveEquipmentTab(name);
+    const newUrl = `${window.location.pathname}?type=${name}`
+    window.history.pushState('', '', newUrl)
+    setActiveEquipmentTab(name)
   }
-  return;
+  return
 }
 
 // About us page handling
-export const aboutUsActiveItem = writable("");
+export const aboutUsActiveItem = writable('')
 
 export function setAboutUsActiveItem(name) {
-  aboutUsActiveItem.set(name);
-  return;
+  aboutUsActiveItem.set(name)
+  return
 }
 
 export function handleAboutUsItemClick(name) {
-  const newUrl = `${window.location.pathname}?name=${name}`;
-  window.history.pushState("", "", newUrl);
-  setAboutUsActiveItem(name);
-  return;
+  const newUrl = `${window.location.pathname}?name=${name}`
+  window.history.pushState('', '', newUrl)
+  setAboutUsActiveItem(name)
+  return
 }

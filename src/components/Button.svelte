@@ -1,15 +1,35 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
-  } from "../utensils/stores.js";
+    animationOutEasing,
+  } from '../utensils/stores.js'
 
-  export let button = {};
+  export let button = {}
 </script>
+
+<div
+  in:fade={{
+    delay: $animationInDelay,
+    duration: $animationInDuration,
+    easing: $animationInEasing,
+  }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
+>
+  <a
+    class="body-bold"
+    href={button.href}
+    aria-label={button.label}
+    target="_blank"
+    rel="noopener">
+    <span>
+      <p>{button.text}</p>
+    </span>
+  </a>
+</div>
 
 <style>
   a {
@@ -56,19 +76,3 @@
     }
   }
 </style>
-
-<div
-  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-
-  <a
-    class="body-bold"
-    href={button.href}
-    aria-label={button.label}
-    target="_blank"
-    rel="noopener">
-    <span>
-      <p>{button.text}</p>
-    </span>
-  </a>
-</div>

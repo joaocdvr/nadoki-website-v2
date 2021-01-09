@@ -1,29 +1,29 @@
 <script>
-  import { onMount } from "svelte";
-  import { fade } from "svelte/transition";
+  import { onMount } from 'svelte'
+  import { fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
-  } from "../utensils/stores.js";
+    animationOutEasing,
+  } from '../utensils/stores.js'
 
   onMount(() => {
     // On mobile, if a tab item was previously selected, that item is shown as selected.
     // It also scrolls the tab component until the selected item is either shown 24px of the left margin or at an edge.
-    if (window.innerWidth < 768 && variant === "services") {
-      const servicesMenu = document.getElementsByClassName("services-tab-menu");
-      const menuBounds = servicesMenu[0].getBoundingClientRect();
+    if (window.innerWidth < 768 && variant === 'services') {
+      const servicesMenu = document.getElementsByClassName('services-tab-menu')
+      const menuBounds = servicesMenu[0].getBoundingClientRect()
 
-      const selectedTab = document.getElementsByClassName("a-is-selected");
-      const tabBounds = selectedTab[0].getBoundingClientRect();
+      const selectedTab = document.getElementsByClassName('a-is-selected')
+      const tabBounds = selectedTab[0].getBoundingClientRect()
 
       if (menuBounds.left === 0) {
         servicesMenu[0].scrollTo({
           left: tabBounds.left - 24,
-          behavior: "smooth"
-        });
+          behavior: 'smooth',
+        })
       } else {
         servicesMenu[0].scrollTo({
           left:
@@ -31,37 +31,66 @@
             servicesMenu[0].scrollLeft -
             24 -
             window.innerWidth,
-          behavior: "smooth"
-        });
+          behavior: 'smooth',
+        })
       }
     }
-  });
+  })
 
-  export let tab = [];
-  export let delay = 0;
-  export let variant = "";
+  export let tab = []
+  export let delay = 0
+  export let variant = ''
 
   function handleClick(event, callback) {
-    event.preventDefault();
-    callback();
+    event.preventDefault()
+    callback()
 
     if (window.screen.width >= 768) {
-      const servicesModal = document.getElementById("services-modal");
+      const servicesModal = document.getElementById('services-modal')
       if (servicesModal.scrollTop > 128) {
-        servicesModal.scrollTop = 130;
+        servicesModal.scrollTop = 130
       }
       // Scrolls the tab component until the selected item is either shown 24px of the left margin or at an edge.
     } else {
-      const servicesMenu = document.getElementsByClassName("services-tab-menu");
-      const tabBounds = event.target.getBoundingClientRect();
+      const servicesMenu = document.getElementsByClassName('services-tab-menu')
+      const tabBounds = event.target.getBoundingClientRect()
 
       servicesMenu[0].scrollTo({
         left: tabBounds.left + servicesMenu[0].scrollLeft - 24,
-        behavior: "smooth"
-      });
+        behavior: 'smooth',
+      })
     }
   }
 </script>
+
+<ul
+  class:services-tab-menu={variant === 'services'}
+  in:fade={{
+    delay: $animationInDelay,
+    duration: $animationInDuration,
+    easing: $animationInEasing,
+  }}
+  out:fade={{
+    delay: delay,
+    duration: $animationOutDuration,
+    easing: $animationOutEasing,
+  }}
+>
+  {#each tab as tab}
+    <li class:just-two={tab.justTwo}>
+      <a
+        href={tab.path}
+        class="tab-a"
+        on:click={(event) => handleClick(event, tab.function)}
+        aria-pressed={tab.variable}
+        class:a-is-selected={tab.variable}>
+        <span class="body-bold" class:span-is-selected={tab.variable}>
+          {tab.title}
+        </span>
+      </a>
+    </li>
+  {/each}
+</ul>
 
 <style>
   ul {
@@ -174,25 +203,3 @@
     font-size: 1rem;
   }
 </style>
-
-<ul
-  class:services-tab-menu={variant === 'services'}
-  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ delay: delay, duration: $animationOutDuration, easing: $animationOutEasing }}>
-
-  {#each tab as tab}
-    <li class:just-two={tab.justTwo}>
-      <a
-        href={tab.path}
-        class="tab-a"
-        on:click={event => handleClick(event, tab.function)}
-        aria-pressed={tab.variable}
-        class:a-is-selected={tab.variable}>
-
-        <span class="body-bold" class:span-is-selected={tab.variable}>
-          {tab.title}
-        </span>
-      </a>
-    </li>
-  {/each}
-</ul>

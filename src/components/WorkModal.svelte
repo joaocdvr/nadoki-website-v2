@@ -1,21 +1,62 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
     animationOutEasing,
-    resetWorkModalActive
-  } from "../utensils/stores.js";
-  import ModalNav from "../components/ModalNav.svelte";
-  import Footer from "../components/Footer.svelte";
+    resetWorkModalActive,
+  } from '../utensils/stores.js'
+  import ModalNav from '../components/ModalNav.svelte'
+  import Footer from '../components/Footer.svelte'
 
   function handleBackClick(event, callback) {
-    event.preventDefault();
-    callback;
+    event.preventDefault()
+    callback
   }
 </script>
+
+<div>
+  <ModalNav
+    on:click={(event) => handleBackClick(event, resetWorkModalActive())}
+    title="Work"
+    path="/work"
+    label="Back to work"
+  />
+  <main
+    in:fade={{
+      delay: $animationInDelay,
+      duration: $animationInDuration,
+      easing: $animationInEasing,
+    }}
+    out:fade={{
+      delay: $animationInDelay,
+      duration: $animationOutDuration,
+      easing: $animationOutEasing,
+    }}
+  >
+    <slot name="media" />
+    <article>
+      <div class="work-modal-content-wrapper">
+        <slot name="title" />
+
+        <slot name="year" />
+
+        <slot name="tag" />
+
+        <slot name="description" />
+
+        <slot name="quote" />
+      </div>
+
+      <div class="credits-wrapper">
+        <slot name="credits" />
+      </div>
+    </article>
+  </main>
+  <Footer delay={$animationInDelay} />
+</div>
 
 <style>
   main {
@@ -51,35 +92,3 @@
     padding: 0;
   }
 </style>
-
-<div>
-  <ModalNav
-    on:click={event => handleBackClick(event, resetWorkModalActive())}
-    title="Work"
-    path="/work"
-    label="Back to work" />
-  <main
-    in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-    out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
-    <slot name="media" />
-    <article>
-      <div class="work-modal-content-wrapper">
-        <slot name="title" />
-
-        <slot name="year" />
-
-        <slot name="tag" />
-
-        <slot name="description" />
-
-        <slot name="quote" />
-      </div>
-
-      <div class="credits-wrapper">
-        <slot name="credits" />
-      </div>
-    </article>
-  </main>
-  <Footer delay={$animationInDelay} />
-
-</div>

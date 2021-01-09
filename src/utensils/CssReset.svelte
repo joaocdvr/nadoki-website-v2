@@ -32,7 +32,7 @@
     quotes: none;
   }
   :global(blockquote:before, blockquote:after, q:before, q:after) {
-    content: "";
+    content: '';
     content: none;
   }
   :global(table) {

@@ -1,7 +1,13 @@
 <script>
-  export let tags = [];
-  export let splitTags = tags.split(",");
+  export let tags = []
+  export let splitTags = tags.split(',')
 </script>
+
+<ul>
+  {#each splitTags as tag}
+    <li class="body-bold tag-color">{tag}</li>
+  {/each}
+</ul>
 
 <style>
   li {
@@ -30,9 +36,3 @@
     }
   }
 </style>
-
-<ul>
-  {#each splitTags as tag}
-    <li class="body-bold tag-color">{tag}</li>
-  {/each}
-</ul>

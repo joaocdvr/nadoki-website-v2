@@ -1,17 +1,54 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
-  } from "../utensils/stores.js";
+    animationOutEasing,
+  } from '../utensils/stores.js'
 
-  export let title = "";
-  export let path = "";
-  export let label = "";
+  export let title = ''
+  export let path = ''
+  export let label = ''
 </script>
+
+<nav>
+  <div>
+    <a on:click href={path} aria-label={label}>
+      <svg
+        viewBox="0 0 40 24"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path
+          d="M22.3783 3.021H10V0L0 5.39L10 11V8H22.3783C27.4967 8 31.6467 10.356
+          31.6467 13.427C31.6467 16.498 27.4983 19 22.3783
+          19H10V24H22.3783C32.1117 24 40 19.266 40 13.427C40 7.588 32.1117 3.021
+          22.3783 3.021Z"
+        />
+      </svg>
+    </a>
+
+    <h1
+      class="body-bold"
+      in:fade={{
+        delay: $animationInDelay,
+        duration: $animationInDuration,
+        easing: $animationInEasing,
+      }}
+      out:fade={{
+        delay: $animationInDelay,
+        duration: $animationOutDuration,
+        easing: $animationOutEasing,
+      }}
+    >
+      {title}
+    </h1>
+
+    <span aria-hidden="true" />
+  </div>
+</nav>
 
 <style>
   a {
@@ -78,30 +115,3 @@
     visibility: hidden;
   }
 </style>
-
-<nav>
-  <div>
-    <a on:click href={path} aria-label={label}>
-      <svg
-        viewBox="0 0 40 24"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true">
-        <path
-          d="M22.3783 3.021H10V0L0 5.39L10 11V8H22.3783C27.4967 8 31.6467 10.356
-          31.6467 13.427C31.6467 16.498 27.4983 19 22.3783
-          19H10V24H22.3783C32.1117 24 40 19.266 40 13.427C40 7.588 32.1117 3.021
-          22.3783 3.021Z" />
-      </svg>
-    </a>
-
-    <h1
-      class="body-bold"
-      in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-      out:fade={{ delay: $animationInDelay, duration: $animationOutDuration, easing: $animationOutEasing }}>
-      {title}
-    </h1>
-
-    <span aria-hidden="true" />
-  </div>
-</nav>

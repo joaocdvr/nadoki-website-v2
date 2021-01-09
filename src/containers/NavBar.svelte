@@ -1,9 +1,19 @@
 <script>
-  import { isMenuClicked } from "../utensils/stores.js";
-  import MenuButton from "../components/otu/MenuButton.svelte";
-  import HomepageButton from "../components/otu/HomepageButton.svelte";
-  import Menu from "./Menu.svelte";
+  import { isMenuClicked } from '../utensils/stores.js'
+  import MenuButton from '../components/otu/MenuButton.svelte'
+  import HomepageButton from '../components/otu/HomepageButton.svelte'
+  import Menu from './Menu.svelte'
 </script>
+
+<nav>
+  <div>
+    <HomepageButton />
+    <MenuButton />
+    <Menu />
+  </div>
+  <div class:menu-bg-is-activated={$isMenuClicked} class="menu-bg" />
+  <div class:nav-bg-is-activated={$isMenuClicked} class="nav-bg" />
+</nav>
 
 <style>
   nav {
@@ -85,13 +95,3 @@
     transition-delay: 500ms;
   }
 </style>
-
-<nav>
-  <div>
-    <HomepageButton />
-    <MenuButton />
-    <Menu />
-  </div>
-  <div class:menu-bg-is-activated={$isMenuClicked} class="menu-bg" />
-  <div class:nav-bg-is-activated={$isMenuClicked} class="nav-bg" />
-</nav>

@@ -1,16 +1,44 @@
 <script>
-  import { slide, fade } from "svelte/transition";
+  import { slide, fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
     animationInEasing,
     animationOutDuration,
-    animationOutEasing
-  } from "../utensils/stores.js";
+    animationOutEasing,
+  } from '../utensils/stores.js'
 
-  export let listItem = [];
-  export let i = 0;
+  export let listItem = []
+  export let i = 0
 </script>
+
+<li
+  class:item-is-clicked={listItem.open}
+  in:fade={{
+    delay: $animationInDelay + i * 100,
+    duration: $animationInDuration,
+    easing: $animationInEasing,
+  }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
+>
+  <button
+    on:click
+    aria-label="Toggle {listItem.name} list"
+    aria-pressed={listItem.open}>
+    <p class="body-bold">
+      {listItem.name}
+      <span />
+    </p>
+  </button>
+
+  <div class="list-content" class:list-open={listItem.open}>
+    {#if listItem.open}
+      <p transition:slide>
+        {@html listItem.content}
+      </p>
+    {/if}
+  </div>
+</li>
 
 <style>
   button {
@@ -52,7 +80,7 @@
   }
 
   .list-content {
-    font-family: "syne-regular", Arial, Helvetica, sans-serif;
+    font-family: 'syne-regular', Arial, Helvetica, sans-serif;
     line-height: 2;
     font-size: 1rem;
     color: transparent;
@@ -100,7 +128,7 @@
   }
 
   p span:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 2.125rem;
     right: 1.5rem;
@@ -110,7 +138,7 @@
   }
 
   p span:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 1.75rem;
     right: 1.875rem;
@@ -145,27 +173,3 @@
     }
   }
 </style>
-
-<li
-  class:item-is-clicked={listItem.open}
-  in:fade={{ delay: $animationInDelay + i * 100, duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-
-  <button
-    on:click
-    aria-label="Toggle {listItem.name} list"
-    aria-pressed={listItem.open}>
-    <p class="body-bold">
-      {listItem.name}
-      <span />
-    </p>
-  </button>
-
-  <div class="list-content" class:list-open={listItem.open}>
-    {#if listItem.open}
-      <p transition:slide>
-        {@html listItem.content}
-      </p>
-    {/if}
-  </div>
-</li>
