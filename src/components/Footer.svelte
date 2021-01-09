@@ -268,7 +268,7 @@
     </ul>
 
     <p>
-      <small class="caption">© 2020 Nadoki. All rights reserved.</small>
+      <small class="caption">© 2021 Nadoki. All rights reserved.</small>
     </p>
   </div>
 </footer>
