@@ -117,9 +117,8 @@
   @media (--max-content-width) {
     a {
       padding: 3rem;
-      margin: 3rem 0 6rem 0;
+      margin-bottom: 6rem;
       width: calc(var(--max-width) * 0.65);
-      transform: translateX(calc(50vw - var(--max-width) * 0.325));
     }
   }
 
@@ -162,6 +161,18 @@
   @media (--not-touchscreen) {
     a:hover :global(.tag-color) {
       color: var(--secondary-color);
+    }
+  }
+
+  .work-cards {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+
+  @media (--max-content-width) {
+    .work-cards {
+      grid-template-columns: 50% 50%;
     }
   }
 
