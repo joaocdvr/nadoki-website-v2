@@ -43,22 +43,23 @@
     Since this array (workSubpages) doesn't include an "example" string, 
     the example url (in practice) would behave as if it didn't have the project parameter (www.nadoki.com/work) 
     */
-    'holiday_special',
-    'cosmic_minivan',
-    'leon_gurvitch',
+    'non-citizens',
+    'holiday-special',
+    'cosmic-minivan',
+    'leon-gurvitch',
     'perle',
     'desolator',
     'pharlight',
-    'sin_thetik',
+    'sin-thetik',
     'ovoo',
-    'bold_gestures',
+    'bold-gestures',
     'ambrosia',
-    'we_gotta_live_together',
-    'glitter_against_terfs',
-    'above_it_all',
+    'we-gotta-live-together',
+    'glitter-against-terfs',
+    'above-it-all',
     'parda',
-    'love_hurts',
-    'der_hauptbahnhof',
+    'love-hurts',
+    'der-hauptbahnhof',
     'ertrinken',
   ]
 
@@ -67,7 +68,20 @@
   let workCards = [
     // Every time there's a new "works" entry, it's data must be added manually to this array.
     {
-      url: 'holiday_special',
+      url: 'non-citizens',
+      ratio: '100%',
+      src: 'work/non-citizens-720.jpg',
+      srcset:
+        'work/non-citizens-480.jpg 480w, work/non-citizens-720.jpg 720w, work/non-citizens-1080.jpg 1080w',
+      alt: "Frame from the Jordi Garcia Rodriguez's 'Non-Citizens' documentary",
+      title: 'Non-Citizens',
+      content:
+        "Jordi Garcia Rodriguez's documentary about the Central African refugee crisis.",
+      tags: 'Mix, Master',
+      path: '/work?project=holiday-special',
+    },
+    {
+      url: 'holiday-special',
       ratio: '100%',
       src: 'work/holiday-special-720.jpg',
       srcset:
@@ -77,10 +91,10 @@
       content:
         "Charm's fundraising online event for her gender affirmation surgery fund.",
       tags: 'Sound',
-      path: '/work?project=holiday_special',
+      path: '/work?project=holiday-special',
     },
     {
-      url: 'cosmic_minivan',
+      url: 'cosmic-minivan',
       ratio: '100%',
       src: 'work/cosmic-minivan-720.jpg',
       srcset:
@@ -89,10 +103,10 @@
       title: 'Cosmic Minivan',
       content: "Princess Century's single released on Paper Bag Records.",
       tags: 'Mix, Master',
-      path: '/work?project=cosmic_minivan',
+      path: '/work?project=cosmic-minivan',
     },
     {
-      url: 'leon_gurvitch',
+      url: 'leon-gurvitch',
       ratio: '100%',
       src: 'work/leon-gurvitch-720.jpg',
       srcset:
@@ -101,7 +115,7 @@
       title: 'Leon Gurvitch',
       content: "Jordi Garcia Rodriguez's short film about Leon Gurvitch.",
       tags: 'Mix, Master',
-      path: '/work?project=leon_gurvitch',
+      path: '/work?project=leon-gurvitch',
     },
     {
       url: 'perle',
@@ -142,7 +156,7 @@
       path: '/work?project=pharlight',
     },
     {
-      url: 'sin_thetik',
+      url: 'sin-thetik',
       ratio: '100%',
       src: 'work/sin-thetik-720.jpg',
       srcset:
@@ -152,7 +166,7 @@
       content:
         "Richie Hawtin's original soundtrack for Prada's Spring /Summer 2021 Womenswear.",
       tags: 'Master',
-      path: '/work?project=sin_thetik',
+      path: '/work?project=sin-thetik',
     },
     {
       url: 'ovoo',
@@ -168,7 +182,7 @@
       path: '/work?project=ovoo',
     },
     {
-      url: 'bold_gestures',
+      url: 'bold-gestures',
       ratio: '100%',
       src: 'work/bold-gestures-720.jpg',
       srcset:
@@ -178,7 +192,7 @@
       content:
         'A podcast where three friends attempt to make sense of this bizarro world and the people who live in it.',
       tags: 'Post-Production',
-      path: '/work?project=bold_gestures',
+      path: '/work?project=bold-gestures',
     },
     {
       url: 'ambrosia',
@@ -193,7 +207,7 @@
       path: '/work?project=ambrosia',
     },
     {
-      url: 'we_gotta_live_together',
+      url: 'we-gotta-live-together',
       ratio: '100%',
       src: 'work/we-gotta-live-together-720.jpg',
       srcset:
@@ -202,10 +216,10 @@
       title: 'We Gotta Live Together',
       content: "DJ FLAT's debut single.",
       tags: 'Master',
-      path: '/work?project=we_gotta_live_together',
+      path: '/work?project=we-gotta-live-together',
     },
     {
-      url: 'glitter_against_terfs',
+      url: 'glitter-against-terfs',
       ratio: '100%',
       src: 'work/glitter-against-terfs-720.jpg',
       srcset:
@@ -214,10 +228,10 @@
       title: 'Glitter Against Terfs',
       content: "Lazy Rosario's fourth EP.",
       tags: 'Master',
-      path: '/work?project=glitter_against_terfs',
+      path: '/work?project=glitter-against-terfs',
     },
     {
-      url: 'above_it_all',
+      url: 'above-it-all',
       ratio: '100%',
       src: 'work/above-it-all-720.jpg',
       srcset:
@@ -227,7 +241,7 @@
       content:
         'Mind Against contribution for Unity — a symbol of togetherness curated by Tale Of Us.',
       tags: 'Master',
-      path: '/work?project=above_it_all',
+      path: '/work?project=above-it-all',
     },
     {
       url: 'parda',
@@ -242,7 +256,7 @@
       path: '/work?project=parda',
     },
     {
-      url: 'love_hurts',
+      url: 'love-hurts',
       ratio: '100%',
       src: 'work/love-hurts-720.jpg',
       srcset:
@@ -251,10 +265,10 @@
       title: 'Love Hurts',
       content: "Osaka88's debut single.",
       tags: 'Mix, Master',
-      path: '/work?project=love_hurts',
+      path: '/work?project=love-hurts',
     },
     {
-      url: 'der_hauptbahnhof',
+      url: 'der-hauptbahnhof',
       ratio: 'calc(1415 / 1000 * 100%)',
       src: 'work/der-hauptbahnhof-720.jpg',
       srcset:
@@ -264,7 +278,7 @@
       content:
         'A documentary written, directed and filmed by Jordi Garcia Rodriguez.',
       tags: 'Sound Design, Post-Production',
-      path: '/work?project=der_hauptbahnhof',
+      path: '/work?project=der-hauptbahnhof',
     },
     {
       url: 'ertrinken',
@@ -300,7 +314,82 @@
     4. Edit it to display the information related to the new entry;
     5. Check a modal that already implemented the media platform (Spotify/Vimeo/YouTube) you intend to use and copy its styling.
   -->
-  {#if $workModalActive === 'holiday_special'}
+  {#if $workModalActive === 'non-citizens'}
+    <WorkModal>
+      <div slot="media" style="padding:56.25% 0 0 0;position:relative;">
+        <iframe
+          title="Non-Citizens - Trailer"
+          src="https://player.vimeo.com/video/442164701"
+          class="vimeo-iframe"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        />
+      </div>
+
+      <h2 slot="title" class="body-extra">NON-CITIZENS</h2>
+
+      <p slot="year" class="body-bold">2020</p>
+
+      <div slot="tag">
+        <Tag tags="Mix, Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Migration: leaving everything behind in search of freedom. Escaping
+        appaling conditions, relentless horror, famine and war. Risking you life
+        walking hundreds of kilometers to reach the gates of paradise: Europe.
+        <br /><br />
+        Non-Citizens tells the story of the ones waiting in the purgatory where hundreds
+        of immigrants from Central Africa are fighting for survival ― giving voice
+        to their hopes and fears. This waiting room is not confortable: dark nights
+        in collapsing, abandoned factories, meals shared in crumbling caverns. This
+        unusual dicumentary contrasts the needs of people in Africa with the abstract,
+        philosophical concerns of a european woman in Berlin. Reality and fiction.
+        Physical and psychological scars.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Directed, Written & Filmed by
+        <span class="body-bold">Jordi Garcia Rodriguez</span>
+        <br />
+        Music by
+        <span class="body-bold">Leon Gurvitch</span>
+        <br />
+        Cast & VO
+        <span class="body-bold">Lucie Aron</span>
+        <br />
+        On set sound
+        <span class="body-bold">Ted Debit</span>
+        <br />
+        VO Recording
+        <span class="body-bold">Louis Mcguire</span>
+        <br />
+        Subtitles
+        <span class="body-bold">Lyz Pfister</span>
+        <br />
+        Translations
+        <span class="body-bold">Flora Beillouin & Juliette Ferrere</span>
+        <br />
+        Mix & Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=joao"> João Rodrigues </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'holiday-special'}
     <WorkModal>
       <iframe
         slot="media"
@@ -423,7 +512,7 @@
         was responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'cosmic_minivan'}
+  {:else if $workModalActive === 'cosmic-minivan'}
     <WorkModal>
       <iframe
         slot="media"
@@ -512,7 +601,7 @@
         was responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'leon_gurvitch'}
+  {:else if $workModalActive === 'leon-gurvitch'}
     <WorkModal>
       <div slot="media" style="padding:56.25% 0 0 0;position:relative;">
         <iframe
@@ -836,7 +925,7 @@
         were responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'sin_thetik'}
+  {:else if $workModalActive === 'sin-thetik'}
     <WorkModal>
       <iframe
         slot="media"
@@ -969,7 +1058,7 @@
         was responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'bold_gestures'}
+  {:else if $workModalActive === 'bold-gestures'}
     <WorkModal>
       <iframe
         slot="media"
@@ -1074,7 +1163,7 @@
         were responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'we_gotta_live_together'}
+  {:else if $workModalActive === 'we-gotta-live-together'}
     <WorkModal>
       <iframe
         slot="media"
@@ -1123,7 +1212,7 @@
         were responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'glitter_against_terfs'}
+  {:else if $workModalActive === 'glitter-against-terfs'}
     <WorkModal>
       <iframe
         slot="media"
@@ -1167,7 +1256,7 @@
         was responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'above_it_all'}
+  {:else if $workModalActive === 'above-it-all'}
     <WorkModal>
       <iframe
         slot="media"
@@ -1335,7 +1424,7 @@
         were responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'love_hurts'}
+  {:else if $workModalActive === 'love-hurts'}
     <WorkModal>
       <iframe
         slot="media"
@@ -1391,7 +1480,7 @@
         were responsible for this project.
       </p>
     </WorkModal>
-  {:else if $workModalActive === 'der_hauptbahnhof'}
+  {:else if $workModalActive === 'der-hauptbahnhof'}
     <WorkModal>
       <div slot="media" style="padding:56.25% 0 0 0;position:relative;">
         <iframe
