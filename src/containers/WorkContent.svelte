@@ -43,7 +43,21 @@
     Since this array (workSubpages) doesn't include an "example" string, 
     the example url (in practice) would behave as if it didn't have the project parameter (www.nadoki.com/work) 
     */
+    'the-prey',
+    'genesys',
+    'not-your-type',
+    'curvas-peligrosas',
+    'new-era',
+    'close-my-eyes',
+    'london',
+    'nina',
+    'inxtro',
+    'unity-part-two',
+    'yum-yum',
+    'tequilla-and-lime',
+    'va-01',
     'non-citizens',
+    'unity-live',
     'holiday-special',
     'cosmic-minivan',
     'leon-gurvitch',
@@ -68,6 +82,163 @@
   let workCards = [
     // Every time there's a new "works" entry, it's data must be added manually to this array.
     {
+      url: 'the-prey',
+      ratio: '100%',
+      src: 'work/the-prey-720.jpg',
+      srcset:
+        'work/the-prey-480.jpg 480w, work/the-prey-720.jpg 720w, work/the-prey-1080.jpg 1080w',
+      alt: "The Prey's artwork",
+      title: 'The Prey',
+      content: `Mind Against remix of Monolink's single "The Prey".`,
+      tags: 'Mix, Master',
+      path: '/work?project=the-prey',
+    },
+    {
+      url: 'genesys',
+      ratio: '100%',
+      src: 'work/genesys-720.jpg',
+      srcset:
+        'work/genesys-480.jpg 480w, work/genesys-720.jpg 720w, work/genesys-1080.jpg 1080w',
+      alt: "Genesys' artwork",
+      title: 'Genesys',
+      content: "Anyma's debut album.",
+      tags: 'Mix, Master',
+      path: '/work?project=genesys',
+    },
+    {
+      url: 'not-your-type',
+      ratio: '100%',
+      src: 'work/not-your-type-720.jpg',
+      srcset:
+        'work/not-your-type-480.jpg 480w, work/not-your-type-720.jpg 720w, work/not-your-type-1080.jpg 1080w',
+      alt: 'Not Your Type artwork',
+      title: 'Not Your Type',
+      content: "Sunmoon's third single.",
+      tags: 'Master',
+      path: '/work?project=not-your-type',
+    },
+    {
+      url: 'curvas-peligrosas',
+      ratio: '100%',
+      src: 'work/curvas-peligrosas-720.jpg',
+      srcset:
+        'work/curvas-peligrosas-480.jpg 480w, work/curvas-peligrosas-720.jpg 720w, work/curvas-peligrosas-1080.jpg 1080w',
+      alt: `Curvas Peligrosas' artwork`,
+      title: 'Curvas Peligrosas',
+      content: "Seleminga's second EP.",
+      tags: 'Mix, Master',
+      path: '/work?project=curvas-peligrosas',
+    },
+    {
+      url: 'new-era',
+      ratio: '100%',
+      src: 'work/new-era-720.jpg',
+      srcset:
+        'work/new-era-480.jpg 480w, work/new-era-720.jpg 720w, work/new-era-1080.jpg 1080w',
+      alt: `New Era's artwork`,
+      title: 'New Era',
+      content: 'Stephan Jolk & Yotto first collaborative EP.',
+      tags: 'Master',
+      path: '/work?project=new-era',
+    },
+    {
+      url: 'close-my-eyes',
+      ratio: '100%',
+      src: 'work/close-my-eyes-720.jpg',
+      srcset:
+        'work/close-my-eyes-480.jpg 480w, work/close-my-eyes-720.jpg 720w, work/close-my-eyes-1080.jpg 1080w',
+      alt: `Close My Eyes' artwork`,
+      title: 'Close My Eyes',
+      content: "Sunmoon's second single.",
+      tags: 'Master',
+      path: '/work?project=close-my-eyes',
+    },
+    {
+      url: 'london',
+      ratio: '100%',
+      src: 'work/london-720.jpg',
+      srcset:
+        'work/london-480.jpg 480w, work/london-720.jpg 720w, work/london-1080.jpg 1080w',
+      alt: `London's artwork`,
+      title: 'London',
+      content: `Giana Brotherz remix of John Johnson's "London".`,
+      tags: 'Stem Master',
+      path: '/work?project=london',
+    },
+    {
+      url: 'nina',
+      ratio: '100%',
+      src: 'work/nina-720.jpg',
+      srcset:
+        'work/nina-480.jpg 480w, work/nina-720.jpg 720w, work/nina-1080.jpg 1080w',
+      alt: `Niña's artwork`,
+      title: 'Niña',
+      content: "Seleminga's single.",
+      tags: 'Mix, Master',
+      path: '/work?project=nina',
+    },
+    {
+      url: 'inxtro',
+      ratio: '100%',
+      src: 'work/inxtro-720.jpg',
+      srcset:
+        'work/inxtro-480.jpg 480w, work/inxtro-720.jpg 720w, work/inxtro-1080.jpg 1080w',
+      alt: `Inxtro's artwork`,
+      title: 'Inxtro',
+      content:
+        "Plastikman's soundtrack for the Prada Fall/Winter 2021 Womanswear Collection runway show.",
+      tags: 'Master',
+      path: '/work?project=inxtro',
+    },
+    {
+      url: 'unity-part-two',
+      ratio: '100%',
+      src: 'work/unity-part-two-720.jpg',
+      srcset:
+        'work/unity-part-two-480.jpg 480w, work/unity-part-two-720.jpg 720w, work/unity-part-two-1080.jpg 1080w',
+      alt: `Unity Part 2's artwork`,
+      title: 'Unity PT. 2',
+      content: `Second part of Afterlife's "Unity" compilation.`,
+      tags: 'Master',
+      path: '/work?project=unity-part-two',
+    },
+    {
+      url: 'yum-yum',
+      ratio: '100%',
+      src: 'work/yum-yum-720.jpg',
+      srcset:
+        'work/yum-yum-480.jpg 480w, work/yum-yum-720.jpg 720w, work/yum-yum-1080.jpg 1080w',
+      alt: `Yum Yum's artwork`,
+      title: 'YUM YUM',
+      content: `Copycattz remix of Laura Blue's debut single "Yum Yum".`,
+      tags: 'Master',
+      path: '/work?project=yum-yum',
+    },
+    {
+      url: 'tequilla-and-lime',
+      ratio: '100%',
+      src: 'work/tequilla-and-lime-720.jpg',
+      srcset:
+        'work/tequilla-and-lime-480.jpg 480w, work/tequilla-and-lime-720.jpg 720w, work/tequilla-and-lime-1080.jpg 1080w',
+      alt: `Tequilla & Lime's artwork`,
+      title: 'Tequilla & Lime',
+      content: "Sunmoon's debut single.",
+      tags: 'Master',
+      path: '/work?project=tequilla-and-lime',
+    },
+    {
+      url: 'va-01',
+      ratio: '100%',
+      src: 'work/va-01-720.jpg',
+      srcset:
+        'work/va-01-480.jpg 480w, work/va-01-720.jpg 720w, work/va-01-1080.jpg 1080w',
+      alt: `Various Artists Volume I's artwork`,
+      title: 'Various Artists Volume I',
+      content: 'First compilation of the Gothenburg-based collective STRECK.',
+      tags: 'Master',
+      path: '/work?project=va-01',
+    },
+    {
       url: 'non-citizens',
       ratio: '100%',
       src: 'work/non-citizens-720.jpg',
@@ -79,6 +250,18 @@
         "Jordi Garcia Rodriguez's documentary about the Central African refugee crisis.",
       tags: 'Mix, Master',
       path: '/work?project=holiday-special',
+    },
+    {
+      url: 'unity-live',
+      ratio: '100%',
+      src: 'work/unity-live-720.jpg',
+      srcset:
+        'work/unity-live-480.jpg 480w, work/unity-live-720.jpg 720w, work/unity-live-1080.jpg 1080w',
+      alt: "Unity Live's artwork",
+      title: 'Unity Live',
+      content: "Afterlife's livestream series.",
+      tags: 'Audio Engineering',
+      path: '/work?project=unity-live',
     },
     {
       url: 'holiday-special',
@@ -314,7 +497,686 @@
     4. Edit it to display the information related to the new entry;
     5. Check a modal that already implemented the media platform (Spotify/Vimeo/YouTube) you intend to use and copy its styling.
   -->
-  {#if $workModalActive === 'non-citizens'}
+  {#if $workModalActive === 'the-prey'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="Monolink - The Prey (Mind Against Remix)"
+        src="https://www.youtube.com/embed/JTvAz780wq4"
+        class="youtube-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope;
+    picture-in-picture"
+        allowfullscreen
+      />
+
+      <h2 slot="title" class="body-extra">THE PREY</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Mix, Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Mind Against’s remix of The Prey comes off the back of Monolink’s hugely
+        successful recent livestream event, where Steffen was joined by close
+        friends and special guests Shawna, Armen Miran, and O/Y for an extra
+        special four-hour virtual concert, live from his home studio in Berlin.
+      </p>
+
+      <p slot="quote" class="body-regular quote">
+        <span class="body-extra" style="text-transform: uppercase;">
+          "Mind Against’s remix of Monolink’s The Prey sees Italian brothers
+        </span>
+        <br />
+        <br />
+        and globally sought-after production duo Alessandro and Federico Fognini
+        transform Steffen Linck’s beautiful melancholic cut into an altogether different
+        beast, exploring a dynamic dance floor-oriented interpretation of Monolink’s
+        reflective, down-tempo masterpiece."
+        <br />
+        <br />
+        <span class="body-bold">Groove Cartel</span>
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Original by
+        <span class="body-bold">Monolink</span>
+        <br />
+        Remixed by
+        <span class="body-bold">Mind Against</span>
+        <br />
+        Mix & Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia"> Elia Bertolaso </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'genesys'}
+    <WorkModal>
+      <h2 slot="title" class="body-extra">GENESYS</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Mix, Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Tale Of Us member Matteo Milleri launches pioneering musical concept
+        Anyma. Matteo Milleri, who makes up one half of the duo Tale Of Us, is
+        venturing into the next step of his career with an innovative new
+        concept called Anyma.
+        <br />
+        <br />
+        What exactly is Anyma, you ask? Anyma is a live music project which blends
+        computer-generated environments with with real-life aspects, blurring the
+        line between what is digital and what is real. This will all be achievable
+        through state of the art technology, production and design, and not only
+        is Anyma a concept but will also be an alias for Matteo to release music
+        on. He explains:
+      </p>
+
+      <p slot="quote" class="body-regular quote">
+        <span class="body-extra" style="text-transform: uppercase;">
+          "Anyma is my creative self-expression, blending music, art and
+          immersive realities
+        </span>
+        <br />
+        <br />
+        to explore the next phase in the realm of consciousness. Physical and digital
+        creations merge to become a singular enlightening field of experience: Genesys"
+        <br />
+        <br />
+        <span class="body-bold">Matteo Milleri</span>
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Anyma</span>
+        <br />
+        Mix & Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Visuals by
+        <span class="body-bold">Builder's Club and Plusyes</span>
+        <br />
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia"> Elia Bertolaso </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'not-your-type'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Not Your Type' by Sunmoon"
+        src="https://open.spotify.com/embed/track/53DCpHFCGzaIyaxZCnqXyA"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">NOT YOUR TYPE</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Sunmoon's third single.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Produced by
+        <span class="body-bold">Sunmoon</span>
+        <br />
+        Vocals by
+        <span class="body-bold">Sine</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Released on
+        <span class="body-bold">Vybrant</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'curvas-peligrosas'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Curvas Peligrosas' by Seleminga"
+        src="https://open.spotify.com/embed/album/4fC6hSYFlNnFAnuTEjDi5q"
+        class="spotify-album-iframe"
+        height="240"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">CURVAS PELIGROSAS</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Mix, Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Seleminga is introducing this new project with a pamphlet against street
+        harassment. Based on her own experience, she is merging diverse
+        testimonies into one story denunciating the aggressor.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Seleminga</span>
+        <br />
+        Mix & Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Artwork by
+        <span class="body-bold">Synopsies</span>
+        <br />
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'new-era'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'New Era' EP by Yotto & Stephan Jolk"
+        src="https://open.spotify.com/embed/album/49LqNtUITrajPTnpwyC8tA"
+        class="spotify-album-iframe"
+        height="152"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">NEW ERA</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        With distinctive but synergic sounds, both artists are renowned for
+        their ability to imbue their music with rich musicality and captivating
+        rhythms. On 'New Era’ we are invited to join an odyssey into the
+        infinite field of consciousness.
+        <br /><br />
+        The title track has the typical Yotto rippling rhythm that gallops along
+        while drawing you into its orbit, whereas a melodramatic signature Stephan
+        Jolk riff infiltrates your heart centre. On the flip ‘Only One’ takes a more
+        unassuming approach, the sombre tones complemented by the main melody which
+        is melancholic, but at the same time uplifting. Dance music with pure soul
+        at its core.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Produced by
+        <span class="body-bold">Yotto + Stephan Jolk</span>
+        <br />
+        Released on
+        <span class="body-bold">Afterlife</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia"> Elia Bertolaso </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'close-my-eyes'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Close My Eyes' by Sunmoon"
+        src="https://open.spotify.com/embed/track/4NfAu7GSDDumt9rQr2vEUZ"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">CLOSE MY EYES</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Sunmoon's second single.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Produced by
+        <span class="body-bold">Sunmoon</span>
+        <br />
+        Vocals by
+        <span class="body-bold">Sine</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Released on
+        <span class="body-bold">Vybrant</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'london'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'London' remix by the Giana Brotherz"
+        src="https://open.spotify.com/embed/track/0DFnifjOEoLu21jsaWucHq"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">LONDON</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Stem Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Berlin based DnB sensation Giana Brotherz closes out the release in
+        style with his outstanding rendition of 'London'. In recent years Giana
+        Brotherz has been famed for his revisions and he's worked that magic
+        once again for a compelling interpretation of this classic.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Original by
+        <span class="body-bold">John Johnson</span>
+        <br />
+        Remixed by
+        <span class="body-bold">Giana Brotherz</span>
+        <br />
+        Stem Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Released on
+        <span class="body-bold">Iconyc</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'nina'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Niña' by Seleminga"
+        src="https://open.spotify.com/embed/track/4gI3kTtsxftTB4mBOX133P"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">NIÑA</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Mix, Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        With its dark but yet melodic vibe, it is embodying an urgent need of
+        freedom by dancing. The original song is "I can’t see nobody" »" from
+        the Bee Gees. It is describing a lonely walk, in the city, with a vision
+        blurred by too intense feelings. Around this base, an organic texture
+        made out of drums and experimental sounds that are digging in our
+        darkest fantasy. Like two contrary forces, meeting in the middle as an
+        explosion, your mind and body will constantly be shaken while listening
+        to it.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Seleminga</span>
+        <br />
+        Mix & Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Artwork by
+        <span class="body-bold">Mert Akbal</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'inxtro'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="Prada Fall/Winter 21 Womens Collection – A conversation with Miuccia Prada and Raf Simons to follow"
+        src="https://www.youtube.com/embed/yKw39s55vOM"
+        class="youtube-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope;
+    picture-in-picture"
+        allowfullscreen
+      />
+
+      <h2 slot="title" class="body-extra">INXTRO</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Inxtro, developed for the fall/winter womenswear collection, boasts
+        "syncopated hypnotic beats that welcome you first into an ambience of
+        intimacy and sensuality, which then develops in the second half into a
+        more playful and sexually charged rhythm of driving percussion".
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Richie Hawtin</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Writer, Director & Producer
+        <span class="body-bold">lee Daniels</span>
+        <br />
+        Co-Creative Directors
+        <span class="body-bold">Raf Simons & Miuccia Prada</span>
+        <br />
+        Fashion Designer
+        <span class="body-bold">Rem Koolhaas</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'unity-part-two'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Unity Pt.2' by varius Afterlife artists"
+        src="https://open.spotify.com/embed/album/5FkWjMTGQOhag93NyFfLP6"
+        class="spotify-album-iframe"
+        height="360"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+      <h2 slot="title" class="body-extra">UNITY PT.2</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Almost a year after the first installment, Tale Of Us and Afterlife
+        return with the second part of Unity compilation, including 25 new
+        exclusive tracks from artists already part of the Afterlife roster as
+        well as new names on the label.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Varius Afterlife artists</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia"> Elia Bertolaso </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'yum-yum'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'YUM YUM' remix by Copycattz"
+        src="https://open.spotify.com/embed/track/0uLKiRpmdumNTldHjeisDS"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">YUM YUM</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Copycattz remix of Laura Blue's debut single "Yum Yum".
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Remixed by
+        <span class="body-bold">Copycattz</span>
+        <br />
+        Original by
+        <span class="body-bold">Laura Blue</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Released on
+        <span class="body-bold">Vybrant</span>
+        <br />
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'tequilla-and-lime'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Tequila & Lime' by Sunmoon"
+        src="https://open.spotify.com/embed/track/13mWorFtWgmyrR6VAYVrlK"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+      <h2 slot="title" class="body-extra">TEQUILLA & LIME</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Sunmoon's debut single.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Produced by
+        <span class="body-bold">Sunmoon</span>
+        <br />
+        Vocals by
+        <span class="body-bold">Joseph Feinstein</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Released on
+        <span class="body-bold">Vybrant</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'va-01'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Various Artits Volume I' by the STRECK collective"
+        src="https://www.youtube.com/embed/videoseries?list=PL1ntfXx-b2MwesGDjM19uGYNDdaosiGkB"
+        class="youtube-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture"
+        allowfullscreen
+      />
+
+      <h2 slot="title" class="body-extra">VARIOUS ARTISTS VOLUME I</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        First album by the Gothenburg-based techno & trance collective "STRECK"
+        with tracks from every member.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Producers
+        <span class="body-bold"
+          >Stefán, Rogue Wave, Stina Francina, Neoandra, Sima, Sonic, Kal Ket &
+          Pro Athlete
+        </span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Artwork
+        <span class="body-bold">Radu Gota</span>
+
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=alper"> Alper Arslan </a>
+        +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'non-citizens'}
     <WorkModal>
       <div slot="media" style="padding:56.25% 0 0 0;position:relative;">
         <iframe
@@ -387,6 +1249,66 @@
           class="body-bold"
           href="/about_us?name=julia"> Julia Borelli </a>
         were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'unity-live'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="Unity Live livestream series by varius Afterlife artists"
+        src="https://www.youtube.com/embed/videoseries?list=PLvmn9Ssy7H3zRe6XrCYPoUykVso4wmXbg"
+        class="youtube-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture"
+        allowfullscreen
+      />
+
+      <h2 slot="title" class="body-extra">UNITY LIVE</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Audio Engineering" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Italian techno producers Tale of us are contributing and doing their bit
+        on this worldwide fight against the COVID-19 pandemic by releasing their
+        brand new ‘Unity Live‘ mix series project.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Episode 1
+        <span class="body-bold">Tale of Us</span>
+        <br />
+        Episode 2
+        <span class="body-bold">Fideles</span>
+        <br />
+        Episode 3
+        <span class="body-bold">Denis Horvat</span>
+        <br />
+        Episode 4
+        <span class="body-bold">Mind Against</span>
+        <br />
+        Episode 5
+        <span class="body-bold">Stephan Jolk</span>
+        <br />
+        Episode 6
+        <span class="body-bold">Mathame</span>
+        <br />
+        Episode 7
+        <span class="body-bold">Agents of Time</span>
+        <br />
+        Audio Engineering
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=elia"> Elia Bertolaso </a>
+        was responsible for this project.
       </p>
     </WorkModal>
   {:else if $workModalActive === 'holiday-special'}
