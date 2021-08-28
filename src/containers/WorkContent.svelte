@@ -43,6 +43,14 @@
     Since this array (workSubpages) doesn't include an "example" string, 
     the example url (in practice) would behave as if it didn't have the project parameter (www.nadoki.com/work) 
     */
+    'triptidethud',
+    'sentient',
+    'invisible-wires',
+    'doomscrolling',
+    'syntax',
+    'deserve-it',
+    'fatbulous',
+    'acid-drop',
     'the-prey',
     'genesys',
     'not-your-type',
@@ -81,6 +89,103 @@
 
   let workCards = [
     // Every time there's a new "works" entry, it's data must be added manually to this array.
+
+    {
+      url: 'triptidethud',
+      ratio: '100%',
+      src: 'work/triptidethud-720.jpg',
+      srcset:
+        'work/triptidethud-480.jpg 480w, work/triptidethud-720.jpg 720w, work/triptidethud-1080.jpg 1080w',
+      alt: "The Prey's artwork",
+      title: 'TripTideThud',
+      content: `Plastikman's soundtrack for Prada's SS22 Menswear show.`,
+      tags: 'Master',
+      path: '/work?project=triptidethud',
+    },
+    {
+      url: 'sentient',
+      ratio: '100%',
+      src: 'work/sentient-720.jpg',
+      srcset:
+        'work/sentient-480.jpg 480w, work/sentient-720.jpg 720w, work/sentient-1080.jpg 1080w',
+      alt: "Sentient's artwork",
+      title: 'Sentient',
+      content: `Anyma's project debut EP.`,
+      tags: 'Mix, Master',
+      path: '/work?project=sentient',
+    },
+    {
+      url: 'invisible-wires',
+      ratio: '100%',
+      src: 'work/invisible-wires-720.jpg',
+      srcset:
+        'work/invisible-wires-480.jpg 480w, work/invisible-wires-720.jpg 720w, work/invisible-wires-1080.jpg 1080w',
+      alt: "Invisible Wires' artwork",
+      title: 'Invisible Wires',
+      content: `Drusnoise's EP.`,
+      tags: 'Mix',
+      path: '/work?project=invisible-wires',
+    },
+    {
+      url: 'doomscrolling',
+      ratio: '100%',
+      src: 'work/doomscrolling-720.jpg',
+      srcset:
+        'work/doomscrolling-480.jpg 480w, work/doomscrolling-720.jpg 720w, work/doomscrolling-1080.jpg 1080w',
+      alt: "The Prey's artwork",
+      title: 'Doomscrolling',
+      content: `Stil & Bense's EP.`,
+      tags: 'Master',
+      path: '/work?project=doomscrolling',
+    },
+    {
+      url: 'syntax',
+      ratio: '100%',
+      src: 'work/syntax-720.jpg',
+      srcset:
+        'work/syntax-480.jpg 480w, work/syntax-720.jpg 720w, work/syntax-1080.jpg 1080w',
+      alt: "Syntax's artwork",
+      title: 'Syntax',
+      content: `F.U.S.E., Richie Hawtin EP.`,
+      tags: 'Master',
+      path: '/work?project=syntax',
+    },
+    {
+      url: 'deserve-it',
+      ratio: '100%',
+      src: 'work/deserve-it-720.jpg',
+      srcset:
+        'work/deserve-it-480.jpg 480w, work/deserve-it-720.jpg 720w, work/deserve-it-1080.jpg 1080w',
+      alt: "Deserve it's artwork",
+      title: 'Deserve it',
+      content: `Nicolas Sales' single.`,
+      tags: 'Master',
+      path: '/work?project=deserve-it',
+    },
+    {
+      url: 'fatbulous',
+      ratio: '100%',
+      src: 'work/fatbulous-720.jpg',
+      srcset:
+        'work/fatbulous-480.jpg 480w, work/fatbulous-720.jpg 720w, work/fatbulous-1080.jpg 1080w',
+      alt: "Fatbulous's artwork",
+      title: 'Fatbulous',
+      content: `Dornika's debut single.`,
+      tags: 'Master',
+      path: '/work?project=fatbulous',
+    },
+    {
+      url: 'acid-drop',
+      ratio: '100%',
+      src: 'work/acid-drop-720.jpg',
+      srcset:
+        'work/acid-drop-480.jpg 480w, work/acid-drop-720.jpg 720w, work/acid-drop-1080.jpg 1080w',
+      alt: "Acid Drop's artwork",
+      title: 'Acid Drop',
+      content: `Plastikman's first NFT collection.`,
+      tags: 'Master',
+      path: '/work?project=acid-drop',
+    },
     {
       url: 'the-prey',
       ratio: '100%',
@@ -497,12 +602,12 @@
     4. Edit it to display the information related to the new entry;
     5. Check a modal that already implemented the media platform (Spotify/Vimeo/YouTube) you intend to use and copy its styling.
   -->
-  {#if $workModalActive === 'the-prey'}
+  {#if $workModalActive === 'triptidethud'}
     <WorkModal>
       <iframe
         slot="media"
-        title="Monolink - The Prey (Mind Against Remix)"
-        src="https://www.youtube.com/embed/JTvAz780wq4"
+        title="Miuccia Prada and Raf Simons present Prada SS22 menswear collection"
+        src="https://www.youtube.com/embed/sxK9_kotE1Y"
         class="youtube-iframe"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope;
@@ -510,7 +615,54 @@
         allowfullscreen
       />
 
-      <h2 slot="title" class="body-extra">THE PREY</h2>
+      <h2 slot="title" class="body-extra">TRIPTIDETHUD</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Plastikman's soundtrack for Prada's SS22 Menswear show.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Plastikman/Richie Hawtin</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Co-creative Directors
+        <span class="body-bold">Raf Simons & Miuccia Prada</span>
+        <br />
+        Set design
+        <span class="body-bold">OMA</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'sentient'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="Anyma - Sentient"
+        src="https://www.youtube.com/embed/Ar5P1Z0KdOc"
+        class="youtube-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope;
+    picture-in-picture"
+        allowfullscreen
+      />
+
+      <h2 slot="title" class="body-extra">SENTIENT</h2>
 
       <p slot="year" class="body-bold">2021</p>
 
@@ -519,36 +671,32 @@
       </div>
 
       <p slot="description" class="body-regular description">
-        Mind Against’s remix of The Prey comes off the back of Monolink’s hugely
-        successful recent livestream event, where Steffen was joined by close
-        friends and special guests Shawna, Armen Miran, and O/Y for an extra
-        special four-hour virtual concert, live from his home studio in Berlin.
-      </p>
-
-      <p slot="quote" class="body-regular quote">
-        <span class="body-extra" style="text-transform: uppercase;">
-          "Mind Against’s remix of Monolink’s The Prey sees Italian brothers
-        </span>
-        <br />
-        <br />
-        and globally sought-after production duo Alessandro and Federico Fognini
-        transform Steffen Linck’s beautiful melancholic cut into an altogether different
-        beast, exploring a dynamic dance floor-oriented interpretation of Monolink’s
-        reflective, down-tempo masterpiece."
-        <br />
-        <br />
-        <span class="body-bold">Groove Cartel</span>
+        Matteo’s achievements with Tale Of Us need little introduction. Soaring
+        to the highest heights of success, he is now exploring the realm of the
+        metaverse with his hybrid persona, Anyma. The Sentient EP* signals the
+        arrival of this integrative algorithmic consciousness. The title track
+        holds true to the label’s progressive sound, with a percolating low end,
+        emotive synth stabs and moments of deep contemplation. ‘Reminding’
+        features the wistful vocals of Rosa Anschütz, complemented by the
+        propulsive energy of its bassline and urgent programming. A soaring
+        breakdown takes us into the electrifying second half. ‘Fragments’ takes
+        a more pensive stance, evoking melancholy melodies and deeply sombre
+        tones, encouraging the listener to journey inward. Finally, ‘Omnia’ has
+        that classic Afterlife sound, while offering a glimpse of our
+        technology-driven future. It’s ominous, dark, seductive and designed to
+        transport you into unexplored digital terrain.
       </p>
 
       <p slot="credits" class="body-regular">
-        Original by
-        <span class="body-bold">Monolink</span>
-        <br />
-        Remixed by
-        <span class="body-bold">Mind Against</span>
+        Music by
+        <span class="body-bold">Anyma</span>
+
         <br />
         Mix & Master
         <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Artwork by
+        <span class="body-bold">plusyes</span>
         <br />
         <br />
         <a
@@ -557,6 +705,273 @@
           class="body-bold"
           href="/about_us?name=elia"> Elia Bertolaso </a>
         +
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        were responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'invisible-wires'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Invisible Wires' by Drusnoise"
+        src="https://open.spotify.com/embed/album/2T5tV08nBMPC1bXrjiutUf"
+        class="spotify-album-iframe"
+        height="180"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">INVISIBLE WIRES</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Mix" />
+      </div>
+
+      <p slot="description" class="body-regular description">Drusnoise' EP.</p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Drusnoise</span>
+        <br />
+        Mixing
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Master
+        <span class="body-bold">Conor Dalton at Glowcast Mastering</span>
+        <br />
+        Artwork
+        <span class="body-bold">Bertha Abslalon</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'doomscrolling'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Doomscrolling' by Still & Bense"
+        src="https://open.spotify.com/embed/album/7FM6rDlWokL8N9gHScKsN6"
+        class="spotify-album-iframe"
+        height="210"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">DOOMSCROLLING</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Still & Bense's EP.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Still & Bense</span>
+        <br />
+        Remixes by
+        <span class="body-bold">Lorraine & GNTN</span>
+        <br />
+        Mixing
+        <span class="body-bold">Still & Bense</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'syntax'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Syntax' by F.U.S.E./Richie Hawtin"
+        src="https://open.spotify.com/embed/album/7cJczMBsxFc5byfCeSMrxN"
+        class="spotify-album-iframe"
+        height="160"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">SYNTAX</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        F.U.S.E/Richie Hawtin's EP.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Richie Hawtin</span>
+        <br />
+        Visuals by
+        <span class="body-bold">Matthew Hawtin</span>
+        <br />
+        Mixing
+        <span class="body-bold">Richie Hawtin</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'deserve-it'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'deserve it' by Nicolas Sales"
+        src="https://open.spotify.com/embed/track/0Gngbm5XMkZCWVoQp4RCIf"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">DESERVE IT</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Nicolas Sales's single.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Music by
+        <span class="body-bold">Nicolas Sales</span>
+        <br />
+        Mixing
+        <span class="body-bold">Nicolas Sales</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'fatbulous'}
+    <WorkModal>
+      <iframe
+        slot="media"
+        title="'Fatbulous' by Dornika"
+        src="https://open.spotify.com/embed/track/41Pl90RIquJRbHOlgRsKj2"
+        class="spotify-track-iframe"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+
+      <h2 slot="title" class="body-extra">FATBULOUS</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Dornika's debut single.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Songwriting & Concept
+        <span class="body-bold">Dornika</span>
+        <br />
+        Mixing
+        <span class="body-bold">Gil Hockman</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        Photography
+        <span class="body-bold">David Kavaler</span>
+        <br />
+        Outfit
+        <span class="body-bold">Lupae</span>
+        <br />
+        MUA
+        <span class="body-bold">Arabinda Des</span>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener"
+          class="body-bold"
+          href="/about_us?name=julia"> Julia Borelli </a>
+        was responsible for this project.
+      </p>
+    </WorkModal>
+  {:else if $workModalActive === 'acid-drop'}
+    <WorkModal>
+      <h2 slot="title" class="body-extra">ACID DROP</h2>
+
+      <p slot="year" class="body-bold">2021</p>
+
+      <div slot="tag">
+        <Tag tags="Master" />
+      </div>
+
+      <p slot="description" class="body-regular description">
+        Plastikman's first NFT collection.
+      </p>
+
+      <p slot="credits" class="body-regular">
+        Produced by
+        <span class="body-bold">Richie Hawtin</span>
+        <br />
+        Mixed by
+        <span class="body-bold">Richie Hawtin</span>
+        <br />
+        Master
+        <span class="body-bold">Nadoki Studios</span>
+        <br />
+        <br />
         <a
           target="_blank"
           rel="noopener"

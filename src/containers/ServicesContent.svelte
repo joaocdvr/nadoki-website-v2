@@ -1194,10 +1194,6 @@
     margin-top: 0.5rem;
   }
 
-  .body-regular + .body-small {
-    margin-top: 0;
-  }
-
   .body-small + .body-regular,
   .no-description + .body-regular {
     margin-top: 0.5rem;
