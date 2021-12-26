@@ -204,7 +204,7 @@
           target="_blank"
           rel="noopener"
           aria-label="Nadoki's WhatsApp"
-          href="https://wa.me/4917643965731">
+          href="https://wa.me/491622501476">
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
