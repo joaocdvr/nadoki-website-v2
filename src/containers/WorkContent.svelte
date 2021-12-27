@@ -90,29 +90,7 @@ picture-in-picture"
         slot="description"
         class="body-regular description"
         style={!work.description && 'display: none'}
-      >
-        {#each work.description as description}
-          <span>{description}</span>
-        {/each}
-      </p>
-
-      <p
-        slot="quote"
-        class="body-regular quote"
-        style={!work.quote && 'display: none'}
-      >
-        {#if work.quote}
-          <span class="body-extra" style="text-transform: uppercase;">
-            "{work.quote.highlight}
-          </span>
-          <br />
-          <br />
-          {work.quote.rest}"
-          <br />
-          <br />
-          <span class="body-bold">{work.quote.author}</span>
-        {/if}
-      </p>
+      >{work.description}</p>
 
       <p slot="credits" class="body-regular">
         {#each work.credits as credited}
@@ -237,7 +215,7 @@ picture-in-picture"
 
   .spotify-track-iframe {
     width: 100%;
-    height: calc(100vw + 80px);
+    height: 80px;
   }
 
   .spotify-album-iframe {
@@ -252,7 +230,6 @@ picture-in-picture"
   @media (--max-content-width) {
     .spotify-track-iframe {
       padding: 0 1.5rem;
-      height: calc(var(--max-width) - 6rem);
     }
 
     .spotify-album-iframe {

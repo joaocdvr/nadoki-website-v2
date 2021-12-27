@@ -91,7 +91,7 @@
               <h2 class="header-small">{card.title.toUpperCase()}</h2>
             </div>
 
-            <p class="body-regular">{card.content}</p>
+            <p class="body-regular">{card.description}</p>
 
             <Tag tags={card.tags} />
 

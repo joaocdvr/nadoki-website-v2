@@ -46,8 +46,6 @@
         <slot name="tag" />
 
         <slot name="description" />
-
-        <slot name="quote" />
       </div>
 
       <div class="credits-wrapper">
