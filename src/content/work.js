@@ -1,5 +1,60 @@
 const workContent = [
   {
+    url: 'surrender',
+    ratio: '100%',
+    src: 'work/surrender-720.jpg',
+    srcset:
+      'work/surrender-480.jpg 480w, work/surrender-720.jpg 720w, work/surrender-1080.jpg 1080w',
+    alt: "Surrender's artwork",
+    title: 'Surrender',
+    description: `Princess Century's second album.`,
+    tags: 'Mix, Master',
+    path: '/work?project=surrender',
+    mediaTitle: 'Princess Century - Surrender',
+    mediaSrc: 'https://open.spotify.com/embed/album/1QHAm8cTlnUmO2aWp07PU5',
+    mediaHeight: 380,
+    year: 2021,
+    credits: [
+      { role: 'Music by', people: 'Princess Century' },
+      {
+        role: 'Mix & Master',
+        people: 'Nadoki Studios',
+      },
+      { role: 'Label', people: 'Paper Bag Records' },
+    ],
+    teamMembers: ['Julia Borelli'],
+  },
+  {
+    url: 'a-magic-world',
+    ratio: '100%',
+    src: 'work/a-magic-world-720.jpg',
+    srcset:
+      'work/a-magic-world-480.jpg 480w, work/a-magic-world-720.jpg 720w, work/a-magic-world-1080.jpg 1080w',
+    alt: "A Magic World (Remixes)'s artwork",
+    title: 'A Magic World (Remixes)',
+    description: `KAS:ST' A Magic World album remixes`,
+    tags: 'Mix, Master',
+    path: '/work?project=a-magic-world',
+    mediaTitle: 'KAS:ST - A Magic World (Remixes)',
+    mediaSrc: 'https://open.spotify.com/embed/album/39rJ5ozCZCmmeC7N0e2JOS',
+    mediaHeight: 240,
+    year: 2021,
+    credits: [
+      { role: 'Music by', people: 'KAS:ST' },
+      {
+        role: 'Remixes by',
+        people:
+          'Anyma, Kevin de Vries, Mind Against, Colyn, Radio Slave, NTO & Chris Avantgarde',
+      },
+      {
+        role: `Outomorrow & Who's to Say What's Real mixed by`,
+        people: 'Nadoki Studios',
+      },
+      { role: 'Master', people: 'Nadoki Studios' },
+    ],
+    teamMembers: ['Julia Borelli', 'Elia Bertolaso'],
+  },
+  {
     url: 'can-i-have-this-dance',
     ratio: '100%',
     src: 'work/can-i-have-this-dance-720.jpg',
