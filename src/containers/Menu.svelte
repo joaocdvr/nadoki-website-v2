@@ -288,7 +288,7 @@
 
   <li class:about-us-is-visible={$isMenuClicked}>
     <a
-      href={['alper', 'elia', 'joao', 'julia'].includes($aboutUsActiveItem)
+      href={['julia', 'elia', 'yuval', 'joao'].includes($aboutUsActiveItem)
         ? 'about_us?name=' + $aboutUsActiveItem
         : 'about_us'}
       aria-label="About Us"
