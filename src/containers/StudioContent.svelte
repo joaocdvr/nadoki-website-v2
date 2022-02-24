@@ -18,18 +18,6 @@
       tags: '',
     },
     {
-      src: 'studio/studio-10-720.jpg',
-      srcset:
-        'studio/studio-10-480.jpg 480w, studio/studio-10-720.jpg 720w, studio/studio-10-1080.jpg 1080w',
-      ratio: 'calc(755 / 1080 * 100%)',
-      alt:
-        "Studio 10, at Riverside Studios (Berlin). Closer to the entrance, on the left, there is a black office chair facing a wooden studio desk with a computer screen, a computer keyboard, a MIDI keyboard, outboard gear, and a pair of speakers. On the back, there's a black couch with a small guitar on top of it and a small white table on it's right.",
-      title: 'Studio 10',
-      content:
-        'Studio 10 is our tracking booth for vocals and overdub recordings. It is the perfect space for smaller-scaled projects.',
-      tags: '',
-    },
-    {
       src: 'studio/the-lab-720.jpg',
       srcset:
         'studio/the-lab-480.jpg 480w, studio/the-lab-720.jpg 720w, studio/the-lab-1080.jpg 1080w',
