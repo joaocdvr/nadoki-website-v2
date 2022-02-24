@@ -38,7 +38,7 @@
     handleSVGAnimation('svg-to-animate-julia', 'about_us', 'name', null)
     handleSVGAnimation('svg-to-animate-elia', 'about_us', 'name', null)
     handleSVGAnimation('svg-to-animate-yuval', 'about_us', 'name', null)
-    handleSVGAnimation('svg-to-animate-joao', 'about_us', 'name', null)
+    handleSVGAnimation('svg-to-animate-alicja', 'about_us', 'name', null)
 
     // Fixes the left submenu to the navbar when the menu is clicked and the page is alread scrolled past the "About us" page title
     if ($scrollYPosition === 0) {
@@ -50,7 +50,7 @@
 
   let compensatedScrollYPosition = 0
 
-  const aboutUsSubpages = ['julia', 'elia', 'joao', 'yuval']
+  const aboutUsSubpages = ['julia', 'elia', 'alicja', 'yuval']
 
   $: isAnyAboutUsItemActive = !!$aboutUsActiveItem
 
@@ -192,30 +192,30 @@
 
   <li class:li-open={isAnyAboutUsItemActive}>
     <a
-      href="/about_us?name=joao"
+      href="/about_us?name=alicja"
       class:a-open={isAnyAboutUsItemActive}
-      class:selected-a={$aboutUsActiveItem === 'joao'}
-      on:click={(event) => handleClick(event, handleAboutUsItemClick('joao'))}
-      aria-label="Toggle João Rodrigues's details"
-      aria-pressed={$aboutUsActiveItem === 'joao'}>
+      class:selected-a={$aboutUsActiveItem === 'alicja'}
+      on:click={(event) => handleClick(event, handleAboutUsItemClick('alicja'))}
+      aria-label="Toggle Alicja Gabryelczyk's details"
+      aria-pressed={$aboutUsActiveItem === 'alicja'}>
       <div>
         <img
           class:img-open={isAnyAboutUsItemActive}
-          src="about_us/joao.png"
-          alt="João Rodrigues' face in a meat package created with an Instagram
+          src="about_us/alicja.png"
+          alt="Alicja Gabryelczyk' face in a meat package created with an Instagram
           filter"
         />
 
         <h2
           class="body-bold"
-          class:selected-text={$aboutUsActiveItem === 'joao'}
+          class:selected-text={$aboutUsActiveItem === 'alicja'}
         >
-          {#if isAnyAboutUsItemActive}João{:else}João Rodrigues{/if}
+          {#if isAnyAboutUsItemActive}Alicja{:else}Alicja Gabryelczyk{/if}
         </h2>
       </div>
 
       <svg
-        id="svg-to-animate-joao"
+        id="svg-to-animate-alicja"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 80 80"

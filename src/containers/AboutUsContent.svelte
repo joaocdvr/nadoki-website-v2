@@ -50,14 +50,14 @@
           ),
         0
       )
-    } else if ($aboutUsActiveItem === 'joao') {
+    } else if ($aboutUsActiveItem === 'alicja') {
       setTimeout(
         () =>
           handleSVGAnimation(
-            'svg-to-animate-joao-2',
+            'svg-to-animate-alicja-2',
             'about_us',
             'name',
-            'joao'
+            'alicja'
           ),
         0
       )
@@ -590,7 +590,7 @@
               </table>
             </li>
           </ul>
-        {:else if $aboutUsActiveItem === 'joao'}
+        {:else if $aboutUsActiveItem === 'alicja'}
           <ul
             in:fade={{
               delay: $animationInDelay,
@@ -605,13 +605,13 @@
             <li class="intro-wrapper">
               <img
                 class:specific-img-open={isAnyAboutUsItemActive}
-                src="about_us/joao.png"
-                alt="João Rodrigues' face in a meat package created with an
+                src="about_us/alicja.png"
+                alt="Alicja Gabryelczyk' face in a meat package created with an
                 Instagram filter"
               />
 
               <svg
-                id="svg-to-animate-joao-2"
+                id="svg-to-animate-alicja-2"
                 class="texture-svg"
                 preserveAspectRatio="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -622,8 +622,8 @@
                 />
               </svg>
 
-              <h2 class="header-big">JOÃO</h2>
-              <h2 class="header-big">RODRIGUES</h2>
+              <h2 class="header-big">ALICJA</h2>
+              <h2 class="header-big">GABRZELCZYK</h2>
 
               <ul class="socials-ul">
                 <li class="socials-li">
@@ -631,8 +631,8 @@
                     class="socials-a"
                     target="_blank"
                     rel="noopener"
-                    aria-label="João Rodrigues' Instagram"
-                    href="https://www.instagram.com/joaocdvr">
+                    aria-label="Alicja Gabryelczyk' Instagram"
+                    href="https://www.instagram.com/_delicja_">
                     <svg
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -664,70 +664,41 @@
                     </svg>
                   </a>
                 </li>
-
-                <li class="socials-li">
-                  <a
-                    class="socials-a"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="João Rodrigues' LindedIn"
-                    href="https://www.linkedin.com/in/joaocdvr">
-                    <svg
-                      viewBox="0 0 24 23"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true">
-                      <path
-                        d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881
-                        0.02 2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98
-                        2.5ZM5 7H0V23H5V7ZM12.982
-                        7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549
-                        19.012 14.601V23H24V12.869C24 4.989 15.078 5.276 12.982
-                        9.155V7Z"
-                      />
-                    </svg>
-                  </a>
-                </li>
               </ul>
             </li>
 
             <li>
               <h3 class="body-bold">Education</h3>
               <p class="body-regular">
-                — Audio Engineering (BA)
+                — Audio Engineering
                 <span class="body-small">SAE Institute Berlin</span>
-                — Sound Art (PgD)
-                <span class="body-small">
-                  Faculty of Fine Arts of the University of Lisbon
-                </span>
-                — Communication Design (BA)
-                <span class="body-small">
-                  Faculty of Fine Arts of the University of Lisbon
-                </span>
+                — Classical Music Education
+                <span class="body-small"> ZPSM im. Fryderyka Chopina </span>
               </p>
             </li>
 
             <li>
               <h3 class="body-bold">Interests</h3>
-              <p class="body-regular">
-                Web design/development, sound design/music & games.
-              </p>
+              <p class="body-regular">Music, fantasy & fireshow.</p>
             </li>
 
             <li>
               <h3 class="body-bold">Nationality</h3>
-              <p class="body-regular">Portuguese</p>
+              <p class="body-regular">Polish</p>
             </li>
 
             <li>
               <h3 class="body-bold">Languages</h3>
-              <p class="body-regular">Portuguese & English</p>
+              <p class="body-regular">
+                Polish, english, german & spanish in progress
+              </p>
             </li>
 
             <li>
               <h3 class="body-bold">About me</h3>
               <p class="body-regular">
-                Gamer since Game Boy Color. Occasional spearfisher. Retired
-                double bassist.
+                Audio student by day, gamer by night. Pianist since the age of
+                5.
               </p>
             </li>
 
@@ -735,16 +706,16 @@
               <h3 class="body-bold">Highlights</h3>
               <table>
                 <tr>
-                  <th class="body-regular">Average KDA</th>
-                  <td class="header-big">4.00</td>
+                  <th class="body-regular">Blankets</th>
+                  <td class="header-big">7</td>
                 </tr>
                 <tr>
-                  <th class="body-regular">Clipper size</th>
-                  <td class="header-big">4</td>
+                  <th class="body-regular">Schnelltests</th>
+                  <td class="header-big">999</td>
                 </tr>
                 <tr>
-                  <th class="body-regular">Windows version</th>
-                  <td class="header-big">10</td>
+                  <th class="body-regular">Height</th>
+                  <td class="header-big">1.5m</td>
                 </tr>
               </table>
             </li>
