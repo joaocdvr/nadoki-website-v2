@@ -18,9 +18,9 @@
     filmActiveTab,
     setActiveFilmTab,
     handleFilmTabClick,
-    gameActiveTab,
-    setActiveGameTab,
-    handleGameTabClick,
+    threeDAudioActiveTab,
+    setActiveThreeDAudioTab,
+    handleThreeDAudioTabClick,
     brandingActiveTab,
     setActiveBrandingTab,
     handleBrandingTabClick,
@@ -43,8 +43,11 @@
       } else if (nameParam === 'film' && filmTabs.includes(typeParam)) {
         setActiveFilmTab(typeParam)
         handleServicesModalClick(nameParam, typeParam)
-      } else if (nameParam === 'game' && gameTabs.includes(typeParam)) {
-        setActiveGameTab(typeParam)
+      } else if (
+        nameParam === '3d-audio' &&
+        threeDAudioTabs.includes(typeParam)
+      ) {
+        setActiveThreeDAudioTab(typeParam)
         handleServicesModalClick(nameParam, typeParam)
       } else if (nameParam === 'branding' && brandingTabs.includes(typeParam)) {
         setActiveBrandingTab(typeParam)
@@ -64,9 +67,12 @@
         } else if (nameParam === 'film' && filmTabs.includes(typeParam)) {
           setServicesModalActive('film')
           setActiveFilmTab(typeParam)
-        } else if (nameParam === 'game' && gameTabs.includes(typeParam)) {
-          setServicesModalActive('game')
-          setActiveGameTab(typeParam)
+        } else if (
+          nameParam === '3d-audio' &&
+          threeDAudioTabs.includes(typeParam)
+        ) {
+          setServicesModalActive('3d-audio')
+          setActiveThreeDAudioTab(typeParam)
         } else if (
           nameParam === 'branding' &&
           brandingTabs.includes(typeParam)
@@ -82,7 +88,7 @@
   })
 
   // Declaration of pages and their tabs
-  const servicesPages = ['music', 'film', 'game', 'branding']
+  const servicesPages = ['music', 'film', '3d-audio', 'branding']
 
   const musicTabs = [
     'mixing',
@@ -100,11 +106,11 @@
     'original_soundtrack',
   ]
 
-  const gameTabs = [
-    'sound_design',
-    'original_soundtrack',
-    'integration',
-    'mixing',
+  const threeDAudioTabs = [
+    'immersive_sound_design',
+    '3d_recording',
+    'post-production',
+    'consultation',
   ]
 
   const brandingTabs = ['sonic_logo', 'podcast', 'post-production_for_ads']
@@ -177,30 +183,30 @@
     },
   ]
 
-  $: gameTab = [
+  $: threeDAudioTab = [
     {
-      title: 'SOUND DESIGN',
-      function: () => handleGameTabClick('sound_design'),
-      variable: $gameActiveTab === 'sound_design',
-      path: '/services?name=game&type=sound_design',
+      title: 'IMMERSIVE SOUND DESIGN',
+      function: () => handleThreeDAudioTabClick('immersive_sound_design'),
+      variable: $threeDAudioActiveTab === 'immersive_sound_design',
+      path: '/services?name=3d_audio&type=immersive_sound_design',
     },
     {
-      title: 'ORIGINAL SOUNDTRACK',
-      function: () => handleGameTabClick('original_soundtrack'),
-      variable: $gameActiveTab === 'original_soundtrack',
-      path: '/services?name=game&type=original_soundtrack',
+      title: '3D RECORDING',
+      function: () => handleThreeDAudioTabClick('3d_recording'),
+      variable: $threeDAudioActiveTab === '3d_recording',
+      path: '/services?name=3d_audio&type=3d_recording',
     },
     {
-      title: 'INTEGRATION',
-      function: () => handleGameTabClick('integration'),
-      variable: $gameActiveTab === 'integration',
-      path: '/services?name=game&type=integration',
+      title: 'POST PRODUCTION',
+      function: () => handleThreeDAudioTabClick('post_production'),
+      variable: $threeDAudioActiveTab === 'post_production',
+      path: '/services?name=3d_audio&type=post_production',
     },
     {
-      title: 'MIXING',
-      function: () => handleGameTabClick('mixing'),
-      variable: $gameActiveTab === 'mixing',
-      path: '/services?name=game&type=mixing',
+      title: 'CONSULTATION',
+      function: () => handleThreeDAudioTabClick('consultation'),
+      variable: $threeDAudioActiveTab === 'consultation',
+      path: '/services?name=3d_audio&type=consultation',
     },
   ]
 
@@ -790,18 +796,18 @@
         {/if}
       </div>
     </main>
-  {:else if $servicesModalActive === 'game'}
+  {:else if $servicesModalActive === '3d-audio'}
     <ModalNav
       on:click={(event) => handleBackClick(event, resetServicesModalActive())}
       path="/services"
       label="Back to services"
       title="Services"
     />
-    <Header variant="game" delay={$animationInDelay} />
+    <Header variant="3d-audio" delay={$animationInDelay} />
     <main>
-      <Tab variant="services" tab={gameTab} delay={$animationInDelay} />
+      <Tab variant="services" tab={threeDAudioTab} delay={$animationInDelay} />
       <div class="tab-content">
-        {#if $gameActiveTab === 'sound_design'}
+        {#if $threeDAudioActiveTab === 'immersive_sound_design'}
           <div
             in:fade={{
               delay: $animationInDelay,
@@ -815,19 +821,30 @@
           >
             <ul>
               <li>
-                <h2 class="body-bold">Sound Design</h2>
+                <h2 class="body-bold">Immersive Sound Design</h2>
 
                 <p class="body-regular">
-                  The multiplicity and variety of possibilities in sound
-                  composition in a game not only allows the creation of
-                  atmospheres and emotions, but also sets the mood of it.
+                  Extended Reality is the fastest-growing field in technology
+                  and consumer experience. The possibility to immerse your
+                  viewer not only visually, but also sonically in a new
+                  environment allows a deeper engagement.
                 </p>
 
                 <p class="body-regular">
-                  We create the sound design for your game to enhance your story
-                  to its full potential. Using high-quality industry-standard
-                  samples and foley recording techniques, we create the sound
-                  your project needs.
+                  From Virtual Reality (VR), Augmented Reality (AR), Mixed
+                  Reality (MR), to now the Metaverse, virtual interactions have
+                  become the new norm. Consequently, the 3D audio possibilities
+                  in Binaural audio and multi-output systems, are responsible
+                  for sealing the immersion in this experience utilizing Dolby
+                  Atmos, FB 360, DearVR, and others.
+                </p>
+
+                <p class="body-regular">
+                  We create 3D audio for your extended reality projects,
+                  audiobooks, music, short film, and audio plays to enhance the
+                  immersion of your viewer in the environment you desire. From
+                  sound design to recording, mixing and integration, we shape
+                  the sound your project needs.
                 </p>
               </li>
 
@@ -845,7 +862,7 @@
               </li>
             </ul>
           </div>
-        {:else if $gameActiveTab === 'original_soundtrack'}
+        {:else if $threeDAudioActiveTab === '3d_recording'}
           <div
             in:fade={{
               delay: $animationInDelay,
@@ -859,13 +876,41 @@
           >
             <ul>
               <li>
-                <h2 class="body-bold">Original Soundtrack</h2>
+                <h2 class="body-bold">3D Recording</h2>
 
                 <p class="body-regular">
-                  We compose tailored music to enrich your game. With the
-                  unlimited possibilities of the in-the-box approach along with
-                  analog instruments, we translate your game’s message into
-                  music.
+                  We record for your immersive projects such as audiobooks,
+                  audio plays, music, short film, extended reality (VR, AR, and
+                  MR), and others.
+                </p>
+
+                <p class="body-regular">
+                  We have two different recording spaces that you can choose
+                  from:
+                  <br />
+                  — Studio 10: our tracking booth for vocals and overdub recordings.
+                  It is the perfect space for small-scaled projects.
+                  <br />
+                  — The Lab: a flexible live tracking room that is perfect for a
+                  full band, orchestra, or choir recording.
+                  <br />
+                  <a
+                    on:click={() =>
+                      document.body.classList.remove('body-is-not-visible')}
+                    href="/studio"
+                    aria-label="Studio"> Learn more </a>
+                  about these rooms. Remote recordings are also available.
+                </p>
+
+                <p class="body-regular">
+                  A selection of industry-standard microphones from brands like
+                  Neumann, Shure, and AKG are available to use. If desired,
+                  other microphones are available upon request.
+                  <a
+                    on:click={() =>
+                      document.body.classList.remove('body-is-not-visible')}
+                    href="/equipment"
+                    aria-label="Equipment"> Check out our gear. </a>
                 </p>
               </li>
 
@@ -883,7 +928,7 @@
               </li>
             </ul>
           </div>
-        {:else if $gameActiveTab === 'integration'}
+        {:else if $threeDAudioActiveTab === 'post_production'}
           <div
             in:fade={{
               delay: $animationInDelay,
@@ -897,26 +942,20 @@
           >
             <ul>
               <li>
-                <h2 class="body-bold">Integration</h2>
+                <h2 class="body-bold">Post-Production</h2>
 
                 <p class="body-regular">
-                  The accuracy of sound integration to the environment of a game
-                  has an important role in the immersion of the player. For the
-                  finest interaction, precision in each moment of gameplay is
-                  crucial. Making sure that all audio assets (music, ambience,
-                  dialogue, and sound effects) load smoothly, are triggered
-                  correctly, and playback in the highest quality at minimal
-                  processing power is key.
+                  We offer post-production solutions such as mixing, mastering,
+                  audio repair, and restoration utilizing the latest
+                  industry-standard tools for your extended reality (VR, AR, and
+                  MR), audiobooks, music, short film, and audio plays.
                 </p>
 
                 <p class="body-regular">
-                  We use FMOD along with Unreal Engine or Unity to integrate
-                  both music and sound effects into game projects. In case you
-                  have a proprietary engine
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    href="mailto:info@nadoki.com"> get in touch. </a>
+                  Combining creativity and technology, we can accurately
+                  position your sounds, simulate any environment, and immerse
+                  through the experience that will place the listener within
+                  your story.
                 </p>
               </li>
 
@@ -934,7 +973,7 @@
               </li>
             </ul>
           </div>
-        {:else if $gameActiveTab === 'mixing'}
+        {:else if $threeDAudioActiveTab === 'consultation'}
           <div
             in:fade={{
               delay: $animationInDelay,
@@ -948,16 +987,12 @@
           >
             <ul>
               <li>
-                <h2 class="body-bold">Mixing</h2>
+                <h2 class="body-bold">Consultation</h2>
 
                 <p class="body-regular">
-                  We offer mixing services for your game's sound. We balance all
-                  dialogue, ADR, sound effects, music, atmospheres, and foleys
-                  for the best immersion of the player.
-                </p>
-
-                <p class="body-regular">
-                  We offer both stereo and multichannel mixing.
+                  If you're a bit lost and just need a push in the right
+                  direction, we also offer feedback and consultation on your 3D
+                  audio project.
                 </p>
               </li>
 

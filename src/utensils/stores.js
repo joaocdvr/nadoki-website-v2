@@ -99,20 +99,20 @@ export function handleFilmTabClick(name) {
   return
 }
 
-// Game submenu
-export const gameActiveTab = writable('sound_design')
+// 3D Audio submenu
+export const threeDAudioActiveTab = writable('immersive_sound_design')
 
-export function setActiveGameTab(name) {
-  gameActiveTab.set(name)
+export function setActiveThreeDAudioTab(name) {
+  threeDAudioActiveTab.set(name)
   return
 }
 
-export function handleGameTabClick(name) {
+export function handleThreeDAudioTabClick(name) {
   if (name !== null) {
-    const newUrl = `${window.location.pathname}?name=game&type=${name}`
+    const newUrl = `${window.location.pathname}?name=3d_audio&type=${name}`
 
     window.history.pushState('', '', newUrl)
-    setActiveGameTab(name)
+    setActiveThreeDAudioTab(name)
   }
   return
 }

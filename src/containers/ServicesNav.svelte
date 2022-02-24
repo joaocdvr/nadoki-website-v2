@@ -14,8 +14,8 @@
     setActiveMusicTab,
     filmActiveTab,
     setActiveFilmTab,
-    gameActiveTab,
-    setActiveGameTab,
+    threeDAudioActiveTab,
+    setActiveThreeDAudioTab,
     brandingActiveTab,
     setActiveBrandingTab,
   } from '../utensils/stores.js'
@@ -24,7 +24,7 @@
   afterUpdate(() => {
     handleSVGAnimation('svg-to-animate-music', 'services', 'name', null)
     handleSVGAnimation('svg-to-animate-film', 'services', 'name', null)
-    handleSVGAnimation('svg-to-animate-game', 'services', 'name', null)
+    handleSVGAnimation('svg-to-animate-3d-audio', 'services', 'name', null)
     handleSVGAnimation('svg-to-animate-branding', 'services', 'name', null)
   })
 
@@ -170,14 +170,15 @@
 
   <li>
     <a
-      href="/services?name=game&type=sound_design"
-      on:click={() => setActiveGameTab(get(gameActiveTab))}
-      on:click={(event) => handleClick(event, 'game', get(gameActiveTab))}
-      aria-label="Game submenu"
-      aria-pressed={$servicesModalActive === 'game'}>
+      href="/services?name=3d_audio&type=sound_design"
+      on:click={() => setActiveThreeDAudioTab(get(threeDAudioActiveTab))}
+      on:click={(event) =>
+        handleClick(event, '3d-audio', get(threeDAudioActiveTab))}
+      aria-label="3D Audio submenu"
+      aria-pressed={$servicesModalActive === '3d-audio'}>
       <svg
         class="icon-svg"
-        id="svg-to-animate-game"
+        id="svg-to-animate-3d-audio"
         preserveAspectRatio="none"
         viewBox="0 0 80 80"
         xmlns="http://www.w3.org/2000/svg"
@@ -194,32 +195,22 @@
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true">
         <path
-          d="M30.4224 33H25.4945C25.4945 30.9667 25.8046 28 26.4248 24.1C25.5699
-          27.1667 24.1535 29.5833 22.1757 31.35C20.2146 33.1167 17.7925 34
-          14.9095 34C10.1324 34 6.45324 32.7667 3.87194 30.3C1.29065 27.8 0
-          23.45 0 17.25C0 10.9833 1.34093 6.55 4.0228 3.95C6.72142 1.31667
-          10.6017 0 15.6638 0C18.7144 0 21.2957 0.566666 23.4077 1.7C25.5364 2.8
-          27.1539 4.4 28.2602 6.5C29.3664 8.56667 29.9698 11.05 30.0704
-          13.95H23.5334C22.6785 10.9833 20.0553 9.5 15.6638 9.5C13.4848 9.5
-          11.7332 9.76667 10.409 10.3C9.08482 10.8 8.11264 11.6167 7.49246
-          12.75C6.87228 13.8833 6.56219 15.3833 6.56219 17.25C6.56219 19.75
-          7.30808 21.5833 8.79987 22.75C10.2917 23.9167 12.7472 24.5 16.1666
-          24.5C20.0218 24.5 23.0305 23.5667 25.1928
-          21.7H17.0215V16.45H30.4224V33Z"
+          d="M8,34c-5.14,0-8-4.28-8-12.34H4.13c0,2.19,1.74,2.89,3.87,2.89,2.61,0,3.85-.3,3.85-2.89s-1.57-2.79-4.53-2.79H4.87V15.39H7.32c3.26,0,4.28-.75,4.28-3,0-2.09-1.09-2.83-3.52-2.83S4.23,10.76,4.15,13H.05C.05,4,3.69.11,8.08.11c5,0,7.8,2.89,7.8,8.81,0,5.47-2,7.32-5.07,7.86,3.22.25,5.4,1.45,5.4,7.37C16.21,30.77,13.06,34,8,34Z"
         />
         <path
-          d="M53.8513 28.15H42.1852L40.6012 33H33.687L44.4731
-          0.999999H51.4627L62.3494 33H55.4352L53.8513 28.15ZM51.4125
-          20.65L47.9931 10.15L44.5988 20.65H51.4125Z"
+          d="M37.22,16.92c0,8.36-1.85,15.92-7.44,15.92H17.93V1H29.78C35.7,1,37.22,8.56,37.22,16.92Zm-7.61,6c2.47,0,3.33-2,3.33-6s-.86-6-3.33-6H22.05V22.89Z"
         />
         <path
-          d="M101.827 0.999999V33H95.5414V16.6L87.4958 33H79.9531L71.9075
-          16.65V33H65.6219V0.999999H71.9075L83.6993 25.3L95.5414
-          0.999999H101.827Z"
+          d="M50.53,1H55.1l7.12,31.84H57.7l-1-4.82H49l-1,4.82H43.47Zm4.54,19.55L52.83,10.1,50.61,20.55Z"
         />
         <path
-          d="M132
-          23.5V33H106.606V0.999999H131.95V10.5H112.892V14.5H128.48V19.5H112.892V23.5H132Z"
+          d="M77.51,1h4.11V16.92c0,14.13-4.72,16.92-9.44,16.92-5,0-9.46-2.79-9.46-16.92V1h4.11V14.68c0,8,2,9.7,5.35,9.7s5.33-1.74,5.33-9.7Z"
+        />
+        <path
+          d="M103.21,16.92c0,8.36-1.85,15.92-7.44,15.92H83.93V1H95.77C101.69,1,103.21,8.56,103.21,16.92Zm-7.6,6c2.46,0,3.32-2,3.32-6s-.86-6-3.32-6H88V22.89Z"
+        /><path d="M109.71,1V32.84h-4.12V1Z" />
+        <path
+          d="M112.09,16.92c0-11.15,2.78-16.92,10-16.92s10,5.77,10,16.92-2.78,16.92-10,16.92S112.09,28.07,112.09,16.92Zm15.47,0c0-6-2.12-7.47-5.51-7.47s-5.68,1.5-5.68,7.47,2.29,7.46,5.68,7.46S127.56,22.89,127.56,16.92Z"
         />
       </svg>
     </a>
