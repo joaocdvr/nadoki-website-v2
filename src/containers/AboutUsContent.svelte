@@ -623,7 +623,7 @@
               </svg>
 
               <h2 class="header-big">ALICJA</h2>
-              <h2 class="header-big">GABRZELCZYK</h2>
+              <h2 class="header-big">GABRYELCZYK</h2>
 
               <ul class="socials-ul">
                 <li class="socials-li">
