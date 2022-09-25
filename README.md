@@ -36,9 +36,9 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Authors and acknowledgment
 
-Designed and developed by [João Rodrigues](@joaocdvr).
+Designed and developed by [João Rodrigues](http://github.com/joaocdvr).
 
-Mentorship by [Margarida Botelho](@mmbotelho) and [Sandrina Pereira](@sandrina-p).
+Mentorship by [Margarida Botelho](http://github.com/mmbotelho) and [Sandrina Pereira](http://github.com/sandrina-p).
 
 ![Homepage](/documentation/nadoki-website-01.jpg)
 ![Pages](/documentation/nadoki-website-02.jpg)
