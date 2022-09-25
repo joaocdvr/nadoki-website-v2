@@ -167,12 +167,6 @@ picture-in-picture"
     grid-gap: 1.5rem;
   }
 
-  .quote span:last-child {
-    text-align: right;
-    display: inline-block;
-    width: 100%;
-  }
-
   .youtube-iframe {
     width: 100vw;
     height: calc(100vw / (16 / 9));

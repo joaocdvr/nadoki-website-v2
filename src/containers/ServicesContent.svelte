@@ -1229,16 +1229,6 @@
     margin-top: 0.5rem;
   }
 
-  .body-small + .body-regular,
-  .no-description + .body-regular {
-    margin-top: 0.5rem;
-  }
-
-  .body-regular + .reach-out,
-  .body-small + .reach-out {
-    margin-top: 1.5rem;
-  }
-
   @media (--max-content-width) {
     h2 {
       display: block;
@@ -1246,11 +1236,6 @@
 
     p + p,
     p + h2 {
-      margin-top: 3rem;
-    }
-
-    .body-regular + .reach-out,
-    .body-small + .reach-out {
       margin-top: 3rem;
     }
 
