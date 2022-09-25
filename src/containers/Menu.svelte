@@ -3,158 +3,29 @@
     isMenuClicked,
     toggleIsMenuClicked,
     aboutUsActiveItem,
-    setActivePage
-  } from "../utensils/stores.js";
-  import { restoreScrollYPosition } from "../utensils/utils.js";
+    setActivePage,
+  } from '../utensils/stores.js'
+  import { restoreScrollYPosition } from '../utensils/utils.js'
 
   function handleMenuOptionsClick() {
-    restoreScrollYPosition();
-    toggleIsMenuClicked();
+    restoreScrollYPosition()
+    toggleIsMenuClicked()
+    return
   }
 </script>
-
-<style>
-  ul {
-    position: absolute;
-    width: 100vw;
-    margin-top: 4.5rem;
-    padding: 1.25rem 0;
-    line-height: 0;
-    visibility: hidden;
-  }
-
-  @media (--mobile-landscape) {
-    ul {
-      padding: 0;
-    }
-  }
-
-  li {
-    text-align: center;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-    transition-delay: 0ms;
-  }
-
-  a {
-    padding: 1.25rem 1.5rem;
-    display: inline-block;
-    transition: background-color 300ms ease-in-out;
-    width: 100%;
-    max-width: 48rem;
-  }
-
-  @media (--mobile-landscape) {
-    a {
-      padding: 0.75rem 0;
-    }
-  }
-
-  a:active,
-  a:visited,
-  a:focus {
-    outline: none;
-  }
-
-  :global(.user-is-tabbing) a:focus {
-    background-color: var(--secondary-color);
-  }
-
-  @media (--not-touchscreen) {
-    a:hover {
-      background-color: var(--secondary-color);
-    }
-  }
-
-  svg {
-    width: 100%;
-    min-height: 1.5rem;
-    height: 1.5rem;
-    fill: var(--light);
-  }
-
-  @media (--mobile-landscape) {
-    svg {
-      max-width: 25rem;
-      max-height: 1.5rem;
-    }
-  }
-
-  @media (--max-content-width) {
-    svg {
-      height: 2.5rem;
-    }
-  }
-
-  /* Equipment height fix */
-  .equipment-svg {
-    min-height: 1.875rem;
-    height: 1.875rem;
-  }
-
-  @media (--max-content-width) {
-    svg.equipment-svg {
-      min-height: 3.125rem;
-      height: 3.125rem;
-    }
-  }
-
-  .equipment-li a {
-    padding-bottom: 0.875rem;
-  }
-
-  @media (--mobile-landscape) {
-    .equipment-li a {
-      padding-bottom: 0.375rem;
-    }
-  }
-
-  /* Menu entries animation */
-  .menu-is-visible {
-    visibility: visible;
-  }
-
-  .services-is-visible,
-  .studio-is-visible,
-  .work-is-visible,
-  .equipment-is-visible,
-  .about-us-is-visible {
-    opacity: 1;
-    transition: opacity 600ms ease-in-out;
-  }
-
-  .services-is-visible {
-    transition-delay: 400ms;
-  }
-
-  .studio-is-visible {
-    transition-delay: 500ms;
-  }
-
-  .work-is-visible {
-    transition-delay: 600ms;
-  }
-
-  .equipment-is-visible {
-    transition-delay: 700ms;
-  }
-
-  .about-us-is-visible {
-    transition-delay: 800ms;
-  }
-</style>
 
 <ul class:menu-is-visible={$isMenuClicked}>
   <li class:services-is-visible={$isMenuClicked}>
     <a
       href="/services"
-      aria-label="Services page"
+      aria-label="Services"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('services')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M9.71819 15.0132C9.95551 15.7416 10.9048 16.3054 12.566
           16.7048C14.2272 17.1043 16.4343 17.304 19.1872 17.304C21.0146 17.304
@@ -230,20 +101,23 @@
           307.313 22.649 304.845 23.1894C302.4 23.7298 299.185 24 295.198
           24C291.472 24 288.244 23.6476 285.515 22.9427C282.786 22.2144 280.698
           21.1806 279.25 19.8414C277.802 18.4787 277.079 16.8693 277.079
-          15.0132H286.797Z" />
+          15.0132H286.797Z"
+        />
       </svg>
     </a>
   </li>
+
   <li class:studio-is-visible={$isMenuClicked}>
     <a
       href="/studio"
-      aria-label="Studio page"
+      aria-label="Studio"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('studio')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M12.8065 15.0132C13.1192 15.7416 14.3701 16.3054 16.5593
           16.7048C18.7484 17.1043 21.6568 17.304 25.2846 17.304C27.6926 17.304
@@ -299,20 +173,23 @@
           295.394 7.89427C292.767 7.11894 288.842 6.73128 283.619
           6.73128C278.334 6.73128 274.316 7.11894 271.563 7.89427C268.811
           8.64611 267.435 10.0206 267.435 12.0176C267.435 14.0147 268.811
-          15.4009 271.563 16.1762C274.316 16.928 278.334 17.304 283.619 17.304Z" />
+          15.4009 271.563 16.1762C274.316 16.928 278.334 17.304 283.619 17.304Z"
+        />
       </svg>
     </a>
   </li>
+
   <li class:work-is-visible={$isMenuClicked}>
     <a
       href="/work"
-      aria-label="Work page"
+      aria-label="Work"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('work')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M101.109 0.705882L81.6774 23.2941H63.1243L50.6641 7.65882L38.2039
           23.2941H19.6509L0 0.705882H15.4792L29.3665 18.3176L42.3756
@@ -343,21 +220,24 @@
           9.98823 227.006 9.35294C227.006 8.29412 225.707 7.76471 223.109
           7.76471H194.401V11.0471H223.109ZM291.581 23.2941L264.794
           11.3647V23.2941H251.071V0.705882H264.794V11.2588L289.495
-          0.705882H309.036L282.798 11.2235L312 23.2941H291.581Z" />
+          0.705882H309.036L282.798 11.2235L312 23.2941H291.581Z"
+        />
       </svg>
     </a>
   </li>
+
   <li class="equipment-li" class:equipment-is-visible={$isMenuClicked}>
     <a
       href="/equipment"
-      aria-label="Equipment page"
+      aria-label="Equipment"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('equipment')}>
       <svg
         class="equipment-svg"
         preserveAspectRatio="none"
         viewBox="0 0 312 30"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M29.2986
           16.3953V23.0233H0V0.697674H29.2406V7.32558H7.25212V10.1163H25.2374V13.6047H7.25212V16.3953H29.2986ZM68.7535
@@ -400,21 +280,25 @@
           0.697674V23.0233H270.233L251.088
           9.69767V23.0233H243.836V0.697674H251.088L270.233
           14.2674V0.697674H277.486ZM312
-          7.32558H300.542V23.0233H293.29V7.32558H281.831V0.697674H312V7.32558Z" />
+          7.32558H300.542V23.0233H293.29V7.32558H281.831V0.697674H312V7.32558Z"
+        />
       </svg>
-
     </a>
   </li>
+
   <li class:about-us-is-visible={$isMenuClicked}>
     <a
-      href={['alper', 'elia', 'joao', 'julia'].includes($aboutUsActiveItem) ? 'about_us?name=' + $aboutUsActiveItem : 'about_us'}
-      aria-label="About Us page"
+      href={['julia', 'elia', 'yuval', 'alicja'].includes($aboutUsActiveItem)
+        ? 'about_us?name=' + $aboutUsActiveItem
+        : 'about_us'}
+      aria-label="About Us"
       on:click={() => handleMenuOptionsClick()}
       on:click={() => setActivePage('studio')}>
       <svg
         preserveAspectRatio="none"
         viewBox="0 0 312 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
         <path
           d="M27.8857 19.8767H11.7523L9.56182 23.2952H0L14.9164
           0.740087H24.5826L39.6381 23.2952H30.0763L27.8857 19.8767ZM24.513
@@ -487,8 +371,135 @@
           311.432 19.5947 310.296 20.7225C309.184 21.8267 307.422 22.649 305.011
           23.1894C302.624 23.7298 299.483 24 295.588 24C291.949 24 288.797
           23.6476 286.131 22.9427C283.465 22.2144 281.425 21.1806 280.011
-          19.8414C278.597 18.4787 277.89 16.8693 277.89 15.0132H287.383Z" />
+          19.8414C278.597 18.4787 277.89 16.8693 277.89 15.0132H287.383Z"
+        />
       </svg>
     </a>
   </li>
 </ul>
+
+<style>
+  ul {
+    position: absolute;
+    width: 100vw;
+    margin-top: 4.5rem;
+    padding: 1.25rem 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+
+  @media (--mobile-landscape) {
+    ul {
+      padding: 0;
+    }
+  }
+
+  li {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    transition-delay: 0ms;
+  }
+
+  a {
+    padding: 1.25rem 1.5rem;
+    display: inline-block;
+    transition: background-color 300ms ease-in-out;
+    width: 100%;
+    max-width: 48rem;
+  }
+
+  @media (--mobile-landscape) {
+    a {
+      padding: 0.75rem 0;
+    }
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    background-color: var(--secondary-color);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover svg {
+      fill: var(--secondary-color);
+    }
+  }
+
+  svg {
+    width: 100%;
+    min-height: 1.5rem;
+    height: 1.5rem;
+    fill: var(--light);
+    transition: fill 300ms ease-in-out;
+  }
+
+  @media (--mobile-landscape) {
+    svg {
+      max-width: 25rem;
+      max-height: 1.5rem;
+    }
+  }
+
+  @media (--max-content-width) {
+    svg {
+      height: 2.5rem;
+    }
+  }
+
+  /* Equipment height fix */
+  .equipment-svg {
+    min-height: 1.875rem;
+    height: 1.875rem;
+  }
+
+  @media (--max-content-width) {
+    svg.equipment-svg {
+      min-height: 3.125rem;
+      height: 3.125rem;
+    }
+  }
+
+  .equipment-li a {
+    padding-bottom: 0.875rem;
+  }
+
+  @media (--mobile-landscape) {
+    .equipment-li a {
+      padding-bottom: 0.375rem;
+    }
+  }
+
+  /* Menu entries animation */
+  .menu-is-visible {
+    visibility: visible;
+  }
+
+  .services-is-visible,
+  .studio-is-visible,
+  .work-is-visible,
+  .equipment-is-visible,
+  .about-us-is-visible {
+    opacity: 1;
+    transition: opacity 600ms ease-in-out;
+  }
+
+  .services-is-visible {
+    transition-delay: 400ms;
+  }
+
+  .studio-is-visible {
+    transition-delay: 500ms;
+  }
+
+  .work-is-visible {
+    transition-delay: 600ms;
+  }
+
+  .equipment-is-visible {
+    transition-delay: 700ms;
+  }
+
+  .about-us-is-visible {
+    transition-delay: 800ms;
+  }
+</style>

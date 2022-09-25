@@ -1,48 +1,59 @@
 <script>
-  import { scrollYPosition } from "../utensils/stores.js";
-  import Header from "../components/Header.svelte";
-  import Card from "../components/Card.svelte";
-  import Footer from "../components/Footer.svelte";
+  import { scrollYPosition } from '../utensils/stores.js'
+  import Header from '../components/Header.svelte'
+  import Card from '../components/Card.svelte'
+  import Footer from '../components/Footer.svelte'
 
   let studioCards = [
     {
-      src: "studio/nadoki_studios_1.jpg",
-      alt: "Nadoki Studios picture nº1",
-      title: "Nadoki",
-      size: "20m²",
+      src: 'studio/nadoki-studios-720.jpg',
+      srcset:
+        'studio/nadoki-studios-480.jpg 480w, studio/nadoki-studios-720.jpg 720w, studio/nadoki-studios-1080.jpg 1080w',
+      ratio: 'calc(810 / 1080 * 100%)',
+      alt:
+        "Nadoki studio, at Riverside Studios (Berlin), being lit by blue light. On the left, there is a stand with MIDI keyboards and synthesizers. In the middle, there's a black office chair facing a black studio desk equipped with a computer screen, outboard gear, and two pairs of speakers. On the right, there are two guitars on a stand and a guitar amplifier. The studio walls and ceiling are full of acoustic panels.",
+      title: 'Nadoki',
       content:
-        "Our control room is equipped with multiple pairs of speakers, outboard gear, instruments and synthesizers. This mixing and mastering suite is also a perfect option for producing and writing sessions.",
-      tags: ""
+        'We are a mixing and mastering studio located at Riverside Studios. Nadoki was founded in 2019 after four educated engineers united to bring a fresh new start to the industry. With our hybrid analog + digital approach, we have the tools and ears to make your idea sound as it deserves.<br><br>Our control room is equipped with multiple pairs of speakers, outboard gear, instruments, and synthesizers. Our mixing and mastering suite is also a perfect option for producing and writing sessions.',
+      tags: '',
     },
     {
-      src: "studio/riverside_1.jpg",
-      alt: "Riverside Studios picture nº1",
-      title: "Riverside Studios",
-      size: "1700m²",
+      src: 'studio/the-lab-720.jpg',
+      srcset:
+        'studio/the-lab-480.jpg 480w, studio/the-lab-720.jpg 720w, studio/the-lab-1080.jpg 1080w',
+      ratio: 'calc(560 / 1080 * 100%)',
+      alt:
+        "The Lab, at Riverside Studios (Berlin), being lit by blue and red lights. The ceiling is full of pipes and cables, there's a a collumn on the right and, on the back, there's a pair of big speakers and a door. Most of the room is empty.",
+      title: 'The Lab',
       content:
-        "The complex we are located at, is a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders. ",
-      tags: ""
+        'The Riverside eventspace is a flexible 100+ m² live tracking room that is perfect for a full band, orchestra, or choir recording.',
+      tags: '',
     },
     {
-      src: "studio/the_lab_1.jpg",
-      alt: "The Lab picture nº1",
-      title: "The Lab",
-      size: "100m²",
+      src: 'studio/riverside-720.jpg',
+      srcset:
+        'studio/riverside-480.jpg 480w, studio/riverside-720.jpg 720w, studio/riverside-1080.jpg 1080w',
+      ratio: 'calc(675 / 1080 * 100%)',
+      alt:
+        "Riverside Studios (Berlin) main common area. There's big wooden table on the left with benches on both sides. On the right there's a semi-open door followed by a big red vintage couch. In the middle, at the back of the room, there's a grand piano with it's cover open next to a big brick collumn.",
+      title: 'Riverside Studios',
       content:
-        "It is a flexible live tracking room that is perfect for a band, orchestra or choir recording.",
-      tags: ""
+        'We are part of the Riverside Studio complex, a unique collective of renowned artists and professionals located in Berlin’s Media Spree, right by the water, neighboring most of the industry’s leaders.',
+      tags: '',
+      link: true,
+      path: 'https://riversidestudios.de/',
     },
-    {
-      src: "studio/studio_10.jpg",
-      alt: "Studio 10 picture nº1",
-      title: "Studio 10",
-      size: "20m²",
-      content:
-        "The perfect space for tracking vocals or overdubs. Great fit for lower-budget projects.",
-      tags: ""
-    }
-  ];
+  ]
 </script>
+
+<div
+  class="content-wrapper"
+  style="transform: translateY({$scrollYPosition * -1}px)"
+>
+  <Header variant="studio" />
+  <Card cards={studioCards} variant="studio" />
+  <Footer />
+</div>
 
 <style>
   .content-wrapper {
@@ -50,11 +61,3 @@
     background-color: var(--main-color);
   }
 </style>
-
-<div
-  class="content-wrapper"
-  style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header variant="studio" />
-  <Card cards={studioCards} variant="studio" />
-  <Footer />
-</div>

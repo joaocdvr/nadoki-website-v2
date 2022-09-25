@@ -1,260 +1,197 @@
-import { writable, readable } from "svelte/store";
-import { quadInOut } from "svelte/easing";
+import { writable, readable } from 'svelte/store'
+import { quadInOut } from 'svelte/easing'
 
 // Animation timers and easing
-export const animationInDelay = readable(300);
-export const animationInDuration = readable(300);
-export const animationInEasing = readable(quadInOut);
+export const animationInDelay = readable(300)
+export const animationInDuration = readable(300)
+export const animationInEasing = readable(quadInOut)
 
-export const animationOutDuration = readable(100);
-export const animationOutEasing = readable(quadInOut);
+export const animationOutDuration = readable(100)
+export const animationOutEasing = readable(quadInOut)
 
 // Menu handling
-export const isMenuClicked = writable(false);
+export const isMenuClicked = writable(false)
 
 export function toggleIsMenuClicked() {
-  isMenuClicked.update((n) => !n);
+  isMenuClicked.update((n) => !n)
+  return
 }
 
 // Scroll handling
-export const scrollYPosition = writable(0);
+export const scrollYPosition = writable(0)
 
 // Page handling
-export const activePage = writable("");
+export const activePage = writable('')
 
 export function setActivePage(name) {
-  activePage.set(name);
+  activePage.set(name)
+  return
 }
 
-// Equipment page tab handling
-export const isEquipmentHardwareClicked = writable(true);
-export const isEquipmentSoftwareClicked = writable(false);
+// Services modal pages handling
+export const servicesModalActive = writable('')
 
-export function handleHardwareSubmenuClick() {
-  isEquipmentHardwareClicked.set(true);
-  isEquipmentSoftwareClicked.set(false);
+export function setServicesModalActive(name) {
+  servicesModalActive.set(name)
+  if (name !== '') {
+    document.body.classList.add('body-is-not-visible')
+  } else {
+    document.body.classList.remove('body-is-not-visible')
+  }
+  return
 }
 
-export function handleSoftwareSubmenuClick() {
-  isEquipmentHardwareClicked.set(false);
-  isEquipmentSoftwareClicked.set(true);
+export function handleServicesModalClick(name, type) {
+  if (name !== null && type !== null) {
+    setServicesModalActive(name)
+
+    const currentUrl = document.location.href
+    const newUrl = `${window.location.pathname}?name=${name}&type=${type}`
+
+    if (currentUrl !== newUrl) {
+      window.history.pushState('', '', newUrl)
+    }
+  }
+  return
+}
+
+export function resetServicesModalActive() {
+  const newUrl = `${window.location.pathname}`
+  window.history.pushState('', '', newUrl)
+  setServicesModalActive('')
+  return
 }
 
 // Services page tab handling
 // Music submenu
-// TODO - minify
-export const isMusicFirstClicked = writable(true);
-export const isMusicSecondClicked = writable(false);
-export const isMusicThirdClicked = writable(false);
-export const isMusicFourthClicked = writable(false);
-export const isMusicFifthClicked = writable(false);
-export const isMusicSixthClicked = writable(false);
+export const musicActiveTab = writable('mixing')
 
-export function handleMusicFirstSubmenuClick() {
-  isMusicFirstClicked.set(true);
-  isMusicSecondClicked.set(false);
-  isMusicThirdClicked.set(false);
-  isMusicFourthClicked.set(false);
-  isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
+export function setActiveMusicTab(name) {
+  musicActiveTab.set(name)
+  return
 }
 
-export function handleMusicSecondSubmenuClick() {
-  isMusicFirstClicked.set(false);
-  isMusicSecondClicked.set(true);
-  isMusicThirdClicked.set(false);
-  isMusicFourthClicked.set(false);
-  isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
+export function handleMusicTabClick(name) {
+  if (name !== null) {
+    const newUrl = `${window.location.pathname}?name=music&type=${name}`
+
+    window.history.pushState('', '', newUrl)
+    setActiveMusicTab(name)
+  }
+  return
 }
 
-export function handleMusicThirdSubmenuClick() {
-  isMusicFirstClicked.set(false);
-  isMusicSecondClicked.set(false);
-  isMusicThirdClicked.set(true);
-  isMusicFourthClicked.set(false);
-  isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
-}
-
-export function handleMusicFourthSubmenuClick() {
-  isMusicFirstClicked.set(false);
-  isMusicSecondClicked.set(false);
-  isMusicThirdClicked.set(false);
-  isMusicFourthClicked.set(true);
-  isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(false);
-}
-
-export function handleMusicFifthSubmenuClick() {
-  isMusicFirstClicked.set(false);
-  isMusicSecondClicked.set(false);
-  isMusicThirdClicked.set(false);
-  isMusicFourthClicked.set(false);
-  isMusicFifthClicked.set(true);
-  isMusicSixthClicked.set(false);
-}
-
-export function handleMusicSixthSubmenuClick() {
-  isMusicFirstClicked.set(false);
-  isMusicSecondClicked.set(false);
-  isMusicThirdClicked.set(false);
-  isMusicFourthClicked.set(false);
-  isMusicFifthClicked.set(false);
-  isMusicSixthClicked.set(true);
-}
 // Film submenu
-// TODO - minify
-export const isFilmFirstClicked = writable(true);
-export const isFilmSecondClicked = writable(false);
-export const isFilmThirdClicked = writable(false);
-export const isFilmFourthClicked = writable(false);
-export const isFilmFifthClicked = writable(false);
+export const filmActiveTab = writable('re-recording_mixing')
 
-export function handleFilmFirstSubmenuClick() {
-  isFilmFirstClicked.set(true);
-  isFilmSecondClicked.set(false);
-  isFilmThirdClicked.set(false);
-  isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(false);
+export function setActiveFilmTab(name) {
+  filmActiveTab.set(name)
+  return
 }
 
-export function handleFilmSecondSubmenuClick() {
-  isFilmFirstClicked.set(false);
-  isFilmSecondClicked.set(true);
-  isFilmThirdClicked.set(false);
-  isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(false);
+export function handleFilmTabClick(name) {
+  if (name !== null) {
+    const newUrl = `${window.location.pathname}?name=film&type=${name}`
+
+    window.history.pushState('', '', newUrl)
+    setActiveFilmTab(name)
+  }
+  return
 }
 
-export function handleFilmThirdSubmenuClick() {
-  isFilmFirstClicked.set(false);
-  isFilmSecondClicked.set(false);
-  isFilmThirdClicked.set(true);
-  isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(false);
+// 3D Audio submenu
+export const threeDAudioActiveTab = writable('immersive_sound_design')
+
+export function setActiveThreeDAudioTab(name) {
+  threeDAudioActiveTab.set(name)
+  return
 }
 
-export function handleFilmFourthSubmenuClick() {
-  isFilmFirstClicked.set(false);
-  isFilmSecondClicked.set(false);
-  isFilmThirdClicked.set(false);
-  isFilmFourthClicked.set(true);
-  isFilmFifthClicked.set(false);
-}
+export function handleThreeDAudioTabClick(name) {
+  if (name !== null) {
+    const newUrl = `${window.location.pathname}?name=3d_audio&type=${name}`
 
-export function handleFilmFifthSubmenuClick() {
-  isFilmFirstClicked.set(false);
-  isFilmSecondClicked.set(false);
-  isFilmThirdClicked.set(false);
-  isFilmFourthClicked.set(false);
-  isFilmFifthClicked.set(true);
-}
-
-// Game submenu
-// TODO - minify
-export const isGameFirstClicked = writable(true);
-export const isGameSecondClicked = writable(false);
-export const isGameThirdClicked = writable(false);
-export const isGameFourthClicked = writable(false);
-
-export function handleGameFirstSubmenuClick() {
-  isGameFirstClicked.set(true);
-  isGameSecondClicked.set(false);
-  isGameThirdClicked.set(false);
-  isGameFourthClicked.set(false);
-}
-
-export function handleGameSecondSubmenuClick() {
-  isGameFirstClicked.set(false);
-  isGameSecondClicked.set(true);
-  isGameThirdClicked.set(false);
-  isGameFourthClicked.set(false);
-}
-
-export function handleGameThirdSubmenuClick() {
-  isGameFirstClicked.set(false);
-  isGameSecondClicked.set(false);
-  isGameThirdClicked.set(true);
-  isGameFourthClicked.set(false);
-}
-
-export function handleGameFourthSubmenuClick() {
-  isGameFirstClicked.set(false);
-  isGameSecondClicked.set(false);
-  isGameThirdClicked.set(false);
-  isGameFourthClicked.set(true);
+    window.history.pushState('', '', newUrl)
+    setActiveThreeDAudioTab(name)
+  }
+  return
 }
 
 // Branding submenu
-// TODO - minify
-export const isBrandingFirstClicked = writable(true);
-export const isBrandingSecondClicked = writable(false);
-export const isBrandingThirdClicked = writable(false);
+export const brandingActiveTab = writable('sonic_logo')
 
-export function handleBrandingFirstSubmenuClick() {
-  isBrandingFirstClicked.set(true);
-  isBrandingSecondClicked.set(false);
-  isBrandingThirdClicked.set(false);
+export function setActiveBrandingTab(name) {
+  brandingActiveTab.set(name)
+  return
 }
 
-export function handleBrandingSecondSubmenuClick() {
-  isBrandingFirstClicked.set(false);
-  isBrandingSecondClicked.set(true);
-  isBrandingThirdClicked.set(false);
-}
+export function handleBrandingTabClick(name) {
+  if (name !== null) {
+    const newUrl = `${window.location.pathname}?name=branding&type=${name}`
 
-export function handleBrandingThirdSubmenuClick() {
-  isBrandingFirstClicked.set(false);
-  isBrandingSecondClicked.set(false);
-  isBrandingThirdClicked.set(true);
-}
-
-// About us page handling
-export const aboutUsActiveItem = writable("");
-
-export function setAboutUsActiveItem(name) {
-  aboutUsActiveItem.set(name);
+    window.history.pushState('', '', newUrl)
+    setActiveBrandingTab(name)
+  }
+  return
 }
 
 // Work modal pages handling
-export const workModalActive = writable("");
+export const workModalActive = writable('')
 
 export function setWorkModalActive(name) {
-  workModalActive.set(name);
+  workModalActive.set(name)
+  if (name !== '') {
+    document.body.classList.add('body-is-not-visible')
+  } else {
+    document.body.classList.remove('body-is-not-visible')
+  }
+  return
 }
 
 export function handleWorkModalClick(name) {
-  if (name !== undefined) {
-    const newUrl = `${window.location.pathname}?project=${name}`;
-    window.history.pushState("", "", newUrl);
-    setWorkModalActive(name);
+  if (name !== null) {
+    const newUrl = `${window.location.pathname}?project=${name}`
+    window.history.pushState('', '', newUrl)
+    setWorkModalActive(name)
   }
+  return
 }
 
 export function resetWorkModalActive() {
-  const newUrl = `${window.location.pathname}`;
-  window.history.pushState("", "", newUrl);
-  setWorkModalActive("");
+  const newUrl = `${window.location.pathname}`
+  window.history.pushState('', '', newUrl)
+  setWorkModalActive('')
+  return
 }
 
-// Services modal pages handling
-export const servicesModalActive = writable("");
+// Equipment page tab handling
+export const equipmentActiveTab = writable('')
 
-export function setServicesModalActive(name) {
-  servicesModalActive.set(name);
+export function setActiveEquipmentTab(name) {
+  equipmentActiveTab.set(name)
+  return
 }
 
-export function handleServicesModalClick(name) {
-  if (name !== undefined) {
-    const newUrl = `${window.location.pathname}?name=${name}`;
-    window.history.pushState("", "", newUrl);
-    setServicesModalActive(name);
+export function handleEquipmentTabClick(name) {
+  if (name !== null) {
+    const newUrl = `${window.location.pathname}?type=${name}`
+    window.history.pushState('', '', newUrl)
+    setActiveEquipmentTab(name)
   }
+  return
 }
 
-export function resetServicesModalActive() {
-  const newUrl = `${window.location.pathname}`;
-  window.history.pushState("", "", newUrl);
-  setServicesModalActive("");
+// About us page handling
+export const aboutUsActiveItem = writable('')
+
+export function setAboutUsActiveItem(name) {
+  aboutUsActiveItem.set(name)
+  return
+}
+
+export function handleAboutUsItemClick(name) {
+  const newUrl = `${window.location.pathname}?name=${name}`
+  window.history.pushState('', '', newUrl)
+  setAboutUsActiveItem(name)
+  return
 }

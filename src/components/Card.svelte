@@ -1,5 +1,5 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition'
   import {
     animationInDelay,
     animationInDuration,
@@ -7,67 +7,186 @@
     animationOutDuration,
     animationOutEasing,
     workModalActive,
-    setWorkModalActive,
-    handleWorkModalClick
-  } from "../utensils/stores.js";
-  import { saveScrollYPosition } from "../utensils/utils.js";
-  import Tag from "./Tag.svelte";
+    handleWorkModalClick,
+  } from '../utensils/stores.js'
+  import Tag from './Tag.svelte'
 
-  export let cards = [];
-  export let variant = "";
+  export let cards = []
+  export let variant = ''
 
-  function handleCardClick(url) {
-    handleWorkModalClick(url);
-    saveScrollYPosition();
+  function handleClick(event, callback) {
+    event.preventDefault()
+    callback
   }
 </script>
 
+<ul class:work-cards={variant === 'work'}>
+  {#each cards as card, i}
+    <li
+      in:fade={{
+        delay: $animationInDelay + i * 250,
+        duration: $animationInDuration + 700,
+        easing: $animationInEasing,
+      }}
+      out:fade={{
+        duration: $animationOutDuration,
+        easing: $animationOutEasing,
+      }}
+    >
+      {#if variant === 'studio'}
+        <div class="studio-card-wrapper">
+          <div class="img-wrapper" style="padding-top:{card.ratio}">
+            <img
+              src={card.src}
+              srcset={card.srcset}
+              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
+              alt={card.alt}
+            />
+          </div>
+
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}
+            >
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+            </div>
+
+            <p class="body-regular">
+              {@html card.content}
+            </p>
+
+            {#if card.link}
+              <a
+                target="_blank"
+                rel="noopener"
+                class="body-small studio-card-a"
+                href={card.path}> Learn more </a>
+            {/if}
+          </div>
+        </div>
+      {/if}
+
+      {#if variant === 'work'}
+        <a
+          href={card.path}
+          on:click={(event) =>
+            handleClick(event, handleWorkModalClick(card.url))}
+          aria-label="Toggle {card.title}'s details"
+          aria-pressed={$workModalActive === card.url}>
+          <div class="img-wrapper" style="padding-top:{card.ratio}">
+            <img
+              src={card.src}
+              srcset={card.srcset}
+              sizes="(max-width: 480px) 480w, (max-width: 720px) 720w, 1080w"
+              alt={card.alt}
+            />
+          </div>
+
+          <div class="div-text">
+            <div
+              class="div-header"
+              class:div-header-border={variant === 'studio'}
+            >
+              <h2 class="header-small">{card.title.toUpperCase()}</h2>
+            </div>
+
+            <p class="body-regular">{card.description}</p>
+
+            <Tag tags={card.tags} />
+
+            <p class="body-small">Learn more</p>
+          </div>
+        </a>
+      {/if}
+    </li>
+  {/each}
+</ul>
+
 <style>
-  button {
+  a {
     text-align: left;
+    display: inline-block;
+    text-decoration: none;
     cursor: pointer;
     width: 100vw;
-    line-height: 0;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
     padding: 3rem 3rem 7rem 3rem;
   }
 
   @media (--max-content-width) {
-    button {
-      padding: 3rem 1.5rem 7rem 1.5rem;
-    }
-
-    .work-cards button {
-      padding: 5rem 3rem;
-    }
-
-    .work-cards li {
-      width: calc(var(--max-width) * 0.75);
-      transform: translateX(calc(50vw - var(--max-width) * 0.375));
+    a {
+      padding: 3rem;
+      margin-bottom: 6rem;
+      width: calc(var(--max-width) * 0.65);
     }
   }
 
-  button:focus {
-    outline: none;
-  }
-
-  :global(.user-is-tabbing) button:focus {
+  :global(.user-is-tabbing) a:focus {
     background-color: var(--secondary-color);
   }
 
-  :global(.user-is-tabbing) button:focus p,
-  :global(.user-is-tabbing) button:focus h2 {
+  :global(.user-is-tabbing) a:focus p,
+  :global(.user-is-tabbing) a:focus h2 {
     color: var(--light);
   }
 
+  a {
+    color: var(--dark);
+    display: inline-block;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    color: var(--light);
+    background-color: var(--secondary-color);
+  }
+
   @media (--not-touchscreen) {
-    button:hover {
+    a:hover {
+      color: var(--secondary-color);
       background-color: var(--secondary-color);
     }
 
-    button:hover p,
-    button:hover h2 {
+    a:hover p,
+    a:hover h2 {
       color: var(--light);
+    }
+  }
+
+  :global(.tag-color) {
+    transition: color 300ms ease-in-out;
+  }
+
+  @media (--not-touchscreen) {
+    a:hover :global(.tag-color) {
+      color: var(--secondary-color);
+    }
+  }
+
+  .work-cards {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+
+  @media (--max-content-width) {
+    .work-cards {
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  .studio-card-a {
+    padding: 0;
+    margin-bottom: 0;
+    transform: translateX(0);
+    width: auto;
+  }
+
+  @media (--not-touchscreen) {
+    .studio-card-a:hover {
+      color: var(--secondary-color);
+      background-color: transparent;
     }
   }
 
@@ -75,16 +194,26 @@
     text-align: left;
     width: 100vw;
     line-height: 0;
-    padding: 3rem 3rem 7rem 3rem;
+    padding: 1.5rem 1.5rem 9rem 1.5rem;
+  }
+
+  @media (--max-content-width) {
+    .studio-card-wrapper {
+      width: var(--max-width);
+      transform: translateX(calc(50vw - var(--max-width) * 0.5));
+      padding: 3rem 1.5rem 9rem 1.5rem;
+    }
   }
 
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    transition: filter 300ms ease-in-out;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   }
 
-  .div-img {
+  .img-wrapper {
     position: relative;
   }
 
@@ -93,72 +222,15 @@
     margin-bottom: 0.5rem;
   }
 
+  /* Exceptions for the studio cards */
   .div-header-border {
-    /* Exceptions for the studio cards */
     border-bottom: 2px solid var(--dark);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
   }
 
-  li {
-    max-width: var(--max-width);
-  }
-
-  @media (--max-content-width) {
-    li {
-      transform: translateX(calc(50vw - var(--max-width) / 2));
-    }
+  .body-small {
+    margin-top: 1rem;
+    text-decoration: underline;
   }
 </style>
-
-<ul class:work-cards={variant === 'work'}>
-  {#each cards as card, i}
-    <li
-      in:fade={{ delay: $animationInDelay + i * 250, duration: $animationInDuration + 700, easing: $animationInEasing }}
-      out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}>
-      {#if variant === 'studio'}
-        <div class="studio-card-wrapper">
-          <div class="div-img">
-            <img src={card.src} alt={card.alt} />
-          </div>
-
-          <div class="div-text">
-            <div
-              class="div-header"
-              class:div-header-border={variant === 'studio'}>
-              <h2 class="header-small">{card.title.toUpperCase()}</h2>
-              <h3 class="body-bold">{card.size}</h3>
-            </div>
-
-            <p class="body-regular">{card.content}</p>
-          </div>
-        </div>
-      {/if}
-
-      {#if variant === 'work'}
-        <button
-          on:click={() => handleCardClick(card.url)}
-          aria-label="Toggle {card.title}'s details"
-          aria-pressed={$workModalActive === card.url}>
-
-          <div class="div-img">
-            <img src={card.src} alt={card.alt} />
-          </div>
-
-          <div class="div-text">
-            <div
-              class="div-header"
-              class:div-header-border={variant === 'studio'}>
-              <h2 class="header-small">{card.title.toUpperCase()}</h2>
-            </div>
-
-            <p class="body-regular">{card.content}</p>
-
-            <Tag tags={card.tags} />
-          </div>
-        </button>
-      {/if}
-
-    </li>
-  {/each}
-</ul>

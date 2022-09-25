@@ -1,8 +1,20 @@
 {
-  "background_color": "#ffffff",
-  "theme_color": "#333333",
-  "name": "Nadoki",
+  "background_color": "#000000",
+  "theme_color": "#00FF00",
+  "name": "Nadoki - Berlin-based music studio",
   "short_name": "Nadoki",
   "display": "minimal-ui",
-  "start_url": "/"
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

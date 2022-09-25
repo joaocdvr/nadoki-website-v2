@@ -2,65 +2,28 @@
   import {
     isMenuClicked,
     toggleIsMenuClicked,
-    setActivePage
-  } from "../../utensils/stores.js";
+    setActivePage,
+  } from '../../utensils/stores.js'
+  import { restoreScrollYPosition } from '../../utensils/utils.js'
+
+  function handleHomepageClick() {
+    restoreScrollYPosition()
+    setActivePage('')
+    return
+  }
 </script>
-
-<style>
-  a {
-    padding: 1.5rem;
-    display: inline-block;
-    transition: background-color 300ms ease-in-out, fill 300ms ease-in-out;
-  }
-
-  a:active,
-  a:visited,
-  a:focus {
-    outline: none;
-  }
-
-  :global(.user-is-tabbing) a:focus {
-    background-color: var(--secondary-color);
-  }
-
-  :global(.user-is-tabbing) a:focus svg {
-    fill: var(--light);
-  }
-
-  @media (--not-touchscreen) {
-    a:hover {
-      background-color: var(--secondary-color);
-    }
-
-    a:hover svg {
-      fill: var(--light);
-    }
-  }
-
-  svg {
-    width: 2.5rem;
-    height: 1.5rem;
-    fill: var(--dark);
-    transition-delay: 0;
-  }
-  /* Fill animation */
-  .is-white {
-    fill: var(--light);
-    transition-delay: 100ms;
-  }
-</style>
 
 <a
   href="/"
   aria-label="Homepage"
   on:click={$isMenuClicked ? toggleIsMenuClicked : () => null}
-  on:click={() => setActivePage('')}>
+  on:click={() => handleHomepageClick()}>
   <svg
     class:is-white={$isMenuClicked}
     preserveAspectRatio="none"
-    alt="Nadoki logo"
     viewBox="0 0 40 24"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true">
     <path
       d="M6.878 1.20028L0.0902539 21.6895C0.00244457 21.9532 -0.0217469 22.2342
       0.0196766 22.5092C0.0611001 22.7842 0.166951 23.0453 0.328488
@@ -80,6 +43,43 @@
       0.728989C39.509 0.503346 39.2963 0.319584 39.0502 0.192841C38.8041
       0.0660967 38.5316 -2.41097e-06 38.2551 0H8.53336C8.16714 -3.19353e-06
       7.8102 0.115917 7.5131 0.331337C7.216 0.546758 6.99381 0.850762 6.878
-      1.20028Z" />
+      1.20028Z"
+    />
   </svg>
 </a>
+
+<style>
+  a {
+    padding: 1.5rem;
+    display: inline-block;
+    transition: background-color 300ms ease-in-out;
+  }
+
+  :global(.user-is-tabbing) a:focus {
+    background-color: var(--secondary-color);
+  }
+
+  :global(.user-is-tabbing) a:focus svg {
+    fill: var(--light);
+  }
+
+  @media (--not-touchscreen) {
+    a:hover svg {
+      fill: var(--secondary-color);
+    }
+  }
+
+  svg {
+    width: 2.5rem;
+    height: 1.5rem;
+    fill: var(--dark);
+    transition-delay: 0;
+    transition: fill 300ms ease-in-out;
+  }
+
+  /* svg fill animation */
+  .is-white {
+    fill: var(--light);
+    transition-delay: 100ms;
+  }
+</style>

@@ -1,20 +1,57 @@
 <script>
-  import { get } from "svelte/store";
-  import { isMenuClicked, toggleIsMenuClicked } from "../../utensils/stores.js";
+  import { get } from 'svelte/store'
+  import { isMenuClicked, toggleIsMenuClicked } from '../../utensils/stores.js'
   import {
     saveScrollYPosition,
-    restoreScrollYPosition
-  } from "../../utensils/utils.js";
+    restoreScrollYPosition,
+  } from '../../utensils/utils.js'
 
   function handleMenuClick() {
     if (get(isMenuClicked) === false) {
-      saveScrollYPosition();
+      saveScrollYPosition()
     } else {
-      restoreScrollYPosition();
+      restoreScrollYPosition()
     }
-    toggleIsMenuClicked();
+    toggleIsMenuClicked()
+    return
   }
 </script>
+
+<button
+  on:click={handleMenuClick}
+  aria-label="Toggle main menu"
+  aria-pressed={$isMenuClicked}>
+  <svg
+    viewbox="0 0 24 24"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true">
+    <rect
+      height="24"
+      width="4.8"
+      x="0"
+      y="0"
+      class:left-rect-cross={$isMenuClicked}
+      class="left-rect-menu"
+    />
+    <rect
+      height="24"
+      width="4.8"
+      x="9.6"
+      y="0"
+      class:middle-rect-cross={$isMenuClicked}
+      class="middle-rect-menu"
+    />
+    <rect
+      height="24"
+      width="4.8"
+      x="19.2"
+      y="0"
+      class:right-rect-cross={$isMenuClicked}
+      class="right-rect-menu"
+    />
+  </svg>
+</button>
 
 <style>
   button {
@@ -25,10 +62,6 @@
     transition: background-color 300ms ease-in-out;
   }
 
-  button:focus {
-    outline: none;
-  }
-
   :global(.user-is-tabbing) button:focus {
     fill: var(--light);
     background-color: var(--secondary-color);
@@ -36,8 +69,7 @@
 
   @media (--not-touchscreen) {
     button:hover {
-      fill: var(--light);
-      background-color: var(--secondary-color);
+      fill: var(--secondary-color);
     }
   }
 
@@ -48,42 +80,37 @@
 
   /* Menu icon */
   .left-rect-menu {
-    width: 0.3rem;
-    height: 1.5rem;
     transition: 300ms ease-in-out;
+    transform: scale(1, 1);
   }
 
   .middle-rect-menu {
-    width: 0.3rem;
-    height: 1.5rem;
-    transform: translateX(0.6rem);
     opacity: 1;
     transition: 300ms ease-in-out;
+    transform: scale(1, 1);
   }
 
   .right-rect-menu {
-    width: 0.3rem;
-    height: 1.5rem;
-    transform: translateX(1.2rem);
     transition: 300ms ease-in-out;
+    transform: scale(1, 1);
   }
 
   /* Menu icon hover animation */
   @media (--not-touchscreen) {
     button:hover .left-rect-menu {
-      height: 0.5rem;
+      transform: scale(1, 0.33);
     }
 
     button:hover .middle-rect-menu {
-      height: 1rem;
+      transform: scale(1, 0.66);
     }
   }
-  /* Menu cross */
+
+  /* Menu cross state */
   .left-rect-cross {
     fill: var(--light);
-    height: 1.820625rem;
-    transform-origin: top right;
-    transform: rotate(45deg) translate(1.35rem, 0.15rem);
+    transform-origin: top left;
+    transform: translate(85%, 0%) rotate(45deg) scale(1, 1.21375);
   }
 
   .middle-rect-cross {
@@ -92,37 +119,20 @@
 
   .right-rect-cross {
     fill: var(--light);
-    height: 1.820625rem;
-    transform-origin: top left;
-    transform: rotate(-45deg) translate(-0.15rem, 0.15rem);
+    transform-origin: top right;
+    transform: translate(-85%, 0%) rotate(-45deg) scale(1, 1.21375);
   }
 
-  /* Menu cross hover animation */
+  /* Menu cross state hover animation */
   @media (--not-touchscreen) {
     button:hover .left-rect-cross {
-      height: 1.820625rem;
-      width: 0.45rem;
-      transform: rotate(45deg) translate(1.275rem, 0.15rem);
+      fill: var(--secondary-color);
+      transform: translate(82.5%, -2.5%) rotate(45deg) scale(1.5, 1.21375);
     }
 
     button:hover .right-rect-cross {
-      width: 0.45rem;
-      transform: rotate(-45deg) translate(-0.225rem, 0.15rem);
+      fill: var(--secondary-color);
+      transform: translate(-82.5%, -2.5%) rotate(-45deg) scale(1.5, 1.21375);
     }
   }
 </style>
-
-<button
-  on:click={handleMenuClick}
-  aria-label="Toggle main menu"
-  aria-pressed={$isMenuClicked}>
-  <svg
-    viewbox="0 0 1.5rem 1.5rem"
-    preserveAspectRatio="none"
-    xmlns="http://www.w3.org/2000/svg">
-    >
-    <rect class:middle-rect-cross={$isMenuClicked} class="middle-rect-menu" />
-    <rect class:left-rect-cross={$isMenuClicked} class="left-rect-menu" />
-    <rect class:right-rect-cross={$isMenuClicked} class="right-rect-menu" />
-  </svg>
-</button>

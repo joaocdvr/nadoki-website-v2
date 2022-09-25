@@ -1,7 +1,6 @@
 <script>
-  import { onMount, afterUpdate } from "svelte";
-  import { get } from "svelte/store";
-  import { fade } from "svelte/transition";
+  import { onMount } from 'svelte'
+  import { fade } from 'svelte/transition'
   import {
     scrollYPosition,
     animationInDelay,
@@ -13,192 +12,1158 @@
     setServicesModalActive,
     handleServicesModalClick,
     resetServicesModalActive,
-    isMusicFirstClicked,
-    handleMusicFirstSubmenuClick,
-    isMusicSecondClicked,
-    handleMusicSecondSubmenuClick,
-    isMusicThirdClicked,
-    handleMusicThirdSubmenuClick,
-    isMusicFourthClicked,
-    handleMusicFourthSubmenuClick,
-    isMusicFifthClicked,
-    handleMusicFifthSubmenuClick,
-    isMusicSixthClicked,
-    handleMusicSixthSubmenuClick,
-    isFilmFirstClicked,
-    handleFilmFirstSubmenuClick,
-    isFilmSecondClicked,
-    handleFilmSecondSubmenuClick,
-    isFilmThirdClicked,
-    handleFilmThirdSubmenuClick,
-    isFilmFourthClicked,
-    handleFilmFourthSubmenuClick,
-    isFilmFifthClicked,
-    handleFilmFifthSubmenuClick,
-    isGameFirstClicked,
-    handleGameFirstSubmenuClick,
-    isGameSecondClicked,
-    handleGameSecondSubmenuClick,
-    isGameThirdClicked,
-    handleGameThirdSubmenuClick,
-    isGameFourthClicked,
-    handleGameFourthSubmenuClick,
-    isBrandingFirstClicked,
-    handleBrandingFirstSubmenuClick,
-    isBrandingSecondClicked,
-    handleBrandingSecondSubmenuClick,
-    isBrandingThirdClicked,
-    handleBrandingThirdSubmenuClick
-  } from "../utensils/stores.js";
-  import { restoreScrollYPosition } from "../utensils/utils.js";
-  import Header from "../components/Header.svelte";
-  import ServicesNav from "../containers/ServicesNav.svelte";
-  import Tab from "../components/Tab.svelte";
-  import ModalNav from "../components/ModalNav.svelte";
-  import Footer from "../components/Footer.svelte";
+    musicActiveTab,
+    setActiveMusicTab,
+    handleMusicTabClick,
+    filmActiveTab,
+    setActiveFilmTab,
+    handleFilmTabClick,
+    threeDAudioActiveTab,
+    setActiveThreeDAudioTab,
+    handleThreeDAudioTabClick,
+    brandingActiveTab,
+    setActiveBrandingTab,
+    handleBrandingTabClick,
+  } from '../utensils/stores.js'
+  import Header from '../components/Header.svelte'
+  import ServicesNav from '../containers/ServicesNav.svelte'
+  import Tab from '../components/Tab.svelte'
+  import ModalNav from '../components/ModalNav.svelte'
+  import Footer from '../components/Footer.svelte'
 
   onMount(() => {
-    const url = new URL(document.location);
-    const projectParam = url.searchParams.get("name");
+    const url = new URL(document.location)
+    const nameParam = url.searchParams.get('name')
+    const typeParam = url.searchParams.get('type')
 
-    if (servicesSubpages.includes(projectParam)) {
-      handleServicesModalClick(projectParam);
+    if (servicesPages.includes(nameParam)) {
+      if (nameParam === 'music' && musicTabs.includes(typeParam)) {
+        setActiveMusicTab(typeParam)
+        handleServicesModalClick(nameParam, typeParam)
+      } else if (nameParam === 'film' && filmTabs.includes(typeParam)) {
+        setActiveFilmTab(typeParam)
+        handleServicesModalClick(nameParam, typeParam)
+      } else if (
+        nameParam === '3d-audio' &&
+        threeDAudioTabs.includes(typeParam)
+      ) {
+        setActiveThreeDAudioTab(typeParam)
+        handleServicesModalClick(nameParam, typeParam)
+      } else if (nameParam === 'branding' && brandingTabs.includes(typeParam)) {
+        setActiveBrandingTab(typeParam)
+        handleServicesModalClick(nameParam, typeParam)
+      }
     }
 
-    window.addEventListener("popstate", function() {
-      const url = new URL(document.location);
-      const nameParam = url.searchParams.get("name");
-      if (servicesSubpages.includes(nameParam)) {
-        setServicesModalActive(nameParam);
+    window.addEventListener('popstate', function () {
+      const url = new URL(document.location)
+      const nameParam = url.searchParams.get('name')
+      const typeParam = url.searchParams.get('type')
+
+      if (servicesPages.includes(nameParam)) {
+        if (nameParam === 'music' && musicTabs.includes(typeParam)) {
+          setServicesModalActive('music')
+          setActiveMusicTab(typeParam)
+        } else if (nameParam === 'film' && filmTabs.includes(typeParam)) {
+          setServicesModalActive('film')
+          setActiveFilmTab(typeParam)
+        } else if (
+          nameParam === '3d-audio' &&
+          threeDAudioTabs.includes(typeParam)
+        ) {
+          setServicesModalActive('3d-audio')
+          setActiveThreeDAudioTab(typeParam)
+        } else if (
+          nameParam === 'branding' &&
+          brandingTabs.includes(typeParam)
+        ) {
+          setServicesModalActive('branding')
+          setActiveBrandingTab(typeParam)
+        }
       } else {
-        setServicesModalActive("");
+        setServicesModalActive('')
       }
-    });
-  });
+      return
+    })
+  })
 
-  function handleBackClick() {
-    resetServicesModalActive();
-    restoreScrollYPosition();
-  }
+  // Declaration of pages and their tabs
+  const servicesPages = ['music', 'film', '3d-audio', 'branding']
 
-  const servicesSubpages = ["music", "film", "game", "branding"];
+  const musicTabs = [
+    'mixing',
+    'mastering',
+    'recording',
+    'editing_restoration',
+    'production',
+    'consultation',
+  ]
 
-  $: isAnyServiceClicked = !!$servicesModalActive;
+  const filmTabs = [
+    're-recording_mixing',
+    'editing_restoration',
+    'sound_design',
+    'original_soundtrack',
+  ]
+
+  const threeDAudioTabs = [
+    'immersive_sound_design',
+    '3d_recording',
+    'post-production',
+    'consultation',
+  ]
+
+  const brandingTabs = ['sonic_logo', 'podcast', 'post-production_for_ads']
+
+  $: isAnyServiceClicked = !!$servicesModalActive
 
   $: musicTab = [
     {
-      title: "MIXING",
-      function: handleMusicFirstSubmenuClick,
-      variable: $isMusicFirstClicked
+      title: 'MIXING',
+      function: () => handleMusicTabClick('mixing'),
+      variable: $musicActiveTab === 'mixing',
+      path: '/services?name=music&type=mixing',
     },
     {
-      title: "MASTERING",
-      function: handleMusicSecondSubmenuClick,
-      variable: $isMusicSecondClicked
+      title: 'MASTERING',
+      function: () => handleMusicTabClick('mastering'),
+      variable: $musicActiveTab === 'mastering',
+      path: '/services?name=music&type=mastering',
     },
     {
-      title: "RECORDING",
-      function: handleMusicThirdSubmenuClick,
-      variable: $isMusicThirdClicked
+      title: 'RECORDING',
+      function: () => handleMusicTabClick('recording'),
+      variable: $musicActiveTab === 'recording',
+      path: '/services?name=music&type=recording',
     },
     {
-      title: "EDITING",
-      function: handleMusicFourthSubmenuClick,
-      variable: $isMusicFourthClicked
+      title: 'EDITING | RESTORATION',
+      function: () => handleMusicTabClick('editing_restoration'),
+      variable: $musicActiveTab === 'editing_restoration',
+      path: '/services?name=music&type=editing_restoration',
     },
     {
-      title: "RESTORATION",
-      function: handleMusicFifthSubmenuClick,
-      variable: $isMusicFifthClicked
+      title: 'PRODUCTION',
+      function: () => handleMusicTabClick('production'),
+      variable: $musicActiveTab === 'production',
+      path: '/services?name=music&type=production',
     },
     {
-      title: "PRODUCTION",
-      function: handleMusicSixthSubmenuClick,
-      variable: $isMusicSixthClicked
-    }
-  ];
+      title: 'CONSULTATION',
+      function: () => handleMusicTabClick('consultation'),
+      variable: $musicActiveTab === 'consultation',
+      path: '/services?name=music&type=consultation',
+    },
+  ]
 
   $: filmTab = [
     {
-      title: "RE-RECORDING MIXING",
-      function: handleFilmFirstSubmenuClick,
-      variable: $isFilmFirstClicked
+      title: 'RE-RECORDING MIXING',
+      function: () => handleFilmTabClick('re-recording_mixing'),
+      variable: $filmActiveTab === 're-recording_mixing',
+      path: '/services?name=film&type=re-recording_mixing',
     },
     {
-      title: "EDITING",
-      function: handleFilmSecondSubmenuClick,
-      variable: $isFilmSecondClicked
+      title: 'EDITING | RESTORATION',
+      function: () => handleFilmTabClick('editing_restoration'),
+      variable: $filmActiveTab === 'editing_restoration',
+      path: '/services?name=film&type=editing_restoration',
     },
     {
-      title: "RESTORATION",
-      function: handleFilmThirdSubmenuClick,
-      variable: $isFilmThirdClicked
+      title: 'SOUND DESIGN',
+      function: () => handleFilmTabClick('sound_design'),
+      variable: $filmActiveTab === 'sound_design',
+      path: '/services?name=film&type=sound_design',
     },
     {
-      title: "SOUND DESIGN",
-      function: handleFilmFourthSubmenuClick,
-      variable: $isFilmFourthClicked
+      title: 'ORIGINAL SOUNDTRACK',
+      function: () => handleFilmTabClick('original_soundtrack'),
+      variable: $filmActiveTab === 'original_soundtrack',
+      path: '/services?name=film&type=original_soundtrack',
     },
-    {
-      title: "ORIGINAL SOUNDTRACK",
-      function: handleFilmFifthSubmenuClick,
-      variable: $isFilmFifthClicked
-    }
-  ];
+  ]
 
-  $: gameTab = [
+  $: threeDAudioTab = [
     {
-      title: "SOUND DESIGN",
-      function: handleGameFirstSubmenuClick,
-      variable: $isGameFirstClicked
+      title: 'IMMERSIVE SOUND DESIGN',
+      function: () => handleThreeDAudioTabClick('immersive_sound_design'),
+      variable: $threeDAudioActiveTab === 'immersive_sound_design',
+      path: '/services?name=3d_audio&type=immersive_sound_design',
     },
     {
-      title: "ORIGINAL SOUNDTRACK",
-      function: handleGameSecondSubmenuClick,
-      variable: $isGameSecondClicked
+      title: '3D RECORDING',
+      function: () => handleThreeDAudioTabClick('3d_recording'),
+      variable: $threeDAudioActiveTab === '3d_recording',
+      path: '/services?name=3d_audio&type=3d_recording',
     },
     {
-      title: "INTEGRATION",
-      function: handleGameThirdSubmenuClick,
-      variable: $isGameThirdClicked
+      title: 'POST PRODUCTION',
+      function: () => handleThreeDAudioTabClick('post_production'),
+      variable: $threeDAudioActiveTab === 'post_production',
+      path: '/services?name=3d_audio&type=post_production',
     },
     {
-      title: "MIXING",
-      function: handleGameFourthSubmenuClick,
-      variable: $isGameFourthClicked
-    }
-  ];
+      title: 'CONSULTATION',
+      function: () => handleThreeDAudioTabClick('consultation'),
+      variable: $threeDAudioActiveTab === 'consultation',
+      path: '/services?name=3d_audio&type=consultation',
+    },
+  ]
 
   $: brandingTab = [
     {
-      title: "SONIC LOGO",
-      function: handleBrandingFirstSubmenuClick,
-      variable: $isBrandingFirstClicked
+      title: 'SONIC LOGO',
+      function: () => handleBrandingTabClick('sonic_logo'),
+      variable: $brandingActiveTab === 'sonic_logo',
+      path: '/services?name=branding&type=sonic_logo',
     },
     {
-      title: "PODCAST",
-      function: handleBrandingSecondSubmenuClick,
-      variable: $isBrandingSecondClicked
+      title: 'PODCAST',
+      function: () => handleBrandingTabClick('podcast'),
+      variable: $brandingActiveTab === 'podcast',
+      path: '/services?name=branding&type=podcast',
     },
     {
-      title: "POST-PRODUCTION FOR ADS",
-      function: handleBrandingThirdSubmenuClick,
-      variable: $isBrandingThirdClicked
-    }
-  ];
+      title: 'POST-PRODUCTION FOR ADS',
+      function: () => handleBrandingTabClick('post-production_for_ads'),
+      variable: $brandingActiveTab === 'post-production_for_ads',
+      path: '/services?name=branding&type=post-production_for_ads',
+    },
+  ]
+
+  function handleBackClick(event, callback) {
+    event.preventDefault()
+    callback
+  }
 </script>
+
+<div
+  class="content-wrapper"
+  style="transform: translateY({$scrollYPosition * -1}px)"
+>
+  <Header variant="services" />
+  <ServicesNav />
+  <Footer />
+</div>
+
+<div
+  in:fade={{
+    delay: $animationInDelay,
+    duration: $animationInDuration,
+    easing: $animationInEasing,
+  }}
+  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
+  class="modal-wrapper"
+  id="services-modal"
+  class:modal-is-visible={isAnyServiceClicked}
+>
+  {#if $servicesModalActive === 'music'}
+    <ModalNav
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services"
+    />
+    <Header variant="music" delay={$animationInDelay} />
+    <main>
+      <Tab variant="services" tab={musicTab} delay={$animationInDelay} />
+      <div class="tab-content">
+        {#if $musicActiveTab === 'mixing'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Mixing</h2>
+
+                <p class="body-regular">
+                  Using our analog/digital hybrid setup, we have the tools and
+                  ears to achieve the sound that you deserve.
+                </p>
+
+                <p class="body-regular">
+                  You can either
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  your tracks or bring the files to an attended session with us.
+                  If you have any mix references, feel free to also send them.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  labeled multitrack, separated track by track. Be sure to send
+                  them in the highest quality possible according to your
+                  session, preferably 44.1kHz or 88.2 kHz sample rate and 24 or
+                  32 bit depth.
+                </p>
+
+                <p class="body-regular">
+                  Please make sure to send us the correct version of the tracks.
+                  Tracks that are handed in later will be charged according to
+                  the pricelist.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular reach-out">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Reach out </a>
+                  for a quote.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $musicActiveTab === 'mastering'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Mastering</h2>
+
+                <p class="body-regular">
+                  With our hybrid setup, we make your song streaming-ready, as
+                  well as vinyl-cut ready.
+                </p>
+
+                <p class="body-regular">
+                  You can either
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  your tracks or bring the files to an attended session with us.
+                  If you have any mastering references, feel free to also send them.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  mixdown in the highest quality according to your session,
+                  preferably 44.1kHz or 88.2 kHz sample rate and 32 bit depth
+                  (or 24bit if you’re using Logic).
+                </p>
+
+                <p class="body-regular">
+                  Please make sure to send us the correct version of the
+                  mixdown. Tracks that are handed in later will be charged
+                  accordingly.
+                </p>
+
+                <p class="body-regular">
+                  If a DDP export is desired, please make sure to include the
+                  catalogue number, track listing, the ISRC code (optional) and
+                  CD Text (optional).
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular reach-out">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Reach out </a>
+                  for a quote.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $musicActiveTab === 'recording'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Recording</h2>
+
+                <p class="body-regular">
+                  We have two different recording spaces that you can choose
+                  from:
+                  <br />
+                  — Studio 10: our tracking booth for vocals and overdub recordings.
+                  It is the perfect space for small-scaled projects.
+                  <br />
+                  — The Lab: a flexible live tracking room that is perfect for a
+                  full band, orchestra, or choir recording.
+                  <br />
+                  <a
+                    on:click={() =>
+                      document.body.classList.remove('body-is-not-visible')}
+                    href="/studio"
+                    aria-label="Studio"> Learn more </a>
+                  about these rooms.
+                </p>
+
+                <p class="body-regular">
+                  A selection of industry-standard microphones from brands like
+                  Neumann, Shure, and AKG are available to use. If desired,
+                  other microphones are available upon request.
+                  <a
+                    on:click={() =>
+                      document.body.classList.remove('body-is-not-visible')}
+                    href="/equipment"
+                    aria-label="Equipment"> Check out our gear. </a>
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular reach-out">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Reach out </a>
+                  for a quote.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $musicActiveTab === 'editing_restoration'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Editing</h2>
+
+                <p class="body-regular">
+                  We offer music editing services, including timing and
+                  pitching, for monophonic or polyphonic instruments.
+                </p>
+
+                <h2 class="body-bold">Restoration</h2>
+
+                <p class="body-regular">
+                  Using every tool at our disposal, we clean, fix, and restore
+                  your audio recordings. Common issues we solve: pops, clicks,
+                  hum, hiss, crackle, among other noises and artifacts. We also
+                  remove clippings from audio files.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  mixdown in the highest quality according to your session,
+                  preferably 44.1kHz or 88.2 kHz sample rate and 32 bit depth
+                  (or 24bit if you’re using Logic).
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  You can
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  the audio files to get a price estimate. Please make sure your
+                  files follow our requirements.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $musicActiveTab === 'production'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Production</h2>
+
+                <p class="body-regular">
+                  We offer music production services for the genres of
+                  hip-hop/trap, pop, and electronic music.
+                </p>
+
+                <p class="body-regular">
+                  Using the endless possibilities of an in-the-box approach,
+                  alongside live instruments, synthesizers, and studio
+                  musicians, anything is possible. We are open to collaborations
+                  as well.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  Project based.
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Get in touch. </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $musicActiveTab === 'consultation'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Consultation</h2>
+
+                <p class="body-regular">
+                  If you're a bit lost and just need a push in the right
+                  direction, we also offer feedback on your music project.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular reach-out">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Reach out </a>
+                  for a quote.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {/if}
+      </div>
+    </main>
+  {:else if $servicesModalActive === 'film'}
+    <ModalNav
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services"
+    />
+    <Header variant="film" delay={$animationInDelay} />
+    <main>
+      <Tab variant="services" tab={filmTab} delay={$animationInDelay} />
+      <div class="tab-content">
+        {#if $filmActiveTab === 're-recording_mixing'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Re-recording Mixing</h2>
+
+                <p class="body-regular">
+                  We mix the audio of your film production to enhance your
+                  project's storytelling without distracting from it. We balance
+                  all dialog, ADR, sound effects, music, atmospheres, and
+                  foleys.
+                </p>
+
+                <p class="body-regular">
+                  We offer both stereo and 5.1 surround mixing.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  audio files in the highest quality according to your session,
+                  preferably 48kHz or 96kHz sample rate and 24 or 32 bit depth.
+                  Please export them as an OMF.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  Project based. You can
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> send us </a>
+                  a render of the video project along with the audio files to get
+                  a price estimate. Please make sure your files follow our requirements.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $filmActiveTab === 'editing_restoration'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Editing</h2>
+
+                <p class="body-regular">
+                  We offer dialogue, music and sound effects editing for your
+                  production.
+                </p>
+
+                <h2 class="body-bold">Restoration</h2>
+
+                <p class="body-regular">
+                  Using every tool at our disposal, we clean, fix, and restore
+                  your audio recordings. Common issues we solve: pops, clicks,
+                  hum, hiss, crackle, among other noises and artifacts. We also
+                  remove clippings from audio files.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Delivery Requirements</p>
+                <p class="body-regular">
+                  In order to deliver the best product possible, send us your
+                  audio files in the highest quality according to your session,
+                  preferably 48kHz or 96kHz sample rate and 24 or 32 bit depth.
+                </p>
+
+                <p class="body-regular">
+                  If applicable, please attach your OMF and make sure to include
+                  all audio files to the export.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  You can
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.dropbox.com/request/ttUKNPYx0K9DedUX5ONk"
+                    aria-label="Nadoki's dropbox file delivery folder">
+                    send us
+                  </a>
+                  the audio files to get a price estimate. Please make sure your
+                  files follow our requirements.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $filmActiveTab === 'sound_design'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Sound Design</h2>
+                <p class="body-regular">
+                  We create the sound design of your film production to enhance
+                  your story to its full potential. Using high-quality industry
+                  standard samples and foley recording techniques, we are able
+                  to deliver the sound your production needs.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Send us an email </a>
+                  with the scope of the project. Please include duration, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $filmActiveTab === 'original_soundtrack'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Original Soundtrack</h2>
+
+                <p class="body-regular">
+                  We compose and produce a tailored music score to accompany
+                  your film production. Using our hybrid setup, in-the-box
+                  tools, live instruments, and synthesizers, we create music
+                  that fits your movie.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Send us an email </a>
+                  with the scope of the project, including duration, references,
+                  and description for a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {/if}
+      </div>
+    </main>
+  {:else if $servicesModalActive === '3d-audio'}
+    <ModalNav
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services"
+    />
+    <Header variant="3d-audio" delay={$animationInDelay} />
+    <main>
+      <Tab variant="services" tab={threeDAudioTab} delay={$animationInDelay} />
+      <div class="tab-content">
+        {#if $threeDAudioActiveTab === 'immersive_sound_design'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Immersive Sound Design</h2>
+
+                <p class="body-regular">
+                  Extended Reality is the fastest-growing field in technology
+                  and consumer experience. The possibility to immerse your
+                  viewer not only visually, but also sonically in a new
+                  environment allows a deeper engagement.
+                </p>
+
+                <p class="body-regular">
+                  From Virtual Reality (VR), Augmented Reality (AR), Mixed
+                  Reality (MR), to now the Metaverse, virtual interactions have
+                  become the new norm. Consequently, the 3D audio possibilities
+                  in Binaural audio and multi-output systems, are responsible
+                  for sealing the immersion in this experience utilizing Dolby
+                  Atmos, FB 360, DearVR, and others.
+                </p>
+
+                <p class="body-regular">
+                  We create 3D audio for your extended reality projects,
+                  audiobooks, music, short film, and audio plays to enhance the
+                  immersion of your viewer in the environment you desire. From
+                  sound design to recording, mixing and integration, we shape
+                  the sound your project needs.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Send us an email </a>
+                  with the scope of the project. Please include a description of
+                  the project, an approximation of how many sound effects you need,
+                  and references for a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $threeDAudioActiveTab === '3d_recording'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">3D Recording</h2>
+
+                <p class="body-regular">
+                  We record for your immersive projects such as audiobooks,
+                  audio plays, music, short film, extended reality (VR, AR, and
+                  MR), and others.
+                </p>
+
+                <p class="body-regular">
+                  We have two different recording spaces that you can choose
+                  from:
+                  <br />
+                  — Studio 10: our tracking booth for vocals and overdub recordings.
+                  It is the perfect space for small-scaled projects.
+                  <br />
+                  — The Lab: a flexible live tracking room that is perfect for a
+                  full band, orchestra, or choir recording.
+                  <br />
+                  <a
+                    on:click={() =>
+                      document.body.classList.remove('body-is-not-visible')}
+                    href="/studio"
+                    aria-label="Studio"> Learn more </a>
+                  about these rooms. Remote recordings are also available.
+                </p>
+
+                <p class="body-regular">
+                  A selection of industry-standard microphones from brands like
+                  Neumann, Shure, and AKG are available to use. If desired,
+                  other microphones are available upon request.
+                  <a
+                    on:click={() =>
+                      document.body.classList.remove('body-is-not-visible')}
+                    href="/equipment"
+                    aria-label="Equipment"> Check out our gear. </a>
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Send us an email </a>
+                  with the scope of the project. Please include a description of
+                  the project, an approximation of how many songs you plan to have,
+                  and references for a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $threeDAudioActiveTab === 'post_production'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Post-Production</h2>
+
+                <p class="body-regular">
+                  We offer post-production solutions such as mixing, mastering,
+                  audio repair, and restoration utilizing the latest
+                  industry-standard tools for your extended reality (VR, AR, and
+                  MR), audiobooks, music, short film, and audio plays.
+                </p>
+
+                <p class="body-regular">
+                  Combining creativity and technology, we can accurately
+                  position your sounds, simulate any environment, and immerse
+                  through the experience that will place the listener within
+                  your story.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Send us an email </a>
+                  with the scope of the project. Please include a description of
+                  the project, an approximation of how many files need to be implemented,
+                  and references for a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $threeDAudioActiveTab === 'consultation'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Consultation</h2>
+
+                <p class="body-regular">
+                  If you're a bit lost and just need a push in the right
+                  direction, we also offer feedback and consultation on your 3D
+                  audio project.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Send us an email </a>
+                  with the scope of the project. Please include a description of
+                  the project, approximation of how many different sounds (be it
+                  music or sound effects) there are in the game, and references for
+                  a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {/if}
+      </div>
+    </main>
+  {:else if $servicesModalActive === 'branding'}
+    <ModalNav
+      on:click={(event) => handleBackClick(event, resetServicesModalActive())}
+      path="/services"
+      label="Back to services"
+      title="Services"
+    />
+    <Header variant="branding" delay={$animationInDelay} />
+    <main>
+      <Tab variant="services" tab={brandingTab} delay={$animationInDelay} />
+      <div class="tab-content">
+        {#if $brandingActiveTab === 'sonic_logo'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Sonic Logo</h2>
+
+                <p class="body-regular">
+                  There’s more to branding than what meets the eye. While strong
+                  visuals are key, it’s also important to communicate your story
+                  and create a sonic identity for your brand.
+                </p>
+
+                <p class="body-regular">
+                  After a talk to understand the story and personality of your
+                  brand, we will find your voice, and create a sonic logo
+                  customized for your company to best translate your energy,
+                  message, and experience to your clients.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Email us </a>
+                  to talk about your project so we can get to a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $brandingActiveTab === 'podcast'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Podcast</h2>
+
+                <p class="body-regular">
+                  Podcasts are the fastest-growing media content for brands
+                  nowadays to best connect with their customers at a personal
+                  level. They can be a key tool in your digital marketing
+                  strategy to increase customer reach and participation with
+                  your brand.
+                </p>
+
+                <p class="body-regular">
+                  We offer podcast directing, recording, editing and
+                  finalization for your business.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Email us </a>
+                  to talk about your project so we can get to a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {:else if $brandingActiveTab === 'post-production_for_ads'}
+          <div
+            in:fade={{
+              delay: $animationInDelay,
+              duration: $animationInDuration,
+              easing: $animationInEasing,
+            }}
+            out:fade={{
+              duration: $animationOutDuration,
+              easing: $animationOutEasing,
+            }}
+          >
+            <ul>
+              <li>
+                <h2 class="body-bold">Post-Production for Ads</h2>
+
+                <p class="body-regular">
+                  Advertisements are around us every day. From radio to TV spots
+                  and now even online streaming spots, the sounds in ads are
+                  more important now than ever.
+                </p>
+
+                <p class="body-regular">
+                  We offer audio post-production for your advertisements. Our
+                  services include ADR recording, editing, restoration, sound
+                  designing, mixing, and finalizing. We make your ad ready to be
+                  heard anywhere.
+                </p>
+              </li>
+
+              <li>
+                <p class="body-bold">Pricing</p>
+                <p class="body-regular">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="mailto:info@nadoki.com"> Email us </a>
+                  to talk about your project so we can get to a price estimate.
+                </p>
+              </li>
+            </ul>
+          </div>
+        {/if}
+      </div>
+    </main>
+  {/if}
+
+  <Footer delay={$animationInDelay} />
+</div>
 
 <style>
   a {
     color: var(--dark);
     display: inline-block;
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-  }
-
-  a:active,
-  a:visited,
-  a:focus {
-    outline: none;
   }
 
   :global(.user-is-tabbing) a:focus {
@@ -208,8 +1173,7 @@
 
   @media (--not-touchscreen) {
     a:hover {
-      color: var(--light);
-      background-color: var(--secondary-color);
+      color: var(--secondary-color);
     }
   }
 
@@ -218,19 +1182,14 @@
     background-color: var(--main-color);
   }
 
-  .content-wrapper-not-visible {
-    display: none;
-  }
-
   .modal-wrapper {
     position: fixed;
     top: 0;
     left: 100vw;
     background-color: var(--main-color);
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
     z-index: 2;
-    backface-visibility: hidden;
     transition: left 300ms ease-in-out;
   }
 
@@ -241,13 +1200,12 @@
   @media (--max-content-width) {
     main {
       display: flex;
-      height: calc(100vh - 12.5rem);
     }
   }
 
   .tab-content {
     padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-    min-height: calc((var(--vh, 1vh) * 100) - 14.5rem);
+    min-height: calc(100vh - 14.5rem);
     width: 100%;
     transition: height 300ms ease-in-out;
   }
@@ -255,265 +1213,73 @@
   @media (--max-content-width) {
     .tab-content {
       padding: 3rem 3rem 5rem 3rem;
-      height: calc(100vh - 12.5rem);
-      overflow-y: auto;
+    }
+  }
+
+  h2 {
+    display: none;
+  }
+
+  p + p,
+  p + h2 {
+    margin-top: 1.5rem;
+  }
+
+  .body-bold + .body-regular {
+    margin-top: 0.5rem;
+  }
+
+  .body-small + .body-regular,
+  .no-description + .body-regular {
+    margin-top: 0.5rem;
+  }
+
+  .body-regular + .reach-out,
+  .body-small + .reach-out {
+    margin-top: 1.5rem;
+  }
+
+  @media (--max-content-width) {
+    h2 {
+      display: block;
     }
 
-    .tab-content p {
-      font-size: 2rem;
+    p + p,
+    p + h2 {
+      margin-top: 3rem;
+    }
+
+    .body-regular + .reach-out,
+    .body-small + .reach-out {
+      margin-top: 3rem;
+    }
+
+    .body-regular,
+    .body-bold {
+      font-size: 1.875rem;
+    }
+  }
+
+  ul li {
+    margin-bottom: 2.5rem;
+  }
+
+  ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  li + li {
+    border-top: 0.125rem solid var(--dark);
+    padding-top: 2.5rem;
+  }
+
+  @media (--max-content-width) {
+    ul li {
+      margin-bottom: 3.5rem;
+    }
+
+    li + li {
+      padding-top: 3.5rem;
     }
   }
 </style>
-
-<div
-  class="content-wrapper"
-  class:content-wrapper-not-visible={isAnyServiceClicked}
-  style="transform: translateY({$scrollYPosition * -1}px)">
-  <Header variant="services" />
-  <ServicesNav />
-  <Footer />
-</div>
-
-<div
-  in:fade={{ delay: $animationInDelay, duration: $animationInDuration, easing: $animationInEasing }}
-  out:fade={{ duration: $animationOutDuration, easing: $animationOutEasing }}
-  class="modal-wrapper"
-  class:modal-is-visible={isAnyServiceClicked}>
-  <ModalNav on:click={() => handleBackClick()} title="Services" />
-
-  {#if $servicesModalActive === 'music'}
-    <Header variant="music" delay={$animationInDelay} />
-    <main>
-      <Tab variant="services" tab={musicTab} delay={$animationInDelay} />
-      <div class="tab-content">
-        {#if $isMusicFirstClicked}
-          <p class="body-regular">
-            Nadoki offers mixing using our analog/digital hybrid setup, we have
-            the tools and ears to achieve the sound that you deserve.
-            <br />
-            <br />
-            The basic price includes three stereo exports: wav 24-bit, wav
-            16-bit, and FLAC. If other formats are desired, we also offer
-            add-ons, such as surround, binaural and 3D audio, as well as other
-            file formats.
-            <br />
-            <br />
-            You can either send us the tracks to be mixed (make sure it’s
-            according to our delivery specs) or bring the files to an attended
-            session with us (check add-on options). If you have any mix
-            references, feel free to also send them to us.
-          </p>
-        {:else if $isMusicSecondClicked}
-          <p class="body-regular">
-            Nadoki offers digital and/or vinyl mastering of a track, EP or LP.
-            With our hybrid setup, we can make your song streaming-ready, as
-            well as vinyl-cut ready!
-            <br />
-            <br />
-            The basic price includes three format exports: wav 24-bit, wav
-            16-bit, and FLAC. If other formats are desired, we also offer
-            add-ons.
-            <br />
-            <br />
-            You can either send us the tracks to be mastered (make sure it’s
-            according to our delivery requirements) or bring the files to an
-            attended session with us (check add-on options). If you have any
-            master references, feel free to also send them to us.
-          </p>
-        {:else if $isMusicThirdClicked}
-          <p class="body-regular">
-            Nadoki is proud to offer two recording spaces that you can choose
-            from:
-            <br />
-            — Studio 10 is the perfect space for overdub recordings, solo
-            instruments, and small ensembles.
-            <br />
-            — The Lab is a flexible 60 sqm live tracking room that is perfect
-            for a large-size band, orchestra or choir recording.
-            <br />
-            <br />
-            A selection of industry-standard microphones from brands like
-            Neumann, Shure, and AKG are available to use. And if desired, other
-            microphones are available upon request.
-            <a href="/equipment" aria-label="Equipment page">Check our gear</a>
-          </p>
-        {:else if $isMusicFourthClicked}
-          <p class="body-regular">
-            Nadoki offers music editing services, including timing or pitching,
-            for monophonic or polyphonic instruments.
-            <br />
-            <br />
-            Please make sure your files are according to our requirements.
-          </p>
-        {:else if $isMusicFifthClicked}
-          <p class="body-regular">
-            Nadoki offers audio restoration services to clean, fix and restore
-            your audio recordings. We can remove pops, clicks, hum, hiss,
-            crackle, and many other noises and artifacts, as well as remove
-            clipping of an audio file.
-            <br />
-            <br />
-            Please make sure your files are according to our requirements.
-          </p>
-        {:else if $isMusicSixthClicked}
-          <p class="body-regular">
-            Nadoki offers music production services in the genres of
-            hip-hop/trap, pop, and electronic music. Using the endless
-            possibilities of an in-the-box approach, together with live
-            instruments available in our setup and studio musicians, anything is
-            possible.
-          </p>
-        {/if}
-      </div>
-    </main>
-  {:else if $servicesModalActive === 'film'}
-    <Header variant="film" delay={$animationInDelay} />
-    <main>
-      <Tab variant="services" tab={filmTab} delay={$animationInDelay} />
-      <div class="tab-content">
-        {#if $isFilmFirstClicked}
-          <p class="body-regular">
-            Nadoki offers to mix the sound for your production balancing all
-            dialog, ADR, sound effects, music, atmospheres and foleys so that it
-            enhances the work’s storytelling without distracting from it.
-            <br />
-            <br />
-            We offer both stereo and 5.1 surround mixing. For other formats,
-            please get in touch.
-          </p>
-        {:else if $isFilmSecondClicked}
-          <p class="body-regular">
-            Nadoki offers dialogue, music and sound effect editing for your
-            production.
-          </p>
-        {:else if $isFilmThirdClicked}
-          <p class="body-regular">
-            Nadoki offers audio restoration services to clean, fix and restore
-            your audio recordings. We can remove pops, clicks, hum, hiss,
-            crackle, and many other noises, as well as remove clipping of an
-            audio file.
-            <br />
-            <br />
-            Please make sure your files are according to our requirements.
-          </p>
-        {:else if $isFilmFourthClicked}
-          <p class="body-regular">
-            Sound has an important role in storytelling in a film production -
-            it allows the creation of atmospheres, emotion and it sets the tone
-            of a movie.
-            <br />
-            <br />
-            Nadoki offers to sound design your film production to enhance your
-            story to its full potential. Using high-quality industry standard
-            samples and foley recording techniques, we can create the sound your
-            production needs.
-          </p>
-        {:else if $isFilmFifthClicked}
-          <p class="body-regular">
-            Nadoki can compose a tailored music score to accompany your film
-            production. Using our hybrid setup, we have in-the-box tools, as
-            well as, analog instruments to create the sound that fits your
-            production.
-          </p>
-        {/if}
-      </div>
-    </main>
-  {:else if $servicesModalActive === 'game'}
-    <Header variant="game" delay={$animationInDelay} />
-    <main>
-      <Tab variant="services" tab={gameTab} delay={$animationInDelay} />
-      <div class="tab-content">
-        {#if $isGameFirstClicked}
-          <p class="body-regular">
-            The multiplicity and variety of possibilities in sound composition
-            in a game not only allow the creation of atmospheres and emotions,
-            but also sets the tone of it.
-            <br />
-            <br />
-            Nadoki offers to sound design your game to enhance your story to its
-            full potential. Using high-quality industry-standard samples and
-            foley recording techniques, we can create the sound your production
-            needs.
-          </p>
-        {:else if $isGameSecondClicked}
-          <p class="body-regular">
-            Nadoki offers to compose tailored music scores to accompany your
-            game. With the unlimited possibilities of the in-the-box approach,
-            together with the analog instruments available in our array of
-            sounds, we can translate your game’s message into music.
-          </p>
-        {:else if $isGameThirdClicked}
-          <p class="body-regular">
-            The accuracy of sound integration to the environment of a game has
-            an important role in the immersion of the player. For the finest
-            interaction, precision in each moment of scene is crucial and making
-            sure that all audio assets (music, ambience, dialogue, and sound
-            effects) load smoothly, trigger correctly, and playback in the
-            highest quality at minimal processing power is key.
-            <br />
-            <br />
-            Nadoki offers to integrate the sound of your game utilizing FMOD,
-            Unreal Engine and Unity.
-          </p>
-        {:else if $isGameFourthClicked}
-          <p class="body-regular">
-            Nadoki offers mixing services for the sound of your game balancing
-            all dialog, ADR, sound effects, music, atmospheres and foleys for
-            the best immersion of the player.
-            <br />
-            <br />
-            We offer both stereo and 5.1 surround mixing. For other formats,
-            please get in touch.
-          </p>
-        {/if}
-      </div>
-    </main>
-  {:else if $servicesModalActive === 'branding'}
-    <Header variant="branding" delay={$animationInDelay} />
-    <main>
-      <Tab variant="services" tab={brandingTab} delay={$animationInDelay} />
-      <div class="tab-content">
-        {#if $isBrandingFirstClicked}
-          <p class="body-regular">
-            There’s more to branding than what meets the eye. While strong
-            visuals are key, it’s also important to communicate your story and
-            create your sonic identity for your brand.
-            <br />
-            <br />
-            After a talk to understand the story and personality of your brand,
-            we will analyze to find your voice, and create a sonic logo
-            customized for your company, to best translate your energy, message,
-            and experience to your clients.
-          </p>
-        {:else if $isBrandingSecondClicked}
-          <p class="body-regular">
-            The fastest-growing media content for brands is used nowadays by
-            several businesses to best connect with their customers at a
-            personal level. Podcasts can be a key tool in the digital marketing
-            strategy of your company to keep your clients connected to your
-            brand and increase the reach and your participation with your
-            community.
-            <br />
-            <br />
-            We offer podcast directing, recording, editing and finalization for
-            your business.
-          </p>
-        {:else if $isBrandingThirdClicked}
-          <p class="body-regular">
-            Advertisements are around us every day. From radio spots to TV spots
-            and now online streaming spots, it’s the most common advertising
-            media.
-            <br />
-            <br />
-            Nadoki offers audio post-production for your advertisements. Our
-            services include ADR recording, editing, restoration, sound
-            designing, mixing, and finalizing. We can make your ad ready to be
-            heard anywhere.
-          </p>
-        {/if}
-      </div>
-    </main>
-  {/if}
-
-  <Footer delay={$animationInDelay} />
-</div>

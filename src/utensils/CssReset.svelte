@@ -7,6 +7,8 @@
     font: inherit;
     vertical-align: baseline;
     max-width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   :global(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
     display: block;
@@ -30,13 +32,14 @@
     quotes: none;
   }
   :global(blockquote:before, blockquote:after, q:before, q:after) {
-    content: "";
+    content: '';
     content: none;
   }
   :global(table) {
     border-collapse: collapse;
     border-spacing: 0;
   }
+
   :global(button) {
     border: none;
     margin: 0;
@@ -51,8 +54,21 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  :global(button:focus) {
+    outline: none;
+  }
+
+  :global(button::-moz-focus-inner) {
+    border: 0;
+  }
+
   :global(a) {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  :global(a:active, a:visited, a:focus) {
+    outline: none;
+    border: none;
   }
 
   :global(*, *:before, *:after) {
